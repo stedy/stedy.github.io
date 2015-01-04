@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: tm | My Octopress Blog]]></title>
+  <title><![CDATA[Category: tm | Zach Stednick]]></title>
   <link href="http://stedy.github.io/blog/categories/tm/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2015-01-04T15:34:24-08:00</updated>
+  <updated>2015-01-04T15:40:07-08:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Zach Stednick]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
