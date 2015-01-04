@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2015-01-04T15:32:59-08:00</updated>
+  <updated>2015-01-04T15:34:24-08:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Summarizing Books Read Over Time]]></title>
+    <title type="html"><![CDATA[Summarizing books read over time]]></title>
     <link href="http://stedy.github.io/blog/2015/01/04/summarizing-books-read-over-time/"/>
     <updated>2015-01-04T13:54:43-08:00</updated>
     <id>http://stedy.github.io/blog/2015/01/04/summarizing-books-read-over-time</id>
@@ -111,7 +111,7 @@ that data from LibraryThing so I abandoned that analysis.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Simple Webstats With R]]></title>
+    <title type="html"><![CDATA[Simple webstats with R]]></title>
     <link href="http://stedy.github.io/blog/2014/11/19/simple-webstats-with-r/"/>
     <updated>2014-11-19T17:01:34-08:00</updated>
     <id>http://stedy.github.io/blog/2014/11/19/simple-webstats-with-r</id>
@@ -164,7 +164,7 @@ Westerlind but maybe I should just focus on the journey instead.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[LEGO Price Estimates Over Time]]></title>
+    <title type="html"><![CDATA[LEGO price estimates over time]]></title>
     <link href="http://stedy.github.io/blog/2014/08/30/lego-price-estimates-over-time/"/>
     <updated>2014-08-30T16:22:00-07:00</updated>
     <id>http://stedy.github.io/blog/2014/08/30/lego-price-estimates-over-time</id>
@@ -322,7 +322,7 @@ price and the actual price.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Datasets for Machine Learning With R by Lantz]]></title>
+    <title type="html"><![CDATA[Datasets for Machine Learning with R by Lantz]]></title>
     <link href="http://stedy.github.io/blog/2014/08/19/datasets-for-machine-learning-with-r-by-lantz/"/>
     <updated>2014-08-19T15:31:00-07:00</updated>
     <id>http://stedy.github.io/blog/2014/08/19/datasets-for-machine-learning-with-r-by-lantz</id>
@@ -345,7 +345,7 @@ to host them.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Analysis of Gas Efficiency by Brand]]></title>
+    <title type="html"><![CDATA[Analysis of gas efficiency by brand]]></title>
     <link href="http://stedy.github.io/blog/2014/07/31/analysis-of-gas-efficiency-by-brand/"/>
     <updated>2014-07-31T17:46:00-07:00</updated>
     <id>http://stedy.github.io/blog/2014/07/31/analysis-of-gas-efficiency-by-brand</id>
@@ -458,7 +458,7 @@ guy is still around?</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Writing a Twitter Bot for Fun and Profit]]></title>
+    <title type="html"><![CDATA[Writing a twitter bot for fun and profit]]></title>
     <link href="http://stedy.github.io/blog/2014/02/24/writing-a-twitter-bot-for-fun-and-profit/"/>
     <updated>2014-02-24T21:42:00-08:00</updated>
     <id>http://stedy.github.io/blog/2014/02/24/writing-a-twitter-bot-for-fun-and-profit</id>
@@ -510,7 +510,7 @@ elected the Face of MLB, then what&rsquo;s the point of programming?</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Foursquare Without a Smartphone]]></title>
+    <title type="html"><![CDATA[Foursquare without a smartphone]]></title>
     <link href="http://stedy.github.io/blog/2014/02/06/foursquare-without-a-smartphone/"/>
     <updated>2014-02-06T22:10:00-08:00</updated>
     <id>http://stedy.github.io/blog/2014/02/06/foursquare-without-a-smartphone</id>
@@ -539,7 +539,7 @@ just stick to using pen on a calendar.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Thoughts on Solving My First 100 Problems on Project Euler]]></title>
+    <title type="html"><![CDATA[Thoughts on solving my first 100 problems on Project Euler]]></title>
     <link href="http://stedy.github.io/blog/2013/11/17/thoughts-on-solving-my-first-100-problems-on-project-euler/"/>
     <updated>2013-11-17T18:40:00-08:00</updated>
     <id>http://stedy.github.io/blog/2013/11/17/thoughts-on-solving-my-first-100-problems-on-project-euler</id>
@@ -627,7 +627,7 @@ hard rules.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Analysis of the Listserve Emails]]></title>
+    <title type="html"><![CDATA[Analysis of The Listserve emails]]></title>
     <link href="http://stedy.github.io/blog/2013/04/14/analysis-of-the-listserve-emails/"/>
     <updated>2013-04-14T20:23:00-07:00</updated>
     <id>http://stedy.github.io/blog/2013/04/14/analysis-of-the-listserve-emails</id>
@@ -841,7 +841,7 @@ I want to learn more about text processing since I found it pretty interesting.<
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Text Mining the Listserve Emails]]></title>
+    <title type="html"><![CDATA[Text mining The Listserve Emails]]></title>
     <link href="http://stedy.github.io/blog/2013/04/14/text-mining-the-listserve-emails/"/>
     <updated>2013-04-14T18:21:00-07:00</updated>
     <id>http://stedy.github.io/blog/2013/04/14/text-mining-the-listserve-emails</id>
@@ -889,7 +889,7 @@ analysis.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Insert Cat Picture]]></title>
+    <title type="html"><![CDATA[insert cat picture]]></title>
     <link href="http://stedy.github.io/blog/2013/02/27/insert-cat-picture/"/>
     <updated>2013-02-27T10:26:00-08:00</updated>
     <id>http://stedy.github.io/blog/2013/02/27/insert-cat-picture</id>
@@ -907,7 +907,7 @@ paper.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[CSS Stopwatch]]></title>
+    <title type="html"><![CDATA[CSS stopwatch]]></title>
     <link href="http://stedy.github.io/blog/2013/02/21/css-stopwatch/"/>
     <updated>2013-02-21T17:49:00-08:00</updated>
     <id>http://stedy.github.io/blog/2013/02/21/css-stopwatch</id>
@@ -924,7 +924,7 @@ the names.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Knapsack Problem IRL]]></title>
+    <title type="html"><![CDATA[Knapsack problem IRL]]></title>
     <link href="http://stedy.github.io/blog/2013/01/30/knapsack-problem-irl/"/>
     <updated>2013-01-30T22:49:00-08:00</updated>
     <id>http://stedy.github.io/blog/2013/01/30/knapsack-problem-irl</id>
@@ -953,7 +953,7 @@ liked as well as maximize the number of cookies I would get.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Red E and Me]]></title>
+    <title type="html"><![CDATA[Red e and me]]></title>
     <link href="http://stedy.github.io/blog/2013/01/16/red-e-and-me/"/>
     <updated>2013-01-16T18:02:00-08:00</updated>
     <id>http://stedy.github.io/blog/2013/01/16/red-e-and-me</id>
@@ -1038,7 +1038,7 @@ help me stay focused is highly welcome in my life.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Running Flask on CentOS]]></title>
+    <title type="html"><![CDATA[Running flask on CentOS]]></title>
     <link href="http://stedy.github.io/blog/2012/11/30/running-flask-on-centos/"/>
     <updated>2012-11-30T10:01:00-08:00</updated>
     <id>http://stedy.github.io/blog/2012/11/30/running-flask-on-centos</id>
@@ -1105,7 +1105,7 @@ remember the Zen of Python</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Kalalau Trail]]></title>
+    <title type="html"><![CDATA[kalalau trail]]></title>
     <link href="http://stedy.github.io/blog/2012/11/20/kalalau-trail/"/>
     <updated>2012-11-20T23:07:00-08:00</updated>
     <id>http://stedy.github.io/blog/2012/11/20/kalalau-trail</id>
@@ -1134,7 +1134,7 @@ n&#8217; Paddle</a> in Hanalei which also sold us some of the other things we fo
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Testing Setup]]></title>
+    <title type="html"><![CDATA[testing setup]]></title>
     <link href="http://stedy.github.io/blog/2012/08/28/testing-setup/"/>
     <updated>2012-08-28T19:57:00-07:00</updated>
     <id>http://stedy.github.io/blog/2012/08/28/testing-setup</id>

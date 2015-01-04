@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Librarything | My Octopress Blog]]></title>
+  <title><![CDATA[Category: librarything | My Octopress Blog]]></title>
   <link href="http://stedy.github.io/blog/categories/librarything/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2015-01-04T15:32:59-08:00</updated>
+  <updated>2015-01-04T15:34:24-08:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Summarizing Books Read Over Time]]></title>
+    <title type="html"><![CDATA[Summarizing books read over time]]></title>
     <link href="http://stedy.github.io/blog/2015/01/04/summarizing-books-read-over-time/"/>
     <updated>2015-01-04T13:54:43-08:00</updated>
     <id>http://stedy.github.io/blog/2015/01/04/summarizing-books-read-over-time</id>
