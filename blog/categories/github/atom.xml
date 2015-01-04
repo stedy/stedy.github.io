@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Github | My Octopress Blog]]></title>
+  <link href="http://stedy.github.io/blog/categories/github/atom.xml" rel="self"/>
+  <link href="http://stedy.github.io/"/>
+  <updated>2015-01-04T15:31:48-08:00</updated>
+  <id>http://stedy.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Simple Webstats With R]]></title>
+    <link href="http://stedy.github.io/blog/2014/11/19/simple-webstats-with-r/"/>
+    <updated>2014-11-19T17:01:34-08:00</updated>
+    <id>http://stedy.github.io/blog/2014/11/19/simple-webstats-with-r</id>
+    <content type="html"><![CDATA[<p>As someone who puts out writings out publically, I am naturally curious who (if anyone) is actually reading what I write. To answer this I developed a simple webstat calculator using R. I realize there are many options out there for tracking visits but to paraphrase my friend Andy, <a href="http://wingolog.org/archives/2014/11/14/on-yakshave-on-color-on-cosines-on-glitchen">when has using standard libraries lead to anything cool?</a>.</p>
+
+<p>My main interests in this project is to answer two questions:</p>
+
+<ol>
+<li><p>Are people visting this site?</p></li>
+<li><p>Where are they visting from?</p></li>
+</ol>
+
+
+<p>I don&rsquo;t really care about things like <a href="https://en.wikipedia.org/wiki/Bounce_rate">bounce rate</a> or type of device used to access the site. Not having to worry about either of these issues helps cut down on the complexity. I run this site on an Apache server and use a standard log output to write my logfile:
+<code>LogFormat "%v:%p %h %l %u %t \"%r\" %&gt;s %O \"%{Referer}i\" \"%{User-Agent}i\"</code></p>
+
+<p>I made a small R script that uses <a href="http://cran.r-project.org/web/packages/knitr/">knitr</a> to output plots to HTML for ease in viewing. I wrote a shell script that uses the excellent <a href="http://dirk.eddelbuettel.com/code/littler.html">little r</a> to perform the commands. I run the shell script daily as a cron job and only look back at the past week&rsquo;s worth of data. Since this blog is served on github pages, it can be difficult to see page views so I use images loaded as a proxy.</p>
+
+<p>Here are some example plots of recent visitors:</p>
+
+<p><img src="http://zachstednick.com/visitor.png"></p>
+
+<p>And then another plot of visitor locations:</p>
+
+<p><img src="http://zachstednick.com/referrer_location.png"></p>
+
+<p>That outlier from Brazil is likely a Google bot crawling the site; better detection and removal of bot traffic from the final output is on the TODO list. All of the code (minus the shell script) lives on <a href="https://github.com/stedy/simple-webstats">github</a></p>
+]]></content>
+  </entry>
+  
+</feed>

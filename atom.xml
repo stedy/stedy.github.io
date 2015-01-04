@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2015-01-04T15:26:26-08:00</updated>
+  <updated>2015-01-04T15:31:48-08:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,5 +12,1136 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA['Summarizing Books Read Over Time']]></title>
+    <link href="http://stedy.github.io/blog/2015/01/04/summarizing-books-read-over-time/"/>
+    <updated>2015-01-04T13:54:43-08:00</updated>
+    <id>http://stedy.github.io/blog/2015/01/04/summarizing-books-read-over-time</id>
+    <content type="html"><![CDATA[<p>I recently read an interesting blog post where the author examined their books rated on Goodreads and summarizing <a href="http://citizen-statistician.org/2014/12/31/annual-review-of-reading/">interesting
+trends</a>.
+I decided to do a similar analysis even though I use
+<a href="https://www.librarything.com/profile/pbirch01">LibraryThing</a>
+instead.</p>
+
+<p>LibraryThing has a nice option to allow to to export your data in a
+variety of <a href="https://www.librarything.com/export.php">formats</a>. Since I
+write R code to parse CSV files everyday I thought I would do something
+different and parse a JSON file with python.</p>
+
+<p>I have been on LibraryThing since 2007 and the first question I was
+interested in was have my average ratings changed over time? I
+calculated the mean for each book by year:</p>
+
+<table>
+<thead>
+<tr>
+<th> Year </th>
+<th style="text-align:right;"> Average Rating </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 2007 </td>
+<td style="text-align:right;"> 3.446809</td>
+</tr>
+<tr>
+<td> 2008 </td>
+<td style="text-align:right;"> 3.480000</td>
+</tr>
+<tr>
+<td> 2009 </td>
+<td style="text-align:right;"> 3.485294</td>
+</tr>
+<tr>
+<td> 2010 </td>
+<td style="text-align:right;"> 3.641509</td>
+</tr>
+<tr>
+<td> 2011 </td>
+<td style="text-align:right;"> 3.456522</td>
+</tr>
+<tr>
+<td> 2012 </td>
+<td style="text-align:right;"> 3.529412</td>
+</tr>
+<tr>
+<td> 2013 </td>
+<td style="text-align:right;"> 3.321429</td>
+</tr>
+<tr>
+<td> 2014 </td>
+<td style="text-align:right;"> 3.614583</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>While uninteresting, this makes a lot of sense - if I am reading a book
+that I do not enjoy, I will usually bail on it which tends to bias my
+ratings upward. Over time, there have been a few notable
+<a href="https://www.librarything.com/work/11691727/reviews/92168929">exceptions</a>.</p>
+
+<p>One of the other interesting analyses in the blog post was examining how the
+reviewer&rsquo;s ratings have changed based on the month of the year. I wanted to
+make a similar plot using R&rsquo;s
+<a href="http://docs.ggplot2.org/current/index.html">ggplot2</a> however since I
+was writing this in python I was largely limited to matplotlib.
+Fortunately, many people have struggled with this issue and the fine
+folks at yhat have ported ggplot2 over to
+<a href="https://pypi.python.org/pypi/ggplot">python</a>. With this library I was
+able to use <code>geom_smooth</code> to produce the following plot showing rating
+trends by week.</p>
+
+<p><img src="http://zachstednick.com/all_years.png"></p>
+
+<p>I tried to figure out why my legend never showed up but I figured that
+since most of the trend lines were pretty much the same anyways that the
+plot was fine without a legend. It appears that I get in most of my good
+reviews early in the year and am harsher later in the year.</p>
+
+<p>The last figure in the blog post compares the writer&rsquo;s review scores to
+the Goodreads consensus score. I attempted to
+replicate this but ran into more trouble than it was worth to extract
+that data from LibraryThing so I abandoned that analysis.</p>
+
+<p>If interested, I put my python code in a GitHub
+<a href="https://gist.github.com/stedy/2cb4fb1f332508f39ff2">gist</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Simple Webstats With R]]></title>
+    <link href="http://stedy.github.io/blog/2014/11/19/simple-webstats-with-r/"/>
+    <updated>2014-11-19T17:01:34-08:00</updated>
+    <id>http://stedy.github.io/blog/2014/11/19/simple-webstats-with-r</id>
+    <content type="html"><![CDATA[<p>As someone who puts out writings out publically, I am naturally curious who (if anyone) is actually reading what I write. To answer this I developed a simple webstat calculator using R. I realize there are many options out there for tracking visits but to paraphrase my friend Andy, <a href="http://wingolog.org/archives/2014/11/14/on-yakshave-on-color-on-cosines-on-glitchen">when has using standard libraries lead to anything cool?</a>.</p>
+
+<p>My main interests in this project is to answer two questions:</p>
+
+<ol>
+<li><p>Are people visting this site?</p></li>
+<li><p>Where are they visting from?</p></li>
+</ol>
+
+
+<p>I don&rsquo;t really care about things like <a href="https://en.wikipedia.org/wiki/Bounce_rate">bounce rate</a> or type of device used to access the site. Not having to worry about either of these issues helps cut down on the complexity. I run this site on an Apache server and use a standard log output to write my logfile:
+<code>LogFormat "%v:%p %h %l %u %t \"%r\" %&gt;s %O \"%{Referer}i\" \"%{User-Agent}i\"</code></p>
+
+<p>I made a small R script that uses <a href="http://cran.r-project.org/web/packages/knitr/">knitr</a> to output plots to HTML for ease in viewing. I wrote a shell script that uses the excellent <a href="http://dirk.eddelbuettel.com/code/littler.html">little r</a> to perform the commands. I run the shell script daily as a cron job and only look back at the past week&rsquo;s worth of data. Since this blog is served on github pages, it can be difficult to see page views so I use images loaded as a proxy.</p>
+
+<p>Here are some example plots of recent visitors:</p>
+
+<p><img src="http://zachstednick.com/visitor.png"></p>
+
+<p>And then another plot of visitor locations:</p>
+
+<p><img src="http://zachstednick.com/referrer_location.png"></p>
+
+<p>That outlier from Brazil is likely a Google bot crawling the site; better detection and removal of bot traffic from the final output is on the TODO list. All of the code (minus the shell script) lives on <a href="https://github.com/stedy/simple-webstats">github</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[(206)419-PARKS]]></title>
+    <link href="http://stedy.github.io/blog/2014/11/05/206-419-parks/"/>
+    <updated>2014-11-05T15:27:00-08:00</updated>
+    <id>http://stedy.github.io/blog/2014/11/05/206-419-parks</id>
+    <content type="html"><![CDATA[<p>I recently became aware of the efforts of Linnea Westerlind who made a
+goal to visit every park in Seattle and documented her efforts
+<a href="http://www.yearofseattleparks.com/">here</a>. I thought this was pretty
+neat so I looked up the list of <a href="http://www.seattle.gov/parks/listall.asp">City of Seattle
+Parks</a> which currently lists
+419 parks. The definitions for a park are hard to determine and this
+list ends up with some oddball parks such as <a href="https://www.google.com/maps/place/Crescent+Place/@47.6842435,-122.3330848,19z/data=!4m2!3m1!1s0x54901413dd56bf9f:0xa19ed07208659a24">Crescent
+Place</a>.
+Still I think it is an interesting way to learn more about where you live
+wherever that may be. I have currently visited 118/419  parkswhich is
+about 28%, not bad. Not
+sure if I will be able to reach them faster than the 4 years it took
+Westerlind but maybe I should just focus on the journey instead.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[LEGO Price Estimates Over Time]]></title>
+    <link href="http://stedy.github.io/blog/2014/08/30/lego-price-estimates-over-time/"/>
+    <updated>2014-08-30T16:22:00-07:00</updated>
+    <id>http://stedy.github.io/blog/2014/08/30/lego-price-estimates-over-time</id>
+    <content type="html"><![CDATA[<p>LEGO recently introduced a new LEGO set called <a href="http://shop.lego.com/en-US/Research-Institute-21110">Research
+Institute</a> which
+featured three female scientists. Since my wife is also a female
+scientist, I tried to order one from the LEGO website only to learn that
+they had sold out in less than a day. I then wrote an email complaining
+about this to LEGO who responded by sending me an apology note and a
+catalog.</p>
+
+<p>I grew up playing with LEGO sets, hard to avoid when you were named Zach
+and commercials like
+<a href="https://www.youtube.com/watch?v=pDH3AoOQzE0">this</a> dominated the
+airwaves. Anyways, when I was a kid my dad once mentioned to me that a good rule of thumb
+for determining the price of a LEGO set was to estimate each brick
+costing about 10 cents. This new catalog made me wonder if this was still
+true. I copied all the model numbers as well as the number of pieces and
+the prices. I was also curious in how true this trend was when adjusted
+for inflation so I used the CPI Inflation calculator from <a href="http://data.bls.gov/cgi-bin/cpicalc.pl?cost1=.10&amp;year1=1989&amp;year2=2014">US Bureau of
+Labor
+Statistics</a> which showed
+that $0.10 in 1989 had the same buying power as $0.19 in 2014. Ideally I
+could have found a catalog from 1989 but I don&rsquo;t remember any back then
+and I probably would have cut it up to put pictures in my locker or
+something like that. I used R
+to plot both of these trends and it appears that my dad&rsquo;s estimate still
+holds true for 2014.</p>
+
+<p><img src="http://zachstednick.com/lego_by_year.png"></p>
+
+<p>A correlation calculation for all sets gives a value of 0.91 which means my dad had a
+pretty good estimate back in the day.</p>
+
+<p>I also looked at the average price for each collection and found that
+almost all collections retained a high correlation between the estimated
+price and the actual price.</p>
+
+<table>
+<thead>
+<tr>
+<th> Collection </th>
+<th> Collection Mean Price </th>
+<th style="text-align:right;"> Collection Correlation </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> Basics </td>
+<td> 29.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Chima </td>
+<td> 38.99 </td>
+<td style="text-align:right;"> 0.977</td>
+</tr>
+<tr>
+<td> City </td>
+<td> 54.365 </td>
+<td style="text-align:right;"> 0.896</td>
+</tr>
+<tr>
+<td> Creator </td>
+<td> 100.375 </td>
+<td style="text-align:right;"> 0.955</td>
+</tr>
+<tr>
+<td> DC Superheroes </td>
+<td> 76.657 </td>
+<td style="text-align:right;"> 1</td>
+</tr>
+<tr>
+<td> Disney Princess </td>
+<td> 27.657 </td>
+<td style="text-align:right;"> 0.963</td>
+</tr>
+<tr>
+<td> Exclusive </td>
+<td> 149.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Friends </td>
+<td> 23.354 </td>
+<td style="text-align:right;"> 0.992</td>
+</tr>
+<tr>
+<td> Ideas </td>
+<td> 49.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Juniors </td>
+<td> 27.49 </td>
+<td style="text-align:right;"> 0.901</td>
+</tr>
+<tr>
+<td> LEGO Movie </td>
+<td> 63.99 </td>
+<td style="text-align:right;"> 0.997</td>
+</tr>
+<tr>
+<td> Marvel Superheroes </td>
+<td> 40.99 </td>
+<td style="text-align:right;"> 0.934</td>
+</tr>
+<tr>
+<td> Mindstorms </td>
+<td> 349.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Minecraft </td>
+<td> 139.96 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Mixels </td>
+<td> 4.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Ninjago </td>
+<td> 47.434 </td>
+<td style="text-align:right;"> 0.976</td>
+</tr>
+<tr>
+<td> Simpsons </td>
+<td> 199.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Star Wars </td>
+<td> 133.365 </td>
+<td style="text-align:right;"> 0.979</td>
+</tr>
+<tr>
+<td> Technic </td>
+<td> 81.99 </td>
+<td style="text-align:right;"> 0.989</td>
+</tr>
+<tr>
+<td> Ultra Agents </td>
+<td> 45.323 </td>
+<td style="text-align:right;"> 0.983</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Raw data and code for this lives at this
+<a href="https://gist.github.com/stedy/92b949ba44effd66c855">gist</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Datasets for Machine Learning With R by Lantz]]></title>
+    <link href="http://stedy.github.io/blog/2014/08/19/datasets-for-machine-learning-with-r-by-lantz/"/>
+    <updated>2014-08-19T15:31:00-07:00</updated>
+    <id>http://stedy.github.io/blog/2014/08/19/datasets-for-machine-learning-with-r-by-lantz</id>
+    <content type="html"><![CDATA[<p>I recently read <a href="https://www.packtpub.com/big-data-and-business-intelligence/machine-learning-r">Machine Learning with
+R</a>
+by Brett Lantz. This is a book that provides an introduction to machine
+learning using R. I really enjoyed the book and thought Lantz did an
+excellent job explaining the content as well as providing many good
+references and examples, which is what lead to my problem with the book.
+As far as I can tell, Packt Publishing does not make its datasets
+available online unless you buy the book and create a <a href="https://www.packtpub.com/books/content/support">user
+account</a> which can be a
+problem if you are checking the book out from the library or borrowing
+the book from a friend. All of these datasets
+are in the public domain but simply needed some cleaning up and
+recoding to match the format in the book so I went ahead and made a
+<a href="https://github.com/stedy/Machine-Learning-with-R-datasets">github repo</a>
+to host them.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Analysis of Gas Efficiency by Brand]]></title>
+    <link href="http://stedy.github.io/blog/2014/07/31/analysis-of-gas-efficiency-by-brand/"/>
+    <updated>2014-07-31T17:46:00-07:00</updated>
+    <id>http://stedy.github.io/blog/2014/07/31/analysis-of-gas-efficiency-by-brand</id>
+    <content type="html"><![CDATA[<p>I have recorded every trip to the gas station so far in 2014 and finally
+got around to analyzing the first seven months. I currently drive a <a href="https://s3.amazonaws.com/images.thecarconnection.com/sml/honda_100227510_s.jpg">2010
+Honda Fit</a>
+and bought only 87 grade gas for the duration of this study.</p>
+
+<p>I was initially interested in how far can I travel per dollar, which can easily be
+calculated:</p>
+
+<p>A first attempt yields the following table:</p>
+
+<table>
+<thead>
+<tr>
+<th> Brand </th>
+<th style="text-align:right;"> meancost </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 7-11 (Citgo) </td>
+<td style="text-align:right;"> 7.858</td>
+</tr>
+<tr>
+<td> 76 </td>
+<td style="text-align:right;"> 7.123</td>
+</tr>
+<tr>
+<td> Arco </td>
+<td style="text-align:right;"> 8.451</td>
+</tr>
+<tr>
+<td> Chevron </td>
+<td style="text-align:right;"> 8.704</td>
+</tr>
+<tr>
+<td> Costco  </td>
+<td style="text-align:right;"> 9.593</td>
+</tr>
+<tr>
+<td> Safeway </td>
+<td style="text-align:right;"> 7.791</td>
+</tr>
+<tr>
+<td> Shell </td>
+<td style="text-align:right;"> 7.597</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Far and away Costco and Chevron have the best mean cost, but they
+each have only one datapoint and the Costco was located in Marysville,
+WA while the Chevron was located in Sherwood, OR which means that both
+of
+these were largely composed of highway miles and therefore higher fuel
+efficiency. I
+initially tried to account for highway miles versus city miles but have
+not had much success so far.</p>
+
+<p>I then looked at MPG by gas station:</p>
+
+<table>
+<thead>
+<tr>
+<th> Brand </th>
+<th style="text-align:right;"> meanMPG </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 7-11 (Citgo) </td>
+<td style="text-align:right;"> 29.07</td>
+</tr>
+<tr>
+<td> 76 </td>
+<td style="text-align:right;"> 26.96</td>
+</tr>
+<tr>
+<td> Arco </td>
+<td style="text-align:right;"> 29.88</td>
+</tr>
+<tr>
+<td> Chevron </td>
+<td style="text-align:right;"> 34.80</td>
+</tr>
+<tr>
+<td> Costco </td>
+<td style="text-align:right;"> 30.50</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Finally, I plotted MPG against mean cost.</p>
+
+<p><img src="http://zachstednick.com/gas_mpg.png"></p>
+
+<p>Since (for now) we are ignoring Costco and Chevron, it appears that
+Safeway is best for
+lowest cost with highest mean MPG. I wonder if the <a href="http://www.cockeyed.com/pranks/safeway/ultimate_shopper.html">Safeway ultimate
+shopper</a>
+guy is still around?</p>
+
+<p>Data and code at this
+<a href="https://gist.github.com/stedy/a198bb0c7b010dcdf7af">gist</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Writing a Twitter Bot for Fun and Profit]]></title>
+    <link href="http://stedy.github.io/blog/2014/02/24/writing-a-twitter-bot-for-fun-and-profit/"/>
+    <updated>2014-02-24T21:42:00-08:00</updated>
+    <id>http://stedy.github.io/blog/2014/02/24/writing-a-twitter-bot-for-fun-and-profit</id>
+    <content type="html"><![CDATA[<p>One of my first thoughts when Twitter had its IPO was that the days of
+writing Twitter bots was over. My fear was that they would lock down
+their
+platform in order to more accurately sell ads.</p>
+
+<p>Man, was I wrong.</p>
+
+<p>The Twitter API is still as robust as ever and allows for creating Twitter bots.
+One of the current trends is to try to generate buzz around a product or
+idea by getting people to use a specific hashtag. This can often lead to
+slightly hilarious results, such as the <a href="http://mlb.mlb.com/mlb/awards/y2014/faceofmlb/">Face of
+MLB</a>. Basically, the
+fans &ldquo;vote&rdquo; for their favorite player to be the Face of MLB by using a
+certain hashtag. I cannot think of a better job for a twitter bot.</p>
+
+<p>Setting up a bot or Twitter Application is easy, just go to
+<a href="apps.twitter.com">Twitter Apps</a> and login or create a new username and
+log in. Follow the steps and you can get an API key in a few minutes. Although note that in order to write tweets as a bot you have to
+choose Read + Write (instead of the default Write). I run my bot largely using the
+<a href="https://pypi.python.org/pypi/tweepy/2.2">tweepy</a> Python library which
+provides easy access to the Twitter API. Here is a
+<a href="https://gist.github.com/stedy/9203520">gist</a> of a bot I am
+running for the Face of MLB. Twitter does not allow the same tweet to be
+posted more than once from an account so I just add something like the
+current time:</p>
+
+<blockquote class="twitter-tweet" lang="en"><p><a
+href="https://twitter.com/_J4EZ">@_j4ez</a> Why not Zoidberg? the time
+is Monday, 09:09:PM <a
+href="https://twitter.com/search?q=%23ericsogard&amp;src=hash">#ericsogard</a>
+<a href="https://twitter.com/search?q=%23FaceofMLB&amp;src=hash">#FaceofMLB</a></p>&mdash;
+Zoidberg bot (@ZoidbergBot) <a href="https://twitter.com/ZoidbergBot/statuses/438179021684097024">February
+25, 2014</a></blockquote>
+
+
+<script async src="//platform.twitter.com/widgets.js"
+charset="utf-8"></script>
+
+
+<p>I will admit this is kinda silly, but if I can&rsquo;t use my programming
+skills to get
+someone like <a href="http://oakland.athletics.mlb.com/team/player.jsp?player_id=519299#gameType=%27R%27">Eric
+Sogard</a>
+elected the Face of MLB, then what&rsquo;s the point of programming?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Foursquare Without a Smartphone]]></title>
+    <link href="http://stedy.github.io/blog/2014/02/06/foursquare-without-a-smartphone/"/>
+    <updated>2014-02-06T22:10:00-08:00</updated>
+    <id>http://stedy.github.io/blog/2014/02/06/foursquare-without-a-smartphone</id>
+    <content type="html"><![CDATA[<p>I don&rsquo;t have a smartphone. Because of this,
+I am apparently missing out on sweet checkin
+<a href="https://foursquare.com/stevewoz/checkin/52f4182911d23311d6d12c6d?s=O5DyXc1-s3wjItCncf6KlvDtyxc&amp;ref=tw">badges</a>
+that I could be displaying on a user
+profile on fourquare or somewhere similar. This, in addition to how
+amazed I am by the <a href="http://feltron.com/ar12_01.html">Feltron
+annual report</a> does make slightly
+envious of people with abilities to easily track daily events. Instead
+of getting a smartphone, I opted for a much more low
+tech solution.</p>
+
+<p><img src="http://zachstednick.com/calendar.jpg"></p>
+
+<p>This is a picture of any bars, restaurants or events I
+went to in the month of January. I am also
+trying to record how often I work out and what kind of workout I am
+doing. Its been interesting thus far to try and observe trends and
+determine if I can gain any insight. I can definitely see why people are
+interested in using a device like a fitbit and or a smartphone for
+tracking. Until that day, I think I will
+just stick to using pen on a calendar.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Thoughts on Solving My First 100 Problems on Project Euler]]></title>
+    <link href="http://stedy.github.io/blog/2013/11/17/thoughts-on-solving-my-first-100-problems-on-project-euler/"/>
+    <updated>2013-11-17T18:40:00-08:00</updated>
+    <id>http://stedy.github.io/blog/2013/11/17/thoughts-on-solving-my-first-100-problems-on-project-euler</id>
+    <content type="html"><![CDATA[<p>Finally!</p>
+
+<p><img src="http://projecteuler.net/profile/zachs.png"></p>
+
+<p>A few years ago I set a goal to solve 100 problems on <a href="http://www.projecteuler.net">Project
+Euler</a> with python. My motivation was to learn as much
+about problem solving as I could and ultimately finish with <a href="http://projecteuler.net/problem=96">Problem
+96</a>, a sudoku solver. My plan was to
+write about my progess in a <a href="http://zerotosudoku.blogspot.com/">blog</a>.
+More than three years later, I finally finished that goal (although I
+quickly abandoned that blog after starting it). The problems definitely got harder
+and it took me a while to get motivated to work on them as well as to
+solve them.  I did however come up with three major lessons learned in
+my first 100 problems:</p>
+
+<p>1 - <strong>Narrow the search space</strong>
+By far the biggest lesson I learned was how to cut down on possible
+options before even starting to program. Since one of the rules of
+Project Euler is to solve each problem within a minute, brute force
+quickly gets thrown out the window. An example would be taking the
+square root of the upper bound to reduce the amount of searching of
+numbers above the square root. I learned to think more in depth about
+the problem and try to optimize the search window to be more effiecient.</p>
+
+<p>2 - <strong>Have a toolbox and use it</strong>
+I quickly developed a set of functions that I imported frequently that
+included functions such as a prime number sieve, a function to check if
+a number was pandigital, and a function for getting all factors of a
+number. I found that the way the problems were structured meant that I
+was frequently coming back to issues or approaches I used on earlier
+problems and I did not want to have to rewrite functions i had
+previously used.</p>
+
+<p>3 - <strong>Google and Stack Overflow are your friends</strong>
+I used both frequently, there are many other people who post their
+answers or even just the
+<a href="https://code.google.com/p/projecteuler-solutions/">solutions</a>. You can
+use these if you want, but I found I was able to learn about libraries such as
+itertools, differences between python&rsquo;s <code>range()</code> vs. <code>xrange()</code> and
+many different types of search algorithms.</p>
+
+<p>I would highly encourage you to try out a few problems on <a href="https://www.projecteuler.net">Project
+Euler</a>, I had fun and learned way more
+python than I thought I would (even if it took me a few years longer than
+originally planned.)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hard Rules]]></title>
+    <link href="http://stedy.github.io/blog/2013/08/21/hard-rules/"/>
+    <updated>2013-08-21T21:39:00-07:00</updated>
+    <id>http://stedy.github.io/blog/2013/08/21/hard-rules</id>
+    <content type="html"><![CDATA[<p>I have been thinking a lot about this <a href="http://sebastianmarshall.com/hard-rules">blog
+post</a> and in many ways I have
+to agree what the author is saying.  The internet can be a distracting
+<a href="http://www.ashersarlin.com/archives/2004/09/honestly_who_co.php">place</a>
+and making rules for yourself can help you stay focused and help
+maintain your energy levels.  Here are some of mine:</p>
+
+<ul>
+<li>Check Sports Illustrated only twice a day - around 10:30 AM and 2:30 PM</li>
+<li>No reddit at work</li>
+<li><a href="http://news.ycombinator.org">Hacker News</a> once a day in the evening</li>
+<li>LinkedIn at most once a week</li>
+<li>Check and respond to personal email only from noon - 1 PM while at
+work</li>
+<li>No computer after 11 PM</li>
+</ul>
+
+
+<p>For me, each of these were challenging to implement and I had to use browser extensions such as
+  <a href="https://addons.mozilla.org/en-US/firefox/addon/leechblock/">Leechblock</a>
+or
+<a href="https://chrome.google.com/webstore/detail/stayfocusd/laankejkbhbdhmipfmgcngdelahlfoji">StayFocusd</a>.
+Now, with these hard rules in place I don&rsquo;t have to debate whether I
+should go to a certain site or feel guilty while on that site.  Instead,
+I can put that energy either into work or simply getting off the
+computer faster - both of which are well worth the initial challenges of
+hard rules.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Analysis of the Listserve Emails]]></title>
+    <link href="http://stedy.github.io/blog/2013/04/14/analysis-of-the-listserve-emails/"/>
+    <updated>2013-04-14T20:23:00-07:00</updated>
+    <id>http://stedy.github.io/blog/2013/04/14/analysis-of-the-listserve-emails</id>
+    <content type="html"><![CDATA[<p><a href="http://www.thelistserve.com">The Listserve</a> is an email lottery, you sign up and once a day someone
+gets a chance to send the entire list an email.  My previous
+<a href="http://zachstednick.name/blog/2013/04/14/text-mining-the-listserve-emails/">post</a>
+covered how I fetched these emails, this post will discuss the actual
+statistics obtained from The Listserve emails.</p>
+
+<h1>To:</h1>
+
+<p>The Listserve website mentions the countries of subscribers but thats
+about it.  As of today, there are currently 21,402 subscribers.  I
+fetched all the archival data I could from Internet Archive and looked
+at enrollment over time which has stayed consistent around 20,000.  I
+also plotted
+enrollment over <a href="http://zachstednick.com/enrollment.html">time</a>.</p>
+
+<h1>From:</h1>
+
+<p>The Listserve allows you to use any name you want as the sender of the email, here are the ones that occurred more than once:</p>
+
+<table>
+<thead>
+<tr>
+<th> Name </th>
+<th style="text-align:right;"> Occurrence </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> Anonymous </td>
+<td style="text-align:right;"> 12</td>
+</tr>
+<tr>
+<td> Laura </td>
+<td style="text-align:right;"> 3</td>
+</tr>
+<tr>
+<td> The Listserve </td>
+<td style="text-align:right;"> 2</td>
+</tr>
+<tr>
+<td> Ben </td>
+<td style="text-align:right;"> 2</td>
+</tr>
+<tr>
+<td> Beth </td>
+<td style="text-align:right;"> 2</td>
+</tr>
+<tr>
+<td> David </td>
+<td style="text-align:right;"> 2</td>
+</tr>
+<tr>
+<td> Sam </td>
+<td style="text-align:right;"> 2</td>
+</tr>
+<tr>
+<td> Michelle Huang </td>
+<td style="text-align:right;"> 2</td>
+</tr>
+<tr>
+<td> T. </td>
+<td style="text-align:right;"> 2</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Interesting that Michelle Huang had two entries, what happens if we look at first name only?</p>
+
+<table>
+<thead>
+<tr>
+<th> Name </th>
+<th style="text-align:right;"> Occurrence </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> Anonymous </td>
+<td style="text-align:right;"> 12</td>
+</tr>
+<tr>
+<td> Chris </td>
+<td style="text-align:right;"> 8</td>
+</tr>
+<tr>
+<td> David </td>
+<td style="text-align:right;"> 7</td>
+</tr>
+<tr>
+<td> Jordan </td>
+<td style="text-align:right;"> 4</td>
+</tr>
+<tr>
+<td> Michelle </td>
+<td style="text-align:right;"> 4</td>
+</tr>
+<tr>
+<td> Alex </td>
+<td style="text-align:right;"> 3</td>
+</tr>
+<tr>
+<td> Andy </td>
+<td style="text-align:right;"> 3</td>
+</tr>
+<tr>
+<td> Ben </td>
+<td style="text-align:right;"> 3</td>
+</tr>
+<tr>
+<td> Brian </td>
+<td style="text-align:right;"> 3</td>
+</tr>
+<tr>
+<td> Daniel </td>
+<td style="text-align:right;"> 3</td>
+</tr>
+<tr>
+<td> James </td>
+<td style="text-align:right;"> 3</td>
+</tr>
+<tr>
+<td> Laura </td>
+<td style="text-align:right;"> 3</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>What about time of day sent?</p>
+
+<p>I took all the timestamps from the emails and plotted when they were
+sent based on GMT.  This was more due to personal curiosity but
+interesting nonetheless.  The red line in the plot is the mean time
+which ended up being 17:19:15 GMT.  Those large drops are likely due to
+some nuances in email dates.  For example, I got two emails on 23 June
+2012 and none on 22 June.</p>
+
+<p><img src="http://zachstednick.com/arrivaltimes.png"></p>
+
+<h1>Subject:</h1>
+
+<p>I took all the subject lines and created a word frequency table on how
+often that word occurred:</p>
+
+<table>
+<thead>
+<tr>
+<th> Word </th>
+<th style="text-align:right;"> Occurrence </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> life </td>
+<td style="text-align:right;"> 9</td>
+</tr>
+<tr>
+<td> world </td>
+<td style="text-align:right;"> 9</td>
+</tr>
+<tr>
+<td> day </td>
+<td style="text-align:right;"> 8</td>
+</tr>
+<tr>
+<td> little </td>
+<td style="text-align:right;"> 8</td>
+</tr>
+<tr>
+<td> love </td>
+<td style="text-align:right;"> 7</td>
+</tr>
+<tr>
+<td> story </td>
+<td style="text-align:right;"> 7</td>
+</tr>
+<tr>
+<td> advice </td>
+<td style="text-align:right;"> 6</td>
+</tr>
+<tr>
+<td> time </td>
+<td style="text-align:right;"> 6</td>
+</tr>
+</tbody>
+</table>
+
+
+<h1>Body:</h1>
+
+<p>For the body of the email I created a <a href="http://en.wikipedia.org/wiki/Document-term_matrix">Term-Document Matrix</a> which is a matrix that describes the frequency of words and how often they occur together.  This allows themes and trends of the body of work or corpus, which in this case happens to be The Listserve emails.  I took all the emails and removed punctuation and stop words such as &ldquo;and&rdquo; or &ldquo;but&rdquo; and made a matrix based on how often the most common words occured together.  I then created a dendrogram of all the words and how they clustered with each other.</p>
+
+<p><img src="http://zachstednick.com/dendrogram.png"></p>
+
+<p>The majority of the words are pretty evenly clustered and its difficult
+to determine any trends.  However there is a cluster on the far left
+side of the tree which I zoomed in on:</p>
+
+<p><img src="http://zachstednick.com/zoomin.png"></p>
+
+<p>This cluster includes word pairs such as &ldquo;email&rdquo; and &ldquo;listserve&rdquo;, &ldquo;love&rdquo; and &ldquo;time&rdquo;, and &ldquo;life&rdquo; and &ldquo;people&rdquo;.  While its not surprising to see these words occurring so often together, it is interesting to see that a majority of people use this email to dispense wisdom or advice to the masses.</p>
+
+<p>I have not yet been selected for The Listserve but I am sure these
+findings here will strongly influence what I write.  In the meantime,
+I want to learn more about text processing since I found it pretty interesting.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Text Mining the Listserve Emails]]></title>
+    <link href="http://stedy.github.io/blog/2013/04/14/text-mining-the-listserve-emails/"/>
+    <updated>2013-04-14T18:21:00-07:00</updated>
+    <id>http://stedy.github.io/blog/2013/04/14/text-mining-the-listserve-emails</id>
+    <content type="html"><![CDATA[<p><a href="http://www.thelistserve.com">The Listserve</a> is an email list where
+people sign up for a chance to send an email out to the entire list to
+discuss whatever they want.  Currently the number of people enrolled is
+about 20,000 and there has been one email per day since 16 April 2012.
+I thought that since this project has been running for about a year, it
+would be a nice opportunity to learn a little more about text mining.</p>
+
+<p>In this first part I will discuss how I fetched all those emails and
+parsed them and in a second blog post I will talk about what I found.</p>
+
+<p>The first issue was how to get the emails off the server and after
+trying a few solutions I finally ended up using the Python
+<a href="http://docs.python.org/2/library/imaplib.html">imaplib</a> which is a
+Python library for connecting with an IMAP4 email server which is used
+by all the major providers such as Yahoo and Google.  After connecting I
+used the Python <a href="http://docs.python.org/2/library/email.html">email</a> library which helped facilitate selecting certain parts of the email.  I relied
+heavily on the function <code>email.message_from_string()</code> to fetch email
+attributes such as Message-ID or Sender.  I took all these emails and
+dumped them into a SQLite database to later parse with
+<a href="http://cran.r-project.org">R</a>.</p>
+
+<p>I use R almost daily for work so it was nice to tackle this part of the
+project with tools I knew pretty well.  I used <code>sapply()</code> and
+<code>strsplit()</code> mostly to parse out parts of various email attributes and
+then used the <a href="http://cran.r-project.org/web/packages/tm/index.html">tm</a>
+package to handle all of the text processing.  The tm package makes it
+easier to get all the emails into a term document matrix which is much
+easier to work with a large corpus of text such as this.  I used an
+English dictonary with the tm package to remove stop words and for
+stemming (reducing the word to its base form).  There have been two
+emails so far in Portuguese but the rest are all in English.</p>
+
+<p>Initially I thought I could track all the emails by date but this proved
+to be a difficult task due to the nuances of email and when they
+actually got sent off the server.  Instead I ended up using the
+Message-ID for making sure that I did not duplicate emails in the
+analysis.</p>
+
+<p>I put up all the source code on a github
+<a href="https://github.com/stedy/thelistserve-stats">repo</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Insert Cat Picture]]></title>
+    <link href="http://stedy.github.io/blog/2013/02/27/insert-cat-picture/"/>
+    <updated>2013-02-27T10:26:00-08:00</updated>
+    <id>http://stedy.github.io/blog/2013/02/27/insert-cat-picture</id>
+    <content type="html"><![CDATA[<p>My wife and sometimes other people ask me to send them research papers
+that are not publicly available which I am more than happy to do.
+However, why should I not have some fun with the final document I send
+her.  I use the excellent, although sadly deprecated
+<a href="http://pybrary.net/pyPdf/">PyPdf</a>.  I have not checked out pyPdf2 but
+it does look promising.  Here is the
+<a href="https://gist.github.com/stedy/5050018">gist</a> for how I randomly add an
+image (usually of a cat) to the pdf document and then rename it since
+most research sites name their documents similar to the DOI for the
+paper.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[CSS Stopwatch]]></title>
+    <link href="http://stedy.github.io/blog/2013/02/21/css-stopwatch/"/>
+    <updated>2013-02-21T17:49:00-08:00</updated>
+    <id>http://stedy.github.io/blog/2013/02/21/css-stopwatch</id>
+    <content type="html"><![CDATA[<p>My wife kept complaining about being bored in long meetings so I decided
+to try and help her cut down on the monotony.
+<a href="http://thecodeplayer.com/walkthrough/make-a-stopwatch-using-css3-without-images-or-javascript">There</a> is a great demo for
+making a stopwatch with pure CSS.  I extended it to provide two
+stopwatches that can run independently.  My
+<a href="https://gist.github.com/stedy/4728805">gist</a> and the actual
+<a href="http://www.zachstednick.com/stopwatch.html">stopwatches</a>.  With more
+time I would go back in and add a javascript popup window to populate
+the names.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Knapsack Problem IRL]]></title>
+    <link href="http://stedy.github.io/blog/2013/01/30/knapsack-problem-irl/"/>
+    <updated>2013-01-30T22:49:00-08:00</updated>
+    <id>http://stedy.github.io/blog/2013/01/30/knapsack-problem-irl</id>
+    <content type="html"><![CDATA[<p>Orders for placing Girl Scout cookies are starting to hit the workplace
+email lists which is always a unique buying experience.  The cookies are
+available for a limited time so you have to order when you can
+especailly since I always seem to run into girls selling them when I
+don&rsquo;t have any cash on me (time for a Square charitable collaboration?).</p>
+
+<p>This year I decided to apply the <a href="https://en.wikipedia.org/wiki/Knapsack_problem">knapsack
+algorithm</a> to find the
+best possible approach to buying cookies.  I used the code from the
+wikipedia page, and edited it for GS cookies.  Since I bike most days I
+limited the weight to 80 ounces.  I wanted to maximize for the cookies I
+liked as well as maximize the number of cookies I would get.</p>
+
+<p>Looks like the Savannah smiles really threw off my preferences:<br>
+<code>4 of: do-si-does</code><br>
+<code>3 of: samoas</code><br>
+<code>1 of: savannah smiles</code><br></p>
+
+<p>Regardless, I am looking forward to getting my order!</p>
+
+<p>Try for yourself with this <a href="https://gist.github.com/4680832">gist</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Red E and Me]]></title>
+    <link href="http://stedy.github.io/blog/2013/01/16/red-e-and-me/"/>
+    <updated>2013-01-16T18:02:00-08:00</updated>
+    <id>http://stedy.github.io/blog/2013/01/16/red-e-and-me</id>
+    <content type="html"><![CDATA[<p>Sometime around the 30th of December 2012, I noticed a huge spike in
+traffic on my server.  I looked at the server logs and noticed that many
+of the requests were coming from <a href="http://theredecafe.com">The Red e
+cafe</a>, a cafe in Portland.  I had never been
+to this cafe so I looked up their website only to find my own
+<a href="http://www.zachstednick.com">website</a>
+staring back at me.</p>
+
+<p>For approximately two days my index page and the associated CSS were
+replacing the main site of this cafe.  It was truly bizzare and am not
+sure why someone would hack a commercial site and put another site such
+as an individual website in
+its place.  For the lulz I guess.</p>
+
+<p>Still, the weirdest part of this to me was that not a single person
+conteacted me on twitter or any other medium to ask what I was doing on
+the mainpage of their cafe.  Someday I will have to visit Red e cafe to
+ask in person if this happens often to them.</p>
+
+<p>One other interesting thing I noticed was how often my site gets hit by
+a Baidu spider.  Prior to this one came by maybe once a week now one
+visits about every 20 minutes.</p>
+
+<p><a href="http://theredecafe.com"><img
+src="http://red-e-cafe.morsel.cc/system/logos/1/medium/red_e_logo_large.png"></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Frugal Mondays]]></title>
+    <link href="http://stedy.github.io/blog/2012/12/31/frugal-mondays/"/>
+    <updated>2012-12-31T18:26:00-08:00</updated>
+    <id>http://stedy.github.io/blog/2012/12/31/frugal-mondays</id>
+    <content type="html"><![CDATA[<p>My 2012 resolution was to attempt to avoid spending any money on
+Mondays. <strong>tldr:</strong> I came nowhere close to that goal but it was
+interesting.</p>
+
+<h2>Motivation</h2>
+
+<p>In 2010, I was slightly annoyed by Amazon deciding to stop hosting
+WikiLeaks
+<a href="http://www.reuters.com/article/2010/12/03/us-wikileaks-amazon-idUSTRE6B05EK20101203">website</a>
+so I made it a challenge to avoid buying anything off Amazon in 2011.
+It was difficult especially for all those little things such as odd
+batteries or MP3 albums from obscure music groups.  This year I decided
+to step up the challenge, instead of trying to avoid spending any money
+on Amazon - I would try to avoid spending any money at all on Mondays.</p>
+
+<h2>Rules</h2>
+
+<p>My only rule was no spending physical money in the form of cash or card
+and no spending money online.  I allowed Monday holidays and Mondays I was on a
+work trip or vacation day to be exempted.  The hours were from 12 am
+Monday morning until midnight Monday night.</p>
+
+<h2>Results</h2>
+
+<p>I would estimate that I was successful in about &frac34; weeks per month on
+average and probably 40 Mondays for the entire year.</p>
+
+<p>The two biggest things I noticed:</p>
+
+<ul>
+<li><p>This did not really affect my spending on larger items.  I noticed
+that if it was something that I wanted that was more substantial than
+just coffee I would have no qualms waiting a day to purchase it.  Most
+of the purchases I did not make were for things I could spend less on
+such as trips to the coffee shop.</p></li>
+<li><p>I felt more focused on Mondays.  With no option to take a break and
+walk to the coffee shop or wonder about where to eat lunch, I was able to keep my
+head down and get some good work done.</p></li>
+</ul>
+
+
+<p>Looking ahead, I will continue to avoid spending money on Mondays
+because I find it to be an interesting challenge and anything that can
+help me stay focused is highly welcome in my life.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Running Flask on CentOS]]></title>
+    <link href="http://stedy.github.io/blog/2012/11/30/running-flask-on-centos/"/>
+    <updated>2012-11-30T10:01:00-08:00</updated>
+    <id>http://stedy.github.io/blog/2012/11/30/running-flask-on-centos</id>
+    <content type="html"><![CDATA[<h1>Notes on installing my flask app on CentOS</h1>
+
+<p>I developed a small <a href="http://flask.pocoo.org/">flask</a> application at work and put it on a server
+running CentOS which I ended up spending a few days struggling with
+getting it up and running.  Hopefully this helps someone else
+avoid some of the pain I had.  Jumping right in, the first thing I did
+was install flask, since CentOS 6.3 comes with python 2.6.6 it was easy to
+install pip-python and use that to get flask.  Since the server was
+running Apache 2.2, I put my webapp in /var/www/html. Next step was to
+install httpd_devel and mod_wsgi both of which easily installed from
+source.  Everything seemed fine but I kept getting an HTTP 500 error
+message, here is what I did:</p>
+
+<p>There was a lot of editing of /etc/httpd/conf/httpd.conf to allow for vitrual hosts.<br/>
+This was also the first time I had worked on a subdomain but my DNS had supposedly been setup correctly.</p>
+
+<h2>Is mod_wsgi in the right place?</h2>
+
+<p>Check that mod_wsgi.so is in /usr/lib/httpd/modules a</p>
+
+<p><code>-rwxr-xr-x. 1 root root 315812 Sep  4 10:20 mod_wsgi.so</code></p>
+
+<p>The <code>.</code> at the end of the permissions field is the SELinux (in this case
+CentOS) ACL.</p>
+
+<h2>Does the application have SE Linux permissions?</h2>
+
+<p><code>bash: semanage: comand not found</code></p>
+
+<p>Since semanage is not found I am assume that we are running CentOS
+without any additional security.</p>
+
+<h2>Are we loading mod_wsgi correctly?</h2>
+
+<p>Add a line to httpd.conf</p>
+
+<p><code>LoadModule wsgi_module modules/mod_wsgi.so</code></p>
+
+<h2>Is the socket file set up correctly?</h2>
+
+<p>Socket file not able to write to directory, set socket file to write to
+/tmp using WSGISocketPrefix to allow www-data worker process to connect.</p>
+
+<h2>Server still giving HTTP 500</h2>
+
+<p>This is where I started trying everything I could thinkof.  I set
+LogLevel to debug and later set LogLevel to info and still could not
+figure out what was going on. I even asked on <a href="http://stackoverflow.com/questions/12416532/mod-wsgi-test-wsgi-runs-fine-application-gives-http-500">stack
+overflow</a>
+with little luck.</p>
+
+<h2>Solved!</h2>
+
+<p>Basically, I was not explicit enough in my file path names which caused the majority of these headaches.  I assumed that CentOS would be like
+Debian in how it parsed filepaths, however this was wrong and this
+caused more headaches than needed.  Since this was a python application,
+you would think that I would recall from the Zen of Python that
+&ldquo;Explicit is better than implicit&rdquo; but in this case you would be wrong.
+remember the Zen of Python</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Kalalau Trail]]></title>
+    <link href="http://stedy.github.io/blog/2012/11/20/kalalau-trail/"/>
+    <updated>2012-11-20T23:07:00-08:00</updated>
+    <id>http://stedy.github.io/blog/2012/11/20/kalalau-trail</id>
+    <content type="html"><![CDATA[<p>My wife and I just did the Kalalau trail in Na Pali State park and I wanted to put out some of my general thoughts to help make it easier for someone else who may be interested.  Prior to departure I had a hard time determining what was important and what to trust based on what I read online.  Hopefully this is helpful, although your milage may vary.</p>
+
+<p>The Hawaii State Parks office is in what might be the tallest building in
+Lihue.  They will give you an informational brochure with a map and try
+to sell you a topo map of the entire island.  We thoguht this would be
+a good informational stop but I think best to skip stopping here and use the map in your guidebook.</p>
+
+<p>The trail itself is difficult, but not quite as dramatic as most of the literature makes it out to be.  The first half to Hanakoa Valley is the most up and down and felt like the hardest part in both directions.  The second half feels much easier.  Hanakoa Valley is a great place to stay if you are not feeling up to doing the trek in one day.  Plus, staying here gives you a full afternoon at the beach as opposed to getting in late in the day.  There is a pretty steep and exposed part around mile 8 or 9 that I was glad to walk across when I was properly rested.</p>
+
+<p>We brought packs and a tent and rented a stove and bought fuel at <a href="http://www.pedalnpaddle.com">Pedal
+n&#8217; Paddle</a> in Hanalei which also sold us some of the other things we forget (such as a cooking pot).  There is a grocery store next door that is pretty well stocked.  You may be able to save a few bucks by planning in advance and shopping elsewhere.</p>
+
+<p>We found the mosquitos were a nuisance, but nothing intolerable and the seemed much smaller and less vigorous than those we have on the mainland.  Bug spray was nice but not essential.</p>
+
+<p>We left our car at Ha&#8217;ena State Park.  There is not a lot of parking at the end of the road and we saw some cars that were ticketed for being illegally parked.  The earlier you can get on the trail the better, but you might get lucky.  The guidebooks talk about break-ins at Ke&#8217;e Beach and while we did not see this, Ha&#8217;ena has better visibility.</p>
+
+<p>We filtered all our water.  The guidebooks warn about Leptospirosis and while I am not sure how prevalent this is better to be on the safe side.</p>
+
+<p>There are a lot of long term campers there but there are also plenty of spots.</p>
+
+<p>Otherwise, the hike was a lot of fun and I totally recommend it!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Testing Setup]]></title>
+    <link href="http://stedy.github.io/blog/2012/08/28/testing-setup/"/>
+    <updated>2012-08-28T19:57:00-07:00</updated>
+    <id>http://stedy.github.io/blog/2012/08/28/testing-setup</id>
+    <content type="html"><![CDATA[<h2>This is the first post of this blog</h2>
+
+<p>testing formatting, etc.</p>
+]]></content>
+  </entry>
   
 </feed>

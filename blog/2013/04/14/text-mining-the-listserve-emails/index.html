@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Text Mining the Listserve Emails - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="The Listserve is an email list where
+people sign up for a chance to send an email out to the entire list to
+discuss whatever they want. Currently the &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://stedy.github.io/blog/2013/04/14/text-mining-the-listserve-emails">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="stedy.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Text Mining the Listserve Emails</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-04-14T18:21:00-07:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>14</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>6:21 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><a href="http://www.thelistserve.com">The Listserve</a> is an email list where
+people sign up for a chance to send an email out to the entire list to
+discuss whatever they want.  Currently the number of people enrolled is
+about 20,000 and there has been one email per day since 16 April 2012.
+I thought that since this project has been running for about a year, it
+would be a nice opportunity to learn a little more about text mining.</p>
+
+<p>In this first part I will discuss how I fetched all those emails and
+parsed them and in a second blog post I will talk about what I found.</p>
+
+<p>The first issue was how to get the emails off the server and after
+trying a few solutions I finally ended up using the Python
+<a href="http://docs.python.org/2/library/imaplib.html">imaplib</a> which is a
+Python library for connecting with an IMAP4 email server which is used
+by all the major providers such as Yahoo and Google.  After connecting I
+used the Python <a href="http://docs.python.org/2/library/email.html">email</a> library which helped facilitate selecting certain parts of the email.  I relied
+heavily on the function <code>email.message_from_string()</code> to fetch email
+attributes such as Message-ID or Sender.  I took all these emails and
+dumped them into a SQLite database to later parse with
+<a href="http://cran.r-project.org">R</a>.</p>
+
+<p>I use R almost daily for work so it was nice to tackle this part of the
+project with tools I knew pretty well.  I used <code>sapply()</code> and
+<code>strsplit()</code> mostly to parse out parts of various email attributes and
+then used the <a href="http://cran.r-project.org/web/packages/tm/index.html">tm</a>
+package to handle all of the text processing.  The tm package makes it
+easier to get all the emails into a term document matrix which is much
+easier to work with a large corpus of text such as this.  I used an
+English dictonary with the tm package to remove stop words and for
+stemming (reducing the word to its base form).  There have been two
+emails so far in Portuguese but the rest are all in English.</p>
+
+<p>Initially I thought I could track all the emails by date but this proved
+to be a difficult task due to the nuances of email and when they
+actually got sent off the server.  Instead I ended up using the
+Message-ID for making sure that I did not duplicate emails in the
+analysis.</p>
+
+<p>I put up all the source code on a github
+<a href="https://github.com/stedy/thelistserve-stats">repo</a>.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2013-04-14T18:21:00-07:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>14</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>6:21 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/r/'>r,</a>, <a class='category' href='/blog/categories/tm/'>tm</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://stedy.github.io/blog/2013/04/14/text-mining-the-listserve-emails/" data-via="" data-counturl="http://stedy.github.io/blog/2013/04/14/text-mining-the-listserve-emails/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/02/27/insert-cat-picture/" title="Previous Post: insert cat picture">&laquo; insert cat picture</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/04/14/analysis-of-the-listserve-emails/" title="Next Post: Analysis of The Listserve emails">Analysis of The Listserve emails &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/04/summarizing-books-read-over-time/">&#8216;Summarizing Books Read Over Time&#8217;</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/19/simple-webstats-with-r/">Simple Webstats With R</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/05/206-419-parks/">(206)419-PARKS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/30/lego-price-estimates-over-time/">LEGO Price Estimates Over Time</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/19/datasets-for-machine-learning-with-r-by-lantz/">Datasets for Machine Learning With R by Lantz</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

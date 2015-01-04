@@ -9,7 +9,9 @@
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content=" Blog Archives Recent Posts ">
+  <meta name="description" content="I recently read an interesting blog post where the author examined their books rated on Goodreads and summarizing interesting
+trends.
+I decided to do &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,7 +68,822 @@
       <div class="blog-index">
   
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/01/04/summarizing-books-read-over-time/">&#8216;Summarizing Books Read Over Time&#8217;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-01-04T13:54:43-08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>4</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>1:54 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I recently read an interesting blog post where the author examined their books rated on Goodreads and summarizing <a href="http://citizen-statistician.org/2014/12/31/annual-review-of-reading/">interesting
+trends</a>.
+I decided to do a similar analysis even though I use
+<a href="https://www.librarything.com/profile/pbirch01">LibraryThing</a>
+instead.</p>
+
+<p>LibraryThing has a nice option to allow to to export your data in a
+variety of <a href="https://www.librarything.com/export.php">formats</a>. Since I
+write R code to parse CSV files everyday I thought I would do something
+different and parse a JSON file with python.</p>
+
+<p>I have been on LibraryThing since 2007 and the first question I was
+interested in was have my average ratings changed over time? I
+calculated the mean for each book by year:</p>
+
+<table>
+<thead>
+<tr>
+<th> Year </th>
+<th style="text-align:right;"> Average Rating </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 2007 </td>
+<td style="text-align:right;"> 3.446809</td>
+</tr>
+<tr>
+<td> 2008 </td>
+<td style="text-align:right;"> 3.480000</td>
+</tr>
+<tr>
+<td> 2009 </td>
+<td style="text-align:right;"> 3.485294</td>
+</tr>
+<tr>
+<td> 2010 </td>
+<td style="text-align:right;"> 3.641509</td>
+</tr>
+<tr>
+<td> 2011 </td>
+<td style="text-align:right;"> 3.456522</td>
+</tr>
+<tr>
+<td> 2012 </td>
+<td style="text-align:right;"> 3.529412</td>
+</tr>
+<tr>
+<td> 2013 </td>
+<td style="text-align:right;"> 3.321429</td>
+</tr>
+<tr>
+<td> 2014 </td>
+<td style="text-align:right;"> 3.614583</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>While uninteresting, this makes a lot of sense - if I am reading a book
+that I do not enjoy, I will usually bail on it which tends to bias my
+ratings upward. Over time, there have been a few notable
+<a href="https://www.librarything.com/work/11691727/reviews/92168929">exceptions</a>.</p>
+
+<p>One of the other interesting analyses in the blog post was examining how the
+reviewer&rsquo;s ratings have changed based on the month of the year. I wanted to
+make a similar plot using R&rsquo;s
+<a href="http://docs.ggplot2.org/current/index.html">ggplot2</a> however since I
+was writing this in python I was largely limited to matplotlib.
+Fortunately, many people have struggled with this issue and the fine
+folks at yhat have ported ggplot2 over to
+<a href="https://pypi.python.org/pypi/ggplot">python</a>. With this library I was
+able to use <code>geom_smooth</code> to produce the following plot showing rating
+trends by week.</p>
+
+<p><img src="http://zachstednick.com/all_years.png"></p>
+
+<p>I tried to figure out why my legend never showed up but I figured that
+since most of the trend lines were pretty much the same anyways that the
+plot was fine without a legend. It appears that I get in most of my good
+reviews early in the year and am harsher later in the year.</p>
+
+<p>The last figure in the blog post compares the writer&rsquo;s review scores to
+the Goodreads consensus score. I attempted to
+replicate this but ran into more trouble than it was worth to extract
+that data from LibraryThing so I abandoned that analysis.</p>
+
+<p>If interested, I put my python code in a GitHub
+<a href="https://gist.github.com/stedy/2cb4fb1f332508f39ff2">gist</a>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/11/19/simple-webstats-with-r/">Simple Webstats With R</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-11-19T17:01:34-08:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>19</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>5:01 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As someone who puts out writings out publically, I am naturally curious who (if anyone) is actually reading what I write. To answer this I developed a simple webstat calculator using R. I realize there are many options out there for tracking visits but to paraphrase my friend Andy, <a href="http://wingolog.org/archives/2014/11/14/on-yakshave-on-color-on-cosines-on-glitchen">when has using standard libraries lead to anything cool?</a>.</p>
+
+<p>My main interests in this project is to answer two questions:</p>
+
+<ol>
+<li><p>Are people visting this site?</p></li>
+<li><p>Where are they visting from?</p></li>
+</ol>
+
+
+<p>I don&rsquo;t really care about things like <a href="https://en.wikipedia.org/wiki/Bounce_rate">bounce rate</a> or type of device used to access the site. Not having to worry about either of these issues helps cut down on the complexity. I run this site on an Apache server and use a standard log output to write my logfile:
+<code>LogFormat "%v:%p %h %l %u %t \"%r\" %&gt;s %O \"%{Referer}i\" \"%{User-Agent}i\"</code></p>
+
+<p>I made a small R script that uses <a href="http://cran.r-project.org/web/packages/knitr/">knitr</a> to output plots to HTML for ease in viewing. I wrote a shell script that uses the excellent <a href="http://dirk.eddelbuettel.com/code/littler.html">little r</a> to perform the commands. I run the shell script daily as a cron job and only look back at the past week&rsquo;s worth of data. Since this blog is served on github pages, it can be difficult to see page views so I use images loaded as a proxy.</p>
+
+<p>Here are some example plots of recent visitors:</p>
+
+<p><img src="http://zachstednick.com/visitor.png"></p>
+
+<p>And then another plot of visitor locations:</p>
+
+<p><img src="http://zachstednick.com/referrer_location.png"></p>
+
+<p>That outlier from Brazil is likely a Google bot crawling the site; better detection and removal of bot traffic from the final output is on the TODO list. All of the code (minus the shell script) lives on <a href="https://github.com/stedy/simple-webstats">github</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/11/05/206-419-parks/">(206)419-PARKS</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-11-05T15:27:00-08:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>5</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>3:27 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I recently became aware of the efforts of Linnea Westerlind who made a
+goal to visit every park in Seattle and documented her efforts
+<a href="http://www.yearofseattleparks.com/">here</a>. I thought this was pretty
+neat so I looked up the list of <a href="http://www.seattle.gov/parks/listall.asp">City of Seattle
+Parks</a> which currently lists
+419 parks. The definitions for a park are hard to determine and this
+list ends up with some oddball parks such as <a href="https://www.google.com/maps/place/Crescent+Place/@47.6842435,-122.3330848,19z/data=!4m2!3m1!1s0x54901413dd56bf9f:0xa19ed07208659a24">Crescent
+Place</a>.
+Still I think it is an interesting way to learn more about where you live
+wherever that may be. I have currently visited 118/419  parkswhich is
+about 28%, not bad. Not
+sure if I will be able to reach them faster than the 4 years it took
+Westerlind but maybe I should just focus on the journey instead.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/08/30/lego-price-estimates-over-time/">LEGO Price Estimates Over Time</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-08-30T16:22:00-07:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>4:22 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>LEGO recently introduced a new LEGO set called <a href="http://shop.lego.com/en-US/Research-Institute-21110">Research
+Institute</a> which
+featured three female scientists. Since my wife is also a female
+scientist, I tried to order one from the LEGO website only to learn that
+they had sold out in less than a day. I then wrote an email complaining
+about this to LEGO who responded by sending me an apology note and a
+catalog.</p>
+
+<p>I grew up playing with LEGO sets, hard to avoid when you were named Zach
+and commercials like
+<a href="https://www.youtube.com/watch?v=pDH3AoOQzE0">this</a> dominated the
+airwaves. Anyways, when I was a kid my dad once mentioned to me that a good rule of thumb
+for determining the price of a LEGO set was to estimate each brick
+costing about 10 cents. This new catalog made me wonder if this was still
+true. I copied all the model numbers as well as the number of pieces and
+the prices. I was also curious in how true this trend was when adjusted
+for inflation so I used the CPI Inflation calculator from <a href="http://data.bls.gov/cgi-bin/cpicalc.pl?cost1=.10&amp;year1=1989&amp;year2=2014">US Bureau of
+Labor
+Statistics</a> which showed
+that $0.10 in 1989 had the same buying power as $0.19 in 2014. Ideally I
+could have found a catalog from 1989 but I don&rsquo;t remember any back then
+and I probably would have cut it up to put pictures in my locker or
+something like that. I used R
+to plot both of these trends and it appears that my dad&rsquo;s estimate still
+holds true for 2014.</p>
+
+<p><img src="http://zachstednick.com/lego_by_year.png"></p>
+
+<p>A correlation calculation for all sets gives a value of 0.91 which means my dad had a
+pretty good estimate back in the day.</p>
+
+<p>I also looked at the average price for each collection and found that
+almost all collections retained a high correlation between the estimated
+price and the actual price.</p>
+
+<table>
+<thead>
+<tr>
+<th> Collection </th>
+<th> Collection Mean Price </th>
+<th style="text-align:right;"> Collection Correlation </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> Basics </td>
+<td> 29.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Chima </td>
+<td> 38.99 </td>
+<td style="text-align:right;"> 0.977</td>
+</tr>
+<tr>
+<td> City </td>
+<td> 54.365 </td>
+<td style="text-align:right;"> 0.896</td>
+</tr>
+<tr>
+<td> Creator </td>
+<td> 100.375 </td>
+<td style="text-align:right;"> 0.955</td>
+</tr>
+<tr>
+<td> DC Superheroes </td>
+<td> 76.657 </td>
+<td style="text-align:right;"> 1</td>
+</tr>
+<tr>
+<td> Disney Princess </td>
+<td> 27.657 </td>
+<td style="text-align:right;"> 0.963</td>
+</tr>
+<tr>
+<td> Exclusive </td>
+<td> 149.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Friends </td>
+<td> 23.354 </td>
+<td style="text-align:right;"> 0.992</td>
+</tr>
+<tr>
+<td> Ideas </td>
+<td> 49.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Juniors </td>
+<td> 27.49 </td>
+<td style="text-align:right;"> 0.901</td>
+</tr>
+<tr>
+<td> LEGO Movie </td>
+<td> 63.99 </td>
+<td style="text-align:right;"> 0.997</td>
+</tr>
+<tr>
+<td> Marvel Superheroes </td>
+<td> 40.99 </td>
+<td style="text-align:right;"> 0.934</td>
+</tr>
+<tr>
+<td> Mindstorms </td>
+<td> 349.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Minecraft </td>
+<td> 139.96 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Mixels </td>
+<td> 4.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Ninjago </td>
+<td> 47.434 </td>
+<td style="text-align:right;"> 0.976</td>
+</tr>
+<tr>
+<td> Simpsons </td>
+<td> 199.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Star Wars </td>
+<td> 133.365 </td>
+<td style="text-align:right;"> 0.979</td>
+</tr>
+<tr>
+<td> Technic </td>
+<td> 81.99 </td>
+<td style="text-align:right;"> 0.989</td>
+</tr>
+<tr>
+<td> Ultra Agents </td>
+<td> 45.323 </td>
+<td style="text-align:right;"> 0.983</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Raw data and code for this lives at this
+<a href="https://gist.github.com/stedy/92b949ba44effd66c855">gist</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/08/19/datasets-for-machine-learning-with-r-by-lantz/">Datasets for Machine Learning With R by Lantz</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-08-19T15:31:00-07:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>19</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>3:31 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I recently read <a href="https://www.packtpub.com/big-data-and-business-intelligence/machine-learning-r">Machine Learning with
+R</a>
+by Brett Lantz. This is a book that provides an introduction to machine
+learning using R. I really enjoyed the book and thought Lantz did an
+excellent job explaining the content as well as providing many good
+references and examples, which is what lead to my problem with the book.
+As far as I can tell, Packt Publishing does not make its datasets
+available online unless you buy the book and create a <a href="https://www.packtpub.com/books/content/support">user
+account</a> which can be a
+problem if you are checking the book out from the library or borrowing
+the book from a friend. All of these datasets
+are in the public domain but simply needed some cleaning up and
+recoding to match the format in the book so I went ahead and made a
+<a href="https://github.com/stedy/Machine-Learning-with-R-datasets">github repo</a>
+to host them.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/07/31/analysis-of-gas-efficiency-by-brand/">Analysis of Gas Efficiency by Brand</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-07-31T17:46:00-07:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2014</span></span> <span class='time'>5:46 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I have recorded every trip to the gas station so far in 2014 and finally
+got around to analyzing the first seven months. I currently drive a <a href="https://s3.amazonaws.com/images.thecarconnection.com/sml/honda_100227510_s.jpg">2010
+Honda Fit</a>
+and bought only 87 grade gas for the duration of this study.</p>
+
+<p>I was initially interested in how far can I travel per dollar, which can easily be
+calculated:</p>
+
+<p>A first attempt yields the following table:</p>
+
+<table>
+<thead>
+<tr>
+<th> Brand </th>
+<th style="text-align:right;"> meancost </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 7-11 (Citgo) </td>
+<td style="text-align:right;"> 7.858</td>
+</tr>
+<tr>
+<td> 76 </td>
+<td style="text-align:right;"> 7.123</td>
+</tr>
+<tr>
+<td> Arco </td>
+<td style="text-align:right;"> 8.451</td>
+</tr>
+<tr>
+<td> Chevron </td>
+<td style="text-align:right;"> 8.704</td>
+</tr>
+<tr>
+<td> Costco  </td>
+<td style="text-align:right;"> 9.593</td>
+</tr>
+<tr>
+<td> Safeway </td>
+<td style="text-align:right;"> 7.791</td>
+</tr>
+<tr>
+<td> Shell </td>
+<td style="text-align:right;"> 7.597</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Far and away Costco and Chevron have the best mean cost, but they
+each have only one datapoint and the Costco was located in Marysville,
+WA while the Chevron was located in Sherwood, OR which means that both
+of
+these were largely composed of highway miles and therefore higher fuel
+efficiency. I
+initially tried to account for highway miles versus city miles but have
+not had much success so far.</p>
+
+<p>I then looked at MPG by gas station:</p>
+
+<table>
+<thead>
+<tr>
+<th> Brand </th>
+<th style="text-align:right;"> meanMPG </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 7-11 (Citgo) </td>
+<td style="text-align:right;"> 29.07</td>
+</tr>
+<tr>
+<td> 76 </td>
+<td style="text-align:right;"> 26.96</td>
+</tr>
+<tr>
+<td> Arco </td>
+<td style="text-align:right;"> 29.88</td>
+</tr>
+<tr>
+<td> Chevron </td>
+<td style="text-align:right;"> 34.80</td>
+</tr>
+<tr>
+<td> Costco </td>
+<td style="text-align:right;"> 30.50</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Finally, I plotted MPG against mean cost.</p>
+
+<p><img src="http://zachstednick.com/gas_mpg.png"></p>
+
+<p>Since (for now) we are ignoring Costco and Chevron, it appears that
+Safeway is best for
+lowest cost with highest mean MPG. I wonder if the <a href="http://www.cockeyed.com/pranks/safeway/ultimate_shopper.html">Safeway ultimate
+shopper</a>
+guy is still around?</p>
+
+<p>Data and code at this
+<a href="https://gist.github.com/stedy/a198bb0c7b010dcdf7af">gist</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/02/24/writing-a-twitter-bot-for-fun-and-profit/">Writing a Twitter Bot for Fun and Profit</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-02-24T21:42:00-08:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>9:42 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>One of my first thoughts when Twitter had its IPO was that the days of
+writing Twitter bots was over. My fear was that they would lock down
+their
+platform in order to more accurately sell ads.</p>
+
+<p>Man, was I wrong.</p>
+
+<p>The Twitter API is still as robust as ever and allows for creating Twitter bots.
+One of the current trends is to try to generate buzz around a product or
+idea by getting people to use a specific hashtag. This can often lead to
+slightly hilarious results, such as the <a href="http://mlb.mlb.com/mlb/awards/y2014/faceofmlb/">Face of
+MLB</a>. Basically, the
+fans &ldquo;vote&rdquo; for their favorite player to be the Face of MLB by using a
+certain hashtag. I cannot think of a better job for a twitter bot.</p>
+
+<p>Setting up a bot or Twitter Application is easy, just go to
+<a href="apps.twitter.com">Twitter Apps</a> and login or create a new username and
+log in. Follow the steps and you can get an API key in a few minutes. Although note that in order to write tweets as a bot you have to
+choose Read + Write (instead of the default Write). I run my bot largely using the
+<a href="https://pypi.python.org/pypi/tweepy/2.2">tweepy</a> Python library which
+provides easy access to the Twitter API. Here is a
+<a href="https://gist.github.com/stedy/9203520">gist</a> of a bot I am
+running for the Face of MLB. Twitter does not allow the same tweet to be
+posted more than once from an account so I just add something like the
+current time:</p>
+
+<blockquote class="twitter-tweet" lang="en"><p><a
+href="https://twitter.com/_J4EZ">@_j4ez</a> Why not Zoidberg? the time
+is Monday, 09:09:PM <a
+href="https://twitter.com/search?q=%23ericsogard&amp;src=hash">#ericsogard</a>
+<a href="https://twitter.com/search?q=%23FaceofMLB&amp;src=hash">#FaceofMLB</a></p>&mdash;
+Zoidberg bot (@ZoidbergBot) <a href="https://twitter.com/ZoidbergBot/statuses/438179021684097024">February
+25, 2014</a></blockquote>
+
+
+<script async src="//platform.twitter.com/widgets.js"
+charset="utf-8"></script>
+
+
+<p>I will admit this is kinda silly, but if I can&rsquo;t use my programming
+skills to get
+someone like <a href="http://oakland.athletics.mlb.com/team/player.jsp?player_id=519299#gameType=%27R%27">Eric
+Sogard</a>
+elected the Face of MLB, then what&rsquo;s the point of programming?</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/02/06/foursquare-without-a-smartphone/">Foursquare Without a Smartphone</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-02-06T22:10:00-08:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>6</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>10:10 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I don&rsquo;t have a smartphone. Because of this,
+I am apparently missing out on sweet checkin
+<a href="https://foursquare.com/stevewoz/checkin/52f4182911d23311d6d12c6d?s=O5DyXc1-s3wjItCncf6KlvDtyxc&amp;ref=tw">badges</a>
+that I could be displaying on a user
+profile on fourquare or somewhere similar. This, in addition to how
+amazed I am by the <a href="http://feltron.com/ar12_01.html">Feltron
+annual report</a> does make slightly
+envious of people with abilities to easily track daily events. Instead
+of getting a smartphone, I opted for a much more low
+tech solution.</p>
+
+<p><img src="http://zachstednick.com/calendar.jpg"></p>
+
+<p>This is a picture of any bars, restaurants or events I
+went to in the month of January. I am also
+trying to record how often I work out and what kind of workout I am
+doing. Its been interesting thus far to try and observe trends and
+determine if I can gain any insight. I can definitely see why people are
+interested in using a device like a fitbit and or a smartphone for
+tracking. Until that day, I think I will
+just stick to using pen on a calendar.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/11/17/thoughts-on-solving-my-first-100-problems-on-project-euler/">Thoughts on Solving My First 100 Problems on Project Euler</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-11-17T18:40:00-08:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>6:40 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Finally!</p>
+
+<p><img src="http://projecteuler.net/profile/zachs.png"></p>
+
+<p>A few years ago I set a goal to solve 100 problems on <a href="http://www.projecteuler.net">Project
+Euler</a> with python. My motivation was to learn as much
+about problem solving as I could and ultimately finish with <a href="http://projecteuler.net/problem=96">Problem
+96</a>, a sudoku solver. My plan was to
+write about my progess in a <a href="http://zerotosudoku.blogspot.com/">blog</a>.
+More than three years later, I finally finished that goal (although I
+quickly abandoned that blog after starting it). The problems definitely got harder
+and it took me a while to get motivated to work on them as well as to
+solve them.  I did however come up with three major lessons learned in
+my first 100 problems:</p>
+
+<p>1 - <strong>Narrow the search space</strong>
+By far the biggest lesson I learned was how to cut down on possible
+options before even starting to program. Since one of the rules of
+Project Euler is to solve each problem within a minute, brute force
+quickly gets thrown out the window. An example would be taking the
+square root of the upper bound to reduce the amount of searching of
+numbers above the square root. I learned to think more in depth about
+the problem and try to optimize the search window to be more effiecient.</p>
+
+<p>2 - <strong>Have a toolbox and use it</strong>
+I quickly developed a set of functions that I imported frequently that
+included functions such as a prime number sieve, a function to check if
+a number was pandigital, and a function for getting all factors of a
+number. I found that the way the problems were structured meant that I
+was frequently coming back to issues or approaches I used on earlier
+problems and I did not want to have to rewrite functions i had
+previously used.</p>
+
+<p>3 - <strong>Google and Stack Overflow are your friends</strong>
+I used both frequently, there are many other people who post their
+answers or even just the
+<a href="https://code.google.com/p/projecteuler-solutions/">solutions</a>. You can
+use these if you want, but I found I was able to learn about libraries such as
+itertools, differences between python&rsquo;s <code>range()</code> vs. <code>xrange()</code> and
+many different types of search algorithms.</p>
+
+<p>I would highly encourage you to try out a few problems on <a href="https://www.projecteuler.net">Project
+Euler</a>, I had fun and learned way more
+python than I thought I would (even if it took me a few years longer than
+originally planned.)</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/21/hard-rules/">Hard Rules</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-08-21T21:39:00-07:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2013</span></span> <span class='time'>9:39 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I have been thinking a lot about this <a href="http://sebastianmarshall.com/hard-rules">blog
+post</a> and in many ways I have
+to agree what the author is saying.  The internet can be a distracting
+<a href="http://www.ashersarlin.com/archives/2004/09/honestly_who_co.php">place</a>
+and making rules for yourself can help you stay focused and help
+maintain your energy levels.  Here are some of mine:</p>
+
+<ul>
+<li>Check Sports Illustrated only twice a day - around 10:30 AM and 2:30 PM</li>
+<li>No reddit at work</li>
+<li><a href="http://news.ycombinator.org">Hacker News</a> once a day in the evening</li>
+<li>LinkedIn at most once a week</li>
+<li>Check and respond to personal email only from noon - 1 PM while at
+work</li>
+<li>No computer after 11 PM</li>
+</ul>
+
+
+<p>For me, each of these were challenging to implement and I had to use browser extensions such as
+  <a href="https://addons.mozilla.org/en-US/firefox/addon/leechblock/">Leechblock</a>
+or
+<a href="https://chrome.google.com/webstore/detail/stayfocusd/laankejkbhbdhmipfmgcngdelahlfoji">StayFocusd</a>.
+Now, with these hard rules in place I don&rsquo;t have to debate whether I
+should go to a certain site or feel guilty while on that site.  Instead,
+I can put that energy either into work or simply getting off the
+computer faster - both of which are well worth the initial challenges of
+hard rules.</p>
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
+    
+      <a class="prev" href="/posts/2">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -77,6 +894,26 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/04/summarizing-books-read-over-time/">&#8216;Summarizing Books Read Over Time&#8217;</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/19/simple-webstats-with-r/">Simple Webstats With R</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/05/206-419-parks/">(206)419-PARKS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/30/lego-price-estimates-over-time/">LEGO Price Estimates Over Time</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/19/datasets-for-machine-learning-with-r-by-lantz/">Datasets for Machine Learning With R by Lantz</a>
+      </li>
     
   </ul>
 </section>

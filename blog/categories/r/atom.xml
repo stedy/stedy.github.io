@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: R | My Octopress Blog]]></title>
+  <link href="http://stedy.github.io/blog/categories/r/atom.xml" rel="self"/>
+  <link href="http://stedy.github.io/"/>
+  <updated>2015-01-04T15:31:48-08:00</updated>
+  <id>http://stedy.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Datasets for Machine Learning With R by Lantz]]></title>
+    <link href="http://stedy.github.io/blog/2014/08/19/datasets-for-machine-learning-with-r-by-lantz/"/>
+    <updated>2014-08-19T15:31:00-07:00</updated>
+    <id>http://stedy.github.io/blog/2014/08/19/datasets-for-machine-learning-with-r-by-lantz</id>
+    <content type="html"><![CDATA[<p>I recently read <a href="https://www.packtpub.com/big-data-and-business-intelligence/machine-learning-r">Machine Learning with
+R</a>
+by Brett Lantz. This is a book that provides an introduction to machine
+learning using R. I really enjoyed the book and thought Lantz did an
+excellent job explaining the content as well as providing many good
+references and examples, which is what lead to my problem with the book.
+As far as I can tell, Packt Publishing does not make its datasets
+available online unless you buy the book and create a <a href="https://www.packtpub.com/books/content/support">user
+account</a> which can be a
+problem if you are checking the book out from the library or borrowing
+the book from a friend. All of these datasets
+are in the public domain but simply needed some cleaning up and
+recoding to match the format in the book so I went ahead and made a
+<a href="https://github.com/stedy/Machine-Learning-with-R-datasets">github repo</a>
+to host them.</p>
+]]></content>
+  </entry>
+  
+</feed>

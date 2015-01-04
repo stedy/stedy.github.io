@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Running Flask on CentOS - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="Notes on installing my flask app on CentOS I developed a small flask application at work and put it on a server
+running CentOS which I ended up &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://stedy.github.io/blog/2012/11/30/running-flask-on-centos">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="stedy.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Running Flask on CentOS</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-11-30T10:01:00-08:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>10:01 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h1>Notes on installing my flask app on CentOS</h1>
+
+<p>I developed a small <a href="http://flask.pocoo.org/">flask</a> application at work and put it on a server
+running CentOS which I ended up spending a few days struggling with
+getting it up and running.  Hopefully this helps someone else
+avoid some of the pain I had.  Jumping right in, the first thing I did
+was install flask, since CentOS 6.3 comes with python 2.6.6 it was easy to
+install pip-python and use that to get flask.  Since the server was
+running Apache 2.2, I put my webapp in /var/www/html. Next step was to
+install httpd_devel and mod_wsgi both of which easily installed from
+source.  Everything seemed fine but I kept getting an HTTP 500 error
+message, here is what I did:</p>
+
+<p>There was a lot of editing of /etc/httpd/conf/httpd.conf to allow for vitrual hosts.<br/>
+This was also the first time I had worked on a subdomain but my DNS had supposedly been setup correctly.</p>
+
+<h2>Is mod_wsgi in the right place?</h2>
+
+<p>Check that mod_wsgi.so is in /usr/lib/httpd/modules a</p>
+
+<p><code>-rwxr-xr-x. 1 root root 315812 Sep  4 10:20 mod_wsgi.so</code></p>
+
+<p>The <code>.</code> at the end of the permissions field is the SELinux (in this case
+CentOS) ACL.</p>
+
+<h2>Does the application have SE Linux permissions?</h2>
+
+<p><code>bash: semanage: comand not found</code></p>
+
+<p>Since semanage is not found I am assume that we are running CentOS
+without any additional security.</p>
+
+<h2>Are we loading mod_wsgi correctly?</h2>
+
+<p>Add a line to httpd.conf</p>
+
+<p><code>LoadModule wsgi_module modules/mod_wsgi.so</code></p>
+
+<h2>Is the socket file set up correctly?</h2>
+
+<p>Socket file not able to write to directory, set socket file to write to
+/tmp using WSGISocketPrefix to allow www-data worker process to connect.</p>
+
+<h2>Server still giving HTTP 500</h2>
+
+<p>This is where I started trying everything I could thinkof.  I set
+LogLevel to debug and later set LogLevel to info and still could not
+figure out what was going on. I even asked on <a href="http://stackoverflow.com/questions/12416532/mod-wsgi-test-wsgi-runs-fine-application-gives-http-500">stack
+overflow</a>
+with little luck.</p>
+
+<h2>Solved!</h2>
+
+<p>Basically, I was not explicit enough in my file path names which caused the majority of these headaches.  I assumed that CentOS would be like
+Debian in how it parsed filepaths, however this was wrong and this
+caused more headaches than needed.  Since this was a python application,
+you would think that I would recall from the Zen of Python that
+&ldquo;Explicit is better than implicit&rdquo; but in this case you would be wrong.
+remember the Zen of Python</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2012-11-30T10:01:00-08:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>10:01 am</span></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://stedy.github.io/blog/2012/11/30/running-flask-on-centos/" data-via="" data-counturl="http://stedy.github.io/blog/2012/11/30/running-flask-on-centos/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/11/20/kalalau-trail/" title="Previous Post: kalalau trail">&laquo; kalalau trail</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/12/31/frugal-mondays/" title="Next Post: Frugal Mondays">Frugal Mondays &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/04/summarizing-books-read-over-time/">&#8216;Summarizing Books Read Over Time&#8217;</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/19/simple-webstats-with-r/">Simple Webstats With R</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/05/206-419-parks/">(206)419-PARKS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/30/lego-price-estimates-over-time/">LEGO Price Estimates Over Time</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/19/datasets-for-machine-learning-with-r-by-lantz/">Datasets for Machine Learning With R by Lantz</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

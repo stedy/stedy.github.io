@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Analysis of Gas Efficiency by Brand - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="I have recorded every trip to the gas station so far in 2014 and finally
+got around to analyzing the first seven months. I currently drive a 2010 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://stedy.github.io/blog/2014/07/31/analysis-of-gas-efficiency-by-brand">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="stedy.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Analysis of Gas Efficiency by Brand</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-07-31T17:46:00-07:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2014</span></span> <span class='time'>5:46 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I have recorded every trip to the gas station so far in 2014 and finally
+got around to analyzing the first seven months. I currently drive a <a href="https://s3.amazonaws.com/images.thecarconnection.com/sml/honda_100227510_s.jpg">2010
+Honda Fit</a>
+and bought only 87 grade gas for the duration of this study.</p>
+
+<p>I was initially interested in how far can I travel per dollar, which can easily be
+calculated:</p>
+
+<p>A first attempt yields the following table:</p>
+
+<table>
+<thead>
+<tr>
+<th> Brand </th>
+<th style="text-align:right;"> meancost </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 7-11 (Citgo) </td>
+<td style="text-align:right;"> 7.858</td>
+</tr>
+<tr>
+<td> 76 </td>
+<td style="text-align:right;"> 7.123</td>
+</tr>
+<tr>
+<td> Arco </td>
+<td style="text-align:right;"> 8.451</td>
+</tr>
+<tr>
+<td> Chevron </td>
+<td style="text-align:right;"> 8.704</td>
+</tr>
+<tr>
+<td> Costco  </td>
+<td style="text-align:right;"> 9.593</td>
+</tr>
+<tr>
+<td> Safeway </td>
+<td style="text-align:right;"> 7.791</td>
+</tr>
+<tr>
+<td> Shell </td>
+<td style="text-align:right;"> 7.597</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Far and away Costco and Chevron have the best mean cost, but they
+each have only one datapoint and the Costco was located in Marysville,
+WA while the Chevron was located in Sherwood, OR which means that both
+of
+these were largely composed of highway miles and therefore higher fuel
+efficiency. I
+initially tried to account for highway miles versus city miles but have
+not had much success so far.</p>
+
+<p>I then looked at MPG by gas station:</p>
+
+<table>
+<thead>
+<tr>
+<th> Brand </th>
+<th style="text-align:right;"> meanMPG </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 7-11 (Citgo) </td>
+<td style="text-align:right;"> 29.07</td>
+</tr>
+<tr>
+<td> 76 </td>
+<td style="text-align:right;"> 26.96</td>
+</tr>
+<tr>
+<td> Arco </td>
+<td style="text-align:right;"> 29.88</td>
+</tr>
+<tr>
+<td> Chevron </td>
+<td style="text-align:right;"> 34.80</td>
+</tr>
+<tr>
+<td> Costco </td>
+<td style="text-align:right;"> 30.50</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Finally, I plotted MPG against mean cost.</p>
+
+<p><img src="http://zachstednick.com/gas_mpg.png"></p>
+
+<p>Since (for now) we are ignoring Costco and Chevron, it appears that
+Safeway is best for
+lowest cost with highest mean MPG. I wonder if the <a href="http://www.cockeyed.com/pranks/safeway/ultimate_shopper.html">Safeway ultimate
+shopper</a>
+guy is still around?</p>
+
+<p>Data and code at this
+<a href="https://gist.github.com/stedy/a198bb0c7b010dcdf7af">gist</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2014-07-31T17:46:00-07:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2014</span></span> <span class='time'>5:46 pm</span></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://stedy.github.io/blog/2014/07/31/analysis-of-gas-efficiency-by-brand/" data-via="" data-counturl="http://stedy.github.io/blog/2014/07/31/analysis-of-gas-efficiency-by-brand/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/02/24/writing-a-twitter-bot-for-fun-and-profit/" title="Previous Post: Writing a twitter bot for fun and profit">&laquo; Writing a twitter bot for fun and profit</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/08/19/datasets-for-machine-learning-with-r-by-lantz/" title="Next Post: Datasets for Machine Learning with R by Lantz">Datasets for Machine Learning with R by Lantz &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/04/summarizing-books-read-over-time/">&#8216;Summarizing Books Read Over Time&#8217;</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/19/simple-webstats-with-r/">Simple Webstats With R</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/05/206-419-parks/">(206)419-PARKS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/30/lego-price-estimates-over-time/">LEGO Price Estimates Over Time</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/19/datasets-for-machine-learning-with-r-by-lantz/">Datasets for Machine Learning With R by Lantz</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

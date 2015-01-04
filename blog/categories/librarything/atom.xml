@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Librarything | My Octopress Blog]]></title>
+  <link href="http://stedy.github.io/blog/categories/librarything/atom.xml" rel="self"/>
+  <link href="http://stedy.github.io/"/>
+  <updated>2015-01-04T15:31:48-08:00</updated>
+  <id>http://stedy.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA['Summarizing Books Read Over Time']]></title>
+    <link href="http://stedy.github.io/blog/2015/01/04/summarizing-books-read-over-time/"/>
+    <updated>2015-01-04T13:54:43-08:00</updated>
+    <id>http://stedy.github.io/blog/2015/01/04/summarizing-books-read-over-time</id>
+    <content type="html"><![CDATA[<p>I recently read an interesting blog post where the author examined their books rated on Goodreads and summarizing <a href="http://citizen-statistician.org/2014/12/31/annual-review-of-reading/">interesting
+trends</a>.
+I decided to do a similar analysis even though I use
+<a href="https://www.librarything.com/profile/pbirch01">LibraryThing</a>
+instead.</p>
+
+<p>LibraryThing has a nice option to allow to to export your data in a
+variety of <a href="https://www.librarything.com/export.php">formats</a>. Since I
+write R code to parse CSV files everyday I thought I would do something
+different and parse a JSON file with python.</p>
+
+<p>I have been on LibraryThing since 2007 and the first question I was
+interested in was have my average ratings changed over time? I
+calculated the mean for each book by year:</p>
+
+<table>
+<thead>
+<tr>
+<th> Year </th>
+<th style="text-align:right;"> Average Rating </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 2007 </td>
+<td style="text-align:right;"> 3.446809</td>
+</tr>
+<tr>
+<td> 2008 </td>
+<td style="text-align:right;"> 3.480000</td>
+</tr>
+<tr>
+<td> 2009 </td>
+<td style="text-align:right;"> 3.485294</td>
+</tr>
+<tr>
+<td> 2010 </td>
+<td style="text-align:right;"> 3.641509</td>
+</tr>
+<tr>
+<td> 2011 </td>
+<td style="text-align:right;"> 3.456522</td>
+</tr>
+<tr>
+<td> 2012 </td>
+<td style="text-align:right;"> 3.529412</td>
+</tr>
+<tr>
+<td> 2013 </td>
+<td style="text-align:right;"> 3.321429</td>
+</tr>
+<tr>
+<td> 2014 </td>
+<td style="text-align:right;"> 3.614583</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>While uninteresting, this makes a lot of sense - if I am reading a book
+that I do not enjoy, I will usually bail on it which tends to bias my
+ratings upward. Over time, there have been a few notable
+<a href="https://www.librarything.com/work/11691727/reviews/92168929">exceptions</a>.</p>
+
+<p>One of the other interesting analyses in the blog post was examining how the
+reviewer&rsquo;s ratings have changed based on the month of the year. I wanted to
+make a similar plot using R&rsquo;s
+<a href="http://docs.ggplot2.org/current/index.html">ggplot2</a> however since I
+was writing this in python I was largely limited to matplotlib.
+Fortunately, many people have struggled with this issue and the fine
+folks at yhat have ported ggplot2 over to
+<a href="https://pypi.python.org/pypi/ggplot">python</a>. With this library I was
+able to use <code>geom_smooth</code> to produce the following plot showing rating
+trends by week.</p>
+
+<p><img src="http://zachstednick.com/all_years.png"></p>
+
+<p>I tried to figure out why my legend never showed up but I figured that
+since most of the trend lines were pretty much the same anyways that the
+plot was fine without a legend. It appears that I get in most of my good
+reviews early in the year and am harsher later in the year.</p>
+
+<p>The last figure in the blog post compares the writer&rsquo;s review scores to
+the Goodreads consensus score. I attempted to
+replicate this but ran into more trouble than it was worth to extract
+that data from LibraryThing so I abandoned that analysis.</p>
+
+<p>If interested, I put my python code in a GitHub
+<a href="https://gist.github.com/stedy/2cb4fb1f332508f39ff2">gist</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

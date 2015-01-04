@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Writing a Twitter Bot for Fun and Profit - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="One of my first thoughts when Twitter had its IPO was that the days of
+writing Twitter bots was over. My fear was that they would lock down
+their &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://stedy.github.io/blog/2014/02/24/writing-a-twitter-bot-for-fun-and-profit">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="stedy.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Writing a Twitter Bot for Fun and Profit</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-02-24T21:42:00-08:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>9:42 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>One of my first thoughts when Twitter had its IPO was that the days of
+writing Twitter bots was over. My fear was that they would lock down
+their
+platform in order to more accurately sell ads.</p>
+
+<p>Man, was I wrong.</p>
+
+<p>The Twitter API is still as robust as ever and allows for creating Twitter bots.
+One of the current trends is to try to generate buzz around a product or
+idea by getting people to use a specific hashtag. This can often lead to
+slightly hilarious results, such as the <a href="http://mlb.mlb.com/mlb/awards/y2014/faceofmlb/">Face of
+MLB</a>. Basically, the
+fans &ldquo;vote&rdquo; for their favorite player to be the Face of MLB by using a
+certain hashtag. I cannot think of a better job for a twitter bot.</p>
+
+<p>Setting up a bot or Twitter Application is easy, just go to
+<a href="apps.twitter.com">Twitter Apps</a> and login or create a new username and
+log in. Follow the steps and you can get an API key in a few minutes. Although note that in order to write tweets as a bot you have to
+choose Read + Write (instead of the default Write). I run my bot largely using the
+<a href="https://pypi.python.org/pypi/tweepy/2.2">tweepy</a> Python library which
+provides easy access to the Twitter API. Here is a
+<a href="https://gist.github.com/stedy/9203520">gist</a> of a bot I am
+running for the Face of MLB. Twitter does not allow the same tweet to be
+posted more than once from an account so I just add something like the
+current time:</p>
+
+<blockquote class="twitter-tweet" lang="en"><p><a
+href="https://twitter.com/_J4EZ">@_j4ez</a> Why not Zoidberg? the time
+is Monday, 09:09:PM <a
+href="https://twitter.com/search?q=%23ericsogard&amp;src=hash">#ericsogard</a>
+<a href="https://twitter.com/search?q=%23FaceofMLB&amp;src=hash">#FaceofMLB</a></p>&mdash;
+Zoidberg bot (@ZoidbergBot) <a href="https://twitter.com/ZoidbergBot/statuses/438179021684097024">February
+25, 2014</a></blockquote>
+
+
+<script async src="//platform.twitter.com/widgets.js"
+charset="utf-8"></script>
+
+
+<p>I will admit this is kinda silly, but if I can&rsquo;t use my programming
+skills to get
+someone like <a href="http://oakland.athletics.mlb.com/team/player.jsp?player_id=519299#gameType=%27R%27">Eric
+Sogard</a>
+elected the Face of MLB, then what&rsquo;s the point of programming?</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2014-02-24T21:42:00-08:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>9:42 pm</span></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://stedy.github.io/blog/2014/02/24/writing-a-twitter-bot-for-fun-and-profit/" data-via="" data-counturl="http://stedy.github.io/blog/2014/02/24/writing-a-twitter-bot-for-fun-and-profit/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/02/06/foursquare-without-a-smartphone/" title="Previous Post: Foursquare without a smartphone">&laquo; Foursquare without a smartphone</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/07/31/analysis-of-gas-efficiency-by-brand/" title="Next Post: Analysis of gas efficiency by brand">Analysis of gas efficiency by brand &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/04/summarizing-books-read-over-time/">&#8216;Summarizing Books Read Over Time&#8217;</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/19/simple-webstats-with-r/">Simple Webstats With R</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/05/206-419-parks/">(206)419-PARKS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/30/lego-price-estimates-over-time/">LEGO Price Estimates Over Time</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/19/datasets-for-machine-learning-with-r-by-lantz/">Datasets for Machine Learning With R by Lantz</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

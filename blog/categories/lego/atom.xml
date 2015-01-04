@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Lego | My Octopress Blog]]></title>
+  <link href="http://stedy.github.io/blog/categories/lego/atom.xml" rel="self"/>
+  <link href="http://stedy.github.io/"/>
+  <updated>2015-01-04T15:31:48-08:00</updated>
+  <id>http://stedy.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[LEGO Price Estimates Over Time]]></title>
+    <link href="http://stedy.github.io/blog/2014/08/30/lego-price-estimates-over-time/"/>
+    <updated>2014-08-30T16:22:00-07:00</updated>
+    <id>http://stedy.github.io/blog/2014/08/30/lego-price-estimates-over-time</id>
+    <content type="html"><![CDATA[<p>LEGO recently introduced a new LEGO set called <a href="http://shop.lego.com/en-US/Research-Institute-21110">Research
+Institute</a> which
+featured three female scientists. Since my wife is also a female
+scientist, I tried to order one from the LEGO website only to learn that
+they had sold out in less than a day. I then wrote an email complaining
+about this to LEGO who responded by sending me an apology note and a
+catalog.</p>
+
+<p>I grew up playing with LEGO sets, hard to avoid when you were named Zach
+and commercials like
+<a href="https://www.youtube.com/watch?v=pDH3AoOQzE0">this</a> dominated the
+airwaves. Anyways, when I was a kid my dad once mentioned to me that a good rule of thumb
+for determining the price of a LEGO set was to estimate each brick
+costing about 10 cents. This new catalog made me wonder if this was still
+true. I copied all the model numbers as well as the number of pieces and
+the prices. I was also curious in how true this trend was when adjusted
+for inflation so I used the CPI Inflation calculator from <a href="http://data.bls.gov/cgi-bin/cpicalc.pl?cost1=.10&amp;year1=1989&amp;year2=2014">US Bureau of
+Labor
+Statistics</a> which showed
+that $0.10 in 1989 had the same buying power as $0.19 in 2014. Ideally I
+could have found a catalog from 1989 but I don&rsquo;t remember any back then
+and I probably would have cut it up to put pictures in my locker or
+something like that. I used R
+to plot both of these trends and it appears that my dad&rsquo;s estimate still
+holds true for 2014.</p>
+
+<p><img src="http://zachstednick.com/lego_by_year.png"></p>
+
+<p>A correlation calculation for all sets gives a value of 0.91 which means my dad had a
+pretty good estimate back in the day.</p>
+
+<p>I also looked at the average price for each collection and found that
+almost all collections retained a high correlation between the estimated
+price and the actual price.</p>
+
+<table>
+<thead>
+<tr>
+<th> Collection </th>
+<th> Collection Mean Price </th>
+<th style="text-align:right;"> Collection Correlation </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> Basics </td>
+<td> 29.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Chima </td>
+<td> 38.99 </td>
+<td style="text-align:right;"> 0.977</td>
+</tr>
+<tr>
+<td> City </td>
+<td> 54.365 </td>
+<td style="text-align:right;"> 0.896</td>
+</tr>
+<tr>
+<td> Creator </td>
+<td> 100.375 </td>
+<td style="text-align:right;"> 0.955</td>
+</tr>
+<tr>
+<td> DC Superheroes </td>
+<td> 76.657 </td>
+<td style="text-align:right;"> 1</td>
+</tr>
+<tr>
+<td> Disney Princess </td>
+<td> 27.657 </td>
+<td style="text-align:right;"> 0.963</td>
+</tr>
+<tr>
+<td> Exclusive </td>
+<td> 149.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Friends </td>
+<td> 23.354 </td>
+<td style="text-align:right;"> 0.992</td>
+</tr>
+<tr>
+<td> Ideas </td>
+<td> 49.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Juniors </td>
+<td> 27.49 </td>
+<td style="text-align:right;"> 0.901</td>
+</tr>
+<tr>
+<td> LEGO Movie </td>
+<td> 63.99 </td>
+<td style="text-align:right;"> 0.997</td>
+</tr>
+<tr>
+<td> Marvel Superheroes </td>
+<td> 40.99 </td>
+<td style="text-align:right;"> 0.934</td>
+</tr>
+<tr>
+<td> Mindstorms </td>
+<td> 349.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Minecraft </td>
+<td> 139.96 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Mixels </td>
+<td> 4.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Ninjago </td>
+<td> 47.434 </td>
+<td style="text-align:right;"> 0.976</td>
+</tr>
+<tr>
+<td> Simpsons </td>
+<td> 199.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Star Wars </td>
+<td> 133.365 </td>
+<td style="text-align:right;"> 0.979</td>
+</tr>
+<tr>
+<td> Technic </td>
+<td> 81.99 </td>
+<td style="text-align:right;"> 0.989</td>
+</tr>
+<tr>
+<td> Ultra Agents </td>
+<td> 45.323 </td>
+<td style="text-align:right;"> 0.983</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Raw data and code for this lives at this
+<a href="https://gist.github.com/stedy/92b949ba44effd66c855">gist</a></p>
+]]></content>
+  </entry>
+  
+</feed>

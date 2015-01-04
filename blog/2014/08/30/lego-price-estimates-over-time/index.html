@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>LEGO Price Estimates Over Time - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="LEGO recently introduced a new LEGO set called Research
+Institute which
+featured three female scientists. Since my wife is also a female
+scientist, I &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://stedy.github.io/blog/2014/08/30/lego-price-estimates-over-time">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="stedy.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">LEGO Price Estimates Over Time</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-08-30T16:22:00-07:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>4:22 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>LEGO recently introduced a new LEGO set called <a href="http://shop.lego.com/en-US/Research-Institute-21110">Research
+Institute</a> which
+featured three female scientists. Since my wife is also a female
+scientist, I tried to order one from the LEGO website only to learn that
+they had sold out in less than a day. I then wrote an email complaining
+about this to LEGO who responded by sending me an apology note and a
+catalog.</p>
+
+<p>I grew up playing with LEGO sets, hard to avoid when you were named Zach
+and commercials like
+<a href="https://www.youtube.com/watch?v=pDH3AoOQzE0">this</a> dominated the
+airwaves. Anyways, when I was a kid my dad once mentioned to me that a good rule of thumb
+for determining the price of a LEGO set was to estimate each brick
+costing about 10 cents. This new catalog made me wonder if this was still
+true. I copied all the model numbers as well as the number of pieces and
+the prices. I was also curious in how true this trend was when adjusted
+for inflation so I used the CPI Inflation calculator from <a href="http://data.bls.gov/cgi-bin/cpicalc.pl?cost1=.10&amp;year1=1989&amp;year2=2014">US Bureau of
+Labor
+Statistics</a> which showed
+that $0.10 in 1989 had the same buying power as $0.19 in 2014. Ideally I
+could have found a catalog from 1989 but I don&rsquo;t remember any back then
+and I probably would have cut it up to put pictures in my locker or
+something like that. I used R
+to plot both of these trends and it appears that my dad&rsquo;s estimate still
+holds true for 2014.</p>
+
+<p><img src="http://zachstednick.com/lego_by_year.png"></p>
+
+<p>A correlation calculation for all sets gives a value of 0.91 which means my dad had a
+pretty good estimate back in the day.</p>
+
+<p>I also looked at the average price for each collection and found that
+almost all collections retained a high correlation between the estimated
+price and the actual price.</p>
+
+<table>
+<thead>
+<tr>
+<th> Collection </th>
+<th> Collection Mean Price </th>
+<th style="text-align:right;"> Collection Correlation </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> Basics </td>
+<td> 29.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Chima </td>
+<td> 38.99 </td>
+<td style="text-align:right;"> 0.977</td>
+</tr>
+<tr>
+<td> City </td>
+<td> 54.365 </td>
+<td style="text-align:right;"> 0.896</td>
+</tr>
+<tr>
+<td> Creator </td>
+<td> 100.375 </td>
+<td style="text-align:right;"> 0.955</td>
+</tr>
+<tr>
+<td> DC Superheroes </td>
+<td> 76.657 </td>
+<td style="text-align:right;"> 1</td>
+</tr>
+<tr>
+<td> Disney Princess </td>
+<td> 27.657 </td>
+<td style="text-align:right;"> 0.963</td>
+</tr>
+<tr>
+<td> Exclusive </td>
+<td> 149.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Friends </td>
+<td> 23.354 </td>
+<td style="text-align:right;"> 0.992</td>
+</tr>
+<tr>
+<td> Ideas </td>
+<td> 49.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Juniors </td>
+<td> 27.49 </td>
+<td style="text-align:right;"> 0.901</td>
+</tr>
+<tr>
+<td> LEGO Movie </td>
+<td> 63.99 </td>
+<td style="text-align:right;"> 0.997</td>
+</tr>
+<tr>
+<td> Marvel Superheroes </td>
+<td> 40.99 </td>
+<td style="text-align:right;"> 0.934</td>
+</tr>
+<tr>
+<td> Mindstorms </td>
+<td> 349.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Minecraft </td>
+<td> 139.96 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Mixels </td>
+<td> 4.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Ninjago </td>
+<td> 47.434 </td>
+<td style="text-align:right;"> 0.976</td>
+</tr>
+<tr>
+<td> Simpsons </td>
+<td> 199.99 </td>
+<td style="text-align:right;"> NA</td>
+</tr>
+<tr>
+<td> Star Wars </td>
+<td> 133.365 </td>
+<td style="text-align:right;"> 0.979</td>
+</tr>
+<tr>
+<td> Technic </td>
+<td> 81.99 </td>
+<td style="text-align:right;"> 0.989</td>
+</tr>
+<tr>
+<td> Ultra Agents </td>
+<td> 45.323 </td>
+<td style="text-align:right;"> 0.983</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Raw data and code for this lives at this
+<a href="https://gist.github.com/stedy/92b949ba44effd66c855">gist</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2014-08-30T16:22:00-07:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>4:22 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/lego/'>lego</a>, <a class='category' href='/blog/categories/r/'>r,</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://stedy.github.io/blog/2014/08/30/lego-price-estimates-over-time/" data-via="" data-counturl="http://stedy.github.io/blog/2014/08/30/lego-price-estimates-over-time/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/08/19/datasets-for-machine-learning-with-r-by-lantz/" title="Previous Post: Datasets for Machine Learning with R by Lantz">&laquo; Datasets for Machine Learning with R by Lantz</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/11/05/206-419-parks/" title="Next Post: (206)419-PARKS">(206)419-PARKS &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/04/summarizing-books-read-over-time/">&#8216;Summarizing Books Read Over Time&#8217;</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/19/simple-webstats-with-r/">Simple Webstats With R</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/05/206-419-parks/">(206)419-PARKS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/30/lego-price-estimates-over-time/">LEGO Price Estimates Over Time</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/19/datasets-for-machine-learning-with-r-by-lantz/">Datasets for Machine Learning With R by Lantz</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
