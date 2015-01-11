@@ -1,0 +1,169 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Offsetting beer by running - Zach Stednick</title>
+	<meta name="author" content="Zach Stednick">
+
+	
+	<meta name="description" content="Last year, among other personal data, I tracked every bar I went to and
+every mile I
+ran.
+Naturally my first question is do I run enough to offset &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Zach Stednick" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Zach Stednick</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:stedy.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/zachstednick" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/stedy" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="https://www.google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:stedy.github.io">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Offsetting Beer by Running</h2>
+	<div class="entry-content"><p>Last year, among other personal data, I tracked every bar I went to and
+every mile I
+<a href="http://zachstednick.name/blog/2014/02/06/foursquare-without-a-smartphone/">ran</a>.
+Naturally my first question is do I run enough to offset the amount of
+beer I am drinking (at bars)?</p>
+
+<p>First we define some units. According to this Runner&rsquo;s World
+<a href="http://www.runnersworld.com/tools/calories-burned-calculator">calculator</a>, at 8:45 minute/mile for my
+weight I am burning 145 calories. Google says the amount of calories in
+a <a href="https://www.google.com/?gws_rd=ssl#q=calories+in+a+pint+of+beer">pint of
+beer</a> is about 180. Since I usually average about two beers each time I go to a bar, that simplifies the calculations. Over the course of the year, how often was I above or below the residual? To answer this, I used R and finally got around to trying <a href="https://github.com/hadley/tidyr">tidyr</a> which is pretty slick.</p>
+
+<p><img src="http://zachstednick.com/running_vs_beers.png"></p>
+
+<p>I thougth a lot about how to determine the residual but eventually
+settled on calories out - calories in because I felt this method made the best
+visualization. As you can see around week 30, I started to run more and
+did a better job at offsetting my beer consumption. Obviously this is an
+overly simplistic view of my caloric expenditure but shows some of the
+interesting insights that can be gained from personal data.</p>
+
+<p>As always, all code and data is in this github
+<a href="https://gist.github.com/stedy/9f2ffa58e25cc52dbe2e">gist</a></p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-10T14:24:32-08:00" pubdate data-updated="true"></time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/r-running/'>r,running</a>
+
+
+</div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+</div>
+
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2015
+
+    Zach Stednick
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>

@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2015-01-04T15:42:17-08:00</updated>
+  <updated>2015-01-10T16:24:54-08:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Offsetting beer by running]]></title>
+    <link href="http://stedy.github.io/blog/2015/01/10/offsetting-beer-by-running/"/>
+    <updated>2015-01-10T14:24:32-08:00</updated>
+    <id>http://stedy.github.io/blog/2015/01/10/offsetting-beer-by-running</id>
+    <content type="html"><![CDATA[<p>Last year, among other personal data, I tracked every bar I went to and
+every mile I
+<a href="http://zachstednick.name/blog/2014/02/06/foursquare-without-a-smartphone/">ran</a>.
+Naturally my first question is do I run enough to offset the amount of
+beer I am drinking (at bars)?</p>
+
+<p>First we define some units. According to this Runner&rsquo;s World
+<a href="http://www.runnersworld.com/tools/calories-burned-calculator">calculator</a>, at 8:45 minute/mile for my
+weight I am burning 145 calories. Google says the amount of calories in
+a <a href="https://www.google.com/?gws_rd=ssl#q=calories+in+a+pint+of+beer">pint of
+beer</a> is about 180. Since I usually average about two beers each time I go to a bar, that simplifies the calculations. Over the course of the year, how often was I above or below the residual? To answer this, I used R and finally got around to trying <a href="https://github.com/hadley/tidyr">tidyr</a> which is pretty slick.</p>
+
+<p><img src="http://zachstednick.com/running_vs_beers.png"></p>
+
+<p>I thougth a lot about how to determine the residual but eventually
+settled on calories out - calories in because I felt this method made the best
+visualization. As you can see around week 30, I started to run more and
+did a better job at offsetting my beer consumption. Obviously this is an
+overly simplistic view of my caloric expenditure but shows some of the
+interesting insights that can be gained from personal data.</p>
+
+<p>As always, all code and data is in this github
+<a href="https://gist.github.com/stedy/9f2ffa58e25cc52dbe2e">gist</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Summarizing books read over time]]></title>
@@ -1130,17 +1161,6 @@ n&#8217; Paddle</a> in Hanalei which also sold us some of the other things we fo
 <p>There are a lot of long term campers there but there are also plenty of spots.</p>
 
 <p>Otherwise, the hike was a lot of fun and I totally recommend it!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[testing setup]]></title>
-    <link href="http://stedy.github.io/blog/2012/08/28/testing-setup/"/>
-    <updated>2012-08-28T19:57:00-07:00</updated>
-    <id>http://stedy.github.io/blog/2012/08/28/testing-setup</id>
-    <content type="html"><![CDATA[<h2>This is the first post of this blog</h2>
-
-<p>testing formatting, etc.</p>
 ]]></content>
   </entry>
   
