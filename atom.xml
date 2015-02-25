@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2015-01-10T16:24:54-08:00</updated>
+  <updated>2015-02-25T15:05:44-08:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,53 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[First year on Fitbit]]></title>
+    <link href="http://stedy.github.io/blog/2015/02/25/first-year-on-fitbit/"/>
+    <updated>2015-02-25T14:15:11-08:00</updated>
+    <id>http://stedy.github.io/blog/2015/02/25/first-year-on-fitbit</id>
+    <content type="html"><![CDATA[<p>After a year on <a href="https://www.fitbit.com/user/2F49C2">Fitbit</a>, I figured it might be time to take a look at the data that I have been generating. Unfortunately, Fitbit makes you sign up for <a href="https://www.fitbit.com/premium/export">Premium</a> which charges you $50 per year to export your data. Fortunately, Cory Nissen has created an excellent <a href="https://github.com/corynissen/fitbitScraper">R package</a> for doing just this. The package simply uses a POST request handled by Hadley&rsquo;s <a href="https://github.com/hadley/httr">httr</a> library to generate a cookie and then parses the returned JSP results to return a nice <code>data.frame</code>.</p>
+
+<p>Anyways, onto the data.</p>
+
+<p>The first command I tried was the <code>get_15_min_data()</code> for parsing step
+data in 15 minute increments. I figured that looking at yesterday&rsquo;s data
+would be granular enough to get a good feel for the data.</p>
+
+<p><img src="http://zachstednick.com/fifteen_min_fitbit.png"></p>
+
+<p>I then plotted number of steps taken per day, with a smoothing function
+overlaid:</p>
+
+<p><img src="http://zachstednick.com/one_year_fitbit_steps.png"></p>
+
+<p>I had a mean step count of 13935 for the past year. This data is more
+interesting to look at as more of an overall trend. There definitely a
+seasonal trend in the summer which makes sense. I can also see the
+signatures of when I went on a four day backpacking trip in August and
+when I broke two ribs and was confined to the couch for four days in
+mid-March.</p>
+
+<p>Since I have a Fitbit one, I can also measure floors climbed.</p>
+
+<p><img src="http://zachstednick.com/fitbit_one_year_floors.png"></p>
+
+<p>My mean number of floors climbed is 69.62 which seems absurdly high. My
+desk is on the fourth floor of my building and I usually take the stairs
+but not sure that is enough to fully explain why these counts are so
+high.</p>
+
+<p>Still, it is pretty interesting to look at this data outside of the
+Fitbit interface and I would highly recommend checking out Cory&rsquo;s github
+<a href="https://github.com/corynissen/fitbitScraper">repo</a></p>
+
+<p>Also, speaking of github, for those of you who regularly follow this
+blog (hi, Mom!) I have moved away from making a new gist every time to
+simply having a standalone
+<a href="https://github.com/stedy/blog-supplemental">repo</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Offsetting beer by running]]></title>
@@ -1132,35 +1179,6 @@ caused more headaches than needed.  Since this was a python application,
 you would think that I would recall from the Zen of Python that
 &ldquo;Explicit is better than implicit&rdquo; but in this case you would be wrong.
 remember the Zen of Python</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[kalalau trail]]></title>
-    <link href="http://stedy.github.io/blog/2012/11/20/kalalau-trail/"/>
-    <updated>2012-11-20T23:07:00-08:00</updated>
-    <id>http://stedy.github.io/blog/2012/11/20/kalalau-trail</id>
-    <content type="html"><![CDATA[<p>My wife and I just did the Kalalau trail in Na Pali State park and I wanted to put out some of my general thoughts to help make it easier for someone else who may be interested.  Prior to departure I had a hard time determining what was important and what to trust based on what I read online.  Hopefully this is helpful, although your milage may vary.</p>
-
-<p>The Hawaii State Parks office is in what might be the tallest building in
-Lihue.  They will give you an informational brochure with a map and try
-to sell you a topo map of the entire island.  We thoguht this would be
-a good informational stop but I think best to skip stopping here and use the map in your guidebook.</p>
-
-<p>The trail itself is difficult, but not quite as dramatic as most of the literature makes it out to be.  The first half to Hanakoa Valley is the most up and down and felt like the hardest part in both directions.  The second half feels much easier.  Hanakoa Valley is a great place to stay if you are not feeling up to doing the trek in one day.  Plus, staying here gives you a full afternoon at the beach as opposed to getting in late in the day.  There is a pretty steep and exposed part around mile 8 or 9 that I was glad to walk across when I was properly rested.</p>
-
-<p>We brought packs and a tent and rented a stove and bought fuel at <a href="http://www.pedalnpaddle.com">Pedal
-n&#8217; Paddle</a> in Hanalei which also sold us some of the other things we forget (such as a cooking pot).  There is a grocery store next door that is pretty well stocked.  You may be able to save a few bucks by planning in advance and shopping elsewhere.</p>
-
-<p>We found the mosquitos were a nuisance, but nothing intolerable and the seemed much smaller and less vigorous than those we have on the mainland.  Bug spray was nice but not essential.</p>
-
-<p>We left our car at Ha&#8217;ena State Park.  There is not a lot of parking at the end of the road and we saw some cars that were ticketed for being illegally parked.  The earlier you can get on the trail the better, but you might get lucky.  The guidebooks talk about break-ins at Ke&#8217;e Beach and while we did not see this, Ha&#8217;ena has better visibility.</p>
-
-<p>We filtered all our water.  The guidebooks warn about Leptospirosis and while I am not sure how prevalent this is better to be on the safe side.</p>
-
-<p>There are a lot of long term campers there but there are also plenty of spots.</p>
-
-<p>Otherwise, the hike was a lot of fun and I totally recommend it!</p>
 ]]></content>
   </entry>
   
