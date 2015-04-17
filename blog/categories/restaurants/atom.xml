@@ -4,7 +4,7 @@
   <title><![CDATA[Category: restaurants, | Zach Stednick]]></title>
   <link href="http://stedy.github.io/blog/categories/restaurants/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2015-04-17T11:27:17-07:00</updated>
+  <updated>2015-04-17T11:28:30-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -35,7 +35,9 @@ restaurant every week and ask if the restaurant is still open. To map each
 restaurant to a particular neighborhood, I
 used geolocation to map license address returned by the City of Seattle business
 finder. Obviously that does not work as well for Mobile Food Services
-(i.e. food trucks) but it still allows for an interesting comparison.</p>
+(i.e. food trucks) but it still allows for an interesting comparison.
+This data is plotted at <a href="http://seattlerestaurantchanges.com">Seattle Restaurant
+Changes</a>.</p>
 
 <p>I initially attempted to scrape
 data from <a href="https://www.thestranger.com/food-and-drink">The Stranger</a> but
