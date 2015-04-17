@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2015-02-25T15:05:44-08:00</updated>
+  <updated>2015-04-17T11:27:17-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Seattle Restaurant Changes]]></title>
+    <link href="http://stedy.github.io/blog/2015/04/17/seattle-restaurant-changes/"/>
+    <updated>2015-04-17T10:51:18-07:00</updated>
+    <id>http://stedy.github.io/blog/2015/04/17/seattle-restaurant-changes</id>
+    <content type="html"><![CDATA[<p>Seattle construction is currently booming and I was interested in how
+that
+reflected in the local restaurant scene. There are many food blogs and
+local news sites that cover openings and closings, but I found it too
+difficult to parse these in a regular manner. Fortunately I was able to
+use data from the <a href="http://www.seattle.gov/licenses/find-a-business">City of Seattle business
+finder</a> and used the
+restaurant classification or
+<a href="https://en.wikipedia.org/wiki/NAICS">NAICS</a> code as a proxy. Using the
+data in this manner makes an assumption that a restaurant will no longer
+have a business licence after it closes.
+I&rsquo;m not sure how accurate this is but I figured it was as accurate as I
+could get short of hiring people on Mechanical Turk to phone every
+restaurant every week and ask if the restaurant is still open. To map each
+restaurant to a particular neighborhood, I
+used geolocation to map license address returned by the City of Seattle business
+finder. Obviously that does not work as well for Mobile Food Services
+(i.e. food trucks) but it still allows for an interesting comparison.</p>
+
+<p>I initially attempted to scrape
+data from <a href="https://www.thestranger.com/food-and-drink">The Stranger</a> but
+after finding the City of Seattle site I just used
+<a href="http://www.crummy.com/software/BeautifulSoup/">BeautifulSoup</a> for the
+scraping. I would not have been able to do much more beyond that state
+if it had not been for Nathan Yau&rsquo;s excellent tutorial on <a href="http://flowingdata.com/2015/02/19/make-an-interactive-map-with-category-filters/">making maps
+with category
+filters</a>.
+I was able to get a state level shapefile for Washington state from
+<a href="http://www.zillow.com/blog/7000-neighborhood-boundary-files-in-shapefile-format-4653/">Zillow</a>
+and then reduce that to just Seattle neighborhoods using R&rsquo;s
+<a href="http://cran.r-project.org/web/packages/sp/">sp</a> package. Full code
+posted on <a href="https://github.com/stedy/seattle-restaurants">github</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[First year on Fitbit]]></title>
@@ -556,7 +596,7 @@ fans &ldquo;vote&rdquo; for their favorite player to be the Face of MLB by using
 certain hashtag. I cannot think of a better job for a twitter bot.</p>
 
 <p>Setting up a bot or Twitter Application is easy, just go to
-<a href="apps.twitter.com">Twitter Apps</a> and login or create a new username and
+<a href="http://apps.twitter.com">Twitter Apps</a> and login or create a new username and
 log in. Follow the steps and you can get an API key in a few minutes. Although note that in order to write tweets as a bot you have to
 choose Read + Write (instead of the default Write). I run my bot largely using the
 <a href="https://pypi.python.org/pypi/tweepy/2.2">tweepy</a> Python library which
@@ -1112,73 +1152,6 @@ head down and get some good work done.</p></li>
 <p>Looking ahead, I will continue to avoid spending money on Mondays
 because I find it to be an interesting challenge and anything that can
 help me stay focused is highly welcome in my life.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Running flask on CentOS]]></title>
-    <link href="http://stedy.github.io/blog/2012/11/30/running-flask-on-centos/"/>
-    <updated>2012-11-30T10:01:00-08:00</updated>
-    <id>http://stedy.github.io/blog/2012/11/30/running-flask-on-centos</id>
-    <content type="html"><![CDATA[<h1>Notes on installing my flask app on CentOS</h1>
-
-<p>I developed a small <a href="http://flask.pocoo.org/">flask</a> application at work and put it on a server
-running CentOS which I ended up spending a few days struggling with
-getting it up and running.  Hopefully this helps someone else
-avoid some of the pain I had.  Jumping right in, the first thing I did
-was install flask, since CentOS 6.3 comes with python 2.6.6 it was easy to
-install pip-python and use that to get flask.  Since the server was
-running Apache 2.2, I put my webapp in /var/www/html. Next step was to
-install httpd_devel and mod_wsgi both of which easily installed from
-source.  Everything seemed fine but I kept getting an HTTP 500 error
-message, here is what I did:</p>
-
-<p>There was a lot of editing of /etc/httpd/conf/httpd.conf to allow for vitrual hosts.<br/>
-This was also the first time I had worked on a subdomain but my DNS had supposedly been setup correctly.</p>
-
-<h2>Is mod_wsgi in the right place?</h2>
-
-<p>Check that mod_wsgi.so is in /usr/lib/httpd/modules a</p>
-
-<p><code>-rwxr-xr-x. 1 root root 315812 Sep  4 10:20 mod_wsgi.so</code></p>
-
-<p>The <code>.</code> at the end of the permissions field is the SELinux (in this case
-CentOS) ACL.</p>
-
-<h2>Does the application have SE Linux permissions?</h2>
-
-<p><code>bash: semanage: comand not found</code></p>
-
-<p>Since semanage is not found I am assume that we are running CentOS
-without any additional security.</p>
-
-<h2>Are we loading mod_wsgi correctly?</h2>
-
-<p>Add a line to httpd.conf</p>
-
-<p><code>LoadModule wsgi_module modules/mod_wsgi.so</code></p>
-
-<h2>Is the socket file set up correctly?</h2>
-
-<p>Socket file not able to write to directory, set socket file to write to
-/tmp using WSGISocketPrefix to allow www-data worker process to connect.</p>
-
-<h2>Server still giving HTTP 500</h2>
-
-<p>This is where I started trying everything I could thinkof.  I set
-LogLevel to debug and later set LogLevel to info and still could not
-figure out what was going on. I even asked on <a href="http://stackoverflow.com/questions/12416532/mod-wsgi-test-wsgi-runs-fine-application-gives-http-500">stack
-overflow</a>
-with little luck.</p>
-
-<h2>Solved!</h2>
-
-<p>Basically, I was not explicit enough in my file path names which caused the majority of these headaches.  I assumed that CentOS would be like
-Debian in how it parsed filepaths, however this was wrong and this
-caused more headaches than needed.  Since this was a python application,
-you would think that I would recall from the Zen of Python that
-&ldquo;Explicit is better than implicit&rdquo; but in this case you would be wrong.
-remember the Zen of Python</p>
 ]]></content>
   </entry>
   

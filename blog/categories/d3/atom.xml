@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: d3 | Zach Stednick]]></title>
+  <link href="http://stedy.github.io/blog/categories/d3/atom.xml" rel="self"/>
+  <link href="http://stedy.github.io/"/>
+  <updated>2015-04-17T11:27:17-07:00</updated>
+  <id>http://stedy.github.io/</id>
+  <author>
+    <name><![CDATA[Zach Stednick]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Seattle Restaurant Changes]]></title>
+    <link href="http://stedy.github.io/blog/2015/04/17/seattle-restaurant-changes/"/>
+    <updated>2015-04-17T10:51:18-07:00</updated>
+    <id>http://stedy.github.io/blog/2015/04/17/seattle-restaurant-changes</id>
+    <content type="html"><![CDATA[<p>Seattle construction is currently booming and I was interested in how
+that
+reflected in the local restaurant scene. There are many food blogs and
+local news sites that cover openings and closings, but I found it too
+difficult to parse these in a regular manner. Fortunately I was able to
+use data from the <a href="http://www.seattle.gov/licenses/find-a-business">City of Seattle business
+finder</a> and used the
+restaurant classification or
+<a href="https://en.wikipedia.org/wiki/NAICS">NAICS</a> code as a proxy. Using the
+data in this manner makes an assumption that a restaurant will no longer
+have a business licence after it closes.
+I&rsquo;m not sure how accurate this is but I figured it was as accurate as I
+could get short of hiring people on Mechanical Turk to phone every
+restaurant every week and ask if the restaurant is still open. To map each
+restaurant to a particular neighborhood, I
+used geolocation to map license address returned by the City of Seattle business
+finder. Obviously that does not work as well for Mobile Food Services
+(i.e. food trucks) but it still allows for an interesting comparison.</p>
+
+<p>I initially attempted to scrape
+data from <a href="https://www.thestranger.com/food-and-drink">The Stranger</a> but
+after finding the City of Seattle site I just used
+<a href="http://www.crummy.com/software/BeautifulSoup/">BeautifulSoup</a> for the
+scraping. I would not have been able to do much more beyond that state
+if it had not been for Nathan Yau&rsquo;s excellent tutorial on <a href="http://flowingdata.com/2015/02/19/make-an-interactive-map-with-category-filters/">making maps
+with category
+filters</a>.
+I was able to get a state level shapefile for Washington state from
+<a href="http://www.zillow.com/blog/7000-neighborhood-boundary-files-in-shapefile-format-4653/">Zillow</a>
+and then reduce that to just Seattle neighborhoods using R&rsquo;s
+<a href="http://cran.r-project.org/web/packages/sp/">sp</a> package. Full code
+posted on <a href="https://github.com/stedy/seattle-restaurants">github</a></p>
+]]></content>
+  </entry>
+  
+</feed>
