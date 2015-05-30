@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2015-04-17T11:28:30-07:00</updated>
+  <updated>2015-05-30T16:29:18-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The Felix Factor]]></title>
+    <link href="http://stedy.github.io/blog/2015/05/30/the-felix-factor/"/>
+    <updated>2015-05-30T16:12:37-07:00</updated>
+    <id>http://stedy.github.io/blog/2015/05/30/the-felix-factor</id>
+    <content type="html"><![CDATA[<p>I was listening to the Jonah Keri
+<a href="http://espn.go.com/espnradio/grantland/player?id=12957030">podcast</a> and
+he and Ben Gibbard were talking about the Mariners, specifically <a href="http://m.mlb.com/player/433587/felix-hernandez/2015/career/R/pitching/MLB">Felix
+Hernandez</a>.
+One of the points Gibbard made was that Hernandez is so outstanding that
+he will be remembered and that people should try to see him pitch in
+person. This made me wonder, did Felix Hernandez have an impact on home
+ticket sales for the Mariners in 2014?</p>
+
+<p>I was able to get all the data from some of the nicely formatted box
+score data that <a href="http://gd2.mlb.com/components/game/mlb/year_2014/">MLB provides</a>. I initially tried to look at the data over the course of the year but attendance was so variable (which made for an extremely confusing plot) that I just ended up making a box and whiskers plot and ignored the date element:</p>
+
+<p><img src="http://zachstednick.com/felix_factor.png"></p>
+
+<p>Conclusion: Hernandez was not that strong of a driver of ticket sales
+which is great news if you are hoping to see him pitching in person.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Seattle Restaurant Changes]]></title>
@@ -1102,58 +1126,6 @@ visits about every 20 minutes.</p>
 
 <p><a href="http://theredecafe.com"><img
 src="http://red-e-cafe.morsel.cc/system/logos/1/medium/red_e_logo_large.png"></a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Frugal Mondays]]></title>
-    <link href="http://stedy.github.io/blog/2012/12/31/frugal-mondays/"/>
-    <updated>2012-12-31T18:26:00-08:00</updated>
-    <id>http://stedy.github.io/blog/2012/12/31/frugal-mondays</id>
-    <content type="html"><![CDATA[<p>My 2012 resolution was to attempt to avoid spending any money on
-Mondays. <strong>tldr:</strong> I came nowhere close to that goal but it was
-interesting.</p>
-
-<h2>Motivation</h2>
-
-<p>In 2010, I was slightly annoyed by Amazon deciding to stop hosting
-WikiLeaks
-<a href="http://www.reuters.com/article/2010/12/03/us-wikileaks-amazon-idUSTRE6B05EK20101203">website</a>
-so I made it a challenge to avoid buying anything off Amazon in 2011.
-It was difficult especially for all those little things such as odd
-batteries or MP3 albums from obscure music groups.  This year I decided
-to step up the challenge, instead of trying to avoid spending any money
-on Amazon - I would try to avoid spending any money at all on Mondays.</p>
-
-<h2>Rules</h2>
-
-<p>My only rule was no spending physical money in the form of cash or card
-and no spending money online.  I allowed Monday holidays and Mondays I was on a
-work trip or vacation day to be exempted.  The hours were from 12 am
-Monday morning until midnight Monday night.</p>
-
-<h2>Results</h2>
-
-<p>I would estimate that I was successful in about &frac34; weeks per month on
-average and probably 40 Mondays for the entire year.</p>
-
-<p>The two biggest things I noticed:</p>
-
-<ul>
-<li><p>This did not really affect my spending on larger items.  I noticed
-that if it was something that I wanted that was more substantial than
-just coffee I would have no qualms waiting a day to purchase it.  Most
-of the purchases I did not make were for things I could spend less on
-such as trips to the coffee shop.</p></li>
-<li><p>I felt more focused on Mondays.  With no option to take a break and
-walk to the coffee shop or wonder about where to eat lunch, I was able to keep my
-head down and get some good work done.</p></li>
-</ul>
-
-
-<p>Looking ahead, I will continue to avoid spending money on Mondays
-because I find it to be an interesting challenge and anything that can
-help me stay focused is highly welcome in my life.</p>
 ]]></content>
   </entry>
   
