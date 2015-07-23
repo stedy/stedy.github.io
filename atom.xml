@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2015-05-30T16:29:18-07:00</updated>
+  <updated>2015-07-23T15:34:41-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Update on restaurant changes]]></title>
+    <link href="http://stedy.github.io/blog/2015/07/23/update-on-restaurant-changes/"/>
+    <updated>2015-07-23T15:31:31-07:00</updated>
+    <id>http://stedy.github.io/blog/2015/07/23/update-on-restaurant-changes</id>
+    <content type="html"><![CDATA[<p>I have been tracking restaurant openings via the <a href="http://www.seattle.gov/licenses/find-a-business">City of Seattle
+Business Finder</a> since
+the beginning of this year and am reporting those changes at <a href="http://seattlerestaurantchanges.com/">Seattle
+Restaurant Changes</a>. Recently I
+put up a <a href="http://seattlerestaurantchanges.com/heatmap.html">heatmap</a>
+showing changes by neighborhood. This heatmap shows a current snaphot of
+the changes which made me curious about changes by restaurant type over the course of
+the year.</p>
+
+<iframe src="http://zachstednick.com/net_restaurant_changes.html></iframe>
+
+
+<p>A few notes:</p>
+
+<ul>
+<li><p>The City of Seattle uses North American Industry Classification System
+codes (NAICS)[<a href="http://www.census.gov/eos/www/naics/">http://www.census.gov/eos/www/naics/</a>] to track
+restaurants. I then use the date of permit issuance as a proxy for a
+restaurant opening and date of permit revocation as a proxy for closing.</p></li>
+<li><p>A Full Service Restaurant as defined by NAICS is &ldquo;establishments primarily engaged in providing food services to patrons who order and are served while seated (i.e., waiter/waitress service) and pay after eating&rdquo;</p></li>
+<li><p>I realized that not that many breweries would be opening up but who
+doesn&rsquo;t want more breweries in town?</p></li>
+<li><p>I was not expecting Full Service Restaurants to take off as much as
+they did, especially since Limited Service Restaurants seem to be
+declining.</p></li>
+</ul>
+
+
+<p>I will try to post another update on this in December, that is unless I decide to open up a food truck of my own.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Felix Factor]]></title>
@@ -1093,39 +1130,6 @@ liked as well as maximize the number of cookies I would get.</p>
 <p>Regardless, I am looking forward to getting my order!</p>
 
 <p>Try for yourself with this <a href="https://gist.github.com/4680832">gist</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Red e and me]]></title>
-    <link href="http://stedy.github.io/blog/2013/01/16/red-e-and-me/"/>
-    <updated>2013-01-16T18:02:00-08:00</updated>
-    <id>http://stedy.github.io/blog/2013/01/16/red-e-and-me</id>
-    <content type="html"><![CDATA[<p>Sometime around the 30th of December 2012, I noticed a huge spike in
-traffic on my server.  I looked at the server logs and noticed that many
-of the requests were coming from <a href="http://theredecafe.com">The Red e
-cafe</a>, a cafe in Portland.  I had never been
-to this cafe so I looked up their website only to find my own
-<a href="http://www.zachstednick.com">website</a>
-staring back at me.</p>
-
-<p>For approximately two days my index page and the associated CSS were
-replacing the main site of this cafe.  It was truly bizzare and am not
-sure why someone would hack a commercial site and put another site such
-as an individual website in
-its place.  For the lulz I guess.</p>
-
-<p>Still, the weirdest part of this to me was that not a single person
-conteacted me on twitter or any other medium to ask what I was doing on
-the mainpage of their cafe.  Someday I will have to visit Red e cafe to
-ask in person if this happens often to them.</p>
-
-<p>One other interesting thing I noticed was how often my site gets hit by
-a Baidu spider.  Prior to this one came by maybe once a week now one
-visits about every 20 minutes.</p>
-
-<p><a href="http://theredecafe.com"><img
-src="http://red-e-cafe.morsel.cc/system/logos/1/medium/red_e_logo_large.png"></a></p>
 ]]></content>
   </entry>
   
