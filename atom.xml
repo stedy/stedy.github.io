@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2015-07-23T15:40:36-07:00</updated>
+  <updated>2015-07-23T15:43:34-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -27,14 +27,14 @@ showing changes by neighborhood. This heatmap shows a current snaphot of
 the changes which made me curious about changes by restaurant type over the course of
 the year.</p>
 
-<iframe width="960" height="500" src="http://zachstednick.com/net_restaurant_changes.html"></iframe>
+<iframe width="960" height="520" src="http://zachstednick.com/net_restaurant_changes.html"></iframe>
 
 
 <p>A few notes:</p>
 
 <ul>
 <li><p>The City of Seattle uses North American Industry Classification System
-codes (NAICS)[<a href="http://www.census.gov/eos/www/naics/">http://www.census.gov/eos/www/naics/</a>] to track
+codes <a href="http://www.census.gov/eos/www/naics/">(NAICS)</a> to track
 restaurants. I then use the date of permit issuance as a proxy for a
 restaurant opening and date of permit revocation as a proxy for closing.</p></li>
 <li><p>A Full Service Restaurant as defined by NAICS is &ldquo;establishments primarily engaged in providing food services to patrons who order and are served while seated (i.e., waiter/waitress service) and pay after eating&rdquo;</p></li>
