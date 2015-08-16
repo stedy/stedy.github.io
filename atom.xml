@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2015-07-23T15:44:41-07:00</updated>
+  <updated>2015-08-16T12:18:27-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,72 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Batch collection of park boundaries with Open Street Map]]></title>
+    <link href="http://stedy.github.io/blog/2015/08/16/batch-collection-of-park-boundaries-with-open-street-map/"/>
+    <updated>2015-08-16T12:16:39-07:00</updated>
+    <id>http://stedy.github.io/blog/2015/08/16/batch-collection-of-park-boundaries-with-open-street-map</id>
+    <content type="html"><![CDATA[<p>Open Street Map (OSM) is, simply put, a freely available and editable
+map of the <a href="http://www.openstreetmap.org">world</a>. I have been interested in
+improving the availability of <a href="https://github.com/openseattle/seattle-boundaries">boundaries in Seattle</a> and wanted
+to add park boundaries to this list as well. It was easy to look up
+boundaries on OSM, for example <a href="http://www.openstreetmap.org/way/53600070">Salmon Bay Park</a> shows the various nodes that
+make up its boundaries. But I had struggled with how to automate this
+search since at last count Seattle had over <a href="http://www.seattle.gov/parks/listall.asp">400
+parks</a>. After months of
+struggling with the OSM API, I fortuitously stumbed
+across the following tweet:</p>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Two
+map data posts:&#10;&#10;Historic map warping for <a
+href="https://twitter.com/somethingmodern">@somethingmodern</a> <a
+href="http://t.co/7POw8PNBXI">http://t.co/7POw8PNBXI</a>&#10;&#10;Data
+from OSM for <a href="https://twitter.com/alignedleft">@alignedleft</a>
+<a href="http://t.co/DqxAuyPunh">http://t.co/DqxAuyPunh</a></p>&mdash;
+Michal Migurski (@michalmigurski) <a
+href="https://twitter.com/michalmigurski/status/632613151721193472">August
+15, 2015</a></blockquote>
+
+
+<script async src="//platform.twitter.com/widgets.js"
+charset="utf-8"></script>
+
+
+<p>This tweet lead me to Mapzen which provides a service called <a href="https://mapzen.com/data/metro-extracts/">Metro
+Extracts</a> which provides
+datasets from OSM on a weekly basis. I downloaded the OSM2PGSQL GeoJSON
+file for Seattle which provided me files for Line, Point, and
+Polygon geometries. I then used
+<a href="https://www.npmjs.com/package/ogr2ogr">ogr2ogr</a> to filter for parks
+only with the command <code>ogr2ogr
+select 'osm_id, name, geometry' where "leisure = 'park'"</code>. This produced
+a GeoJSON file that looked like this:</p>
+
+<script src="https://gist.github.com/stedy/d11ab757400fd5375796.js"></script>
+
+
+<p>Obviously, more filtering needed to be done. Since many of these parks
+were not in Seattle, I used the Nominatim API to search for each park
+based on the OSM ID number. For example, the above mentioned park Salmon
+Bay Park returns a nicely formatted <a href="http://nominatim.openstreetmap.org/lookup?osm_ids=W53600070">XML
+file</a> which
+I just filtered based on city.</p>
+
+<p>Even after this there were still parks that were wrongly labelled as
+being in Seattle. I loaded the file into R and subset based on OSM ID
+and then used
+<a href="https://cran.r-project.org/web/packages/rgdal/">rgdal</a> to write the
+final result out as a GeoJSON file.</p>
+
+<script src="https://gist.github.com/stedy/1ef0a40bc8c29f7412a0.js"></script>
+
+
+<p>The take home lesson for me is that OSM is an excellent service but as
+with any publically annotated dataset be prepared to invest some time
+into cleaning and validating the data.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Update on restaurant changes]]></title>
@@ -1101,35 +1167,6 @@ stopwatches that can run independently.  My
 <a href="http://www.zachstednick.com/stopwatch.html">stopwatches</a>.  With more
 time I would go back in and add a javascript popup window to populate
 the names.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Knapsack problem IRL]]></title>
-    <link href="http://stedy.github.io/blog/2013/01/30/knapsack-problem-irl/"/>
-    <updated>2013-01-30T22:49:00-08:00</updated>
-    <id>http://stedy.github.io/blog/2013/01/30/knapsack-problem-irl</id>
-    <content type="html"><![CDATA[<p>Orders for placing Girl Scout cookies are starting to hit the workplace
-email lists which is always a unique buying experience.  The cookies are
-available for a limited time so you have to order when you can
-especailly since I always seem to run into girls selling them when I
-don&rsquo;t have any cash on me (time for a Square charitable collaboration?).</p>
-
-<p>This year I decided to apply the <a href="https://en.wikipedia.org/wiki/Knapsack_problem">knapsack
-algorithm</a> to find the
-best possible approach to buying cookies.  I used the code from the
-wikipedia page, and edited it for GS cookies.  Since I bike most days I
-limited the weight to 80 ounces.  I wanted to maximize for the cookies I
-liked as well as maximize the number of cookies I would get.</p>
-
-<p>Looks like the Savannah smiles really threw off my preferences:<br>
-<code>4 of: do-si-does</code><br>
-<code>3 of: samoas</code><br>
-<code>1 of: savannah smiles</code><br></p>
-
-<p>Regardless, I am looking forward to getting my order!</p>
-
-<p>Try for yourself with this <a href="https://gist.github.com/4680832">gist</a></p>
 ]]></content>
   </entry>
   

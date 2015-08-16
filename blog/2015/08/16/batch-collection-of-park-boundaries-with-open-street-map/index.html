@@ -1,0 +1,203 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Batch collection of park boundaries with Open Street Map - Zach Stednick</title>
+	<meta name="author" content="Zach Stednick">
+
+	
+	<meta name="description" content="Open Street Map (OSM) is, simply put, a freely available and editable
+map of the world. I have been interested in
+improving the availability of &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Zach Stednick" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Zach Stednick</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:stedy.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/zachstednick" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/stedy" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="https://www.google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:stedy.github.io">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Batch Collection of Park Boundaries With Open Street Map</h2>
+	<div class="entry-content"><p>Open Street Map (OSM) is, simply put, a freely available and editable
+map of the <a href="http://www.openstreetmap.org">world</a>. I have been interested in
+improving the availability of <a href="https://github.com/openseattle/seattle-boundaries">boundaries in Seattle</a> and wanted
+to add park boundaries to this list as well. It was easy to look up
+boundaries on OSM, for example <a href="http://www.openstreetmap.org/way/53600070">Salmon Bay Park</a> shows the various nodes that
+make up its boundaries. But I had struggled with how to automate this
+search since at last count Seattle had over <a href="http://www.seattle.gov/parks/listall.asp">400
+parks</a>. After months of
+struggling with the OSM API, I fortuitously stumbed
+across the following tweet:</p>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Two
+map data posts:&#10;&#10;Historic map warping for <a
+href="https://twitter.com/somethingmodern">@somethingmodern</a> <a
+href="http://t.co/7POw8PNBXI">http://t.co/7POw8PNBXI</a>&#10;&#10;Data
+from OSM for <a href="https://twitter.com/alignedleft">@alignedleft</a>
+<a href="http://t.co/DqxAuyPunh">http://t.co/DqxAuyPunh</a></p>&mdash;
+Michal Migurski (@michalmigurski) <a
+href="https://twitter.com/michalmigurski/status/632613151721193472">August
+15, 2015</a></blockquote>
+
+
+<script async src="//platform.twitter.com/widgets.js"
+charset="utf-8"></script>
+
+
+<p>This tweet lead me to Mapzen which provides a service called <a href="https://mapzen.com/data/metro-extracts/">Metro
+Extracts</a> which provides
+datasets from OSM on a weekly basis. I downloaded the OSM2PGSQL GeoJSON
+file for Seattle which provided me files for Line, Point, and
+Polygon geometries. I then used
+<a href="https://www.npmjs.com/package/ogr2ogr">ogr2ogr</a> to filter for parks
+only with the command <code>ogr2ogr
+select 'osm_id, name, geometry' where "leisure = 'park'"</code>. This produced
+a GeoJSON file that looked like this:</p>
+
+<script src="https://gist.github.com/stedy/d11ab757400fd5375796.js"></script>
+
+
+<p>Obviously, more filtering needed to be done. Since many of these parks
+were not in Seattle, I used the Nominatim API to search for each park
+based on the OSM ID number. For example, the above mentioned park Salmon
+Bay Park returns a nicely formatted <a href="http://nominatim.openstreetmap.org/lookup?osm_ids=W53600070">XML
+file</a> which
+I just filtered based on city.</p>
+
+<p>Even after this there were still parks that were wrongly labelled as
+being in Seattle. I loaded the file into R and subset based on OSM ID
+and then used
+<a href="https://cran.r-project.org/web/packages/rgdal/">rgdal</a> to write the
+final result out as a GeoJSON file.</p>
+
+<script src="https://gist.github.com/stedy/1ef0a40bc8c29f7412a0.js"></script>
+
+
+<p>The take home lesson for me is that OSM is an excellent service but as
+with any publically annotated dataset be prepared to invest some time
+into cleaning and validating the data.</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-08-16T12:16:39-07:00" pubdate data-updated="true"></time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/geojson/'>geojson,</a>, <a class='category' href='/blog/categories/osm/'>osm</a>, <a class='category' href='/blog/categories/r/'>r,</a>
+
+
+</div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+</div>
+
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2015
+
+    Zach Stednick
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: osm | Zach Stednick]]></title>
+  <link href="http://stedy.github.io/blog/categories/osm/atom.xml" rel="self"/>
+  <link href="http://stedy.github.io/"/>
+  <updated>2015-08-16T12:18:27-07:00</updated>
+  <id>http://stedy.github.io/</id>
+  <author>
+    <name><![CDATA[Zach Stednick]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Batch collection of park boundaries with Open Street Map]]></title>
+    <link href="http://stedy.github.io/blog/2015/08/16/batch-collection-of-park-boundaries-with-open-street-map/"/>
+    <updated>2015-08-16T12:16:39-07:00</updated>
+    <id>http://stedy.github.io/blog/2015/08/16/batch-collection-of-park-boundaries-with-open-street-map</id>
+    <content type="html"><![CDATA[<p>Open Street Map (OSM) is, simply put, a freely available and editable
+map of the <a href="http://www.openstreetmap.org">world</a>. I have been interested in
+improving the availability of <a href="https://github.com/openseattle/seattle-boundaries">boundaries in Seattle</a> and wanted
+to add park boundaries to this list as well. It was easy to look up
+boundaries on OSM, for example <a href="http://www.openstreetmap.org/way/53600070">Salmon Bay Park</a> shows the various nodes that
+make up its boundaries. But I had struggled with how to automate this
+search since at last count Seattle had over <a href="http://www.seattle.gov/parks/listall.asp">400
+parks</a>. After months of
+struggling with the OSM API, I fortuitously stumbed
+across the following tweet:</p>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Two
+map data posts:&#10;&#10;Historic map warping for <a
+href="https://twitter.com/somethingmodern">@somethingmodern</a> <a
+href="http://t.co/7POw8PNBXI">http://t.co/7POw8PNBXI</a>&#10;&#10;Data
+from OSM for <a href="https://twitter.com/alignedleft">@alignedleft</a>
+<a href="http://t.co/DqxAuyPunh">http://t.co/DqxAuyPunh</a></p>&mdash;
+Michal Migurski (@michalmigurski) <a
+href="https://twitter.com/michalmigurski/status/632613151721193472">August
+15, 2015</a></blockquote>
+
+
+<script async src="//platform.twitter.com/widgets.js"
+charset="utf-8"></script>
+
+
+<p>This tweet lead me to Mapzen which provides a service called <a href="https://mapzen.com/data/metro-extracts/">Metro
+Extracts</a> which provides
+datasets from OSM on a weekly basis. I downloaded the OSM2PGSQL GeoJSON
+file for Seattle which provided me files for Line, Point, and
+Polygon geometries. I then used
+<a href="https://www.npmjs.com/package/ogr2ogr">ogr2ogr</a> to filter for parks
+only with the command <code>ogr2ogr
+select 'osm_id, name, geometry' where "leisure = 'park'"</code>. This produced
+a GeoJSON file that looked like this:</p>
+
+<script src="https://gist.github.com/stedy/d11ab757400fd5375796.js"></script>
+
+
+<p>Obviously, more filtering needed to be done. Since many of these parks
+were not in Seattle, I used the Nominatim API to search for each park
+based on the OSM ID number. For example, the above mentioned park Salmon
+Bay Park returns a nicely formatted <a href="http://nominatim.openstreetmap.org/lookup?osm_ids=W53600070">XML
+file</a> which
+I just filtered based on city.</p>
+
+<p>Even after this there were still parks that were wrongly labelled as
+being in Seattle. I loaded the file into R and subset based on OSM ID
+and then used
+<a href="https://cran.r-project.org/web/packages/rgdal/">rgdal</a> to write the
+final result out as a GeoJSON file.</p>
+
+<script src="https://gist.github.com/stedy/1ef0a40bc8c29f7412a0.js"></script>
+
+
+<p>The take home lesson for me is that OSM is an excellent service but as
+with any publically annotated dataset be prepared to invest some time
+into cleaning and validating the data.</p>
+]]></content>
+  </entry>
+  
+</feed>
