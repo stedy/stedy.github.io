@@ -4,7 +4,7 @@
   <title><![CDATA[Category: geojson, | Zach Stednick]]></title>
   <link href="http://stedy.github.io/blog/categories/geojson/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2015-08-16T12:18:27-07:00</updated>
+  <updated>2015-08-16T12:19:54-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -50,9 +50,11 @@ datasets from OSM on a weekly basis. I downloaded the OSM2PGSQL GeoJSON
 file for Seattle which provided me files for Line, Point, and
 Polygon geometries. I then used
 <a href="https://www.npmjs.com/package/ogr2ogr">ogr2ogr</a> to filter for parks
-only with the command <code>ogr2ogr
-select 'osm_id, name, geometry' where "leisure = 'park'"</code>. This produced
-a GeoJSON file that looked like this:</p>
+only with the command</p>
+
+<p><code>ogr2ogr select 'osm_id, name, geometry' where "leisure = 'park'"</code></p>
+
+<p>This produced a GeoJSON file that looked like this:</p>
 
 <script src="https://gist.github.com/stedy/d11ab757400fd5375796.js"></script>
 
