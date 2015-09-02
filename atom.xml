@@ -124,7 +124,7 @@ final result out as a GeoJSON file.</p>
 
 
 <p>The take home lesson for me is that OSM is an excellent service but as
-with any publically annotated dataset be prepared to invest some time
+with any publicly annotated dataset be prepared to invest some time
 into cleaning and validating the data.</p>
 ]]></content>
   </entry>
@@ -412,7 +412,7 @@ that data from LibraryThing so I abandoned that analysis.</p>
     <link href="http://stedy.github.io/blog/2014/11/19/simple-webstats-with-r/"/>
     <updated>2014-11-19T17:01:34-08:00</updated>
     <id>http://stedy.github.io/blog/2014/11/19/simple-webstats-with-r</id>
-    <content type="html"><![CDATA[<p>As someone who puts out writings out publically, I am naturally curious who (if anyone) is actually reading what I write. To answer this I developed a simple webstat calculator using R. I realize there are many options out there for tracking visits but to paraphrase my friend Andy, <a href="http://wingolog.org/archives/2014/11/14/on-yakshave-on-color-on-cosines-on-glitchen">when has using standard libraries lead to anything cool?</a>.</p>
+    <content type="html"><![CDATA[<p>As someone who puts out writings out publicly, I am naturally curious who (if anyone) is actually reading what I write. To answer this I developed a simple webstat calculator using R. I realize there are many options out there for tracking visits but to paraphrase my friend Andy, <a href="http://wingolog.org/archives/2014/11/14/on-yakshave-on-color-on-cosines-on-glitchen">when has using standard libraries lead to anything cool?</a>.</p>
 
 <p>My main interests in this project is to answer two questions:</p>
 
