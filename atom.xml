@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2015-08-16T12:19:54-07:00</updated>
+  <updated>2015-09-02T09:56:06-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,54 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Fremont bridge opening times]]></title>
+    <link href="http://stedy.github.io/blog/2015/09/02/fremont-bridge-opening-times/"/>
+    <updated>2015-09-02T09:54:03-07:00</updated>
+    <id>http://stedy.github.io/blog/2015/09/02/fremont-bridge-opening-times</id>
+    <content type="html"><![CDATA[<p>I bike across the Fremont Bridge twice a day which Wikipedia
+<a href="https://en.wikipedia.org/wiki/Fremont_Bridge_%28Seattle%29">claims</a> is
+the most frequently opened bridge in the United States.
+This claim is uncited and while it may be true, due to <a href="http://www.ecfr.gov/cgi-bin/text-idx?SID=cfc62d83403b960e08f5038e67b9ecd1&amp;node=33:1.0.1.10.61.1.65.3&amp;rgn=div8">Federal Maritime
+Law</a>
+boats get precedence for bridge opening with the exceptions of rush
+hours which in Seattle are M-F 7-9 AM and 4-6 PM. I often get to the
+bridge on my bike around 9 AM in the morning and 6 PM in the evening and
+it
+always felt like the bridge opens right at 9 and 6 PM on the dot. I
+could manually time the bridge openings but that seemed like too much
+effort.</p>
+
+<p>Recently, a friend notified me about the twitter account of <a href="https://twitter.com/sdotbridges">Seattle DOT
+bridges</a> which is basically a bot that
+posts bridge openings and closings such as:</p>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">The
+Fremont Bridge has closed to traffic - 9:43:03 AM</p>&mdash;
+seattleDOTbridges (@SDOTbridges) <a
+href="https://twitter.com/SDOTbridges/status/639116352200970240">September
+2, 2015</a></blockquote>
+
+
+<script async src="//platform.twitter.com/widgets.js"
+charset="utf-8"></script>
+
+
+<p>I used the excellent (twitteR)[<a href="https://github.com/geoffjentry/twitteR">https://github.com/geoffjentry/twitteR</a>]
+to scrape tweets from Seattle DOT bridges for the past month to test how
+accurate my assumption was. From this, I pulled
+the first crossing post morning rush hour and evening rush hour for
+weekdays only.</p>
+
+<p><img src="http://zachstednick.com/Fremont_bridge_openings.png"></p>
+
+<p>The mean opening time post-morning rush was 9:28 AM and the mean opening
+time post-evening rush was 9:25 which means that my assumptions were
+pretty off and I should not feel so stressed to arrive at the bridge
+before 9 AM and 6 PM.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Batch collection of park boundaries with Open Street Map]]></title>
@@ -1152,23 +1200,6 @@ it does look promising.  Here is the
 image (usually of a cat) to the pdf document and then rename it since
 most research sites name their documents similar to the DOI for the
 paper.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[CSS stopwatch]]></title>
-    <link href="http://stedy.github.io/blog/2013/02/21/css-stopwatch/"/>
-    <updated>2013-02-21T17:49:00-08:00</updated>
-    <id>http://stedy.github.io/blog/2013/02/21/css-stopwatch</id>
-    <content type="html"><![CDATA[<p>My wife kept complaining about being bored in long meetings so I decided
-to try and help her cut down on the monotony.
-<a href="http://thecodeplayer.com/walkthrough/make-a-stopwatch-using-css3-without-images-or-javascript">There</a> is a great demo for
-making a stopwatch with pure CSS.  I extended it to provide two
-stopwatches that can run independently.  My
-<a href="https://gist.github.com/stedy/4728805">gist</a> and the actual
-<a href="http://www.zachstednick.com/stopwatch.html">stopwatches</a>.  With more
-time I would go back in and add a javascript popup window to populate
-the names.</p>
 ]]></content>
   </entry>
   

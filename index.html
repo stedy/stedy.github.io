@@ -7,9 +7,10 @@
 	<meta name="author" content="Zach Stednick">
 
 	
-	<meta name="description" content="Open Street Map (OSM) is, simply put, a freely available and editable
-map of the world. I have been interested in
-improving the availability of &hellip;">
+	<meta name="description" content="I bike across the Fremont Bridge twice a day which Wikipedia
+claims is
+the most frequently opened bridge in the United States.
+This claim is uncited &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -80,6 +81,86 @@ improving the availability of &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2015/09/02/fremont-bridge-opening-times/">
+		
+			Fremont Bridge Opening Times</a>
+	</h2>
+	<div class="entry-content">
+		<p>I bike across the Fremont Bridge twice a day which Wikipedia
+<a href="https://en.wikipedia.org/wiki/Fremont_Bridge_%28Seattle%29">claims</a> is
+the most frequently opened bridge in the United States.
+This claim is uncited and while it may be true, due to <a href="http://www.ecfr.gov/cgi-bin/text-idx?SID=cfc62d83403b960e08f5038e67b9ecd1&amp;node=33:1.0.1.10.61.1.65.3&amp;rgn=div8">Federal Maritime
+Law</a>
+boats get precedence for bridge opening with the exceptions of rush
+hours which in Seattle are M-F 7-9 AM and 4-6 PM. I often get to the
+bridge on my bike around 9 AM in the morning and 6 PM in the evening and
+it
+always felt like the bridge opens right at 9 and 6 PM on the dot. I
+could manually time the bridge openings but that seemed like too much
+effort.</p>
+
+<p>Recently, a friend notified me about the twitter account of <a href="https://twitter.com/sdotbridges">Seattle DOT
+bridges</a> which is basically a bot that
+posts bridge openings and closings such as:</p>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">The
+Fremont Bridge has closed to traffic - 9:43:03 AM</p>&mdash;
+seattleDOTbridges (@SDOTbridges) <a
+href="https://twitter.com/SDOTbridges/status/639116352200970240">September
+2, 2015</a></blockquote>
+
+
+<script async src="//platform.twitter.com/widgets.js"
+charset="utf-8"></script>
+
+
+<p>I used the excellent (twitteR)[<a href="https://github.com/geoffjentry/twitteR">https://github.com/geoffjentry/twitteR</a>]
+to scrape tweets from Seattle DOT bridges for the past month to test how
+accurate my assumption was. From this, I pulled
+the first crossing post morning rush hour and evening rush hour for
+weekdays only.</p>
+
+<p><img src="http://zachstednick.com/Fremont_bridge_openings.png"></p>
+
+<p>The mean opening time post-morning rush was 9:28 AM and the mean opening
+time post-evening rush was 9:25 which means that my assumptions were
+pretty off and I should not feel so stressed to arrive at the bridge
+before 9 AM and 6 PM.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-09-02T09:54:03-07:00" pubdate data-updated="true"></time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/biking/'>biking,</a>, <a class='category' href='/blog/categories/r/'>r,</a>, <a class='category' href='/blog/categories/twitter/'>twitter</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -758,196 +839,6 @@ Westerlind but maybe I should just focus on the journey instead.</p>
 
 <time datetime="2014-11-05T15:27:00-08:00" pubdate data-updated="true"></time></div>
 	<div class="tags">
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/08/30/lego-price-estimates-over-time/">
-		
-			LEGO Price Estimates Over Time</a>
-	</h2>
-	<div class="entry-content">
-		<p>LEGO recently introduced a new LEGO set called <a href="http://shop.lego.com/en-US/Research-Institute-21110">Research
-Institute</a> which
-featured three female scientists. Since my wife is also a female
-scientist, I tried to order one from the LEGO website only to learn that
-they had sold out in less than a day. I then wrote an email complaining
-about this to LEGO who responded by sending me an apology note and a
-catalog.</p>
-
-<p>I grew up playing with LEGO sets, hard to avoid when you were named Zach
-and commercials like
-<a href="https://www.youtube.com/watch?v=pDH3AoOQzE0">this</a> dominated the
-airwaves. Anyways, when I was a kid my dad once mentioned to me that a good rule of thumb
-for determining the price of a LEGO set was to estimate each brick
-costing about 10 cents. This new catalog made me wonder if this was still
-true. I copied all the model numbers as well as the number of pieces and
-the prices. I was also curious in how true this trend was when adjusted
-for inflation so I used the CPI Inflation calculator from <a href="http://data.bls.gov/cgi-bin/cpicalc.pl?cost1=.10&amp;year1=1989&amp;year2=2014">US Bureau of
-Labor
-Statistics</a> which showed
-that $0.10 in 1989 had the same buying power as $0.19 in 2014. Ideally I
-could have found a catalog from 1989 but I don&rsquo;t remember any back then
-and I probably would have cut it up to put pictures in my locker or
-something like that. I used R
-to plot both of these trends and it appears that my dad&rsquo;s estimate still
-holds true for 2014.</p>
-
-<p><img src="http://zachstednick.com/lego_by_year.png"></p>
-
-<p>A correlation calculation for all sets gives a value of 0.91 which means my dad had a
-pretty good estimate back in the day.</p>
-
-<p>I also looked at the average price for each collection and found that
-almost all collections retained a high correlation between the estimated
-price and the actual price.</p>
-
-<table>
-<thead>
-<tr>
-<th> Collection </th>
-<th> Collection Mean Price </th>
-<th style="text-align:right;"> Collection Correlation </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td> Basics </td>
-<td> 29.99 </td>
-<td style="text-align:right;"> NA</td>
-</tr>
-<tr>
-<td> Chima </td>
-<td> 38.99 </td>
-<td style="text-align:right;"> 0.977</td>
-</tr>
-<tr>
-<td> City </td>
-<td> 54.365 </td>
-<td style="text-align:right;"> 0.896</td>
-</tr>
-<tr>
-<td> Creator </td>
-<td> 100.375 </td>
-<td style="text-align:right;"> 0.955</td>
-</tr>
-<tr>
-<td> DC Superheroes </td>
-<td> 76.657 </td>
-<td style="text-align:right;"> 1</td>
-</tr>
-<tr>
-<td> Disney Princess </td>
-<td> 27.657 </td>
-<td style="text-align:right;"> 0.963</td>
-</tr>
-<tr>
-<td> Exclusive </td>
-<td> 149.99 </td>
-<td style="text-align:right;"> NA</td>
-</tr>
-<tr>
-<td> Friends </td>
-<td> 23.354 </td>
-<td style="text-align:right;"> 0.992</td>
-</tr>
-<tr>
-<td> Ideas </td>
-<td> 49.99 </td>
-<td style="text-align:right;"> NA</td>
-</tr>
-<tr>
-<td> Juniors </td>
-<td> 27.49 </td>
-<td style="text-align:right;"> 0.901</td>
-</tr>
-<tr>
-<td> LEGO Movie </td>
-<td> 63.99 </td>
-<td style="text-align:right;"> 0.997</td>
-</tr>
-<tr>
-<td> Marvel Superheroes </td>
-<td> 40.99 </td>
-<td style="text-align:right;"> 0.934</td>
-</tr>
-<tr>
-<td> Mindstorms </td>
-<td> 349.99 </td>
-<td style="text-align:right;"> NA</td>
-</tr>
-<tr>
-<td> Minecraft </td>
-<td> 139.96 </td>
-<td style="text-align:right;"> NA</td>
-</tr>
-<tr>
-<td> Mixels </td>
-<td> 4.99 </td>
-<td style="text-align:right;"> NA</td>
-</tr>
-<tr>
-<td> Ninjago </td>
-<td> 47.434 </td>
-<td style="text-align:right;"> 0.976</td>
-</tr>
-<tr>
-<td> Simpsons </td>
-<td> 199.99 </td>
-<td style="text-align:right;"> NA</td>
-</tr>
-<tr>
-<td> Star Wars </td>
-<td> 133.365 </td>
-<td style="text-align:right;"> 0.979</td>
-</tr>
-<tr>
-<td> Technic </td>
-<td> 81.99 </td>
-<td style="text-align:right;"> 0.989</td>
-</tr>
-<tr>
-<td> Ultra Agents </td>
-<td> 45.323 </td>
-<td style="text-align:right;"> 0.983</td>
-</tr>
-</tbody>
-</table>
-
-
-<p>Raw data and code for this lives at this
-<a href="https://gist.github.com/stedy/92b949ba44effd66c855">gist</a></p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-30T16:22:00-07:00" pubdate data-updated="true"></time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/lego/'>lego</a>, <a class='category' href='/blog/categories/r/'>r,</a>
-
 
 </div>
 	
