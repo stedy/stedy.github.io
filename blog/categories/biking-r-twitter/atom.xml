@@ -4,7 +4,7 @@
   <title><![CDATA[Category: biking,r,twitter | Zach Stednick]]></title>
   <link href="http://stedy.github.io/blog/categories/biking-r-twitter/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2015-09-02T09:57:16-07:00</updated>
+  <updated>2015-09-02T10:00:32-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -31,7 +31,7 @@ always felt like the bridge opens right at 9 and 6 PM on the dot. I
 could manually time the bridge openings but that seemed like too much
 effort.</p>
 
-<p>Recently, a friend notified me about the twitter account of <a href="https://twitter.com/sdotbridges">Seattle DOT
+<p>Recently, a <a href="https://twitter.com/brotherslogsdon">friend</a> notified me about the twitter account of <a href="https://twitter.com/sdotbridges">Seattle DOT
 bridges</a> which is basically a bot that
 posts bridge openings and closings such as:</p>
 
@@ -46,7 +46,7 @@ href="https://twitter.com/SDOTbridges/status/639116352200970240">September
 charset="utf-8"></script>
 
 
-<p>I used the excellent (twitteR)[<a href="https://github.com/geoffjentry/twitteR">https://github.com/geoffjentry/twitteR</a>]
+<p>I used the excellent <a href="https://github.com/geoffjentry/twitteR">twitteR</a>
 to scrape tweets from Seattle DOT bridges for the past month to test how
 accurate my assumption was. From this, I pulled
 the first crossing post morning rush hour and evening rush hour for
