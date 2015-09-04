@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2015-09-04T13:11:43-07:00</updated>
+  <updated>2015-09-04T13:13:37-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -60,8 +60,7 @@ convert to the WGS84 datum which are easily done with</p>
 
 <p>And written out as a GeoJSON file with</p>
 
-<p><code>writeOGR(seattle.only.wgs, dsn="seattle.only.wgs.geojson",
-        layer="cd2012", driver="GeoJSON", check_exists = FALSE)</code></p>
+<p><code>writeOGR(seattle.only.wgs, dsn="seattle.only.wgs.geojson", layer="cd2012", driver="GeoJSON", check_exists = FALSE)</code></p>
 
 <p>Occasionally I get an error about the file I am about to create not
 being found. This Stack Overflow
@@ -88,8 +87,9 @@ boats get precedence for bridge opening with the exceptions of rush
 hours which in Seattle are M-F 7-9 AM and 4-6 PM. I often get to the
 bridge on my bike around 9 AM in the morning and 6 PM in the evening and
 it
-always felt like the bridge opens right at 9 and 6 PM on the dot. I
-could manually time the bridge openings but that seemed like too much
+always felt like the bridge opens for a boat right at 9 and 6 PM on the
+dot. I wanted to verify this and figured the only way to do so would be
+to manually time the bridge openings but that seemed like too much
 effort.</p>
 
 <p>Recently, a <a href="https://twitter.com/brotherslogsdon">friend</a> notified me about the twitter account of <a href="https://twitter.com/sdotbridges">Seattle DOT
