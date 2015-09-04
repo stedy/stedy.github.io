@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2015-09-04T13:09:30-07:00</updated>
+  <updated>2015-09-04T13:11:43-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -32,20 +32,19 @@ two libraries in R to achieve this, specifically
 <p>For example, lets use the Congressional District 2012 shapefiles from
 the <a href="http://www.ofm.wa.gov/pop/geographic/tiger.asp">Washington State Office of Financial
 Management</a>. Downloading
-the file, unzipping, and then loading into R with</p>
-
-<pre><code>R&gt; wa.cd &lt;- readOGR("cd2012.shp", layer="cd2012")
-OGR data source with driver: ESRI Shapefile
-Source: "cd2012.shp", layer: "cd2012"
-with 10 features
-It has 34 fields
-R&gt; class(wa.cd)
-[1] "SpatialPolygonsDataFrame"
-attr(,"package")
-[1] "sp"
-</code></pre>
-
-<p>We want to select only the districts that cover Seattle, 7 and 9 which
+the file, unzipping, and then loading into R with
+<code>
+    R&gt; wa.cd &lt;- readOGR("cd2012.shp", layer="cd2012")
+    OGR data source with driver: ESRI Shapefile
+    Source: "cd2012.shp", layer: "cd2012"
+    with 10 features
+    It has 34 fields
+    R&gt; class(wa.cd)
+    [1] "SpatialPolygonsDataFrame"
+    attr(,"package")
+    [1] "sp"
+</code>
+We want to select only the districts that cover Seattle, 7 and 9 which
 is as simple as subsetting</p>
 
 <p><code>seattle.only &lt;- subset(wa.cd, CD113FP %in% c('07', '09'))</code></p>
