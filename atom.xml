@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2015-09-04T13:07:39-07:00</updated>
+  <updated>2015-09-04T13:09:30-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -14,9 +14,9 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Subsetting Shapefiles With R]]></title>
+    <title type="html"><![CDATA[subsetting shapefiles with R]]></title>
     <link href="http://stedy.github.io/blog/2015/09/04/subsetting-shapefiles-with-r/"/>
-    <updated>2015-09-04T00:00:00-07:00</updated>
+    <updated>2015-09-04T13:05:49-07:00</updated>
     <id>http://stedy.github.io/blog/2015/09/04/subsetting-shapefiles-with-r</id>
     <content type="html"><![CDATA[<p>I have been trying to improve my GIS skills lately and have been trying
 to use R for as much of this process as I can. One of the tasks I
@@ -34,15 +34,16 @@ the <a href="http://www.ofm.wa.gov/pop/geographic/tiger.asp">Washington State Of
 Management</a>. Downloading
 the file, unzipping, and then loading into R with</p>
 
-<p>  R> wa.cd <- readOGR("cd2012.shp", layer="cd2012")
-  OGR data source with driver: ESRI Shapefile
-  Source: "cd2012.shp", layer: "cd2012"
-  with 10 features
-  It has 34 fields
-  R> class(wa.cd)
-  [1] &ldquo;SpatialPolygonsDataFrame&rdquo;
-  attr(,&ldquo;package&rdquo;)
-  [1] &ldquo;sp&rdquo;</p>
+<pre><code>R&gt; wa.cd &lt;- readOGR("cd2012.shp", layer="cd2012")
+OGR data source with driver: ESRI Shapefile
+Source: "cd2012.shp", layer: "cd2012"
+with 10 features
+It has 34 fields
+R&gt; class(wa.cd)
+[1] "SpatialPolygonsDataFrame"
+attr(,"package")
+[1] "sp"
+</code></pre>
 
 <p>We want to select only the districts that cover Seattle, 7 and 9 which
 is as simple as subsetting</p>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: gis,r,geojson | Zach Stednick]]></title>
+  <link href="http://stedy.github.io/blog/categories/gis-r-geojson/atom.xml" rel="self"/>
+  <link href="http://stedy.github.io/"/>
+  <updated>2015-09-04T13:09:30-07:00</updated>
+  <id>http://stedy.github.io/</id>
+  <author>
+    <name><![CDATA[Zach Stednick]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[subsetting shapefiles with R]]></title>
+    <link href="http://stedy.github.io/blog/2015/09/04/subsetting-shapefiles-with-r/"/>
+    <updated>2015-09-04T13:05:49-07:00</updated>
+    <id>http://stedy.github.io/blog/2015/09/04/subsetting-shapefiles-with-r</id>
+    <content type="html"><![CDATA[<p>I have been trying to improve my GIS skills lately and have been trying
+to use R for as much of this process as I can. One of the tasks I
+frequently perform is taking a shapefile, subsetting it, and then
+converting to a GeoJSON. The npm module
+<a href="https://www.npmjs.com/package/ogr2ogr">ogr2ogr</a> is excellent for
+converting from a shapefile to GeoJSON, however I frequntly find myself
+needing to select only certain areas of a shapefile. I have been using
+two libraries in R to achieve this, specifically
+<a href="https://cran.r-project.org/web/packages/rgdal/index.html">rgdal</a> and
+<a href="https://cran.r-project.org/web/packages/sp/">sp</a>.</p>
+
+<p>For example, lets use the Congressional District 2012 shapefiles from
+the <a href="http://www.ofm.wa.gov/pop/geographic/tiger.asp">Washington State Office of Financial
+Management</a>. Downloading
+the file, unzipping, and then loading into R with</p>
+
+<pre><code>R&gt; wa.cd &lt;- readOGR("cd2012.shp", layer="cd2012")
+OGR data source with driver: ESRI Shapefile
+Source: "cd2012.shp", layer: "cd2012"
+with 10 features
+It has 34 fields
+R&gt; class(wa.cd)
+[1] "SpatialPolygonsDataFrame"
+attr(,"package")
+[1] "sp"
+</code></pre>
+
+<p>We want to select only the districts that cover Seattle, 7 and 9 which
+is as simple as subsetting</p>
+
+<p><code>seattle.only &lt;- subset(wa.cd, CD113FP %in% c('07', '09'))</code></p>
+
+<p>One of the nice features about GitHub gists is that you can overlay a
+GeoJSON file on a Google map for a quick QC check. While R accepts a
+variety of
+projection formats, Github does not and I occasionally I find I have to
+convert to the WGS84 datum which are easily done with</p>
+
+<p><code>seattle.only.wgs &lt;- spTransform(seattle.only, CRS("+proj=longlat
++ellps=WGS84"))</code></p>
+
+<p>And written out as a GeoJSON file with</p>
+
+<p><code>writeOGR(seattle.only.wgs, dsn="seattle.only.wgs.geojson",
+        layer="cd2012", driver="GeoJSON", check_exists = FALSE)</code></p>
+
+<p>Occasionally I get an error about the file I am about to create not
+being found. This Stack Overflow
+<a href="http://stackoverflow.com/a/29743969/163809">answer</a> was very helpful
+and now I add the <code>check_exists = FALSE</code> parameter every time I write
+out with <code>writeOGR()</code>.</p>
+
+<p><script
+src="https://gist.github.com/stedy/3c4954baa0b1c96fc9e8.js"></script></p>
+]]></content>
+  </entry>
+  
+</feed>

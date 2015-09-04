@@ -106,15 +106,16 @@ the <a href="http://www.ofm.wa.gov/pop/geographic/tiger.asp">Washington State Of
 Management</a>. Downloading
 the file, unzipping, and then loading into R with</p>
 
-<p>  R> wa.cd <- readOGR("cd2012.shp", layer="cd2012")
-  OGR data source with driver: ESRI Shapefile
-  Source: "cd2012.shp", layer: "cd2012"
-  with 10 features
-  It has 34 fields
-  R> class(wa.cd)
-  [1] &ldquo;SpatialPolygonsDataFrame&rdquo;
-  attr(,&ldquo;package&rdquo;)
-  [1] &ldquo;sp&rdquo;</p>
+<pre><code>R&gt; wa.cd &lt;- readOGR("cd2012.shp", layer="cd2012")
+OGR data source with driver: ESRI Shapefile
+Source: "cd2012.shp", layer: "cd2012"
+with 10 features
+It has 34 fields
+R&gt; class(wa.cd)
+[1] "SpatialPolygonsDataFrame"
+attr(,"package")
+[1] "sp"
+</code></pre>
 
 <p>We want to select only the districts that cover Seattle, 7 and 9 which
 is as simple as subsetting</p>
@@ -162,8 +163,12 @@ src="https://gist.github.com/stedy/3c4954baa0b1c96fc9e8.js"></script></p>
   
 
 
-<time datetime="2015-09-04T00:00:00-07:00" pubdate data-updated="true"></time></div>
+<time datetime="2015-09-04T13:05:49-07:00" pubdate data-updated="true"></time></div>
 	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/gis-r-geojson/'>gis,r,geojson</a>
+
 
 </div>
 	
