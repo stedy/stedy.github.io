@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2015-09-22T08:17:37-07:00</updated>
+  <updated>2015-09-22T08:20:19-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -84,7 +84,7 @@ run in a browser so I converted it to
 <a href="https://github.com/mbostock/topojson">topojson</a> using <code>topojson -o colored_traffic_circles2.topojson -p color colored_traffic_circles.geojson</code>. Even this ran too slowly so I had to
 reduce to streets with more than two traffic circles.</p>
 
-<p>&lt;img=&ldquo;<a href="http://zachstednick.com/seattle_traffic_circles.png">http://zachstednick.com/seattle_traffic_circles.png</a>&rdquo;></p>
+<p><img src="http://zachstednick.com/seattle_traffic_circles.png"></p>
 
 <p>Here the darker the color, the more traffic circles present on that
 street. For me the most interesting feature is how many traffic circles
