@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2015-09-21T22:05:38-07:00</updated>
+  <updated>2015-09-21T22:07:59-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Mapping Seattle Traffic Circles]]></title>
     <link href="http://stedy.github.io/blog/2015/09/21/mapping-seattle-traffic-circles/"/>
-    <updated>2015-09-21T00:00:00-07:00</updated>
+    <updated>2015-09-21T22:03:39-07:00</updated>
     <id>http://stedy.github.io/blog/2015/09/21/mapping-seattle-traffic-circles</id>
     <content type="html"><![CDATA[<p>Recently, there was a post on Priceonomics about traffic circles with
 the argument that roundabouts are <a href="http://priceonomics.com/the-case-for-more-traffic-roundabouts/">safer, help improve traffic flow, and
@@ -84,7 +84,7 @@ run in a browser so I converted it to
 <a href="https://github.com/mbostock/topojson">topojson</a> using <code>topojson -o colored_traffic_circles2.topojson -p color colored_traffic_circles.geojson</code>. Even this ran too slowly so I had to
 reduce to streets with more than two traffic circles.</p>
 
-<iframe><width="980" height="520" src="http://zachstednick.com/seattle_traffic_circles.html"></iframe>
+<iframe><src="http://zachstednick.com/seattle_traffic_circles.html"></iframe>
 
 
 <p>Here the darker the color, the more traffic circles present on that

@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://stedy.github.io/blog/2015/09/21/mapping-seattle-traffic-circles/</loc>
-    <lastmod>2015-09-21T00:00:00-07:00</lastmod>
+    <lastmod>2015-09-21T22:03:39-07:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -147,13 +147,13 @@
   </url>
   <url>
     <loc>http://stedy.github.io/blog/archives/</loc>
-    <lastmod>2015-09-21T22:05:38-07:00</lastmod>
+    <lastmod>2015-09-21T22:07:59-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://stedy.github.io/</loc>
-    <lastmod>2015-09-21T22:05:38-07:00</lastmod>
+    <lastmod>2015-09-21T22:07:59-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
