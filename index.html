@@ -7,9 +7,9 @@
 	<meta name="author" content="Zach Stednick">
 
 	
-	<meta name="description" content="I have been trying to improve my GIS skills lately and have been trying
-to use R for as much of this process as I can. One of the tasks I
-frequently &hellip;">
+	<meta name="description" content="Recently, there was a post on Priceonomics about traffic circles with
+the argument that roundabouts are safer, help improve traffic flow, and
+reduce &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -80,6 +80,131 @@ frequently &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2015/09/21/mapping-seattle-traffic-circles/">
+		
+			Mapping Seattle Traffic Circles</a>
+	</h2>
+	<div class="entry-content">
+		<p>Recently, there was a post on Priceonomics about traffic circles with
+the argument that roundabouts are <a href="http://priceonomics.com/the-case-for-more-traffic-roundabouts/">safer, help improve traffic flow, and
+reduce emissions</a>.
+The post mentions that there are 3700 roundabouts in the United States,
+which made me wonder - how many of those are in Seattle?</p>
+
+<p>Fortunately, the <a href="https://data.seattle.gov/">City of Seattle data site</a>
+has GIS data for all streets as well as GIS data for all traffic
+circles. The traffic circles dataset had 1042 total entries or about a
+third of the total number of roundabouts in the United States. I&rsquo;m not
+sure how accurate that is but I think focusing on traffic circles within
+the city limits is more interesting.</p>
+
+<p>I used the <a href="https://cran.r-project.org/web/packages/sp/">sp library</a> in
+R to read in both sets of shapefiles and quickly determine the streets
+with the highest number of roundabouts:</p>
+
+<table>
+<thead>
+<tr>
+<th> street </th>
+<th style="text-align:right;"> count </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> FREMONT AVE N </td>
+<td style="text-align:right;"> 27</td>
+</tr>
+<tr>
+<td> 1ST AVE NW </td>
+<td style="text-align:right;"> 24</td>
+</tr>
+<tr>
+<td> 8TH AVE NE </td>
+<td style="text-align:right;"> 23</td>
+</tr>
+<tr>
+<td> DAYTON AVE N </td>
+<td style="text-align:right;"> 23</td>
+</tr>
+<tr>
+<td> 6TH AVE NW </td>
+<td style="text-align:right;"> 21</td>
+</tr>
+<tr>
+<td> 12TH AVE NE </td>
+<td style="text-align:right;"> 18</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Fremont Ave N. has a whopping 27 traffic circles which seems excessive
+until you realize that most of these are North of the zoo and not in the
+denser southern part of the street.</p>
+
+<p>I thought quite a bit about how to best represent these values and
+ultimately
+settled on mapping streets colored to the number of traffic
+circles on that street. I wrote out my GeoJSON files using
+<code>rgdal::writeOGR()</code> and then found that was way too slow to reasonably
+run in a browser so I converted it to
+<a href="https://github.com/mbostock/topojson">topojson</a> using <code>topojson -o colored_traffic_circles2.topojson -p color colored_traffic_circles.geojson</code>. Even this ran too slowly so I had to
+reduce to streets with more than two traffic circles.</p>
+
+<iframe><width="980" height="520" src="http://zachstednick.com/seattle_traffic_circles.html"></iframe>
+
+
+<p>Here the darker the color, the more traffic circles present on that
+street. For me the most interesting feature is how many traffic circles
+in a N-S
+direction are right next to State Highway 99 or near I-5. Is this an
+attempt to mitigate traffic of people trying to use surface streets
+instead of arterials? Possibly, though difficult to determine.
+Regardless, 1042 is an impressive amount of traffic circles for a
+metropolitan area this large.</p>
+
+<h2>Notes</h2>
+
+<ul>
+<li>The City dataset has dates on traffic circle installations with the
+oldest traffic circle being 18TH AVE E AND E HARRISON ST installed on
+1/5/1976</li>
+<li>Full size version of this map available
+<a href="http://zachstednick.com/seattle_traffic_circles.html">here</a></li>
+<li>All code available <a href="https://github.com/stedy/blog-supplemental">here</a></li>
+</ul>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-09-21T00:00:00-07:00" pubdate data-updated="true"></time></div>
+	<div class="tags">
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -810,70 +935,6 @@ that data from LibraryThing so I abandoned that analysis.</p>
 
 
 	<a class='category' href='/blog/categories/librarything/'>librarything</a>, <a class='category' href='/blog/categories/r/'>r,</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/11/19/simple-webstats-with-r/">
-		
-			Simple Webstats With R</a>
-	</h2>
-	<div class="entry-content">
-		<p>As someone who puts out writings out publically, I am naturally curious who (if anyone) is actually reading what I write. To answer this I developed a simple webstat calculator using R. I realize there are many options out there for tracking visits but to paraphrase my friend Andy, <a href="http://wingolog.org/archives/2014/11/14/on-yakshave-on-color-on-cosines-on-glitchen">when has using standard libraries lead to anything cool?</a>.</p>
-
-<p>My main interests in this project is to answer two questions:</p>
-
-<ol>
-<li><p>Are people visting this site?</p></li>
-<li><p>Where are they visting from?</p></li>
-</ol>
-
-
-<p>I don&rsquo;t really care about things like <a href="https://en.wikipedia.org/wiki/Bounce_rate">bounce rate</a> or type of device used to access the site. Not having to worry about either of these issues helps cut down on the complexity. I run this site on an Apache server and use a standard log output to write my logfile:
-<code>LogFormat "%v:%p %h %l %u %t \"%r\" %&gt;s %O \"%{Referer}i\" \"%{User-Agent}i\"</code></p>
-
-<p>I made a small R script that uses <a href="http://cran.r-project.org/web/packages/knitr/">knitr</a> to output plots to HTML for ease in viewing. I wrote a shell script that uses the excellent <a href="http://dirk.eddelbuettel.com/code/littler.html">little r</a> to perform the commands. I run the shell script daily as a cron job and only look back at the past week&rsquo;s worth of data. Since this blog is served on github pages, it can be difficult to see page views so I use images loaded as a proxy.</p>
-
-<p>Here are some example plots of recent visitors:</p>
-
-<p><img src="http://zachstednick.com/visitor.png"></p>
-
-<p>And then another plot of visitor locations:</p>
-
-<p><img src="http://zachstednick.com/referrer_location.png"></p>
-
-<p>That outlier from Brazil is likely a Google bot crawling the site; better detection and removal of bot traffic from the final output is on the TODO list. All of the code (minus the shell script) lives on <a href="https://github.com/stedy/simple-webstats">github</a></p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-11-19T17:01:34-08:00" pubdate data-updated="true"></time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/github/'>github</a>, <a class='category' href='/blog/categories/r/'>r,</a>, <a class='category' href='/blog/categories/web/'>web,</a>
 
 
 </div>
