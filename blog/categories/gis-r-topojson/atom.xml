@@ -4,7 +4,7 @@
   <title><![CDATA[Category: gis,r,topojson | Zach Stednick]]></title>
   <link href="http://stedy.github.io/blog/categories/gis-r-topojson/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2015-09-21T22:10:41-07:00</updated>
+  <updated>2015-09-22T08:17:37-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -78,14 +78,13 @@ denser southern part of the street.</p>
 <p>I thought quite a bit about how to best represent these values and
 ultimately
 settled on mapping streets colored to the number of traffic
-circles on that street. I wrote out my GeoJSON files using
+circles on that street. I used R and <a href="http://colorbrewer2.org/">Color Brewer</a> to make a color attribute for the map based on traffic circle count that could be read by Leaflet. I wrote out my GeoJSON files using
 <code>rgdal::writeOGR()</code> and then found that was way too slow to reasonably
 run in a browser so I converted it to
 <a href="https://github.com/mbostock/topojson">topojson</a> using <code>topojson -o colored_traffic_circles2.topojson -p color colored_traffic_circles.geojson</code>. Even this ran too slowly so I had to
 reduce to streets with more than two traffic circles.</p>
 
-<iframe width="980" height="520" src="http://zachstednick.com/seattle_traffic_circles.html"></iframe>
-
+<p>&lt;img=&ldquo;<a href="http://zachstednick.com/seattle_traffic_circles.png">http://zachstednick.com/seattle_traffic_circles.png</a>&rdquo;></p>
 
 <p>Here the darker the color, the more traffic circles present on that
 street. For me the most interesting feature is how many traffic circles
