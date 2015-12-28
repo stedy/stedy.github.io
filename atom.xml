@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2015-12-28T12:53:48-08:00</updated>
+  <updated>2015-12-28T12:57:48-08:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -26,13 +26,12 @@ to a variety of factors such the size of the city and the difficulty in
 aggregating reliable data. There are several options for attempting to
 track changes such as scraping data from a review site such as Yelp or
 Zomato, systematically
-checking the Food section of the local paper, or go straight to the city
+checking the Food section of the local paper, or going straight to the city
 records and attempt to
 determine what restaurant permits are being issued over time.</p>
 
-<p>I was interested in comparing the <a href="http://www.seattle.gov/licenses/find-a-business">City of Seattle Business
-License Database</a> and
-the Food column from a local paper, specifically <a href="http://www.thestranger.com/">The
+<p>For the purposes of this analysis, I was decided to compare official city permit
+records and the Food column from a local paper, specifically <a href="http://www.thestranger.com/">The
 Stranger</a>.</p>
 
 <p>Earlier this year, I started scraping the <a href="http://www.seattle.gov/licenses/find-a-business">City of Seattle Business
