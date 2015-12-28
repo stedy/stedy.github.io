@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2015-09-22T08:20:19-07:00</updated>
+  <updated>2015-12-28T12:52:28-08:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,85 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Summarizing The Seattle Restaurant Scene In 2015]]></title>
+    <link href="http://stedy.github.io/blog/2015/12/28/summarizing-the-seattle-restaurant-scene-in-2015/"/>
+    <updated>2015-12-28T00:00:00-08:00</updated>
+    <id>http://stedy.github.io/blog/2015/12/28/summarizing-the-seattle-restaurant-scene-in-2015</id>
+    <content type="html"><![CDATA[<p>Seattle is experiencing sustained economic growth which manifests
+itself in a variety of ways, one of the most visible being changes in
+the restaurant
+industry. However, tracking the exact changes can be difficult due
+to a variety of factors such the size of the city and the difficulty in
+aggregating reliable data. There are several options for attempting to
+track changes such as scraping data from a review site such as Yelp or
+Zomato, systematically
+checking the Food section of the local paper, or go straight to the city
+records and attempt to
+determine what restaurant permits are being issued over time.</p>
+
+<p>I was interested in comparing the <a href="http://www.seattle.gov/licenses/find-a-business">City of Seattle Business
+License Database</a> and
+the Food column from a local paper, specifically <a href="http://www.thestranger.com/">The
+Stranger</a>.</p>
+
+<p>Earlier this year, I started scraping the <a href="http://www.seattle.gov/licenses/find-a-business">City of Seattle Business
+License
+database</a> which
+tracks both permit issuance and revocations. The City of Seattle site
+classifies permits based on <a href="https://en.wikipedia.org/wiki/North_American_Industry_Classification_System">NAICS
+codes</a>.
+Because I am only interested in restaurant related permits, I focused on
+the following five NAICS codes: Breweries, Drinking Places
+(Alcoholic Beverages), Mobile Food Services, Limited-Service
+Restaurants, and Full-Service Restaurants. I tracked changes in permits
+by
+week which when looked at for the entire year produces the following
+figure:</p>
+
+<p><img src="http://zachstednick.com/City_DB_NAICS_2015.png"></p>
+
+<p>Clearly a good time to be in the food truck business. Also I am not sure
+why so many Limited-Service Restaurants are closing and so many
+Full-Service
+Restaurants are opening. It could be simply that the restaurant decided
+to expand its service or attempt to cater to a different clientele.
+According to the official
+<a href="http://www.census.gov/cgi-bin/sssd/naics/naicsrch?code=722511&amp;search=2012">definition</a>,
+the NAICS code for Full-Service Restaurant
+is that &ldquo;Providing food services to patrons who order and are served
+while seated and pay after eating&rdquo;. For more details
+on these changes, I have made an <a href="http://seattlerestaurantchanges.com">interactive
+site</a> that allows you to further
+investigate by neighborhood and restaurant type.</p>
+
+<p>For comparison, I looked at every column I could
+find by <a href="http://www.thestranger.com/authors/31833/angela-garbes">Angela
+Garbes</a> who
+seems to be the main restaurant reporter at The Stranger. I looked at
+every restaurant opening and closing she mentioned in her
+column. I then
+<a href="https://docs.google.com/spreadsheets/d/1HFS4H8E-4RiM47pQzbauLzjfKSoEzv3IZ6Xl2PbHmIg/edit?usp=sharing">classified</a>
+all the restaurants she mentioned
+based on the same NAICS code to generate a similar figure:</p>
+
+<p><img src="http://zachstednick.com/Stranger_NAICS_2015.png"></p>
+
+<p>Obviously, she has a lot less data and her column is focused on more of
+the narrative of big name restaurants that
+have opened and less likely to focus on something like a new Taco Time.
+She focuses a lot on local food events such as popup restaurants as well
+as restaurant personnel which is not something that shows up in the
+official city
+statistics. Regardless, our figures look very similar and both of the
+datasets
+show that Full-Service Restaurants have had sustained growth over the
+entire year, which makes for great storytelling either with data or a
+narrative and
+benefits all of us with increased diversity of restaurant options.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mapping Seattle Traffic Circles]]></title>
@@ -1070,220 +1149,6 @@ should go to a certain site or feel guilty while on that site.  Instead,
 I can put that energy either into work or simply getting off the
 computer faster - both of which are well worth the initial challenges of
 hard rules.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Analysis of The Listserve emails]]></title>
-    <link href="http://stedy.github.io/blog/2013/04/14/analysis-of-the-listserve-emails/"/>
-    <updated>2013-04-14T20:23:00-07:00</updated>
-    <id>http://stedy.github.io/blog/2013/04/14/analysis-of-the-listserve-emails</id>
-    <content type="html"><![CDATA[<p><a href="http://www.thelistserve.com">The Listserve</a> is an email lottery, you sign up and once a day someone
-gets a chance to send the entire list an email.  My previous
-<a href="http://zachstednick.name/blog/2013/04/14/text-mining-the-listserve-emails/">post</a>
-covered how I fetched these emails, this post will discuss the actual
-statistics obtained from The Listserve emails.</p>
-
-<h1>To:</h1>
-
-<p>The Listserve website mentions the countries of subscribers but thats
-about it.  As of today, there are currently 21,402 subscribers.  I
-fetched all the archival data I could from Internet Archive and looked
-at enrollment over time which has stayed consistent around 20,000.  I
-also plotted
-enrollment over <a href="http://zachstednick.com/enrollment.html">time</a>.</p>
-
-<h1>From:</h1>
-
-<p>The Listserve allows you to use any name you want as the sender of the email, here are the ones that occurred more than once:</p>
-
-<table>
-<thead>
-<tr>
-<th> Name </th>
-<th style="text-align:right;"> Occurrence </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td> Anonymous </td>
-<td style="text-align:right;"> 12</td>
-</tr>
-<tr>
-<td> Laura </td>
-<td style="text-align:right;"> 3</td>
-</tr>
-<tr>
-<td> The Listserve </td>
-<td style="text-align:right;"> 2</td>
-</tr>
-<tr>
-<td> Ben </td>
-<td style="text-align:right;"> 2</td>
-</tr>
-<tr>
-<td> Beth </td>
-<td style="text-align:right;"> 2</td>
-</tr>
-<tr>
-<td> David </td>
-<td style="text-align:right;"> 2</td>
-</tr>
-<tr>
-<td> Sam </td>
-<td style="text-align:right;"> 2</td>
-</tr>
-<tr>
-<td> Michelle Huang </td>
-<td style="text-align:right;"> 2</td>
-</tr>
-<tr>
-<td> T. </td>
-<td style="text-align:right;"> 2</td>
-</tr>
-</tbody>
-</table>
-
-
-<p>Interesting that Michelle Huang had two entries, what happens if we look at first name only?</p>
-
-<table>
-<thead>
-<tr>
-<th> Name </th>
-<th style="text-align:right;"> Occurrence </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td> Anonymous </td>
-<td style="text-align:right;"> 12</td>
-</tr>
-<tr>
-<td> Chris </td>
-<td style="text-align:right;"> 8</td>
-</tr>
-<tr>
-<td> David </td>
-<td style="text-align:right;"> 7</td>
-</tr>
-<tr>
-<td> Jordan </td>
-<td style="text-align:right;"> 4</td>
-</tr>
-<tr>
-<td> Michelle </td>
-<td style="text-align:right;"> 4</td>
-</tr>
-<tr>
-<td> Alex </td>
-<td style="text-align:right;"> 3</td>
-</tr>
-<tr>
-<td> Andy </td>
-<td style="text-align:right;"> 3</td>
-</tr>
-<tr>
-<td> Ben </td>
-<td style="text-align:right;"> 3</td>
-</tr>
-<tr>
-<td> Brian </td>
-<td style="text-align:right;"> 3</td>
-</tr>
-<tr>
-<td> Daniel </td>
-<td style="text-align:right;"> 3</td>
-</tr>
-<tr>
-<td> James </td>
-<td style="text-align:right;"> 3</td>
-</tr>
-<tr>
-<td> Laura </td>
-<td style="text-align:right;"> 3</td>
-</tr>
-</tbody>
-</table>
-
-
-<p>What about time of day sent?</p>
-
-<p>I took all the timestamps from the emails and plotted when they were
-sent based on GMT.  This was more due to personal curiosity but
-interesting nonetheless.  The red line in the plot is the mean time
-which ended up being 17:19:15 GMT.  Those large drops are likely due to
-some nuances in email dates.  For example, I got two emails on 23 June
-2012 and none on 22 June.</p>
-
-<p><img src="http://zachstednick.com/arrivaltimes.png"></p>
-
-<h1>Subject:</h1>
-
-<p>I took all the subject lines and created a word frequency table on how
-often that word occurred:</p>
-
-<table>
-<thead>
-<tr>
-<th> Word </th>
-<th style="text-align:right;"> Occurrence </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td> life </td>
-<td style="text-align:right;"> 9</td>
-</tr>
-<tr>
-<td> world </td>
-<td style="text-align:right;"> 9</td>
-</tr>
-<tr>
-<td> day </td>
-<td style="text-align:right;"> 8</td>
-</tr>
-<tr>
-<td> little </td>
-<td style="text-align:right;"> 8</td>
-</tr>
-<tr>
-<td> love </td>
-<td style="text-align:right;"> 7</td>
-</tr>
-<tr>
-<td> story </td>
-<td style="text-align:right;"> 7</td>
-</tr>
-<tr>
-<td> advice </td>
-<td style="text-align:right;"> 6</td>
-</tr>
-<tr>
-<td> time </td>
-<td style="text-align:right;"> 6</td>
-</tr>
-</tbody>
-</table>
-
-
-<h1>Body:</h1>
-
-<p>For the body of the email I created a <a href="http://en.wikipedia.org/wiki/Document-term_matrix">Term-Document Matrix</a> which is a matrix that describes the frequency of words and how often they occur together.  This allows themes and trends of the body of work or corpus, which in this case happens to be The Listserve emails.  I took all the emails and removed punctuation and stop words such as &ldquo;and&rdquo; or &ldquo;but&rdquo; and made a matrix based on how often the most common words occured together.  I then created a dendrogram of all the words and how they clustered with each other.</p>
-
-<p><img src="http://zachstednick.com/dendrogram.png"></p>
-
-<p>The majority of the words are pretty evenly clustered and its difficult
-to determine any trends.  However there is a cluster on the far left
-side of the tree which I zoomed in on:</p>
-
-<p><img src="http://zachstednick.com/zoomin.png"></p>
-
-<p>This cluster includes word pairs such as &ldquo;email&rdquo; and &ldquo;listserve&rdquo;, &ldquo;love&rdquo; and &ldquo;time&rdquo;, and &ldquo;life&rdquo; and &ldquo;people&rdquo;.  While its not surprising to see these words occurring so often together, it is interesting to see that a majority of people use this email to dispense wisdom or advice to the masses.</p>
-
-<p>I have not yet been selected for The Listserve but I am sure these
-findings here will strongly influence what I write.  In the meantime,
-I want to learn more about text processing since I found it pretty interesting.</p>
 ]]></content>
   </entry>
   

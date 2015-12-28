@@ -7,9 +7,9 @@
 	<meta name="author" content="Zach Stednick">
 
 	
-	<meta name="description" content="Recently, there was a post on Priceonomics about traffic circles with
-the argument that roundabouts are safer, help improve traffic flow, and
-reduce &hellip;">
+	<meta name="description" content="Seattle is experiencing sustained economic growth which manifests
+itself in a variety of ways, one of the most visible being changes in
+the &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -80,6 +80,113 @@ reduce &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2015/12/28/summarizing-the-seattle-restaurant-scene-in-2015/">
+		
+			Summarizing the Seattle Restaurant Scene in 2015</a>
+	</h2>
+	<div class="entry-content">
+		<p>Seattle is experiencing sustained economic growth which manifests
+itself in a variety of ways, one of the most visible being changes in
+the restaurant
+industry. However, tracking the exact changes can be difficult due
+to a variety of factors such the size of the city and the difficulty in
+aggregating reliable data. There are several options for attempting to
+track changes such as scraping data from a review site such as Yelp or
+Zomato, systematically
+checking the Food section of the local paper, or go straight to the city
+records and attempt to
+determine what restaurant permits are being issued over time.</p>
+
+<p>I was interested in comparing the <a href="http://www.seattle.gov/licenses/find-a-business">City of Seattle Business
+License Database</a> and
+the Food column from a local paper, specifically <a href="http://www.thestranger.com/">The
+Stranger</a>.</p>
+
+<p>Earlier this year, I started scraping the <a href="http://www.seattle.gov/licenses/find-a-business">City of Seattle Business
+License
+database</a> which
+tracks both permit issuance and revocations. The City of Seattle site
+classifies permits based on <a href="https://en.wikipedia.org/wiki/North_American_Industry_Classification_System">NAICS
+codes</a>.
+Because I am only interested in restaurant related permits, I focused on
+the following five NAICS codes: Breweries, Drinking Places
+(Alcoholic Beverages), Mobile Food Services, Limited-Service
+Restaurants, and Full-Service Restaurants. I tracked changes in permits
+by
+week which when looked at for the entire year produces the following
+figure:</p>
+
+<p><img src="http://zachstednick.com/City_DB_NAICS_2015.png"></p>
+
+<p>Clearly a good time to be in the food truck business. Also I am not sure
+why so many Limited-Service Restaurants are closing and so many
+Full-Service
+Restaurants are opening. It could be simply that the restaurant decided
+to expand its service or attempt to cater to a different clientele.
+According to the official
+<a href="http://www.census.gov/cgi-bin/sssd/naics/naicsrch?code=722511&amp;search=2012">definition</a>,
+the NAICS code for Full-Service Restaurant
+is that &ldquo;Providing food services to patrons who order and are served
+while seated and pay after eating&rdquo;. For more details
+on these changes, I have made an <a href="http://seattlerestaurantchanges.com">interactive
+site</a> that allows you to further
+investigate by neighborhood and restaurant type.</p>
+
+<p>For comparison, I looked at every column I could
+find by <a href="http://www.thestranger.com/authors/31833/angela-garbes">Angela
+Garbes</a> who
+seems to be the main restaurant reporter at The Stranger. I looked at
+every restaurant opening and closing she mentioned in her
+column. I then
+<a href="https://docs.google.com/spreadsheets/d/1HFS4H8E-4RiM47pQzbauLzjfKSoEzv3IZ6Xl2PbHmIg/edit?usp=sharing">classified</a>
+all the restaurants she mentioned
+based on the same NAICS code to generate a similar figure:</p>
+
+<p><img src="http://zachstednick.com/Stranger_NAICS_2015.png"></p>
+
+<p>Obviously, she has a lot less data and her column is focused on more of
+the narrative of big name restaurants that
+have opened and less likely to focus on something like a new Taco Time.
+She focuses a lot on local food events such as popup restaurants as well
+as restaurant personnel which is not something that shows up in the
+official city
+statistics. Regardless, our figures look very similar and both of the
+datasets
+show that Full-Service Restaurants have had sustained growth over the
+entire year, which makes for great storytelling either with data or a
+narrative and
+benefits all of us with increased diversity of restaurant options.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-12-28T00:00:00-08:00" pubdate data-updated="true"></time></div>
+	<div class="tags">
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -809,135 +916,6 @@ interesting insights that can be gained from personal data.</p>
 
 
 	<a class='category' href='/blog/categories/r-running/'>r,running</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2015/01/04/summarizing-books-read-over-time/">
-		
-			Summarizing Books Read Over Time</a>
-	</h2>
-	<div class="entry-content">
-		<p>I recently read an interesting blog post where the author examined their books rated on Goodreads and summarizing <a href="http://citizen-statistician.org/2014/12/31/annual-review-of-reading/">interesting
-trends</a>.
-I decided to do a similar analysis even though I use
-<a href="https://www.librarything.com/profile/pbirch01">LibraryThing</a>
-instead.</p>
-
-<p>LibraryThing has a nice option to allow to to export your data in a
-variety of <a href="https://www.librarything.com/export.php">formats</a>. Since I
-write R code to parse CSV files everyday I thought I would do something
-different and parse a JSON file with python.</p>
-
-<p>I have been on LibraryThing since 2007 and the first question I was
-interested in was have my average ratings changed over time? I
-calculated the mean for each book by year:</p>
-
-<table>
-<thead>
-<tr>
-<th> Year </th>
-<th style="text-align:right;"> Average Rating </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td> 2007 </td>
-<td style="text-align:right;"> 3.446809</td>
-</tr>
-<tr>
-<td> 2008 </td>
-<td style="text-align:right;"> 3.480000</td>
-</tr>
-<tr>
-<td> 2009 </td>
-<td style="text-align:right;"> 3.485294</td>
-</tr>
-<tr>
-<td> 2010 </td>
-<td style="text-align:right;"> 3.641509</td>
-</tr>
-<tr>
-<td> 2011 </td>
-<td style="text-align:right;"> 3.456522</td>
-</tr>
-<tr>
-<td> 2012 </td>
-<td style="text-align:right;"> 3.529412</td>
-</tr>
-<tr>
-<td> 2013 </td>
-<td style="text-align:right;"> 3.321429</td>
-</tr>
-<tr>
-<td> 2014 </td>
-<td style="text-align:right;"> 3.614583</td>
-</tr>
-</tbody>
-</table>
-
-
-<p>While uninteresting, this makes a lot of sense - if I am reading a book
-that I do not enjoy, I will usually bail on it which tends to bias my
-ratings upward. Over time, there have been a few notable
-<a href="https://www.librarything.com/work/11691727/reviews/92168929">exceptions</a>.</p>
-
-<p>One of the other interesting analyses in the blog post was examining how the
-reviewer&rsquo;s ratings have changed based on the month of the year. I wanted to
-make a similar plot using R&rsquo;s
-<a href="http://docs.ggplot2.org/current/index.html">ggplot2</a> however since I
-was writing this in python I was largely limited to matplotlib.
-Fortunately, many people have struggled with this issue and the fine
-folks at yhat have ported ggplot2 over to
-<a href="https://pypi.python.org/pypi/ggplot">python</a>. With this library I was
-able to use <code>geom_smooth</code> to produce the following plot showing rating
-trends by week.</p>
-
-<p><img src="http://zachstednick.com/all_years.png"></p>
-
-<p>I tried to figure out why my legend never showed up but I figured that
-since most of the trend lines were pretty much the same anyways that the
-plot was fine without a legend. It appears that I get in most of my good
-reviews early in the year and am harsher later in the year.</p>
-
-<p>The last figure in the blog post compares the writer&rsquo;s review scores to
-the Goodreads consensus score. I attempted to
-replicate this but ran into more trouble than it was worth to extract
-that data from LibraryThing so I abandoned that analysis.</p>
-
-<p>If interested, I put my python code in a GitHub
-<a href="https://gist.github.com/stedy/2cb4fb1f332508f39ff2">gist</a>.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-01-04T13:54:43-08:00" pubdate data-updated="true"></time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/librarything/'>librarything</a>, <a class='category' href='/blog/categories/r/'>r,</a>
 
 
 </div>
