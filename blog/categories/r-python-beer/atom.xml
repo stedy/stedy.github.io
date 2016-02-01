@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: r,python,beer | Zach Stednick]]></title>
+  <link href="http://stedy.github.io/blog/categories/r-python-beer/atom.xml" rel="self"/>
+  <link href="http://stedy.github.io/"/>
+  <updated>2016-02-01T06:52:50-08:00</updated>
+  <id>http://stedy.github.io/</id>
+  <author>
+    <name><![CDATA[Zach Stednick]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Weekend at Chuck's]]></title>
+    <link href="http://stedy.github.io/blog/2016/01/31/weekend-at-chucks/"/>
+    <updated>2016-01-31T22:52:49-08:00</updated>
+    <id>http://stedy.github.io/blog/2016/01/31/weekend-at-chucks</id>
+    <content type="html"><![CDATA[<p><a href="http://chucks85th.com">Chuck&rsquo;s Hop Shop on 85th</a> is a beer store with
+40 beers on tap and hundreds if not thousands of bottled beers for sale.
+I have always been curious about what types of beers they go though
+fastest and what are some of the more popular breweries.
+Fortunately, they post their current tap list on their website which
+allowed me to look at their data over the course of the weekend.</p>
+
+<p>I scraped their website every 15 minutes from opening Friday,
+January 29 - closing Sunday, January 30th. Their website also lists cost
+per pint,
+cost per growler, and <a href="https://en.wikipedia.org/wiki/ABV">ABV</a>.</p>
+
+<p>For the purposes of this analysis, I made a few assumptions:</p>
+
+<ul>
+<li>A keg is on tap until it is empty.</li>
+<li>Each keg only serves pints of beer.</li>
+<li>A pint is the only unit served (ie no 8 oz. pours).</li>
+</ul>
+
+
+<p>With these assumptions in mind, my first question was which beer goes
+fastest? The below table shows beers that were on tap for five hours or
+less:</p>
+
+<table>
+<thead>
+<tr>
+<th>Brewery         </th>
+<th>Beer                 </th>
+<th style="text-align:right;">    Minutes on tap </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> Bale Breaker    </td>
+<td> Field 41 Pale        </td>
+<td style="text-align:right;">  74.98333</td>
+</tr>
+<tr>
+<td> Boneyard        </td>
+<td> Hop Venom IIPA       </td>
+<td style="text-align:right;">  74.98333</td>
+</tr>
+<tr>
+<td> Almanac         </td>
+<td> Elephant Heart de&hellip; </td>
+<td style="text-align:right;"> 134.98333</td>
+</tr>
+<tr>
+<td> Firestone       </td>
+<td> Wookey Jack CDA      </td>
+<td style="text-align:right;"> 224.98333</td>
+</tr>
+<tr>
+<td> pFriem          </td>
+<td> Imperial IPA         </td>
+<td style="text-align:right;"> 240.00833</td>
+</tr>
+<tr>
+<td> Sound           </td>
+<td> Dubbel Entendre      </td>
+<td style="text-align:right;"> 270.00000</td>
+</tr>
+<tr>
+<td> Bale Breaker    </td>
+<td> Top Cutter IPA       </td>
+<td style="text-align:right;"> 277.48333</td>
+</tr>
+<tr>
+<td> Kulshan         </td>
+<td> Bastard Kat IPA      </td>
+<td style="text-align:right;"> 284.98333</td>
+</tr>
+<tr>
+<td> Roslyn          </td>
+<td> Brookside Pale Lager </td>
+<td style="text-align:right;"> 284.98333</td>
+</tr>
+<tr>
+<td> Breakside       </td>
+<td> Vienna Coffee OG &hellip; </td>
+<td style="text-align:right;"> 299.86667</td>
+</tr>
+<tr>
+<td> Bale Breaker    </td>
+<td> High Camp Winter &hellip; </td>
+<td style="text-align:right;"> 300.00833</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>In a first place tie for a duration of a stunning <em>fifteen</em> minutes were
+Bale Breaker Field 41 Pale and Hop Venom IIPA. There may be
+another explanation but with respective BeerAdvocate scores of
+<a href="http://www.beeradvocate.com/beer/profile/31389/93176/?ba=beertunes">89</a>
+and <a href="http://www.beeradvocate.com/beer/profile/23066/72750/">97</a>, its
+easy to see why they are so popular.</p>
+
+<h1>Price of a pint vs. ABV</h1>
+
+<p>Is there a correlation between the price of a pint of beer and the ABV?</p>
+
+<p><img src="http://zachstednick.com/cost_vs_abv.png"></p>
+
+<h1>Drinking based on ABV</h1>
+
+<p>Do beers with higher ABV get ordered faster?</p>
+
+<p><img src="http://zachstednick.com/min_on_tap_vs_abv.png"></p>
+
+<h1>Are beers at Chuck&rsquo;s veblen goods?</h1>
+
+<p>Do pricier beer move faster?</p>
+
+<p><img src="http://zachstednick.com/min_on_tap_vs_price.png"></p>
+
+<p>Obviously there are many more types of analysis one could look at with
+this data. I do think this analysis was sorely lacking in first person
+research, something I intend to fix in the next analysis. Full code on
+<a href="https://github.com/stedy/chucks-beer-db">github</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>
