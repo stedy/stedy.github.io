@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2016-02-01T14:33:51-08:00</updated>
+  <updated>2016-02-09T17:27:12-08:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,84 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Thoughts on Pronto]]></title>
+    <link href="http://stedy.github.io/blog/2016/02/09/thoughts-on-pronto/"/>
+    <updated>2016-02-09T17:21:05-08:00</updated>
+    <id>http://stedy.github.io/blog/2016/02/09/thoughts-on-pronto</id>
+    <content type="html"><![CDATA[<p><a href="http://www.prontocycleshare.com/">Pronto bikeshare</a> is in serious
+financial trouble and may not make it
+until the end of <a href="http://www.seattlebikeblog.com/2016/02/04/pronto-needs-city-buyout-before-end-of-march-how-did-we-get-here/">March of this
+year</a>.
+There has been a lot of talk about the future of Pronto and funding but for now I
+just wanted to mention a few of the things I like
+about Pronto.</p>
+
+<ul>
+<li><p>Its great for connecting mass transit and your final destination.
+Waiting for a bus transfer and then taking said transfer sometimes
+feels like it takes forever and
+hopping on a Pronto bike can make the trip dramatically faster.</p></li>
+<li><p>Its great for just going somewhere and not worrying about your bike.
+Worried about locking up your bike in a certain area at a certain
+time? If there is a Pronto station nearby that problem can be easily
+fixed.</p></li>
+<li><p>Its fun, full stop. The bikes are very sturdy and while they can feel
+a bit slow I never feel like they will have physical problems. Yeah I
+realize I look like a dork while riding it but then again I run
+my own blog, who am I to judge?</p></li>
+<li><p>Finally, cars treat you as if you have never been on a bike before and
+give you significant leeway. On my commuter bike I often get buzzed by
+cars but on a Pronto I get treated like some tourist who has no
+clue what they are doing. From a safety standopint, thats pretty tough
+to beat.</p></li>
+</ul>
+
+
+<p>I think that Pronto had a terrible rollout (starting a bikeshare program
+in October?) and as multiple people have
+shown, it does not have the best station placement compared to a
+similarly sized metropolitan area.</p>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en"
+dir="ltr">Seattle&#39;s <a
+href="https://twitter.com/CyclePronto">@CyclePronto</a> and DC&#39;s <a
+href="https://twitter.com/bikeshare">@bikeshare</a> at the same scale.
+Maybe hills &amp; helmets aren&#39;t the problem? <a
+href="https://twitter.com/hashtag/SEABikes?src=hash">#SEABikes</a> <a
+href="https://t.co/at9HjJkDxX">pic.twitter.com/at9HjJkDxX</a></p>&mdash;
+Jake Vanderplas (@jakevdp) <a
+href="https://twitter.com/jakevdp/status/695393881710419970">February 4,
+2016</a></blockquote>
+
+
+<script async src="//platform.twitter.com/widgets.js"
+charset="utf-8"></script>
+
+
+<p> I have had multiple
+problems with bike docks and the helmet locker can sometimes be unresponsive. But, even after all that I
+am long on Pronto and am constantly telling people about it. I had an
+<a href="http://prontostories.com">entry</a> in the <a href="http://www.prontocycleshare.com/datachallenge">Pronto Data
+Challenge</a>. I was even
+planning on doing both the <a href="http://www.cascade.org/rides-major-rides/emerald-city-bike-ride">Emerald
+City Bike
+Ride</a>
+and
+<a href="http://obliteride.org/">Obliteride</a> on a Pronto bike just because I
+thought it would be fun.</p>
+
+<p>Seattle is growing,
+really fast in fact, and giving people as many transit options as
+possible will only make it that much easier for people to move around. I
+really hope that Pronto lasts longer than the end of March and is
+eventually able
+to expand to cover more areas. As to whether the city should step in to
+save it or not, we&rsquo;ll leave that
+exercise to the reader.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Weekend at Chuck's]]></title>
@@ -1188,35 +1266,6 @@ skills to get
 someone like <a href="http://oakland.athletics.mlb.com/team/player.jsp?player_id=519299#gameType=%27R%27">Eric
 Sogard</a>
 elected the Face of MLB, then what&rsquo;s the point of programming?</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Foursquare without a smartphone]]></title>
-    <link href="http://stedy.github.io/blog/2014/02/06/foursquare-without-a-smartphone/"/>
-    <updated>2014-02-06T22:10:00-08:00</updated>
-    <id>http://stedy.github.io/blog/2014/02/06/foursquare-without-a-smartphone</id>
-    <content type="html"><![CDATA[<p>I don&rsquo;t have a smartphone. Because of this,
-I am apparently missing out on sweet checkin
-<a href="https://foursquare.com/stevewoz/checkin/52f4182911d23311d6d12c6d?s=O5DyXc1-s3wjItCncf6KlvDtyxc&amp;ref=tw">badges</a>
-that I could be displaying on a user
-profile on fourquare or somewhere similar. This, in addition to how
-amazed I am by the <a href="http://feltron.com/ar12_01.html">Feltron
-annual report</a> does make slightly
-envious of people with abilities to easily track daily events. Instead
-of getting a smartphone, I opted for a much more low
-tech solution.</p>
-
-<p><img src="http://zachstednick.com/calendar.jpg"></p>
-
-<p>This is a picture of any bars, restaurants or events I
-went to in the month of January. I am also
-trying to record how often I work out and what kind of workout I am
-doing. Its been interesting thus far to try and observe trends and
-determine if I can gain any insight. I can definitely see why people are
-interested in using a device like a fitbit and or a smartphone for
-tracking. Until that day, I think I will
-just stick to using pen on a calendar.</p>
 ]]></content>
   </entry>
   
