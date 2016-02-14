@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2016-02-09T17:33:56-08:00</updated>
+  <updated>2016-02-13T21:13:34-08:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,57 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Super Bowl Sunday at Chuck's]]></title>
+    <link href="http://stedy.github.io/blog/2016/02/13/super-bowl-sunday-at-chucks/"/>
+    <updated>2016-02-13T20:58:15-08:00</updated>
+    <id>http://stedy.github.io/blog/2016/02/13/super-bowl-sunday-at-chucks</id>
+    <content type="html"><![CDATA[<p>In the same vein as my previous post on <a href="http://zachstednick.name/blog/2016/01/31/weekend-at-chucks/">beer sales analysis</a> at <a href="http://chucks85th.com/">Chuck&rsquo;s Hop Shop</a>, I wanted to make a similar analysis but this time focus on Super Bowl Sunday sales. Similar to last time, I made a few assumptions:</p>
+
+<ul>
+<li>A keg is on tap until it is empty.</li>
+<li>Each keg only serves pints of beer.</li>
+<li>A pint is the only unit served (ie no 8 oz. pours).</li>
+</ul>
+
+
+<p>Anyways, here is a brief summary of beers on tap for the shortest amount
+of
+time on Sunday:</p>
+
+<p>|Brewery      |Beer     |Hours on tap |
+| &mdash;&mdash;&mdash;&mdash;|&mdash;&mdash;&mdash;|&mdash;&mdash;&mdash;&mdash;: |
+Cloudburst    |Psycho Hose Beast&hellip;    |  0.25
+Iron Fist     |Mint Chocolate Im&hellip;    |  1.00
+Ballast Point |Watermelon Dorado&hellip;    |  1.00
+Wander        |Wanderale, Belgia&hellip;    |  1.25
+Sound         |Humonkulous IIIPA       |  1.25
+Cloudburst    |Saison W/Grapefru&hellip;    |  1.25
+Victory       |Prima Pilsner           |  1.75
+Commons       |Holden Saison           |  2.00
+Seattle Cider |Semi-Sweet Cider        |  3.00
+Deschutes     |Abyss &lsquo;15  &frac12; Pint     |  3.00</p>
+
+<h1>Time on tap vs. ABV</h1>
+
+<p>Did beer with higher ABV sell faster?</p>
+
+<p><img src="http://zachstednick.com/SB_abv_count.png"></p>
+
+<h1>Time on tap vs. cost</h1>
+
+<p>Did more expensive beer sell faster?</p>
+
+<p><img src="http://zachstednick.com/SB_cost_count.png"></p>
+
+<h1>What does the relation between cost per pint and ABV look like?</h1>
+
+<p><img src="http://zachstednick.com/SB_labeled.png"></p>
+
+<p>Once again, all code lives <a href="https://github.com/stedy/chucks-beer-db">here</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Thoughts on Pronto]]></title>
@@ -1215,58 +1266,6 @@ guy is still around?</p>
 
 <p>Data and code at this
 <a href="https://gist.github.com/stedy/a198bb0c7b010dcdf7af">gist</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Writing a twitter bot for fun and profit]]></title>
-    <link href="http://stedy.github.io/blog/2014/02/24/writing-a-twitter-bot-for-fun-and-profit/"/>
-    <updated>2014-02-24T21:42:00-08:00</updated>
-    <id>http://stedy.github.io/blog/2014/02/24/writing-a-twitter-bot-for-fun-and-profit</id>
-    <content type="html"><![CDATA[<p>One of my first thoughts when Twitter had its IPO was that the days of
-writing Twitter bots was over. My fear was that they would lock down
-their
-platform in order to more accurately sell ads.</p>
-
-<p>Man, was I wrong.</p>
-
-<p>The Twitter API is still as robust as ever and allows for creating Twitter bots.
-One of the current trends is to try to generate buzz around a product or
-idea by getting people to use a specific hashtag. This can often lead to
-slightly hilarious results, such as the <a href="http://mlb.mlb.com/mlb/awards/y2014/faceofmlb/">Face of
-MLB</a>. Basically, the
-fans &ldquo;vote&rdquo; for their favorite player to be the Face of MLB by using a
-certain hashtag. I cannot think of a better job for a twitter bot.</p>
-
-<p>Setting up a bot or Twitter Application is easy, just go to
-<a href="http://apps.twitter.com">Twitter Apps</a> and login or create a new username and
-log in. Follow the steps and you can get an API key in a few minutes. Although note that in order to write tweets as a bot you have to
-choose Read + Write (instead of the default Write). I run my bot largely using the
-<a href="https://pypi.python.org/pypi/tweepy/2.2">tweepy</a> Python library which
-provides easy access to the Twitter API. Here is a
-<a href="https://gist.github.com/stedy/9203520">gist</a> of a bot I am
-running for the Face of MLB. Twitter does not allow the same tweet to be
-posted more than once from an account so I just add something like the
-current time:</p>
-
-<blockquote class="twitter-tweet" lang="en"><p><a
-href="https://twitter.com/_J4EZ">@_j4ez</a> Why not Zoidberg? the time
-is Monday, 09:09:PM <a
-href="https://twitter.com/search?q=%23ericsogard&amp;src=hash">#ericsogard</a>
-<a href="https://twitter.com/search?q=%23FaceofMLB&amp;src=hash">#FaceofMLB</a></p>&mdash;
-Zoidberg bot (@ZoidbergBot) <a href="https://twitter.com/ZoidbergBot/statuses/438179021684097024">February
-25, 2014</a></blockquote>
-
-
-<script async src="//platform.twitter.com/widgets.js"
-charset="utf-8"></script>
-
-
-<p>I will admit this is kinda silly, but if I can&rsquo;t use my programming
-skills to get
-someone like <a href="http://oakland.athletics.mlb.com/team/player.jsp?player_id=519299#gameType=%27R%27">Eric
-Sogard</a>
-elected the Face of MLB, then what&rsquo;s the point of programming?</p>
 ]]></content>
   </entry>
   

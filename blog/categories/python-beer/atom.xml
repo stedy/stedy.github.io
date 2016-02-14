@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: python,beer | Zach Stednick]]></title>
+  <link href="http://stedy.github.io/blog/categories/python-beer/atom.xml" rel="self"/>
+  <link href="http://stedy.github.io/"/>
+  <updated>2016-02-13T21:13:34-08:00</updated>
+  <id>http://stedy.github.io/</id>
+  <author>
+    <name><![CDATA[Zach Stednick]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Super Bowl Sunday at Chuck's]]></title>
+    <link href="http://stedy.github.io/blog/2016/02/13/super-bowl-sunday-at-chucks/"/>
+    <updated>2016-02-13T20:58:15-08:00</updated>
+    <id>http://stedy.github.io/blog/2016/02/13/super-bowl-sunday-at-chucks</id>
+    <content type="html"><![CDATA[<p>In the same vein as my previous post on <a href="http://zachstednick.name/blog/2016/01/31/weekend-at-chucks/">beer sales analysis</a> at <a href="http://chucks85th.com/">Chuck&rsquo;s Hop Shop</a>, I wanted to make a similar analysis but this time focus on Super Bowl Sunday sales. Similar to last time, I made a few assumptions:</p>
+
+<ul>
+<li>A keg is on tap until it is empty.</li>
+<li>Each keg only serves pints of beer.</li>
+<li>A pint is the only unit served (ie no 8 oz. pours).</li>
+</ul>
+
+
+<p>Anyways, here is a brief summary of beers on tap for the shortest amount
+of
+time on Sunday:</p>
+
+<p>|Brewery      |Beer     |Hours on tap |
+| &mdash;&mdash;&mdash;&mdash;|&mdash;&mdash;&mdash;|&mdash;&mdash;&mdash;&mdash;: |
+Cloudburst    |Psycho Hose Beast&hellip;    |  0.25
+Iron Fist     |Mint Chocolate Im&hellip;    |  1.00
+Ballast Point |Watermelon Dorado&hellip;    |  1.00
+Wander        |Wanderale, Belgia&hellip;    |  1.25
+Sound         |Humonkulous IIIPA       |  1.25
+Cloudburst    |Saison W/Grapefru&hellip;    |  1.25
+Victory       |Prima Pilsner           |  1.75
+Commons       |Holden Saison           |  2.00
+Seattle Cider |Semi-Sweet Cider        |  3.00
+Deschutes     |Abyss &lsquo;15  &frac12; Pint     |  3.00</p>
+
+<h1>Time on tap vs. ABV</h1>
+
+<p>Did beer with higher ABV sell faster?</p>
+
+<p><img src="http://zachstednick.com/SB_abv_count.png"></p>
+
+<h1>Time on tap vs. cost</h1>
+
+<p>Did more expensive beer sell faster?</p>
+
+<p><img src="http://zachstednick.com/SB_cost_count.png"></p>
+
+<h1>What does the relation between cost per pint and ABV look like?</h1>
+
+<p><img src="http://zachstednick.com/SB_labeled.png"></p>
+
+<p>Once again, all code lives <a href="https://github.com/stedy/chucks-beer-db">here</a></p>
+]]></content>
+  </entry>
+  
+</feed>
