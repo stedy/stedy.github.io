@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2016-02-13T21:18:51-08:00</updated>
+  <updated>2016-04-16T12:42:30-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,54 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A National Parks tour with feather]]></title>
+    <link href="http://stedy.github.io/blog/2016/04/16/a-national-parks-tour-with-feather/"/>
+    <updated>2016-04-16T12:35:08-07:00</updated>
+    <id>http://stedy.github.io/blog/2016/04/16/a-national-parks-tour-with-feather</id>
+    <content type="html"><![CDATA[<p>This year is the 100th Anniversary of the National Park system and the
+National Park Service is kicking things off with <a href="https://www.nps.gov/findapark/national-park-week.htm">National Park
+Week</a> where every
+National Park will be open for free. With all the savings, my next
+thought was what would be the best way to visit all of them in a single
+trip?</p>
+
+<p>To calculate this, I used a variant of the <a href="https://en.wikipedia.org/wiki/Concorde_TSP_Solver">Concorde
+algorithm</a> which is
+an algorithm for solving the <a href="https://en.wikipedia.org/wiki/Traveling_salesman_problem">Traveling Salesman
+Problem</a> or
+what is the shortest route I can use to visit every National Park?</p>
+
+<p>This also gave me an excellent opportunity to use
+<a href="https://blog.rstudio.org/2016/03/29/feather/">Feather</a> a way of writing
+dataframes to disk for interchanging between R and Python. I wanted to
+use R largely due to Michael Hahsler&rsquo;s <a href="https://github.com/mhahsler/TSP">TSP
+library</a> and I wanted to use python
+because of the ease of use of the Google Maps API client. Finally, I
+wanted to make a static map to show the route and I decided return to R
+and use the <a href="https://github.com/dkahle/ggmap">ggmap library</a>.</p>
+
+<p><img src="http://zachstednick.com/NP_tour.png"></p>
+
+<p>I realize there are many ways to call R from Python and vice versa but I
+wanted to try feather. As a first attempt, I was
+pretty impressed with feather&rsquo;s ease of use. I did not have too large of
+a dataset so I was unable to comment on the speed but simple reading and
+writing in R and Python is made to feel very simple. The one issue I did run into was
+more of a user issue and that it was challenging to rapidly flip back and forth
+between the two languages as I iterated this code. The 0-index of Python versus
+the 1-index of R is all handled by feather which is nice not to have to think
+about.</p>
+
+<p>As a whole, I highly recommend checking out feather and as for me, well
+its time to hit the road and start visiting some National Parks and
+according to Google Maps I only have 14832.8 miles to go.</p>
+
+<p>My code for this lives
+<a href="https://github.com/stedy/blog-supplemental">here</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Super Bowl Sunday at Chuck's]]></title>
@@ -1203,119 +1251,6 @@ are in the public domain but simply needed some cleaning up and
 recoding to match the format in the book so I went ahead and made a
 <a href="https://github.com/stedy/Machine-Learning-with-R-datasets">github repo</a>
 to host them.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Analysis of gas efficiency by brand]]></title>
-    <link href="http://stedy.github.io/blog/2014/07/31/analysis-of-gas-efficiency-by-brand/"/>
-    <updated>2014-07-31T17:46:00-07:00</updated>
-    <id>http://stedy.github.io/blog/2014/07/31/analysis-of-gas-efficiency-by-brand</id>
-    <content type="html"><![CDATA[<p>I have recorded every trip to the gas station so far in 2014 and finally
-got around to analyzing the first seven months. I currently drive a <a href="https://s3.amazonaws.com/images.thecarconnection.com/sml/honda_100227510_s.jpg">2010
-Honda Fit</a>
-and bought only 87 grade gas for the duration of this study.</p>
-
-<p>I was initially interested in how far can I travel per dollar, which can easily be
-calculated:</p>
-
-<p>A first attempt yields the following table:</p>
-
-<table>
-<thead>
-<tr>
-<th> Brand </th>
-<th style="text-align:right;"> meancost </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td> 7-11 (Citgo) </td>
-<td style="text-align:right;"> 7.858</td>
-</tr>
-<tr>
-<td> 76 </td>
-<td style="text-align:right;"> 7.123</td>
-</tr>
-<tr>
-<td> Arco </td>
-<td style="text-align:right;"> 8.451</td>
-</tr>
-<tr>
-<td> Chevron </td>
-<td style="text-align:right;"> 8.704</td>
-</tr>
-<tr>
-<td> Costco  </td>
-<td style="text-align:right;"> 9.593</td>
-</tr>
-<tr>
-<td> Safeway </td>
-<td style="text-align:right;"> 7.791</td>
-</tr>
-<tr>
-<td> Shell </td>
-<td style="text-align:right;"> 7.597</td>
-</tr>
-</tbody>
-</table>
-
-
-<p>Far and away Costco and Chevron have the best mean cost, but they
-each have only one datapoint and the Costco was located in Marysville,
-WA while the Chevron was located in Sherwood, OR which means that both
-of
-these were largely composed of highway miles and therefore higher fuel
-efficiency. I
-initially tried to account for highway miles versus city miles but have
-not had much success so far.</p>
-
-<p>I then looked at MPG by gas station:</p>
-
-<table>
-<thead>
-<tr>
-<th> Brand </th>
-<th style="text-align:right;"> meanMPG </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td> 7-11 (Citgo) </td>
-<td style="text-align:right;"> 29.07</td>
-</tr>
-<tr>
-<td> 76 </td>
-<td style="text-align:right;"> 26.96</td>
-</tr>
-<tr>
-<td> Arco </td>
-<td style="text-align:right;"> 29.88</td>
-</tr>
-<tr>
-<td> Chevron </td>
-<td style="text-align:right;"> 34.80</td>
-</tr>
-<tr>
-<td> Costco </td>
-<td style="text-align:right;"> 30.50</td>
-</tr>
-</tbody>
-</table>
-
-
-<p>Finally, I plotted MPG against mean cost.</p>
-
-<p><img src="http://zachstednick.com/gas_mpg.png"></p>
-
-<p>Since (for now) we are ignoring Costco and Chevron, it appears that
-Safeway is best for
-lowest cost with highest mean MPG. I wonder if the <a href="http://www.cockeyed.com/pranks/safeway/ultimate_shopper.html">Safeway ultimate
-shopper</a>
-guy is still around?</p>
-
-<p>Data and code at this
-<a href="https://gist.github.com/stedy/a198bb0c7b010dcdf7af">gist</a></p>
 ]]></content>
   </entry>
   

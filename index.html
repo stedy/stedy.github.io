@@ -7,7 +7,9 @@
 	<meta name="author" content="Zach Stednick">
 
 	
-	<meta name="description" content="In the same vein as my previous post on beer sales analysis at Chuck&rsquo;s Hop Shop, I wanted to make a similar analysis but this time focus on &hellip;">
+	<meta name="description" content="This year is the 100th Anniversary of the National Park system and the
+National Park Service is kicking things off with National Park
+Week where &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -78,6 +80,86 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2016/04/16/a-national-parks-tour-with-feather/">
+		
+			A National Parks Tour With Feather</a>
+	</h2>
+	<div class="entry-content">
+		<p>This year is the 100th Anniversary of the National Park system and the
+National Park Service is kicking things off with <a href="https://www.nps.gov/findapark/national-park-week.htm">National Park
+Week</a> where every
+National Park will be open for free. With all the savings, my next
+thought was what would be the best way to visit all of them in a single
+trip?</p>
+
+<p>To calculate this, I used a variant of the <a href="https://en.wikipedia.org/wiki/Concorde_TSP_Solver">Concorde
+algorithm</a> which is
+an algorithm for solving the <a href="https://en.wikipedia.org/wiki/Traveling_salesman_problem">Traveling Salesman
+Problem</a> or
+what is the shortest route I can use to visit every National Park?</p>
+
+<p>This also gave me an excellent opportunity to use
+<a href="https://blog.rstudio.org/2016/03/29/feather/">Feather</a> a way of writing
+dataframes to disk for interchanging between R and Python. I wanted to
+use R largely due to Michael Hahsler&rsquo;s <a href="https://github.com/mhahsler/TSP">TSP
+library</a> and I wanted to use python
+because of the ease of use of the Google Maps API client. Finally, I
+wanted to make a static map to show the route and I decided return to R
+and use the <a href="https://github.com/dkahle/ggmap">ggmap library</a>.</p>
+
+<p><img src="http://zachstednick.com/NP_tour.png"></p>
+
+<p>I realize there are many ways to call R from Python and vice versa but I
+wanted to try feather. As a first attempt, I was
+pretty impressed with feather&rsquo;s ease of use. I did not have too large of
+a dataset so I was unable to comment on the speed but simple reading and
+writing in R and Python is made to feel very simple. The one issue I did run into was
+more of a user issue and that it was challenging to rapidly flip back and forth
+between the two languages as I iterated this code. The 0-index of Python versus
+the 1-index of R is all handled by feather which is nice not to have to think
+about.</p>
+
+<p>As a whole, I highly recommend checking out feather and as for me, well
+its time to hit the road and start visiting some National Parks and
+according to Google Maps I only have 14832.8 miles to go.</p>
+
+<p>My code for this lives
+<a href="https://github.com/stedy/blog-supplemental">here</a></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-04-16T12:35:08-07:00" pubdate data-updated="true"></time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/parks/'>parks</a>, <a class='category' href='/blog/categories/r-python-feather-national/'>r,python,feather,national</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -1041,75 +1123,6 @@ into cleaning and validating the data.</p>
 
 
 	<a class='category' href='/blog/categories/geojson/'>geojson,</a>, <a class='category' href='/blog/categories/osm/'>osm</a>, <a class='category' href='/blog/categories/r/'>r,</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2015/07/23/update-on-restaurant-changes/">
-		
-			Update on Restaurant Changes</a>
-	</h2>
-	<div class="entry-content">
-		<p>I have been tracking restaurant openings via the <a href="http://www.seattle.gov/licenses/find-a-business">City of Seattle
-Business Finder</a> since
-the beginning of this year and am reporting those changes at <a href="http://seattlerestaurantchanges.com/">Seattle
-Restaurant Changes</a>. Recently I
-put up a <a href="http://seattlerestaurantchanges.com/heatmap.html">heatmap</a>
-showing changes by neighborhood. This heatmap shows a current snaphot of
-the changes which made me curious about changes by restaurant type over the course of
-the year.</p>
-
-<iframe width="980" height="520" src="http://zachstednick.com/net_restaurant_changes.html"></iframe>
-
-
-<p>A few notes:</p>
-
-<ul>
-<li><p>The City of Seattle uses North American Industry Classification System
-codes <a href="http://www.census.gov/eos/www/naics/">(NAICS)</a> to track
-restaurants. I then use the date of permit issuance as a proxy for a
-restaurant opening and date of permit revocation as a proxy for closing.</p></li>
-<li><p>A Full Service Restaurant as defined by NAICS is &ldquo;establishments primarily engaged in providing food services to patrons who order and are served while seated (i.e., waiter/waitress service) and pay after eating&rdquo;</p></li>
-<li><p>I realized that not that many breweries would be opening up but who
-doesn&rsquo;t want more breweries in town?</p></li>
-<li><p>I was not expecting Full Service Restaurants to take off as much as
-they did, especially since Limited Service Restaurants seem to be
-declining.</p></li>
-</ul>
-
-
-<p>I will try to post another update on this in December, that is unless I decide to open up a food truck of my own.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-07-23T15:31:31-07:00" pubdate data-updated="true"></time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/d3/'>d3,</a>, <a class='category' href='/blog/categories/restaurants/'>restaurants,</a>, <a class='category' href='/blog/categories/seattle/'>seattle</a>
 
 
 </div>

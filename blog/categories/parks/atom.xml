@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: parks | Zach Stednick]]></title>
+  <link href="http://stedy.github.io/blog/categories/parks/atom.xml" rel="self"/>
+  <link href="http://stedy.github.io/"/>
+  <updated>2016-04-16T12:42:30-07:00</updated>
+  <id>http://stedy.github.io/</id>
+  <author>
+    <name><![CDATA[Zach Stednick]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A National Parks tour with feather]]></title>
+    <link href="http://stedy.github.io/blog/2016/04/16/a-national-parks-tour-with-feather/"/>
+    <updated>2016-04-16T12:35:08-07:00</updated>
+    <id>http://stedy.github.io/blog/2016/04/16/a-national-parks-tour-with-feather</id>
+    <content type="html"><![CDATA[<p>This year is the 100th Anniversary of the National Park system and the
+National Park Service is kicking things off with <a href="https://www.nps.gov/findapark/national-park-week.htm">National Park
+Week</a> where every
+National Park will be open for free. With all the savings, my next
+thought was what would be the best way to visit all of them in a single
+trip?</p>
+
+<p>To calculate this, I used a variant of the <a href="https://en.wikipedia.org/wiki/Concorde_TSP_Solver">Concorde
+algorithm</a> which is
+an algorithm for solving the <a href="https://en.wikipedia.org/wiki/Traveling_salesman_problem">Traveling Salesman
+Problem</a> or
+what is the shortest route I can use to visit every National Park?</p>
+
+<p>This also gave me an excellent opportunity to use
+<a href="https://blog.rstudio.org/2016/03/29/feather/">Feather</a> a way of writing
+dataframes to disk for interchanging between R and Python. I wanted to
+use R largely due to Michael Hahsler&rsquo;s <a href="https://github.com/mhahsler/TSP">TSP
+library</a> and I wanted to use python
+because of the ease of use of the Google Maps API client. Finally, I
+wanted to make a static map to show the route and I decided return to R
+and use the <a href="https://github.com/dkahle/ggmap">ggmap library</a>.</p>
+
+<p><img src="http://zachstednick.com/NP_tour.png"></p>
+
+<p>I realize there are many ways to call R from Python and vice versa but I
+wanted to try feather. As a first attempt, I was
+pretty impressed with feather&rsquo;s ease of use. I did not have too large of
+a dataset so I was unable to comment on the speed but simple reading and
+writing in R and Python is made to feel very simple. The one issue I did run into was
+more of a user issue and that it was challenging to rapidly flip back and forth
+between the two languages as I iterated this code. The 0-index of Python versus
+the 1-index of R is all handled by feather which is nice not to have to think
+about.</p>
+
+<p>As a whole, I highly recommend checking out feather and as for me, well
+its time to hit the road and start visiting some National Parks and
+according to Google Maps I only have 14832.8 miles to go.</p>
+
+<p>My code for this lives
+<a href="https://github.com/stedy/blog-supplemental">here</a></p>
+]]></content>
+  </entry>
+  
+</feed>
