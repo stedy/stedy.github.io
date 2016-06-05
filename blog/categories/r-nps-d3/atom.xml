@@ -4,7 +4,7 @@
   <title><![CDATA[Category: r,nps,d3 | Zach Stednick]]></title>
   <link href="http://stedy.github.io/blog/categories/r-nps-d3/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2016-06-05T11:33:57-07:00</updated>
+  <updated>2016-06-05T11:35:06-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -35,7 +35,8 @@ creation but what other parks have recently become popular? I used
 interactively exploring park attendance based on year over year change
 from the mean attendance over the last ten years:</p>
 
-<p><iframe src="http://zachstednick.com/deltaNP.html"></p>
+<iframe src="http://zachstednick.com/deltaNP.html"></iframe>
+
 
 <p>Clearly a spike in recent years - maybe due to lower gas prices or
 increased popularity of social media?</p>
@@ -43,7 +44,8 @@ increased popularity of social media?</p>
 <p>Also, I was curious about what the trend looked like for the National
 Monuments.</p>
 
-<p><iframe src="http://zachstednick.com/deltaNM.html"></p>
+<iframe src="http://zachstednick.com/deltaNM.html"></iframe>
+
 
 <p>The most immediate trend that jumps out is the effect of the
 <a href="https://en.wikipedia.org/wiki/Statue_of_Liberty#Closures_and_reopening_.282001.E2.80.93present.29">closing</a> of the <a href="https://www.nps.gov/stli/index.htm">Statue of Liberty</a> in 2011 which indirectly caused a slowdown in visits to <a href="https://www.nps.gov/cacl/index.htm">Castle Clinton</a>.</p>
