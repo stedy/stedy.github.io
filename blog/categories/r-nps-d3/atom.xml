@@ -4,7 +4,7 @@
   <title><![CDATA[Category: r,nps,d3 | Zach Stednick]]></title>
   <link href="http://stedy.github.io/blog/categories/r-nps-d3/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2016-06-05T11:37:14-07:00</updated>
+  <updated>2016-06-05T11:38:35-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -35,7 +35,7 @@ creation but what other parks have recently become popular? I used
 interactively exploring park attendance based on year over year change
 from the mean attendance over the last ten years:</p>
 
-<iframe src="http://zachstednick.com/deltaNP.html" marginwidth="0" marginheight="0" style="height:500px;" scrolling="no"></iframe>
+<iframe src="http://zachstednick.com/deltaNP.html" marginwidth="0" marginheight="0" style="height:500px; width:1060px;" scrolling="no"></iframe>
 
 
 <p>Clearly a spike in recent years - maybe due to lower gas prices or
@@ -44,7 +44,7 @@ increased popularity of social media?</p>
 <p>Also, I was curious about what the trend looked like for the National
 Monuments.</p>
 
-<iframe src="http://zachstednick.com/deltaNM.html" marginwidth="0" marginheight="0" style="height:500px;" scrolling="no"></iframe>
+<iframe src="http://zachstednick.com/deltaNM.html" marginwidth="0" marginheight="0" style="height:500px; width:1060px:" scrolling="no"></iframe>
 
 
 <p>The most immediate trend that jumps out is the effect of the
