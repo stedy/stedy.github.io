@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: r,nps,d3 | Zach Stednick]]></title>
+  <link href="http://stedy.github.io/blog/categories/r-nps-d3/atom.xml" rel="self"/>
+  <link href="http://stedy.github.io/"/>
+  <updated>2016-06-05T11:33:57-07:00</updated>
+  <id>http://stedy.github.io/</id>
+  <author>
+    <name><![CDATA[Zach Stednick]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Changes in NPS visits over time with D3]]></title>
+    <link href="http://stedy.github.io/blog/2016/06/05/changes-in-nps-visits-over-time-with-d3/"/>
+    <updated>2016-06-05T11:24:26-07:00</updated>
+    <id>http://stedy.github.io/blog/2016/06/05/changes-in-nps-visits-over-time-with-d3</id>
+    <content type="html"><![CDATA[<p>This year is the 100th anniversary of the National Park Service and I
+was curious about how park attendance had changed recently. Andrew
+Flowers of FiveThirtyEight had a nice
+<a href="http://fivethirtyeight.com/features/the-national-parks-have-never-been-more-popular/">overview</a>
+using official <a href="https://irma.nps.gov/Stats/Reports/National">NPS data</a>.
+The article was interesting but contrary to most of FiveThirtyEight&rsquo;s
+pieces there was a stunning lack of interactivity in what I felt was the
+main figure of the piece</p>
+
+<p><img src="http://i2.wp.com/espnfivethirtyeight.files.wordpress.com/2016/05/flowers-national-parks-4.png?quality=90&strip=all&w=575&ssl=1"></p>
+
+<p>Basically, Great Smoky Mountains NP has dominated attendance since its
+creation but what other parks have recently become popular? I used
+<a href="https://d3js.org/">D3</a> to make a simple line plot that allowed for
+interactively exploring park attendance based on year over year change
+from the mean attendance over the last ten years:</p>
+
+<p><iframe src="http://zachstednick.com/deltaNP.html"></p>
+
+<p>Clearly a spike in recent years - maybe due to lower gas prices or
+increased popularity of social media?</p>
+
+<p>Also, I was curious about what the trend looked like for the National
+Monuments.</p>
+
+<p><iframe src="http://zachstednick.com/deltaNM.html"></p>
+
+<p>The most immediate trend that jumps out is the effect of the
+<a href="https://en.wikipedia.org/wiki/Statue_of_Liberty#Closures_and_reopening_.282001.E2.80.93present.29">closing</a> of the <a href="https://www.nps.gov/stli/index.htm">Statue of Liberty</a> in 2011 which indirectly caused a slowdown in visits to <a href="https://www.nps.gov/cacl/index.htm">Castle Clinton</a>.</p>
+
+<p>I aim to visit some new parks and monuments this summer and hopefully
+looking at the data like this will help me avoid the crowds.</p>
+]]></content>
+  </entry>
+  
+</feed>
