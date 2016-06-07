@@ -4,7 +4,7 @@
   <title><![CDATA[Category: r,nps,d3 | Zach Stednick]]></title>
   <link href="http://stedy.github.io/blog/categories/r-nps-d3/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2016-06-05T11:39:20-07:00</updated>
+  <updated>2016-06-06T22:36:04-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -28,6 +28,12 @@ pieces there was a stunning lack of interactivity in what I felt was the
 main figure of the piece</p>
 
 <p><img src="http://i2.wp.com/espnfivethirtyeight.files.wordpress.com/2016/05/flowers-national-parks-4.png?quality=90&strip=all&w=575&ssl=1"></p>
+
+<p>I remade the figure using that same data but just focusong on 2006 until
+2015 and basically the popular parks stay popular and vice versa:</p>
+
+<iframe src="http://zachstednick.com/rankNP.html" marginwidth="0" marginheight="0" style="height:500px; width:1060px;" scrolling="no"></iframe>
+
 
 <p>Basically, Great Smoky Mountains NP has dominated attendance since its
 creation but what other parks have recently become popular? I used
