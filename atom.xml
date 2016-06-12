@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2016-06-06T22:36:04-07:00</updated>
+  <updated>2016-06-11T20:04:57-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,60 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Slopeplots Of African Gdp With Ggplot2]]></title>
+    <link href="http://stedy.github.io/blog/2016/06/11/slopeplots-of-african-gdp-with-ggplot2/"/>
+    <updated>2016-06-11T00:00:00-07:00</updated>
+    <id>http://stedy.github.io/blog/2016/06/11/slopeplots-of-african-gdp-with-ggplot2</id>
+    <content type="html"><![CDATA[<p>I finally got around to reading <a href="https://www.librarything.com/work/13493349">Poor
+Numbers</a> by Morton
+Jerven and found it really interesting. Basically Jerven argues that
+academic literature has either &ldquo;neglected the issue of data quality and
+therefore accepted the data at face value or dismissed the data as
+unreliable and therefore irrelevant&rdquo; and this causes many issues with
+the more data-driven approach to international aid in recent years.</p>
+
+<p>The key table in this book was a largely inscrutable table that showed
+African economies ranked by per capita GDP with data from three
+different sources of national income data: the <a href="http://data.worldbank.org/data-catalog/world-development-indicators">World Development
+Indicators</a>,
+<a href="http://www.ggdc.net/maddison/maddison-project/home.htm">Angus
+Maddison</a>, and
+<a href="http://www.rug.nl/research/ggdc/data/pwt/">Penn World Tables</a>. The
+differences in the rankings is hard to parse in a table but lend
+themselves well to a slopegraph originally proposed by Edward Tufte in
+(The Visual Display of Quantitative
+Information)[<a href="https://www.librarything.com/work/7983">https://www.librarything.com/work/7983</a>]</p>
+
+<p><img src="http://charliepark.org/images/slopegraphs/slopegraph.gif"></p>
+
+<p>Although not a true slopeplot, I was able to use a combination of
+<code>geom_line</code> from ggplot2 and the
+<a href="https://cran.r-project.org/web/packages/directlabels/">directlabels
+package</a> to
+generate the following plot (which I will admit is a bit of a hack):</p>
+
+<p><img src="http://zachstednick.com/AfricanEconomiesbyGDP.png"></p>
+
+<p>I was mainly interested in observing the variation in the top ten or so
+countries which this plot handles well. The remaining 35 or so countries
+are difficult to tell apart mostly due to very large differences in GDP.
+A log transformed plot shows that
+there is generally more consistency within the different rating agencies
+but some variation between them.</p>
+
+<p><img src="http://zachstednick.com/AfricanEconomiesbyGDP_logscaled.png"></p>
+
+<p>Slopegraphs are an effective way to visualize this type of data which
+is odd because I feel like they are rarely used and only barely
+mentioned in Tufte&rsquo;s works. Hopefully more people being exposed to them
+will result in further usage.</p>
+
+<p>Data from Table 1.1 of Poor Numbers and full code available at this
+<a href="https://gist.github.com/stedy/59fe24c6b5ab02a870d2584e4ce89ef9">gist</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Changes in NPS visits over time with D3]]></title>
@@ -1118,164 +1172,6 @@ wherever that may be. I have currently visited 118/419  parkswhich is
 about 28%, not bad. Not
 sure if I will be able to reach them faster than the 4 years it took
 Westerlind but maybe I should just focus on the journey instead.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[LEGO price estimates over time]]></title>
-    <link href="http://stedy.github.io/blog/2014/08/30/lego-price-estimates-over-time/"/>
-    <updated>2014-08-30T16:22:00-07:00</updated>
-    <id>http://stedy.github.io/blog/2014/08/30/lego-price-estimates-over-time</id>
-    <content type="html"><![CDATA[<p>LEGO recently introduced a new LEGO set called <a href="http://shop.lego.com/en-US/Research-Institute-21110">Research
-Institute</a> which
-featured three female scientists. Since my wife is also a female
-scientist, I tried to order one from the LEGO website only to learn that
-they had sold out in less than a day. I then wrote an email complaining
-about this to LEGO who responded by sending me an apology note and a
-catalog.</p>
-
-<p>I grew up playing with LEGO sets, hard to avoid when you were named Zach
-and commercials like
-<a href="https://www.youtube.com/watch?v=pDH3AoOQzE0">this</a> dominated the
-airwaves. Anyways, when I was a kid my dad once mentioned to me that a good rule of thumb
-for determining the price of a LEGO set was to estimate each brick
-costing about 10 cents. This new catalog made me wonder if this was still
-true. I copied all the model numbers as well as the number of pieces and
-the prices. I was also curious in how true this trend was when adjusted
-for inflation so I used the CPI Inflation calculator from <a href="http://data.bls.gov/cgi-bin/cpicalc.pl?cost1=.10&amp;year1=1989&amp;year2=2014">US Bureau of
-Labor
-Statistics</a> which showed
-that $0.10 in 1989 had the same buying power as $0.19 in 2014. Ideally I
-could have found a catalog from 1989 but I don&rsquo;t remember any back then
-and I probably would have cut it up to put pictures in my locker or
-something like that. I used R
-to plot both of these trends and it appears that my dad&rsquo;s estimate still
-holds true for 2014.</p>
-
-<p><img src="http://zachstednick.com/lego_by_year.png"></p>
-
-<p>A correlation calculation for all sets gives a value of 0.91 which means my dad had a
-pretty good estimate back in the day.</p>
-
-<p>I also looked at the average price for each collection and found that
-almost all collections retained a high correlation between the estimated
-price and the actual price.</p>
-
-<table>
-<thead>
-<tr>
-<th> Collection </th>
-<th> Collection Mean Price </th>
-<th style="text-align:right;"> Collection Correlation </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td> Basics </td>
-<td> 29.99 </td>
-<td style="text-align:right;"> NA</td>
-</tr>
-<tr>
-<td> Chima </td>
-<td> 38.99 </td>
-<td style="text-align:right;"> 0.977</td>
-</tr>
-<tr>
-<td> City </td>
-<td> 54.365 </td>
-<td style="text-align:right;"> 0.896</td>
-</tr>
-<tr>
-<td> Creator </td>
-<td> 100.375 </td>
-<td style="text-align:right;"> 0.955</td>
-</tr>
-<tr>
-<td> DC Superheroes </td>
-<td> 76.657 </td>
-<td style="text-align:right;"> 1</td>
-</tr>
-<tr>
-<td> Disney Princess </td>
-<td> 27.657 </td>
-<td style="text-align:right;"> 0.963</td>
-</tr>
-<tr>
-<td> Exclusive </td>
-<td> 149.99 </td>
-<td style="text-align:right;"> NA</td>
-</tr>
-<tr>
-<td> Friends </td>
-<td> 23.354 </td>
-<td style="text-align:right;"> 0.992</td>
-</tr>
-<tr>
-<td> Ideas </td>
-<td> 49.99 </td>
-<td style="text-align:right;"> NA</td>
-</tr>
-<tr>
-<td> Juniors </td>
-<td> 27.49 </td>
-<td style="text-align:right;"> 0.901</td>
-</tr>
-<tr>
-<td> LEGO Movie </td>
-<td> 63.99 </td>
-<td style="text-align:right;"> 0.997</td>
-</tr>
-<tr>
-<td> Marvel Superheroes </td>
-<td> 40.99 </td>
-<td style="text-align:right;"> 0.934</td>
-</tr>
-<tr>
-<td> Mindstorms </td>
-<td> 349.99 </td>
-<td style="text-align:right;"> NA</td>
-</tr>
-<tr>
-<td> Minecraft </td>
-<td> 139.96 </td>
-<td style="text-align:right;"> NA</td>
-</tr>
-<tr>
-<td> Mixels </td>
-<td> 4.99 </td>
-<td style="text-align:right;"> NA</td>
-</tr>
-<tr>
-<td> Ninjago </td>
-<td> 47.434 </td>
-<td style="text-align:right;"> 0.976</td>
-</tr>
-<tr>
-<td> Simpsons </td>
-<td> 199.99 </td>
-<td style="text-align:right;"> NA</td>
-</tr>
-<tr>
-<td> Star Wars </td>
-<td> 133.365 </td>
-<td style="text-align:right;"> 0.979</td>
-</tr>
-<tr>
-<td> Technic </td>
-<td> 81.99 </td>
-<td style="text-align:right;"> 0.989</td>
-</tr>
-<tr>
-<td> Ultra Agents </td>
-<td> 45.323 </td>
-<td style="text-align:right;"> 0.983</td>
-</tr>
-</tbody>
-</table>
-
-
-<p>Raw data and code for this lives at this
-<a href="https://gist.github.com/stedy/92b949ba44effd66c855">gist</a></p>
 ]]></content>
   </entry>
   

@@ -1,0 +1,46 @@
+<p>I finally got around to reading <a href="https://www.librarything.com/work/13493349">Poor
+Numbers</a> by Morton
+Jerven and found it really interesting. Basically Jerven argues that
+academic literature has either &ldquo;neglected the issue of data quality and
+therefore accepted the data at face value or dismissed the data as
+unreliable and therefore irrelevant&rdquo; and this causes many issues with
+the more data-driven approach to international aid in recent years.</p>
+
+<p>The key table in this book was a largely inscrutable table that showed
+African economies ranked by per capita GDP with data from three
+different sources of national income data: the <a href="http://data.worldbank.org/data-catalog/world-development-indicators">World Development
+Indicators</a>,
+<a href="http://www.ggdc.net/maddison/maddison-project/home.htm">Angus
+Maddison</a>, and
+<a href="http://www.rug.nl/research/ggdc/data/pwt/">Penn World Tables</a>. The
+differences in the rankings is hard to parse in a table but lend
+themselves well to a slopegraph originally proposed by Edward Tufte in
+(The Visual Display of Quantitative
+Information)[<a href="https://www.librarything.com/work/7983">https://www.librarything.com/work/7983</a>]</p>
+
+<p><img src="http://charliepark.org/images/slopegraphs/slopegraph.gif"></p>
+
+<p>Although not a true slopeplot, I was able to use a combination of
+<code>geom_line</code> from ggplot2 and the
+<a href="https://cran.r-project.org/web/packages/directlabels/">directlabels
+package</a> to
+generate the following plot (which I will admit is a bit of a hack):</p>
+
+<p><img src="http://zachstednick.com/AfricanEconomiesbyGDP.png"></p>
+
+<p>I was mainly interested in observing the variation in the top ten or so
+countries which this plot handles well. The remaining 35 or so countries
+are difficult to tell apart mostly due to very large differences in GDP.
+A log transformed plot shows that
+there is generally more consistency within the different rating agencies
+but some variation between them.</p>
+
+<p><img src="http://zachstednick.com/AfricanEconomiesbyGDP_logscaled.png"></p>
+
+<p>Slopegraphs are an effective way to visualize this type of data which
+is odd because I feel like they are rarely used and only barely
+mentioned in Tufte&rsquo;s works. Hopefully more people being exposed to them
+will result in further usage.</p>
+
+<p>Data from Table 1.1 of Poor Numbers and full code available at this
+<a href="https://gist.github.com/stedy/59fe24c6b5ab02a870d2584e4ce89ef9">gist</a></p>
