@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2016-06-11T20:36:45-07:00</updated>
+  <updated>2016-06-11T20:44:38-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -19,8 +19,8 @@
     <updated>2016-06-11T20:03:34-07:00</updated>
     <id>http://stedy.github.io/blog/2016/06/11/slopeplots-of-african-gdp-with-ggplot2</id>
     <content type="html"><![CDATA[<p>I finally got around to reading <a href="https://www.librarything.com/work/13493349">Poor
-Numbers</a> by Morton
-Jerven and found it really interesting. Basically Jerven argues that
+Numbers</a> by <a href="http://mortenjerven.com/">Morton
+Jerven</a> and found it really interesting. Basically Jerven argues that
 academic literature has either &ldquo;neglected the issue of data quality and
 therefore accepted the data at face value or dismissed the data as
 unreliable and therefore irrelevant&rdquo; and this causes many issues with
