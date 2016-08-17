@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2016-06-11T20:44:38-07:00</updated>
+  <updated>2016-08-16T22:38:15-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[This American Life stats]]></title>
+    <link href="http://stedy.github.io/blog/2016/08/16/this-american-life-stats/"/>
+    <updated>2016-08-16T22:19:24-07:00</updated>
+    <id>http://stedy.github.io/blog/2016/08/16/this-american-life-stats</id>
+    <content type="html"><![CDATA[<p>Lately I have been listening to episodes of <a href="http://www.thisamericanlife.org/">This American
+Life</a> faster than they are making them
+which means I have been going back to the archive for past unheard shows. Their website has a nice <a href="http://www.thisamericanlife.org/user/login">user section</a> where you can log in and mark episodes you have heard and mark episodes as your favorites. The archives are arranged by year which naturally got me thinking about the number episodes listened to by year. A search of GitHub revealed many libraries for downloading episodes of the podcast but none that were interested in user statistics so I decided to write my own. I am still very much beginner level with passing cookies and CSRF requests which is why I ultimately ended up using <a href="https://splinter.readthedocs.io/en/latest/">Splinter</a> which just lets you automate browser actions. I used that to login and navigate the TAL archives by year. I then used <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a> to parse the HTML. Finally I wanted to visualize the results so I just used Mike Bostock&rsquo;s <a href="https://bl.ocks.org/mbostock/3885304">D3 Bar Chart example</a>.</p>
+
+<p><iframe src="http://zachstednick.com/TAL_stats.html"></p>
+
+<p>Pretty basic but it gets the job done, full code here on
+<a href="https://github.com/stedy/TAL_stats">GitHub</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Slopeplots of African GDP with ggplot2]]></title>
@@ -1152,27 +1168,6 @@ that data from LibraryThing so I abandoned that analysis.</p>
 <p><img src="http://zachstednick.com/referrer_location.png"></p>
 
 <p>That outlier from Brazil is likely a Google bot crawling the site; better detection and removal of bot traffic from the final output is on the TODO list. All of the code (minus the shell script) lives on <a href="https://github.com/stedy/simple-webstats">github</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[(206)419-PARKS]]></title>
-    <link href="http://stedy.github.io/blog/2014/11/05/206-419-parks/"/>
-    <updated>2014-11-05T15:27:00-08:00</updated>
-    <id>http://stedy.github.io/blog/2014/11/05/206-419-parks</id>
-    <content type="html"><![CDATA[<p>I recently became aware of the efforts of Linnea Westerlind who made a
-goal to visit every park in Seattle and documented her efforts
-<a href="http://www.yearofseattleparks.com/">here</a>. I thought this was pretty
-neat so I looked up the list of <a href="http://www.seattle.gov/parks/listall.asp">City of Seattle
-Parks</a> which currently lists
-419 parks. The definitions for a park are hard to determine and this
-list ends up with some oddball parks such as <a href="https://www.google.com/maps/place/Crescent+Place/@47.6842435,-122.3330848,19z/data=!4m2!3m1!1s0x54901413dd56bf9f:0xa19ed07208659a24">Crescent
-Place</a>.
-Still I think it is an interesting way to learn more about where you live
-wherever that may be. I have currently visited 118/419  parkswhich is
-about 28%, not bad. Not
-sure if I will be able to reach them faster than the 4 years it took
-Westerlind but maybe I should just focus on the journey instead.</p>
 ]]></content>
   </entry>
   
