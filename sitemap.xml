@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://stedy.github.io/blog/2016/09/02/has-the-pac-12-network-decreased-uw-home-football-game-attendance/</loc>
+    <lastmod>2016-09-02T12:52:46-07:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://stedy.github.io/blog/2016/08/16/this-american-life-stats/</loc>
     <lastmod>2016-08-16T22:19:24-07:00</lastmod>
     <priority>0.8</priority>
@@ -192,13 +197,13 @@
   </url>
   <url>
     <loc>http://stedy.github.io/blog/archives/</loc>
-    <lastmod>2016-08-16T22:47:48-07:00</lastmod>
+    <lastmod>2016-09-02T13:52:40-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://stedy.github.io/</loc>
-    <lastmod>2016-08-16T22:47:48-07:00</lastmod>
+    <lastmod>2016-09-02T13:52:40-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>

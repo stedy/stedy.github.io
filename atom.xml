@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2016-08-16T22:47:48-07:00</updated>
+  <updated>2016-09-02T13:52:40-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,90 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Has the Pac-12 Network decreased UW home football game attendance?]]></title>
+    <link href="http://stedy.github.io/blog/2016/09/02/has-the-pac-12-network-decreased-uw-home-football-game-attendance/"/>
+    <updated>2016-09-02T12:52:46-07:00</updated>
+    <id>http://stedy.github.io/blog/2016/09/02/has-the-pac-12-network-decreased-uw-home-football-game-attendance</id>
+    <content type="html"><![CDATA[<p>The University of Washington Husky football team is taking on Rutgers
+this Saturday with kickoff at 11 AM PST. This is awfully early to start a game especially a game that occurs during Labor Day weekend. The game is being aired on the <a href="https://en.wikipedia.org/wiki/Pac-12_Network">Pac-12 Network</a> which is about to enter its fifth year of operation. This made me wonder, with the presence of the Pac-12 Network, has attendance decreased at home UW football games?</p>
+
+<p>Fortunately, Wikipedia lists game attendance which allows for a quick
+overview of UW home games stratified by network:</p>
+
+<p><img src="http://zachstednick.com/UW_football_attendance_by_TV.png"></p>
+
+<p>I then looked at only home Pac-10/Pac-12 games and looked at attendance
+by season:</p>
+
+<p><img src="http://zachstednick.com/UW_football_total_attendance.png"></p>
+
+<p>That high data point is Oregon in 2013 while that particularly low point in 2015 was versus Arizona on Halloween
+which happened to fall on a Thursday in 2015. Why some executive at FS1 thought it would be a good idea to schedule a game then is beyond me.</p>
+
+<p>In 2012, UW played its home games at CenturyLink Field, while Husky
+Stadium was renovated. For the 2013 season the UW football team returned to play at a smaller Husky
+Stadium, did either of these factors impact attendance?</p>
+
+<p><img src="http://zachstednick.com/UW_football_percentage_capacity.png"></p>
+
+<p>What Pac-12 opponents were the biggest draws on average?</p>
+
+<table>
+<thead>
+<tr>
+<th> Opponent </th>
+<th style="text-align:right;"> Average Attendance </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>          Oregon </td>
+<td style="text-align:right;"> 69584</td>
+</tr>
+<tr>
+<td>Washington State </td>
+<td style="text-align:right;"> 68862</td>
+</tr>
+<tr>
+<td>        Colorado </td>
+<td style="text-align:right;"> 64373</td>
+</tr>
+<tr>
+<td>             USC </td>
+<td style="text-align:right;"> 64046</td>
+</tr>
+<tr>
+<td>    Oregon State </td>
+<td style="text-align:right;"> 63777</td>
+</tr>
+<tr>
+<td>        Stanford </td>
+<td style="text-align:right;"> 63360</td>
+</tr>
+<tr>
+<td>            UCLA </td>
+<td style="text-align:right;"> 62544</td>
+</tr>
+<tr>
+<td>      California </td>
+<td style="text-align:right;"> 62541</td>
+</tr>
+<tr>
+<td>         Arizona </td>
+<td style="text-align:right;"> 60756</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Obviously there are a lot of factors that can&rsquo;t be captured by game
+attendance alone but with a significant deficit largely blamed on
+<a href="http://www.seattletimes.com/sports/uw-huskies/uw-athletic-department-projects-budget-deficit-of-14-million-for-2016-fiscal-year/">reduced
+attendance</a>, it seems like it might be time for the UW to analyze if the Pac-12 Network has really been worth the investments to date.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[This American Life stats]]></title>
@@ -1137,38 +1221,6 @@ that data from LibraryThing so I abandoned that analysis.</p>
 
 <p>If interested, I put my python code in a GitHub
 <a href="https://gist.github.com/stedy/2cb4fb1f332508f39ff2">gist</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Simple webstats with R]]></title>
-    <link href="http://stedy.github.io/blog/2014/11/19/simple-webstats-with-r/"/>
-    <updated>2014-11-19T17:01:34-08:00</updated>
-    <id>http://stedy.github.io/blog/2014/11/19/simple-webstats-with-r</id>
-    <content type="html"><![CDATA[<p>As someone who puts out writings out publically, I am naturally curious who (if anyone) is actually reading what I write. To answer this I developed a simple webstat calculator using R. I realize there are many options out there for tracking visits but to paraphrase my friend Andy, <a href="http://wingolog.org/archives/2014/11/14/on-yakshave-on-color-on-cosines-on-glitchen">when has using standard libraries lead to anything cool?</a>.</p>
-
-<p>My main interests in this project is to answer two questions:</p>
-
-<ol>
-<li><p>Are people visting this site?</p></li>
-<li><p>Where are they visting from?</p></li>
-</ol>
-
-
-<p>I don&rsquo;t really care about things like <a href="https://en.wikipedia.org/wiki/Bounce_rate">bounce rate</a> or type of device used to access the site. Not having to worry about either of these issues helps cut down on the complexity. I run this site on an Apache server and use a standard log output to write my logfile:
-<code>LogFormat "%v:%p %h %l %u %t \"%r\" %&gt;s %O \"%{Referer}i\" \"%{User-Agent}i\"</code></p>
-
-<p>I made a small R script that uses <a href="http://cran.r-project.org/web/packages/knitr/">knitr</a> to output plots to HTML for ease in viewing. I wrote a shell script that uses the excellent <a href="http://dirk.eddelbuettel.com/code/littler.html">little r</a> to perform the commands. I run the shell script daily as a cron job and only look back at the past week&rsquo;s worth of data. Since this blog is served on github pages, it can be difficult to see page views so I use images loaded as a proxy.</p>
-
-<p>Here are some example plots of recent visitors:</p>
-
-<p><img src="http://zachstednick.com/visitor.png"></p>
-
-<p>And then another plot of visitor locations:</p>
-
-<p><img src="http://zachstednick.com/referrer_location.png"></p>
-
-<p>That outlier from Brazil is likely a Google bot crawling the site; better detection and removal of bot traffic from the final output is on the TODO list. All of the code (minus the shell script) lives on <a href="https://github.com/stedy/simple-webstats">github</a></p>
 ]]></content>
   </entry>
   
