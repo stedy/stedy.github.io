@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: books | Zach Stednick]]></title>
+  <link href="http://stedy.github.io/blog/categories/books/atom.xml" rel="self"/>
+  <link href="http://stedy.github.io/"/>
+  <updated>2017-01-01T15:19:37-08:00</updated>
+  <id>http://stedy.github.io/</id>
+  <author>
+    <name><![CDATA[Zach Stednick]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[First book of the year]]></title>
+    <link href="http://stedy.github.io/blog/2017/01/01/first-book-of-the-year/"/>
+    <updated>2017-01-01T15:10:38-08:00</updated>
+    <id>http://stedy.github.io/blog/2017/01/01/first-book-of-the-year</id>
+    <content type="html"><![CDATA[<p>Last year I started off the year by making Ashlee Vance&rsquo;s
+<a href="https://www.librarything.com/work/15743242/book/124695914">biography</a>
+of Elon Musk the first book I read all year.
+I wanted to start 2016 off better than 2015 and thought this book might
+help my thinking. The story is on Musk is quite interesting if anything
+to simply show how much he believes in himself even when the odds seem
+stacked against him and the money in the bank grows lower. I tried to
+use Musk&rsquo;s story to improve my own self-confidence and I felt like the most concrete way I
+was able to do so was to reduce the amount I took on and instead focus
+on doing a better job of what I had in front of me.</p>
+
+<p>I will be repeating this little project in 2017 by starting the year off
+by reading <a href="https://www.librarything.com/work/8586497">Spread Spectrum:Hedy Lamarr and
+the mobile phone</a> by Rob
+Walters. I know very little about <a href="https://en.wikipedia.org/wiki/Spread_spectrum">spread spectrum
+technology</a> and <a href="https://en.wikipedia.org/wiki/Hedy_Lamarr">Hedy
+Lamarr</a> had a very
+interesting life and is greatly underappreciated in
+modern society. Hopefully this book will prove to be as motivational
+over the course of the year in a similar manner as Musk&rsquo;s biography was.</p>
+]]></content>
+  </entry>
+  
+</feed>
