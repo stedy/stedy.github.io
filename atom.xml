@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2017-01-01T15:19:37-08:00</updated>
+  <updated>2017-03-02T15:29:45-08:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A forgotten cron job leads to interesting results]]></title>
+    <link href="http://stedy.github.io/blog/2017/03/02/a-forgotten-cron-job-leads-to-interesting-results/"/>
+    <updated>2017-03-02T15:15:33-08:00</updated>
+    <id>http://stedy.github.io/blog/2017/03/02/a-forgotten-cron-job-leads-to-interesting-results</id>
+    <content type="html"><![CDATA[<p>On January 1, 2016 I set up a <a href="https://en.wikipedia.org/wiki/Cron">cron</a> job to perform a daily count of the number of Twitter followers of the two main Gubernatorial candidates in Washington State: <a href="https://twitter.com/GovInslee">Jay Inslee</a> and <a href="https://twitter.com/BillBryantWA">Bill Bryant</a>. I was not attempting to predict the election or do anything with the data, I just wanted to count followers until Election Day 2016 and hopefully plot some interesting results. I checked on Election Day and the trend lines remained pretty much the same as they did at the start of the year so I abandonded my idea. Today I was cleaning out my crontab file I found that the script was still running. I added a solid line for the 2016 Election day and dashed line for the Presidential Inauguration.</p>
+
+<p><img src="http://zachstednick.com/Inslee_vs_Bryant.png"></p>
+
+<p>To me, the follower count data after the inauguration is the most interesting but it is just count data and I am not sure how much you can really read into it. If anything, forgetting the cronjob was a pleasant surprise that reminded me of this guy who took a screenshot of the New York Times frontpage everyday for 5 years <a href="https://www.youtube.com/watch?v=sCKGOiauJCE">YouTube</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[First book of the year]]></title>
@@ -1132,53 +1145,6 @@ I was able to get a state level shapefile for Washington state from
 and then reduce that to just Seattle neighborhoods using R&rsquo;s
 <a href="http://cran.r-project.org/web/packages/sp/">sp</a> package. Full code
 posted on <a href="https://github.com/stedy/seattle-restaurants">github</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[First year on Fitbit]]></title>
-    <link href="http://stedy.github.io/blog/2015/02/25/first-year-on-fitbit/"/>
-    <updated>2015-02-25T14:15:11-08:00</updated>
-    <id>http://stedy.github.io/blog/2015/02/25/first-year-on-fitbit</id>
-    <content type="html"><![CDATA[<p>After a year on <a href="https://www.fitbit.com/user/2F49C2">Fitbit</a>, I figured it might be time to take a look at the data that I have been generating. Unfortunately, Fitbit makes you sign up for <a href="https://www.fitbit.com/premium/export">Premium</a> which charges you $50 per year to export your data. Fortunately, Cory Nissen has created an excellent <a href="https://github.com/corynissen/fitbitScraper">R package</a> for doing just this. The package simply uses a POST request handled by Hadley&rsquo;s <a href="https://github.com/hadley/httr">httr</a> library to generate a cookie and then parses the returned JSP results to return a nice <code>data.frame</code>.</p>
-
-<p>Anyways, onto the data.</p>
-
-<p>The first command I tried was the <code>get_15_min_data()</code> for parsing step
-data in 15 minute increments. I figured that looking at yesterday&rsquo;s data
-would be granular enough to get a good feel for the data.</p>
-
-<p><img src="http://zachstednick.com/fifteen_min_fitbit.png"></p>
-
-<p>I then plotted number of steps taken per day, with a smoothing function
-overlaid:</p>
-
-<p><img src="http://zachstednick.com/one_year_fitbit_steps.png"></p>
-
-<p>I had a mean step count of 13935 for the past year. This data is more
-interesting to look at as more of an overall trend. There definitely a
-seasonal trend in the summer which makes sense. I can also see the
-signatures of when I went on a four day backpacking trip in August and
-when I broke two ribs and was confined to the couch for four days in
-mid-March.</p>
-
-<p>Since I have a Fitbit one, I can also measure floors climbed.</p>
-
-<p><img src="http://zachstednick.com/fitbit_one_year_floors.png"></p>
-
-<p>My mean number of floors climbed is 69.62 which seems absurdly high. My
-desk is on the fourth floor of my building and I usually take the stairs
-but not sure that is enough to fully explain why these counts are so
-high.</p>
-
-<p>Still, it is pretty interesting to look at this data outside of the
-Fitbit interface and I would highly recommend checking out Cory&rsquo;s github
-<a href="https://github.com/corynissen/fitbitScraper">repo</a></p>
-
-<p>Also, speaking of github, for those of you who regularly follow this
-blog (hi, Mom!) I have moved away from making a new gist every time to
-simply having a standalone
-<a href="https://github.com/stedy/blog-supplemental">repo</a></p>
 ]]></content>
   </entry>
   
