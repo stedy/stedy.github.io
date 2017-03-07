@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2017-03-07T13:22:41-08:00</updated>
+  <updated>2017-03-07T13:23:31-08:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -25,11 +25,8 @@ as I can remember and with Selection Sunday coming up, I wondered if
 there
 have been more or less upsets in recent tournaments. To look at this
 visually I used a hypothetical perfect bracket as a reference (i.e. #1
-seed beats #16 seed,</p>
-
-<h1>2 seed beats #15 seed all the way to #1 seed beating a #2 seed). I</h1>
-
-<p>took the sum of all the winning seed numbers at each round in the
+seed beats #16 seed, #2 seed beats #15 seed all the way to #1 seed beating a #2 seed). I
+took the sum of all the winning seed numbers at each round in the
 Regional Tournament and used that as the denominator
 for comparison with the other Regional Tournaments for that particular
 year.</p>
