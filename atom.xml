@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2017-03-02T15:45:59-08:00</updated>
+  <updated>2017-03-07T13:22:41-08:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Have there been more upsets in the NCAA Tournament recently?]]></title>
+    <link href="http://stedy.github.io/blog/2017/03/07/have-there-been-more-upsets-in-the-ncaa-tournament-recently/"/>
+    <updated>2017-03-07T13:19:58-08:00</updated>
+    <id>http://stedy.github.io/blog/2017/03/07/have-there-been-more-upsets-in-the-ncaa-tournament-recently</id>
+    <content type="html"><![CDATA[<p>I have been following the <a href="https://en.wikipedia.org/wiki/NCAA_Division_I_Men%27s_Basketball_Tournament">NCAA Men&rsquo;s Basketball
+Tournament</a>
+for as long
+as I can remember and with Selection Sunday coming up, I wondered if
+there
+have been more or less upsets in recent tournaments. To look at this
+visually I used a hypothetical perfect bracket as a reference (i.e. #1
+seed beats #16 seed,</p>
+
+<h1>2 seed beats #15 seed all the way to #1 seed beating a #2 seed). I</h1>
+
+<p>took the sum of all the winning seed numbers at each round in the
+Regional Tournament and used that as the denominator
+for comparison with the other Regional Tournaments for that particular
+year.</p>
+
+<p>I went back in time as far as I could but the <a href="https://en.wikipedia.org/wiki/2007_NCAA_Division_I_Men's_Basketball_Tournament">2007
+Tournament</a>
+Finally harmonized the names of the Regional tournaments with the names
+East, West, South, and
+Midwest which made for easier comparison across years.</p>
+
+<p><img src="http://zachstednick.com/NCAA_by_region.png"></p>
+
+<p>Clearly there have been quite a lot of upsets in the past ten years
+especially within the Midwest Region.</p>
+
+<p>I then went back and looked at all games back to 1985 when
+the Tournament first expanded to 64 teams. For this I did not have all
+the Regional Tournament information so I just looked at all the games
+(except the Final Four).</p>
+
+<p><img src="http://zachstednick.com/NCAA_all_by_year.png"></p>
+
+<p>The aggregate data is pretty volatile year over year as well with a low
+in
+<a href="https://en.wikipedia.org/wiki/2007_NCAA_Division_I_Men's_Basketball_Tournament">2007</a>. If anything, this shows we should be in for another great year of NCAA tournament basketball complete with some (hopefully many) exciting upsets.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A forgotten cron job leads to interesting results]]></title>
@@ -1103,48 +1148,6 @@ score data that <a href="http://gd2.mlb.com/components/game/mlb/year_2014/">MLB 
 
 <p>Conclusion: Hernandez was not that strong of a driver of ticket sales
 which is great news if you are hoping to see him pitching in person.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Seattle Restaurant Changes]]></title>
-    <link href="http://stedy.github.io/blog/2015/04/17/seattle-restaurant-changes/"/>
-    <updated>2015-04-17T10:51:18-07:00</updated>
-    <id>http://stedy.github.io/blog/2015/04/17/seattle-restaurant-changes</id>
-    <content type="html"><![CDATA[<p>Seattle construction is currently booming and I was interested in how
-that
-reflected in the local restaurant scene. There are many food blogs and
-local news sites that cover openings and closings, but I found it too
-difficult to parse these in a regular manner. Fortunately I was able to
-use data from the <a href="http://www.seattle.gov/licenses/find-a-business">City of Seattle business
-finder</a> and used the
-restaurant classification or
-<a href="https://en.wikipedia.org/wiki/NAICS">NAICS</a> code as a proxy. Using the
-data in this manner makes an assumption that a restaurant will no longer
-have a business licence after it closes.
-I&rsquo;m not sure how accurate this is but I figured it was as accurate as I
-could get short of hiring people on Mechanical Turk to phone every
-restaurant every week and ask if the restaurant is still open. To map each
-restaurant to a particular neighborhood, I
-used geolocation to map license address returned by the City of Seattle business
-finder. Obviously that does not work as well for Mobile Food Services
-(i.e. food trucks) but it still allows for an interesting comparison.
-This data is plotted at <a href="http://seattlerestaurantchanges.com">Seattle Restaurant
-Changes</a>.</p>
-
-<p>I initially attempted to scrape
-data from <a href="https://www.thestranger.com/food-and-drink">The Stranger</a> but
-after finding the City of Seattle site I just used
-<a href="http://www.crummy.com/software/BeautifulSoup/">BeautifulSoup</a> for the
-scraping. I would not have been able to do much more beyond that state
-if it had not been for Nathan Yau&rsquo;s excellent tutorial on <a href="http://flowingdata.com/2015/02/19/make-an-interactive-map-with-category-filters/">making maps
-with category
-filters</a>.
-I was able to get a state level shapefile for Washington state from
-<a href="http://www.zillow.com/blog/7000-neighborhood-boundary-files-in-shapefile-format-4653/">Zillow</a>
-and then reduce that to just Seattle neighborhoods using R&rsquo;s
-<a href="http://cran.r-project.org/web/packages/sp/">sp</a> package. Full code
-posted on <a href="https://github.com/stedy/seattle-restaurants">github</a></p>
 ]]></content>
   </entry>
   
