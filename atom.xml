@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2017-03-07T13:24:15-08:00</updated>
+  <updated>2017-03-26T17:25:13-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Pronto post-mortem]]></title>
+    <link href="http://stedy.github.io/blog/2017/03/26/pronto-post-mortem/"/>
+    <updated>2017-03-26T17:21:03-07:00</updated>
+    <id>http://stedy.github.io/blog/2017/03/26/pronto-post-mortem</id>
+    <content type="html"><![CDATA[<p>Pronto bike share ends this Friday March 31st and I will miss it for
+sure. I <a href="http://zachstednick.name/blog/2016/02/09/thoughts-on-pronto/">wrote about why Pronto mattered to me</a> and I
+even rode a Pronto bike in the 25
+mile <a href="http://www.obliteride.org/">Obliteride</a> last year:</p>
+
+<p><img src="http://zachstednick.com/IMG_2260.JPG"></p>
+
+<p>In October 2015, there was a Pronto sponsored
+<a href="https://www.prontocycleshare.com/datachallenge">contest</a> to visualize
+bikeshare ride data. I created an
+<a href="http://prontostories.com/">entry</a> which although did not win, was a
+nice introduction for me to learn mapping with
+<a href="d3js.org">D3</a>. As I was
+checking out the Pronto site one last time today I noticed that they had
+updated their open dataset to include 2016
+ride data as well as the 2015 ride data.</p>
+
+<p><img src="http://zachstednick.com/pronto_historical_ridership.png"></p>
+
+<p>To me it seems that Pronto had a hard time expanding and encouraging
+repeat riders. Unfortunately we do not have the membership data but if
+we can assume that people who did not ride much in 2015 did not renew
+their membership in 2016 then it looks pretty clear that Pronto was hurting
+more than people thought. Also, it looked like they had good success in
+2015 with getting people to buy day passes especially during peak tourist
+season in the summer and were able to replicate that success in 2016. I
+feel there is a need for a dedicated
+bike share in Seattle however this iteration of bike share does not
+appear to be the solution we need.</p>
+
+<p>I went back to the Pronto site to fetch all my data because of an idea I
+worked on then abandoned last summer. The idea was for a website that
+was basically <a href="https://www.strava.com/">Strava</a> for Pronto
+whereby you compared your ride time data to everyone else&rsquo;s and mapped out how
+fast you were compared to them. Pronto did not make it easy to download
+all your trip data so I ended up having to write a webscraper to get out
+my own data (Hint, hint Pronto 2.0!) which I put at this <a href="https://github.com/stedy/pronto-scraper">GitHub
+repository</a>. I never was able
+to get my project past the personal level and my ultimate goal was to
+simply make a map of the route and add
+in plots. Here is an example of all trips from Fairview Ave N &amp; Ward St
+to Westlake Ave &amp; 6th Ave:</p>
+
+<iframe src="http://zachstednick.com/strava_for_pronto_demo.html"
+marginwidth="0" marginheight="0" style="height:500px; width:1060px;"
+scrolling="no"></iframe>
+
+
+<p>I&rsquo;m sad that I can&rsquo;t work on this project anymore but maybe with Pronto
+2.0 I will be able to revist this idea.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Have there been more upsets in the NCAA Tournament recently?]]></title>
@@ -1121,30 +1179,6 @@ declining.</p></li>
 
 
 <p>I will try to post another update on this in December, that is unless I decide to open up a food truck of my own.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The Felix Factor]]></title>
-    <link href="http://stedy.github.io/blog/2015/05/30/the-felix-factor/"/>
-    <updated>2015-05-30T16:12:37-07:00</updated>
-    <id>http://stedy.github.io/blog/2015/05/30/the-felix-factor</id>
-    <content type="html"><![CDATA[<p>I was listening to the Jonah Keri
-<a href="http://espn.go.com/espnradio/grantland/player?id=12957030">podcast</a> and
-he and Ben Gibbard were talking about the Mariners, specifically <a href="http://m.mlb.com/player/433587/felix-hernandez/2015/career/R/pitching/MLB">Felix
-Hernandez</a>.
-One of the points Gibbard made was that Hernandez is so outstanding that
-he will be remembered and that people should try to see him pitch in
-person. This made me wonder, did Felix Hernandez have an impact on home
-ticket sales for the Mariners in 2014?</p>
-
-<p>I was able to get all the data from some of the nicely formatted box
-score data that <a href="http://gd2.mlb.com/components/game/mlb/year_2014/">MLB provides</a>. I initially tried to look at the data over the course of the year but attendance was so variable (which made for an extremely confusing plot) that I just ended up making a box and whiskers plot and ignored the date element:</p>
-
-<p><img src="http://zachstednick.com/felix_factor.png"></p>
-
-<p>Conclusion: Hernandez was not that strong of a driver of ticket sales
-which is great news if you are hoping to see him pitching in person.</p>
 ]]></content>
   </entry>
   

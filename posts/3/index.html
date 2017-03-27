@@ -7,9 +7,11 @@
 	<meta name="author" content="Zach Stednick">
 
 	
-	<meta name="description" content="Seattle construction is currently booming and I was interested in how
-that
-reflected in the local restaurant scene. There are many food blogs and &hellip;">
+	<meta name="description" content="I was listening to the Jonah Keri
+podcast and
+he and Ben Gibbard were talking about the Mariners, specifically Felix
+Hernandez.
+One of the points &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -80,6 +82,62 @@ reflected in the local restaurant scene. There are many food blogs and &hellip;"
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2015/05/30/the-felix-factor/">
+		
+			The Felix Factor</a>
+	</h2>
+	<div class="entry-content">
+		<p>I was listening to the Jonah Keri
+<a href="http://espn.go.com/espnradio/grantland/player?id=12957030">podcast</a> and
+he and Ben Gibbard were talking about the Mariners, specifically <a href="http://m.mlb.com/player/433587/felix-hernandez/2015/career/R/pitching/MLB">Felix
+Hernandez</a>.
+One of the points Gibbard made was that Hernandez is so outstanding that
+he will be remembered and that people should try to see him pitch in
+person. This made me wonder, did Felix Hernandez have an impact on home
+ticket sales for the Mariners in 2014?</p>
+
+<p>I was able to get all the data from some of the nicely formatted box
+score data that <a href="http://gd2.mlb.com/components/game/mlb/year_2014/">MLB provides</a>. I initially tried to look at the data over the course of the year but attendance was so variable (which made for an extremely confusing plot) that I just ended up making a box and whiskers plot and ignored the date element:</p>
+
+<p><img src="http://zachstednick.com/felix_factor.png"></p>
+
+<p>Conclusion: Hernandez was not that strong of a driver of ticket sales
+which is great news if you are hoping to see him pitching in person.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-05-30T16:12:37-07:00" pubdate data-updated="true"></time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/baseball/'>baseball,</a>, <a class='category' href='/blog/categories/r/'>r</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -918,86 +976,6 @@ guy is still around?</p>
 
 
 <time datetime="2014-07-31T17:46:00-07:00" pubdate data-updated="true"></time></div>
-	<div class="tags">
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/02/24/writing-a-twitter-bot-for-fun-and-profit/">
-		
-			Writing a Twitter Bot for Fun and Profit</a>
-	</h2>
-	<div class="entry-content">
-		<p>One of my first thoughts when Twitter had its IPO was that the days of
-writing Twitter bots was over. My fear was that they would lock down
-their
-platform in order to more accurately sell ads.</p>
-
-<p>Man, was I wrong.</p>
-
-<p>The Twitter API is still as robust as ever and allows for creating Twitter bots.
-One of the current trends is to try to generate buzz around a product or
-idea by getting people to use a specific hashtag. This can often lead to
-slightly hilarious results, such as the <a href="http://mlb.mlb.com/mlb/awards/y2014/faceofmlb/">Face of
-MLB</a>. Basically, the
-fans &ldquo;vote&rdquo; for their favorite player to be the Face of MLB by using a
-certain hashtag. I cannot think of a better job for a twitter bot.</p>
-
-<p>Setting up a bot or Twitter Application is easy, just go to
-<a href="http://apps.twitter.com">Twitter Apps</a> and login or create a new username and
-log in. Follow the steps and you can get an API key in a few minutes. Although note that in order to write tweets as a bot you have to
-choose Read + Write (instead of the default Write). I run my bot largely using the
-<a href="https://pypi.python.org/pypi/tweepy/2.2">tweepy</a> Python library which
-provides easy access to the Twitter API. Here is a
-<a href="https://gist.github.com/stedy/9203520">gist</a> of a bot I am
-running for the Face of MLB. Twitter does not allow the same tweet to be
-posted more than once from an account so I just add something like the
-current time:</p>
-
-<blockquote class="twitter-tweet" lang="en"><p><a
-href="https://twitter.com/_J4EZ">@_j4ez</a> Why not Zoidberg? the time
-is Monday, 09:09:PM <a
-href="https://twitter.com/search?q=%23ericsogard&amp;src=hash">#ericsogard</a>
-<a href="https://twitter.com/search?q=%23FaceofMLB&amp;src=hash">#FaceofMLB</a></p>&mdash;
-Zoidberg bot (@ZoidbergBot) <a href="https://twitter.com/ZoidbergBot/statuses/438179021684097024">February
-25, 2014</a></blockquote>
-
-
-<script async src="//platform.twitter.com/widgets.js"
-charset="utf-8"></script>
-
-
-<p>I will admit this is kinda silly, but if I can&rsquo;t use my programming
-skills to get
-someone like <a href="http://oakland.athletics.mlb.com/team/player.jsp?player_id=519299#gameType=%27R%27">Eric
-Sogard</a>
-elected the Face of MLB, then what&rsquo;s the point of programming?</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-24T21:42:00-08:00" pubdate data-updated="true"></time></div>
 	<div class="tags">
 
 </div>

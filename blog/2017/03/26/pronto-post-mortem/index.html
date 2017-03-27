@@ -1,0 +1,195 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Pronto post-mortem - Zach Stednick</title>
+	<meta name="author" content="Zach Stednick">
+
+	
+	<meta name="description" content="Pronto bike share ends this Friday March 31st and I will miss it for
+sure. I wrote about why Pronto mattered to me and I
+even rode a Pronto bike in &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Zach Stednick" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Zach Stednick</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:stedy.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/zachstednick" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/stedy" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="https://www.google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:stedy.github.io">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Pronto Post-mortem</h2>
+	<div class="entry-content"><p>Pronto bike share ends this Friday March 31st and I will miss it for
+sure. I <a href="http://zachstednick.name/blog/2016/02/09/thoughts-on-pronto/">wrote about why Pronto mattered to me</a> and I
+even rode a Pronto bike in the 25
+mile <a href="http://www.obliteride.org/">Obliteride</a> last year:</p>
+
+<p><img src="http://zachstednick.com/IMG_2260.JPG"></p>
+
+<p>In October 2015, there was a Pronto sponsored
+<a href="https://www.prontocycleshare.com/datachallenge">contest</a> to visualize
+bikeshare ride data. I created an
+<a href="http://prontostories.com/">entry</a> which although did not win, was a
+nice introduction for me to learn mapping with
+<a href="d3js.org">D3</a>. As I was
+checking out the Pronto site one last time today I noticed that they had
+updated their open dataset to include 2016
+ride data as well as the 2015 ride data.</p>
+
+<p><img src="http://zachstednick.com/pronto_historical_ridership.png"></p>
+
+<p>To me it seems that Pronto had a hard time expanding and encouraging
+repeat riders. Unfortunately we do not have the membership data but if
+we can assume that people who did not ride much in 2015 did not renew
+their membership in 2016 then it looks pretty clear that Pronto was hurting
+more than people thought. Also, it looked like they had good success in
+2015 with getting people to buy day passes especially during peak tourist
+season in the summer and were able to replicate that success in 2016. I
+feel there is a need for a dedicated
+bike share in Seattle however this iteration of bike share does not
+appear to be the solution we need.</p>
+
+<p>I went back to the Pronto site to fetch all my data because of an idea I
+worked on then abandoned last summer. The idea was for a website that
+was basically <a href="https://www.strava.com/">Strava</a> for Pronto
+whereby you compared your ride time data to everyone else&rsquo;s and mapped out how
+fast you were compared to them. Pronto did not make it easy to download
+all your trip data so I ended up having to write a webscraper to get out
+my own data (Hint, hint Pronto 2.0!) which I put at this <a href="https://github.com/stedy/pronto-scraper">GitHub
+repository</a>. I never was able
+to get my project past the personal level and my ultimate goal was to
+simply make a map of the route and add
+in plots. Here is an example of all trips from Fairview Ave N &amp; Ward St
+to Westlake Ave &amp; 6th Ave:</p>
+
+<iframe src="http://zachstednick.com/strava_for_pronto_demo.html"
+marginwidth="0" marginheight="0" style="height:500px; width:1060px;"
+scrolling="no"></iframe>
+
+
+<p>I&rsquo;m sad that I can&rsquo;t work on this project anymore but maybe with Pronto
+2.0 I will be able to revist this idea.</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-03-26T17:21:03-07:00" pubdate data-updated="true"></time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/pronto-biking-seattle-r/'>pronto,biking,seattle,r</a>
+
+
+</div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+</div>
+
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2017
+
+    Zach Stednick
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>

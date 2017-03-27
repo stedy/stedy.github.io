@@ -7,10 +7,9 @@
 	<meta name="author" content="Zach Stednick">
 
 	
-	<meta name="description" content="I have been following the NCAA Men&rsquo;s Basketball
-Tournament
-for as long
-as I can remember and with Selection Sunday coming up, I wondered if &hellip;">
+	<meta name="description" content="Pronto bike share ends this Friday March 31st and I will miss it for
+sure. I wrote about why Pronto mattered to me and I
+even rode a Pronto bike in &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -81,6 +80,96 @@ as I can remember and with Selection Sunday coming up, I wondered if &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2017/03/26/pronto-post-mortem/">
+		
+			Pronto Post-mortem</a>
+	</h2>
+	<div class="entry-content">
+		<p>Pronto bike share ends this Friday March 31st and I will miss it for
+sure. I <a href="http://zachstednick.name/blog/2016/02/09/thoughts-on-pronto/">wrote about why Pronto mattered to me</a> and I
+even rode a Pronto bike in the 25
+mile <a href="http://www.obliteride.org/">Obliteride</a> last year:</p>
+
+<p><img src="http://zachstednick.com/IMG_2260.JPG"></p>
+
+<p>In October 2015, there was a Pronto sponsored
+<a href="https://www.prontocycleshare.com/datachallenge">contest</a> to visualize
+bikeshare ride data. I created an
+<a href="http://prontostories.com/">entry</a> which although did not win, was a
+nice introduction for me to learn mapping with
+<a href="d3js.org">D3</a>. As I was
+checking out the Pronto site one last time today I noticed that they had
+updated their open dataset to include 2016
+ride data as well as the 2015 ride data.</p>
+
+<p><img src="http://zachstednick.com/pronto_historical_ridership.png"></p>
+
+<p>To me it seems that Pronto had a hard time expanding and encouraging
+repeat riders. Unfortunately we do not have the membership data but if
+we can assume that people who did not ride much in 2015 did not renew
+their membership in 2016 then it looks pretty clear that Pronto was hurting
+more than people thought. Also, it looked like they had good success in
+2015 with getting people to buy day passes especially during peak tourist
+season in the summer and were able to replicate that success in 2016. I
+feel there is a need for a dedicated
+bike share in Seattle however this iteration of bike share does not
+appear to be the solution we need.</p>
+
+<p>I went back to the Pronto site to fetch all my data because of an idea I
+worked on then abandoned last summer. The idea was for a website that
+was basically <a href="https://www.strava.com/">Strava</a> for Pronto
+whereby you compared your ride time data to everyone else&rsquo;s and mapped out how
+fast you were compared to them. Pronto did not make it easy to download
+all your trip data so I ended up having to write a webscraper to get out
+my own data (Hint, hint Pronto 2.0!) which I put at this <a href="https://github.com/stedy/pronto-scraper">GitHub
+repository</a>. I never was able
+to get my project past the personal level and my ultimate goal was to
+simply make a map of the route and add
+in plots. Here is an example of all trips from Fairview Ave N &amp; Ward St
+to Westlake Ave &amp; 6th Ave:</p>
+
+<iframe src="http://zachstednick.com/strava_for_pronto_demo.html"
+marginwidth="0" marginheight="0" style="height:500px; width:1060px;"
+scrolling="no"></iframe>
+
+
+<p>I&rsquo;m sad that I can&rsquo;t work on this project anymore but maybe with Pronto
+2.0 I will be able to revist this idea.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-03-26T17:21:03-07:00" pubdate data-updated="true"></time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/pronto-biking-seattle-r/'>pronto,biking,seattle,r</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -756,139 +845,6 @@ according to Google Maps I only have 14832.8 miles to go.</p>
 
 
 	<a class='category' href='/blog/categories/r-python-feather-nps/'>r,python,feather,nps</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2016/02/13/super-bowl-sunday-at-chucks/">
-		
-			Super Bowl Sunday at Chuck&#8217;s</a>
-	</h2>
-	<div class="entry-content">
-		<p>In the same vein as my previous post on <a href="http://zachstednick.name/blog/2016/01/31/weekend-at-chucks/">beer sales analysis</a> at <a href="http://chucks85th.com/">Chuck&rsquo;s Hop Shop</a>, I wanted to make a similar analysis but this time focus on Super Bowl Sunday sales. Similar to last time, I made a few assumptions:</p>
-
-<ul>
-<li>A keg is on tap until it is empty.</li>
-<li>Each keg only serves pints of beer.</li>
-<li>A pint is the only unit served (ie no 8 oz. pours).</li>
-</ul>
-
-
-<p>Anyways, here is a brief summary of beers on tap for the shortest amount
-of
-time on Sunday:</p>
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">Brewery      </th>
-<th style="text-align:left;">Beer     </th>
-<th style="text-align:left;">Hours on tap </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">Cloudburst    </td>
-<td style="text-align:left;">Psycho Hose Beast&hellip;    </td>
-<td style="text-align:left;">  0.25</td>
-</tr>
-<tr>
-<td style="text-align:left;">Iron Fist     </td>
-<td style="text-align:left;">Mint Chocolate Im&hellip;    </td>
-<td style="text-align:left;">  1.00</td>
-</tr>
-<tr>
-<td style="text-align:left;">Ballast Point </td>
-<td style="text-align:left;">Watermelon Dorado&hellip;    </td>
-<td style="text-align:left;">  1.00</td>
-</tr>
-<tr>
-<td style="text-align:left;">Wander        </td>
-<td style="text-align:left;">Wanderale, Belgia&hellip;    </td>
-<td style="text-align:left;">  1.25</td>
-</tr>
-<tr>
-<td style="text-align:left;">Sound         </td>
-<td style="text-align:left;">Humonkulous IIIPA       </td>
-<td style="text-align:left;">  1.25</td>
-</tr>
-<tr>
-<td style="text-align:left;">Cloudburst    </td>
-<td style="text-align:left;">Saison W/Grapefru&hellip;    </td>
-<td style="text-align:left;">  1.25</td>
-</tr>
-<tr>
-<td style="text-align:left;">Victory       </td>
-<td style="text-align:left;">Prima Pilsner           </td>
-<td style="text-align:left;">  1.75</td>
-</tr>
-<tr>
-<td style="text-align:left;">Commons       </td>
-<td style="text-align:left;">Holden Saison           </td>
-<td style="text-align:left;">  2.00</td>
-</tr>
-<tr>
-<td style="text-align:left;">Seattle Cider </td>
-<td style="text-align:left;">Semi-Sweet Cider        </td>
-<td style="text-align:left;">  3.00</td>
-</tr>
-<tr>
-<td style="text-align:left;">Deschutes     </td>
-<td style="text-align:left;">Abyss &lsquo;15  &frac12; Pint     </td>
-<td style="text-align:left;">  3.00</td>
-</tr>
-</tbody>
-</table>
-
-
-<h1>Time on tap vs. ABV</h1>
-
-<p>Did beer with higher ABV sell faster?</p>
-
-<p><img src="http://zachstednick.com/SB_abv_count.png"></p>
-
-<h1>Time on tap vs. cost</h1>
-
-<p>Did more expensive beer sell faster?</p>
-
-<p><img src="http://zachstednick.com/SB_cost_count.png"></p>
-
-<h1>What does the relation between cost per pint and ABV look like?</h1>
-
-<p><img src="http://zachstednick.com/SB_labeled.png"></p>
-
-<p>Once again, all code lives <a href="https://github.com/stedy/chucks-beer-db">here</a></p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-02-13T20:58:15-08:00" pubdate data-updated="true"></time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/python-beer/'>python,beer</a>
 
 
 </div>
