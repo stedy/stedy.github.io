@@ -7,9 +7,8 @@
 	<meta name="author" content="Zach Stednick">
 
 	
-	<meta name="description" content="One of my first thoughts when Twitter had its IPO was that the days of
-writing Twitter bots was over. My fear was that they would lock down
-their &hellip;">
+	<meta name="description" content="I have recorded every trip to the gas station so far in 2014 and finally
+got around to analyzing the first seven months. I currently drive a 2010 &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -80,6 +79,147 @@ their &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/07/31/analysis-of-gas-efficiency-by-brand/">
+		
+			Analysis of Gas Efficiency by Brand</a>
+	</h2>
+	<div class="entry-content">
+		<p>I have recorded every trip to the gas station so far in 2014 and finally
+got around to analyzing the first seven months. I currently drive a <a href="https://s3.amazonaws.com/images.thecarconnection.com/sml/honda_100227510_s.jpg">2010
+Honda Fit</a>
+and bought only 87 grade gas for the duration of this study.</p>
+
+<p>I was initially interested in how far can I travel per dollar, which can easily be
+calculated:</p>
+
+<p>A first attempt yields the following table:</p>
+
+<table>
+<thead>
+<tr>
+<th> Brand </th>
+<th style="text-align:right;"> meancost </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 7-11 (Citgo) </td>
+<td style="text-align:right;"> 7.858</td>
+</tr>
+<tr>
+<td> 76 </td>
+<td style="text-align:right;"> 7.123</td>
+</tr>
+<tr>
+<td> Arco </td>
+<td style="text-align:right;"> 8.451</td>
+</tr>
+<tr>
+<td> Chevron </td>
+<td style="text-align:right;"> 8.704</td>
+</tr>
+<tr>
+<td> Costco  </td>
+<td style="text-align:right;"> 9.593</td>
+</tr>
+<tr>
+<td> Safeway </td>
+<td style="text-align:right;"> 7.791</td>
+</tr>
+<tr>
+<td> Shell </td>
+<td style="text-align:right;"> 7.597</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Far and away Costco and Chevron have the best mean cost, but they
+each have only one datapoint and the Costco was located in Marysville,
+WA while the Chevron was located in Sherwood, OR which means that both
+of
+these were largely composed of highway miles and therefore higher fuel
+efficiency. I
+initially tried to account for highway miles versus city miles but have
+not had much success so far.</p>
+
+<p>I then looked at MPG by gas station:</p>
+
+<table>
+<thead>
+<tr>
+<th> Brand </th>
+<th style="text-align:right;"> meanMPG </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 7-11 (Citgo) </td>
+<td style="text-align:right;"> 29.07</td>
+</tr>
+<tr>
+<td> 76 </td>
+<td style="text-align:right;"> 26.96</td>
+</tr>
+<tr>
+<td> Arco </td>
+<td style="text-align:right;"> 29.88</td>
+</tr>
+<tr>
+<td> Chevron </td>
+<td style="text-align:right;"> 34.80</td>
+</tr>
+<tr>
+<td> Costco </td>
+<td style="text-align:right;"> 30.50</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Finally, I plotted MPG against mean cost.</p>
+
+<p><img src="http://zachstednick.com/gas_mpg.png"></p>
+
+<p>Since (for now) we are ignoring Costco and Chevron, it appears that
+Safeway is best for
+lowest cost with highest mean MPG. I wonder if the <a href="http://www.cockeyed.com/pranks/safeway/ultimate_shopper.html">Safeway ultimate
+shopper</a>
+guy is still around?</p>
+
+<p>Data and code at this
+<a href="https://gist.github.com/stedy/a198bb0c7b010dcdf7af">gist</a></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-31T17:46:00-07:00" pubdate data-updated="true"></time></div>
+	<div class="tags">
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -830,67 +970,6 @@ liked as well as maximize the number of cookies I would get.</p>
 
 	<a class='category' href='/blog/categories/python/'>python</a>
 
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2013/01/16/red-e-and-me/">
-		
-			Red E and Me</a>
-	</h2>
-	<div class="entry-content">
-		<p>Sometime around the 30th of December 2012, I noticed a huge spike in
-traffic on my server.  I looked at the server logs and noticed that many
-of the requests were coming from <a href="http://theredecafe.com">The Red e
-cafe</a>, a cafe in Portland.  I had never been
-to this cafe so I looked up their website only to find my own
-<a href="http://www.zachstednick.com">website</a>
-staring back at me.</p>
-
-<p>For approximately two days my index page and the associated CSS were
-replacing the main site of this cafe.  It was truly bizzare and am not
-sure why someone would hack a commercial site and put another site such
-as an individual website in
-its place.  For the lulz I guess.</p>
-
-<p>Still, the weirdest part of this to me was that not a single person
-conteacted me on twitter or any other medium to ask what I was doing on
-the mainpage of their cafe.  Someday I will have to visit Red e cafe to
-ask in person if this happens often to them.</p>
-
-<p>One other interesting thing I noticed was how often my site gets hit by
-a Baidu spider.  Prior to this one came by maybe once a week now one
-visits about every 20 minutes.</p>
-
-<p><a href="http://theredecafe.com"><img
-src="http://red-e-cafe.morsel.cc/system/logos/1/medium/red_e_logo_large.png"></a></p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-16T18:02:00-08:00" pubdate data-updated="true"></time></div>
-	<div class="tags">
 
 </div>
 	

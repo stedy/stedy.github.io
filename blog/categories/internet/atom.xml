@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: internet | Zach Stednick]]></title>
+  <link href="http://stedy.github.io/blog/categories/internet/atom.xml" rel="self"/>
+  <link href="http://stedy.github.io/"/>
+  <updated>2017-07-05T21:30:38-07:00</updated>
+  <id>http://stedy.github.io/</id>
+  <author>
+    <name><![CDATA[Zach Stednick]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Standing up for net neutrality]]></title>
+    <link href="http://stedy.github.io/blog/2017/07/05/standing-up-for-net-neutrality/"/>
+    <updated>2017-07-05T21:26:12-07:00</updated>
+    <id>http://stedy.github.io/blog/2017/07/05/standing-up-for-net-neutrality</id>
+    <content type="html"><![CDATA[<p>Currently there are many political issues that demand
+attention however in my opinion there are none that would affect more
+people than the possible destruction of net neutrality.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Net_neutrality">Net neutrality</a> is simply the principle that all data on the internet
+should be treated the same. It does not matter if you are visiting Fox
+News or Mother Jones - the data and content from both of these
+websites (as well as from every other website) should be treated as
+equal and that data should be served equally by all Internet Service Providers. Losing net neutrality could
+lead to an internet that favors
+one of these two sites based on which site is willing to pay more. I
+chose these sites because they are such polar opposites but at the same
+time we live in a country that allows for such opposites to
+have equal protection of freedom of speech. I may disagree with the content of a particular
+website but
+I do not think it should be served any differently than the website of a
+site I do agree with. Destruction of net neutrality will lead to greater
+influence wielded by larger corporations and could
+stifle smaller websites and startups.</p>
+
+<p>Fortunately, there is still time to act. On July 12, various online
+communities and users will come together to stand tall and sound the
+alarm about the FCC&rsquo;s attack on net neutrality. Join us
+<a href="https://www.battleforthenet.com/july12">here</a>!</p>
+]]></content>
+  </entry>
+  
+</feed>

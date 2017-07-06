@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2017-03-26T17:30:29-07:00</updated>
+  <updated>2017-07-05T21:30:38-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Standing up for net neutrality]]></title>
+    <link href="http://stedy.github.io/blog/2017/07/05/standing-up-for-net-neutrality/"/>
+    <updated>2017-07-05T21:26:12-07:00</updated>
+    <id>http://stedy.github.io/blog/2017/07/05/standing-up-for-net-neutrality</id>
+    <content type="html"><![CDATA[<p>Currently there are many political issues that demand
+attention however in my opinion there are none that would affect more
+people than the possible destruction of net neutrality.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Net_neutrality">Net neutrality</a> is simply the principle that all data on the internet
+should be treated the same. It does not matter if you are visiting Fox
+News or Mother Jones - the data and content from both of these
+websites (as well as from every other website) should be treated as
+equal and that data should be served equally by all Internet Service Providers. Losing net neutrality could
+lead to an internet that favors
+one of these two sites based on which site is willing to pay more. I
+chose these sites because they are such polar opposites but at the same
+time we live in a country that allows for such opposites to
+have equal protection of freedom of speech. I may disagree with the content of a particular
+website but
+I do not think it should be served any differently than the website of a
+site I do agree with. Destruction of net neutrality will lead to greater
+influence wielded by larger corporations and could
+stifle smaller websites and startups.</p>
+
+<p>Fortunately, there is still time to act. On July 12, various online
+communities and users will come together to stand tall and sound the
+alarm about the FCC&rsquo;s attack on net neutrality. Join us
+<a href="https://www.battleforthenet.com/july12">here</a>!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Pronto post-mortem]]></title>
@@ -1140,43 +1172,6 @@ final result out as a GeoJSON file.</p>
 <p>The take home lesson for me is that OSM is an excellent service but as
 with any publically annotated dataset be prepared to invest some time
 into cleaning and validating the data.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Update on restaurant changes]]></title>
-    <link href="http://stedy.github.io/blog/2015/07/23/update-on-restaurant-changes/"/>
-    <updated>2015-07-23T15:31:31-07:00</updated>
-    <id>http://stedy.github.io/blog/2015/07/23/update-on-restaurant-changes</id>
-    <content type="html"><![CDATA[<p>I have been tracking restaurant openings via the <a href="http://www.seattle.gov/licenses/find-a-business">City of Seattle
-Business Finder</a> since
-the beginning of this year and am reporting those changes at <a href="http://seattlerestaurantchanges.com/">Seattle
-Restaurant Changes</a>. Recently I
-put up a <a href="http://seattlerestaurantchanges.com/heatmap.html">heatmap</a>
-showing changes by neighborhood. This heatmap shows a current snaphot of
-the changes which made me curious about changes by restaurant type over the course of
-the year.</p>
-
-<iframe width="980" height="520" src="http://zachstednick.com/net_restaurant_changes.html"></iframe>
-
-
-<p>A few notes:</p>
-
-<ul>
-<li><p>The City of Seattle uses North American Industry Classification System
-codes <a href="http://www.census.gov/eos/www/naics/">(NAICS)</a> to track
-restaurants. I then use the date of permit issuance as a proxy for a
-restaurant opening and date of permit revocation as a proxy for closing.</p></li>
-<li><p>A Full Service Restaurant as defined by NAICS is &ldquo;establishments primarily engaged in providing food services to patrons who order and are served while seated (i.e., waiter/waitress service) and pay after eating&rdquo;</p></li>
-<li><p>I realized that not that many breweries would be opening up but who
-doesn&rsquo;t want more breweries in town?</p></li>
-<li><p>I was not expecting Full Service Restaurants to take off as much as
-they did, especially since Limited Service Restaurants seem to be
-declining.</p></li>
-</ul>
-
-
-<p>I will try to post another update on this in December, that is unless I decide to open up a food truck of my own.</p>
 ]]></content>
   </entry>
   
