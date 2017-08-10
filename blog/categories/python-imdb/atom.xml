@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: python,imdb | Zach Stednick]]></title>
+  <link href="http://stedy.github.io/blog/categories/python-imdb/atom.xml" rel="self"/>
+  <link href="http://stedy.github.io/"/>
+  <updated>2017-08-09T21:33:33-07:00</updated>
+  <id>http://stedy.github.io/</id>
+  <author>
+    <name><![CDATA[Zach Stednick]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Smarter binge watching with linear regression]]></title>
+    <link href="http://stedy.github.io/blog/2017/08/09/smarter-binge-watching-with-linear-regression/"/>
+    <updated>2017-08-09T21:32:39-07:00</updated>
+    <id>http://stedy.github.io/blog/2017/08/09/smarter-binge-watching-with-linear-regression</id>
+    <content type="html"><![CDATA[<p>I am not much of a binge watcher but I do enjoy quality TV shows which
+is why I think <a href="http://graphtv.kevinformatics.com/">GraphTV</a> is so
+great. GraphTV plots the IMDb user ratings for every episode
+and then performs a
+<a href="https://en.wikipedia.org/wiki/Linear_regression">linear regression</a> of
+the episode rating by the episode number to create a trend line.</p>
+
+<p>This is nice but it can get difficult to use GraphTV for shows like
+<a href="http://graphtv.kevinformatics.com/tt0088526">Golden Girls</a> and
+downright impossible for shows like <a href="http://graphtv.kevinformatics.com/tt0096697">The
+Simpsons</a>.</p>
+
+<p>To solve this I created a GitHub repo
+<a href="https://github.com/stedy/binge-trendy">binge-trendy</a>. Because the trend
+line is fit to the IMDb user rating data, we are
+interested in what episodes do IMDb usres think is better than the
+regression model predicts which translates to any deviation from the
+trend line. Since I am interested in episodes that are
+rated higher than the regression model would have predicted,
+specifically episodes with a positive residual.</p>
+
+<p>For example, Golden Girls season 4</p>
+
+<table>
+<thead>
+<tr>
+<th>   Season</th>
+<th style="text-align:center;"> Episode </th>
+<th style="text-align:right;">                                Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>       4 </td>
+<td style="text-align:center;">     1 </td>
+<td style="text-align:right;">               Yes, We Have No Havanas</td>
+</tr>
+<tr>
+<td>       4 </td>
+<td style="text-align:center;">     2 </td>
+<td style="text-align:right;">The Days and Nights of Sophia Petrillo</td>
+</tr>
+<tr>
+<td>       4 </td>
+<td style="text-align:center;">     6 </td>
+<td style="text-align:right;">              Sophia&rsquo;s Wedding: Part 1</td>
+</tr>
+<tr>
+<td>       4 </td>
+<td style="text-align:center;">     9 </td>
+<td style="text-align:right;">                       Scared Straight</td>
+</tr>
+<tr>
+<td>      4  </td>
+<td style="text-align:center;">   11  </td>
+<td style="text-align:right;">                          The Auction</td>
+</tr>
+<tr>
+<td>      4  </td>
+<td style="text-align:center;">   14  </td>
+<td style="text-align:right;">                       Love Me Tender</td>
+</tr>
+<tr>
+<td>      4  </td>
+<td style="text-align:center;">   15  </td>
+<td style="text-align:right;">                      Valentine&rsquo;s Day</td>
+</tr>
+<tr>
+<td>      4  </td>
+<td style="text-align:center;">   19  </td>
+<td style="text-align:right;">              Till Death Do We Volley</td>
+</tr>
+<tr>
+<td>      4  </td>
+<td style="text-align:center;">   20  </td>
+<td style="text-align:right;">                         High Anxiety</td>
+</tr>
+<tr>
+<td>      4  </td>
+<td style="text-align:center;">   22  </td>
+<td style="text-align:right;">                      Sophia&rsquo;s Choice</td>
+</tr>
+<tr>
+<td>      4  </td>
+<td style="text-align:center;">   23  </td>
+<td style="text-align:right;">                      Rites of Spring</td>
+</tr>
+<tr>
+<td>      4  </td>
+<td style="text-align:center;">   24  </td>
+<td style="text-align:right;">                     Foreign Exchange</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>I realize the code is not great, pylint gives it a 6.05 but if there is
+one thing I have learned in software:</p>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en"
+dir="ltr">The only way to write good code is to write tons of shitty
+code first. Feeling shame about bad code stops you from getting to good
+code</p>&mdash; Hadley Wickham (@hadleywickham) <a
+href="https://twitter.com/hadleywickham/status/589068687669243905">April
+17, 2015</a></blockquote>
+
+
+<script async src="//platform.twitter.com/widgets.js"
+charset="utf-8"></script>
+
+]]></content>
+  </entry>
+  
+</feed>

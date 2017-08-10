@@ -1,0 +1,255 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Smarter binge watching with linear regression - Zach Stednick</title>
+	<meta name="author" content="Zach Stednick">
+
+	
+	<meta name="description" content="I am not much of a binge watcher but I do enjoy quality TV shows which
+is why I think GraphTV is so
+great. GraphTV plots the IMDb user ratings for &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Zach Stednick" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Zach Stednick</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:stedy.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/zachstednick" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/stedy" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="https://www.google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:stedy.github.io">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Smarter Binge Watching With Linear Regression</h2>
+	<div class="entry-content"><p>I am not much of a binge watcher but I do enjoy quality TV shows which
+is why I think <a href="http://graphtv.kevinformatics.com/">GraphTV</a> is so
+great. GraphTV plots the IMDb user ratings for every episode
+and then performs a
+<a href="https://en.wikipedia.org/wiki/Linear_regression">linear regression</a> of
+the episode rating by the episode number to create a trend line.</p>
+
+<p>This is nice but it can get difficult to use GraphTV for shows like
+<a href="http://graphtv.kevinformatics.com/tt0088526">Golden Girls</a> and
+downright impossible for shows like <a href="http://graphtv.kevinformatics.com/tt0096697">The
+Simpsons</a>.</p>
+
+<p>To solve this I created a GitHub repo
+<a href="https://github.com/stedy/binge-trendy">binge-trendy</a>. Because the trend
+line is fit to the IMDb user rating data, we are
+interested in what episodes do IMDb usres think is better than the
+regression model predicts which translates to any deviation from the
+trend line. Since I am interested in episodes that are
+rated higher than the regression model would have predicted,
+specifically episodes with a positive residual.</p>
+
+<p>For example, Golden Girls season 4</p>
+
+<table>
+<thead>
+<tr>
+<th>   Season</th>
+<th style="text-align:center;"> Episode </th>
+<th style="text-align:right;">                                Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>       4 </td>
+<td style="text-align:center;">     1 </td>
+<td style="text-align:right;">               Yes, We Have No Havanas</td>
+</tr>
+<tr>
+<td>       4 </td>
+<td style="text-align:center;">     2 </td>
+<td style="text-align:right;">The Days and Nights of Sophia Petrillo</td>
+</tr>
+<tr>
+<td>       4 </td>
+<td style="text-align:center;">     6 </td>
+<td style="text-align:right;">              Sophia&rsquo;s Wedding: Part 1</td>
+</tr>
+<tr>
+<td>       4 </td>
+<td style="text-align:center;">     9 </td>
+<td style="text-align:right;">                       Scared Straight</td>
+</tr>
+<tr>
+<td>      4  </td>
+<td style="text-align:center;">   11  </td>
+<td style="text-align:right;">                          The Auction</td>
+</tr>
+<tr>
+<td>      4  </td>
+<td style="text-align:center;">   14  </td>
+<td style="text-align:right;">                       Love Me Tender</td>
+</tr>
+<tr>
+<td>      4  </td>
+<td style="text-align:center;">   15  </td>
+<td style="text-align:right;">                      Valentine&rsquo;s Day</td>
+</tr>
+<tr>
+<td>      4  </td>
+<td style="text-align:center;">   19  </td>
+<td style="text-align:right;">              Till Death Do We Volley</td>
+</tr>
+<tr>
+<td>      4  </td>
+<td style="text-align:center;">   20  </td>
+<td style="text-align:right;">                         High Anxiety</td>
+</tr>
+<tr>
+<td>      4  </td>
+<td style="text-align:center;">   22  </td>
+<td style="text-align:right;">                      Sophia&rsquo;s Choice</td>
+</tr>
+<tr>
+<td>      4  </td>
+<td style="text-align:center;">   23  </td>
+<td style="text-align:right;">                      Rites of Spring</td>
+</tr>
+<tr>
+<td>      4  </td>
+<td style="text-align:center;">   24  </td>
+<td style="text-align:right;">                     Foreign Exchange</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>I realize the code is not great, pylint gives it a 6.05 but if there is
+one thing I have learned in software:</p>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en"
+dir="ltr">The only way to write good code is to write tons of shitty
+code first. Feeling shame about bad code stops you from getting to good
+code</p>&mdash; Hadley Wickham (@hadleywickham) <a
+href="https://twitter.com/hadleywickham/status/589068687669243905">April
+17, 2015</a></blockquote>
+
+
+<script async src="//platform.twitter.com/widgets.js"
+charset="utf-8"></script>
+
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-08-09T21:32:39-07:00" pubdate data-updated="true"></time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/python-imdb/'>python,imdb</a>
+
+
+</div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+</div>
+
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2017
+
+    Zach Stednick
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>
