@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2017-08-09T21:33:33-07:00</updated>
+  <updated>2017-08-09T21:38:00-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -23,7 +23,9 @@ is why I think <a href="http://graphtv.kevinformatics.com/">GraphTV</a> is so
 great. GraphTV plots the IMDb user ratings for every episode
 and then performs a
 <a href="https://en.wikipedia.org/wiki/Linear_regression">linear regression</a> of
-the episode rating by the episode number to create a trend line.</p>
+the episode rating by the episode number to create a trend line which
+helps you see if the show gets better or worse over the course of the
+season.</p>
 
 <p>This is nice but it can get difficult to use GraphTV for shows like
 <a href="http://graphtv.kevinformatics.com/tt0088526">Golden Girls</a> and
@@ -33,11 +35,11 @@ Simpsons</a>.</p>
 <p>To solve this I created a GitHub repo
 <a href="https://github.com/stedy/binge-trendy">binge-trendy</a>. Because the trend
 line is fit to the IMDb user rating data, we are
-interested in what episodes do IMDb usres think is better than the
+interested in which episodes do IMDb users think are better than the
 regression model predicts which translates to any deviation from the
-trend line. Since I am interested in episodes that are
+trend line. Since I am only interested in episodes that are
 rated higher than the regression model would have predicted,
-specifically episodes with a positive residual.</p>
+I only look at episodes with a positive residual.</p>
 
 <p>For example, Golden Girls season 4</p>
 
@@ -114,7 +116,8 @@ specifically episodes with a positive residual.</p>
 </table>
 
 
-<p>I realize the code is not great, pylint gives it a 6.05 but if there is
+<p>I realize the code is not great,
+<a href="https://pypi.python.org/pypi/pylint">pylint</a> currently gives it a 6.05 but if there is
 one thing I have learned in software:</p>
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en"
