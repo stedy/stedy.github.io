@@ -4,7 +4,7 @@
   <title><![CDATA[Category: r,python,imdb | Zach Stednick]]></title>
   <link href="http://stedy.github.io/blog/categories/r-python-imdb/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2017-09-30T14:56:05-07:00</updated>
+  <updated>2017-09-30T14:59:37-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -216,9 +216,7 @@ finale would be 1.0 to generate an index. I then took the
 maximum and minimum residual values for each show and plotted them
 against that episode. For example here is a plot of just Master of None:</p>
 
-<iframe src="http://zachstednick.com/mon_min_max.html" marginwidth="0"
-marginheight="0" style="height:500px; width:800px;"
-scrolling="no"></iframe>
+<iframe src="http://zachstednick.com/mon_min_max.html" marginwidth="0" marginheight="0" style="height:500px; width:800px;" scrolling="no"></iframe>
 
 
 <p>To obtain data on as many shows as I could I used this <a href="http://www.imdb.com/search/title?at=0&amp;num_votes=5000,&amp;sort=user_rating,de">IMDb
@@ -228,9 +226,7 @@ dataset. I then reused the <a href="http://www.omdbapi.com/">OMDb API</a> as I d
 above and plotted them in a similar manner (use the mouseover for more
 information on each point):</p>
 
-<iframe src="http://zachstednick.com/imdb_min_max.html" marginwidth="0"
-marginheight="0" style="height:500px; width:800px;"
-scrolling="no"></iframe>
+<iframe src="http://zachstednick.com/imdb_min_max.html" marginwidth="0" marginheight="0" style="height:500px; width:800px;" scrolling="no"></iframe>
 
 
 <p>Two things immediately jump out at me:</p>
