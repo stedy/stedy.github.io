@@ -1,0 +1,379 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Further exploration of IMDb TV show rating data - Zach Stednick</title>
+	<meta name="author" content="Zach Stednick">
+
+	
+	<meta name="description" content="I wanted to revist my previous
+post
+continuing to look at using linear
+regression for determining the best
+episodes of a TV show to watch. I started &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Zach Stednick" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Zach Stednick</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:stedy.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/zachstednick" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/stedy" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="https://www.google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:stedy.github.io">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Further Exploration of IMDb TV Show Rating Data</h2>
+	<div class="entry-content"><p>I wanted to revist my previous
+<a href="http://zachstednick.name/blog/2017/08/09/smarter-binge-watching-with-linear-regression/">post</a>
+continuing to look at using linear
+regression for determining the best
+episodes of a TV show to watch. I started to think about how to look at
+this data for multiple TV shows. Performing a linear regression on show
+rating by episode number within a season quickly allows us to determine
+the maximum and minimum residual for all the show episodes. I took this
+a step further and
+calculated which episode of the show it was. For example, here are all
+the episodes with residual value for that particular show <a href="http://www.imdb.com/title/tt4635276/">Master of
+None</a>:</p>
+
+<table>
+<thead>
+<tr>
+<th>Season</th>
+<th style="text-align:center;">Episode</th>
+<th style="text-align:center;">Name</th>
+<th style="text-align:center;">Residual</th>
+<th style="text-align:center;">count</th>
+<th style="text-align:right;">appearance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align:center;">1</td>
+<td style="text-align:center;">               Plan B</td>
+<td style="text-align:center;">-0.28</td>
+<td style="text-align:center;">1</td>
+<td style="text-align:right;">0.05</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align:center;">2</td>
+<td style="text-align:center;">              Parents</td>
+<td style="text-align:center;">0.21</td>
+<td style="text-align:center;">2</td>
+<td style="text-align:right;">0.1</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align:center;">3</td>
+<td style="text-align:center;">           Hot Ticket</td>
+<td style="text-align:center;">0.01</td>
+<td style="text-align:center;">3</td>
+<td style="text-align:right;">0.15</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align:center;">4</td>
+<td style="text-align:center;">        Indians on TV</td>
+<td style="text-align:center;">0.21</td>
+<td style="text-align:center;">4</td>
+<td style="text-align:right;">0.2</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align:center;">5</td>
+<td style="text-align:center;">        The Other Man</td>
+<td style="text-align:center;">-0.09</td>
+<td style="text-align:center;">5</td>
+<td style="text-align:right;">0.25</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align:center;">6</td>
+<td style="text-align:center;">            Nashville</td>
+<td style="text-align:center;">0.31</td>
+<td style="text-align:center;">6</td>
+<td style="text-align:right;">0.3</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align:center;">7</td>
+<td style="text-align:center;"> Ladies and Gentlemen</td>
+<td style="text-align:center;">-0.39</td>
+<td style="text-align:center;">7</td>
+<td style="text-align:right;">0.35</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align:center;">8</td>
+<td style="text-align:center;">           Old People</td>
+<td style="text-align:center;">-0.09</td>
+<td style="text-align:center;">8</td>
+<td style="text-align:right;">0.4</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align:center;">9</td>
+<td style="text-align:center;">             Mornings</td>
+<td style="text-align:center;">0.11</td>
+<td style="text-align:center;">9</td>
+<td style="text-align:right;">0.45</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align:center;">10</td>
+<td style="text-align:center;">               Finale</td>
+<td style="text-align:center;">0.01</td>
+<td style="text-align:center;">10</td>
+<td style="text-align:right;">0.5</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:center;">1</td>
+<td style="text-align:center;">            The Thief</td>
+<td style="text-align:center;">0.44</td>
+<td style="text-align:center;">11</td>
+<td style="text-align:right;">0.55</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:center;">2</td>
+<td style="text-align:center;">             Le Nozze</td>
+<td style="text-align:center;">-0.36</td>
+<td style="text-align:center;">12</td>
+<td style="text-align:right;">0.6</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:center;">3</td>
+<td style="text-align:center;">             Religion</td>
+<td style="text-align:center;">-0.27</td>
+<td style="text-align:center;">13</td>
+<td style="text-align:right;">0.65</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:center;">4</td>
+<td style="text-align:center;">           First Date</td>
+<td style="text-align:center;">0.13</td>
+<td style="text-align:center;">14</td>
+<td style="text-align:right;">0.7</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:center;">5</td>
+<td style="text-align:center;">     The Dinner Party</td>
+<td style="text-align:center;">0.02</td>
+<td style="text-align:center;">15</td>
+<td style="text-align:right;">0.75</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:center;">6</td>
+<td style="text-align:center;"> New York, I Love You</td>
+<td style="text-align:center;">0.42</td>
+<td style="text-align:center;">16</td>
+<td style="text-align:right;">0.8</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:center;">7</td>
+<td style="text-align:center;">              Door #3</td>
+<td style="text-align:center;">-0.89</td>
+<td style="text-align:center;">17</td>
+<td style="text-align:right;">0.85</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:center;">8</td>
+<td style="text-align:center;">         Thanksgiving</td>
+<td style="text-align:center;">0.31</td>
+<td style="text-align:center;">18</td>
+<td style="text-align:right;">0.9</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:center;">9</td>
+<td style="text-align:center;">         Amarsi Un Po</td>
+<td style="text-align:center;">0.30</td>
+<td style="text-align:center;">19</td>
+<td style="text-align:right;">0.95</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:center;">10</td>
+<td style="text-align:center;">          Buona Notte</td>
+<td style="text-align:center;">-0.10</td>
+<td style="text-align:center;">20</td>
+<td style="text-align:right;">1</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>We can see that the episode with the highest residual is S2E1 &ldquo;The
+Thief&rdquo; and the episode with the lowest residual is S2E7 &ldquo;Door #3&rdquo;. For
+every TV show I took all the episodes and calculated their order as a percent of
+the total number of episodes - for example the pilot episode would be 0.0 and the
+series
+finale would be 1.0 to generate an index. I then took the
+maximum and minimum residual values for each show and plotted them
+against that episode. For example here is a plot of just Master of None:</p>
+
+<iframe src="http://zachstednick.com/mon_min_max.html" marginwidth="0"
+marginheight="0" style="height:700px; width:850px;"
+scrolling="no"></iframe>
+
+
+<p>To obtain data on as many shows as I could I used this <a href="http://www.imdb.com/search/title?at=0&amp;num_votes=5000,&amp;sort=user_rating,de">IMDb
+list</a>
+of shows with over 5000 votes and selected the first 1200 shows as a
+dataset. I then reused the <a href="http://www.omdbapi.com/">OMDb API</a> as I did before. I then calculated the same values as I did for Master of None
+above and plotted them in a similar manner (use the mouseover for more
+information on each point):</p>
+
+<iframe src="http://zachstednick.com/imdb_residuals.html" marginwidth="0"
+marginheight="0" style="height:700px; width:850px;"
+scrolling="no"></iframe>
+
+
+<p>Two things immediately jump out at me:</p>
+
+<ol>
+<li><p>The density of points right around the zero line shows that linear
+regression is a pretty good metric to use for this type of analysis and
+that most people rate the show generally in line with the overall trend
+for that particular season.</p></li>
+<li><p>There seems to be a tendancy for people to really love or really hate
+the series finale of TV shows and this shows up by the sheer number of
+points at 1. Possibly this is people expressing their overall view of
+the show as a whole or maybe people really were really happy or unhappy
+with the series finale.</p></li>
+</ol>
+
+
+<p>I put some of the main code I used in a <a href="https://github.com/stedy/blog-supplemental">GitHub
+repository</a></p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-09-30T13:57:18-07:00" pubdate data-updated="true"></time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/r-python-imdb/'>r,python,imdb</a>
+
+
+</div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+</div>
+
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2017
+
+    Zach Stednick
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>
