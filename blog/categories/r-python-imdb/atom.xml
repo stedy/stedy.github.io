@@ -4,7 +4,7 @@
   <title><![CDATA[Category: r,python,imdb | Zach Stednick]]></title>
   <link href="http://stedy.github.io/blog/categories/r-python-imdb/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2017-09-30T14:27:48-07:00</updated>
+  <updated>2017-09-30T14:51:17-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -217,7 +217,7 @@ maximum and minimum residual values for each show and plotted them
 against that episode. For example here is a plot of just Master of None:</p>
 
 <iframe src="http://zachstednick.com/mon_min_max.html" marginwidth="0"
-marginheight="0" style="height:500px; width:850px;"
+marginheight="0" style="height:500px; width:800px;"
 scrolling="no"></iframe>
 
 
@@ -229,7 +229,7 @@ above and plotted them in a similar manner (use the mouseover for more
 information on each point):</p>
 
 <iframe src="http://zachstednick.com/imdb_min_max.html" marginwidth="0"
-marginheight="0" style="height:500px; width:850px;"
+marginheight="0" style="height:500px; width:800px;"
 scrolling="no"></iframe>
 
 
