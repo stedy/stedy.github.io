@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: r,wikipedia,football | Zach Stednick]]></title>
+  <link href="http://stedy.github.io/blog/categories/r-wikipedia-football/atom.xml" rel="self"/>
+  <link href="http://stedy.github.io/"/>
+  <updated>2017-10-07T22:25:57-07:00</updated>
+  <id>http://stedy.github.io/</id>
+  <author>
+    <name><![CDATA[Zach Stednick]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[States with multiple football teams in the AP Top 25]]></title>
+    <link href="http://stedy.github.io/blog/2017/10/07/states-with-multiple-football-teams-in-the-ap-top-25/"/>
+    <updated>2017-10-07T22:24:34-07:00</updated>
+    <id>http://stedy.github.io/blog/2017/10/07/states-with-multiple-football-teams-in-the-ap-top-25</id>
+    <content type="html"><![CDATA[<p>With <a href="http://www.espn.com/college-football/game?gameId=400935292">WSU beating
+Oregon</a> and
+<a href="http://www.espn.com/college-football/game?gameId=400935293">UW beating UC
+Berkeley</a>,
+the State of Washington is poised to have two football teams in the top
+ten of NCAA Division I football rankings. Naturally this got me
+thinking, how often does this happen and how many states have had this
+same achievement?</p>
+
+<p>To answer this I used the weekly results of <a href="https://en.wikipedia.org/wiki/AP_Poll">Associated Press
+poll</a> which started in 1936 and
+thanks to our good friends at <a href="https://donate.wikimedia.org">Wikipedia</a>,
+I was able to get AP Poll results for every week.</p>
+
+<p>I found that 25 states had at least one week where two teams from that
+state were in the AP Poll. However, the more I thought about it the more
+I realized this was slightly biased because some states might only have
+one team (i.e. Wyoming) while other states might have two Division I
+teams that are never both great at the same time (i.e. Montana). I
+tightened down my restrictions a bit and only looked at the top 10 teams
+from each AP Poll.</p>
+
+<p>Surprisingly, of the 25 states with at least two teams in the AP top 25,
+21 of those states had a week with at least two teams in the AP top 10.
+I made a summary table with the most recent year listed:</p>
+
+<p>|state | year |
+| &mdash;- | &mdash;: |
+|Louisiana|<a href="https://en.wikipedia.org/wiki/1936_NCAA_football_rankings">1936</a>|
+|Maryland|<a href="https://en.wikipedia.org/wiki/1955_NCAA_football_rankings">1955</a>|
+|North
+Carolina|<a href="https://en.wikipedia.org/wiki/1957_NCAA_University_Division_football_rankings">1957</a>|
+|New York|<a href="https://en.wikipedia.org/wiki/1958_NCAA_University_Division_football_rankings">1958</a>|
+|Illinois|<a href="https://en.wikipedia.org/wiki/1963_NCAA_University_Division_football_rankings">1963</a>|
+|Indiana|<a href="https://en.wikipedia.org/wiki/1979_NCAA_Division_I-A_football_rankings">1979</a>|
+|Pennsylvania|<a href="https://en.wikipedia.org/wiki/1982_NCAA_Division_I-A_football_rankings">1982</a>|
+|Colorado|<a href="https://en.wikipedia.org/wiki/1994_NCAA_Division_I-A_football_rankings">1994</a>|
+|Kansas|<a href="https://en.wikipedia.org/wiki/1995_NCAA_Division_I-A_football_rankings">1995</a>|
+|Washington|<a href="https://en.wikipedia.org/wiki/1997_NCAA_Division_I-A_football_rankings">1997</a>|
+|Ohio|<a href="https://en.wikipedia.org/wiki/2009_NCAA_Division_I_FBS_football_rankings">2009</a>|
+|Oregon|<a href="https://en.wikipedia.org/wiki/2012_NCAA_Division_I_FBS_football_rankings">2012</a>|
+|Florida|<a href="https://en.wikipedia.org/wiki/2013_NCAA_Division_I_FBS_football_rankings">2013</a>|
+|South
+Carolina|<a href="https://en.wikipedia.org/wiki/2013_NCAA_Division_I_FBS_football_rankings">2013</a>|
+|Georgia|<a href="https://en.wikipedia.org/wiki/2014_NCAA_Division_I_FBS_football_rankings">2014</a>|
+|Mississippi|<a href="https://en.wikipedia.org/wiki/2014_NCAA_Division_I_FBS_football_rankings">2014</a>|
+|California|<a href="https://en.wikipedia.org/wiki/2015_NCAA_Division_I_FBS_football_rankings">2015</a>|
+|Alabama|<a href="https://en.wikipedia.org/wiki/2016_NCAA_Division_I_FBS_football_rankings">2016</a>|
+|Michigan|<a href="https://en.wikipedia.org/wiki/2016_NCAA_Division_I_FBS_football_rankings">2016</a>|
+|Texas|<a href="https://en.wikipedia.org/wiki/2016_NCAA_Division_I_FBS_football_rankings">2016</a>|
+|Oklahoma|<a href="https://en.wikipedia.org/wiki/2017_NCAA_Division_I_FBS_football_rankings">2017</a>|</p>
+
+<p>Then, I thought what if there were ever a week when a state had 3 teams
+in the AP top 10. Sure enough, four states have achieved this:</p>
+
+<table>
+<thead>
+<tr>
+<th>state </th>
+<th style="text-align:right;"> year </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>California</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/1952_NCAA_football_rankings">1952</a></td>
+</tr>
+<tr>
+<td>Indiana</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/1967_NCAA_University_Division_football_rankings">1967</a></td>
+</tr>
+<tr>
+<td>Florida</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/2005_NCAA_Division_I-A_football_rankings">2005</a></td>
+</tr>
+<tr>
+<td>Texas</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/2015_NCAA_Division_I_FBS_football_rankings">2015</a></td>
+</tr>
+</tbody>
+</table>
+
+
+<p>As always, all of my code for this is on
+<a href="https://github.com/stedy/blog-supplemental/">GitHub</a></p>
+]]></content>
+  </entry>
+  
+</feed>

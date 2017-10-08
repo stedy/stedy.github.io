@@ -7,11 +7,12 @@
 	<meta name="author" content="Zach Stednick">
 
 	
-	<meta name="description" content="I wanted to revist my previous
-post
-continuing to look at using linear
-regression for determining the best
-episodes of a TV show to watch. I started &hellip;">
+	<meta name="description" content="With WSU beating
+Oregon and
+UW beating UC
+Berkeley,
+the State of Washington is poised to have two football teams in the top
+ten of NCAA Division I &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -82,6 +83,131 @@ episodes of a TV show to watch. I started &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2017/10/07/states-with-multiple-football-teams-in-the-ap-top-25/">
+		
+			States With Multiple Football Teams in the AP Top 25</a>
+	</h2>
+	<div class="entry-content">
+		<p>With <a href="http://www.espn.com/college-football/game?gameId=400935292">WSU beating
+Oregon</a> and
+<a href="http://www.espn.com/college-football/game?gameId=400935293">UW beating UC
+Berkeley</a>,
+the State of Washington is poised to have two football teams in the top
+ten of NCAA Division I football rankings. Naturally this got me
+thinking, how often does this happen and how many states have had this
+same achievement?</p>
+
+<p>To answer this I used the weekly results of <a href="https://en.wikipedia.org/wiki/AP_Poll">Associated Press
+poll</a> which started in 1936 and
+thanks to our good friends at <a href="https://donate.wikimedia.org">Wikipedia</a>,
+I was able to get AP Poll results for every week.</p>
+
+<p>I found that 25 states had at least one week where two teams from that
+state were in the AP Poll. However, the more I thought about it the more
+I realized this was slightly biased because some states might only have
+one team (i.e. Wyoming) while other states might have two Division I
+teams that are never both great at the same time (i.e. Montana). I
+tightened down my restrictions a bit and only looked at the top 10 teams
+from each AP Poll.</p>
+
+<p>Surprisingly, of the 25 states with at least two teams in the AP top 25,
+21 of those states had a week with at least two teams in the AP top 10.
+I made a summary table with the most recent year listed:</p>
+
+<p>|state | year |
+| &mdash;- | &mdash;: |
+|Louisiana|<a href="https://en.wikipedia.org/wiki/1936_NCAA_football_rankings">1936</a>|
+|Maryland|<a href="https://en.wikipedia.org/wiki/1955_NCAA_football_rankings">1955</a>|
+|North
+Carolina|<a href="https://en.wikipedia.org/wiki/1957_NCAA_University_Division_football_rankings">1957</a>|
+|New York|<a href="https://en.wikipedia.org/wiki/1958_NCAA_University_Division_football_rankings">1958</a>|
+|Illinois|<a href="https://en.wikipedia.org/wiki/1963_NCAA_University_Division_football_rankings">1963</a>|
+|Indiana|<a href="https://en.wikipedia.org/wiki/1979_NCAA_Division_I-A_football_rankings">1979</a>|
+|Pennsylvania|<a href="https://en.wikipedia.org/wiki/1982_NCAA_Division_I-A_football_rankings">1982</a>|
+|Colorado|<a href="https://en.wikipedia.org/wiki/1994_NCAA_Division_I-A_football_rankings">1994</a>|
+|Kansas|<a href="https://en.wikipedia.org/wiki/1995_NCAA_Division_I-A_football_rankings">1995</a>|
+|Washington|<a href="https://en.wikipedia.org/wiki/1997_NCAA_Division_I-A_football_rankings">1997</a>|
+|Ohio|<a href="https://en.wikipedia.org/wiki/2009_NCAA_Division_I_FBS_football_rankings">2009</a>|
+|Oregon|<a href="https://en.wikipedia.org/wiki/2012_NCAA_Division_I_FBS_football_rankings">2012</a>|
+|Florida|<a href="https://en.wikipedia.org/wiki/2013_NCAA_Division_I_FBS_football_rankings">2013</a>|
+|South
+Carolina|<a href="https://en.wikipedia.org/wiki/2013_NCAA_Division_I_FBS_football_rankings">2013</a>|
+|Georgia|<a href="https://en.wikipedia.org/wiki/2014_NCAA_Division_I_FBS_football_rankings">2014</a>|
+|Mississippi|<a href="https://en.wikipedia.org/wiki/2014_NCAA_Division_I_FBS_football_rankings">2014</a>|
+|California|<a href="https://en.wikipedia.org/wiki/2015_NCAA_Division_I_FBS_football_rankings">2015</a>|
+|Alabama|<a href="https://en.wikipedia.org/wiki/2016_NCAA_Division_I_FBS_football_rankings">2016</a>|
+|Michigan|<a href="https://en.wikipedia.org/wiki/2016_NCAA_Division_I_FBS_football_rankings">2016</a>|
+|Texas|<a href="https://en.wikipedia.org/wiki/2016_NCAA_Division_I_FBS_football_rankings">2016</a>|
+|Oklahoma|<a href="https://en.wikipedia.org/wiki/2017_NCAA_Division_I_FBS_football_rankings">2017</a>|</p>
+
+<p>Then, I thought what if there were ever a week when a state had 3 teams
+in the AP top 10. Sure enough, four states have achieved this:</p>
+
+<table>
+<thead>
+<tr>
+<th>state </th>
+<th style="text-align:right;"> year </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>California</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/1952_NCAA_football_rankings">1952</a></td>
+</tr>
+<tr>
+<td>Indiana</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/1967_NCAA_University_Division_football_rankings">1967</a></td>
+</tr>
+<tr>
+<td>Florida</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/2005_NCAA_Division_I-A_football_rankings">2005</a></td>
+</tr>
+<tr>
+<td>Texas</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/2015_NCAA_Division_I_FBS_football_rankings">2015</a></td>
+</tr>
+</tbody>
+</table>
+
+
+<p>As always, all of my code for this is on
+<a href="https://github.com/stedy/blog-supplemental/">GitHub</a></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-10-07T22:24:34-07:00" pubdate data-updated="true"></time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/r-wikipedia-football/'>r,wikipedia,football</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -1034,55 +1160,6 @@ attendance</a>, it seems like it might be time for the UW to analyze if the Pac-
 
 
 	<a class='category' href='/blog/categories/r-football/'>r,football</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2016/08/16/this-american-life-stats/">
-		
-			This American Life Stats</a>
-	</h2>
-	<div class="entry-content">
-		<p>Lately I have been listening to episodes of <a href="http://www.thisamericanlife.org/">This American
-Life</a> faster than they are making them
-which means I have been going back to the archive for past unheard shows. Their website has a nice <a href="http://www.thisamericanlife.org/user/login">user section</a> where you can log in and mark episodes you have heard and your favorites. The archives are arranged by year which naturally got me thinking about the number episodes I have listened to by year. A search of GitHub revealed many libraries for downloading episodes of the podcast but none that were interested in user statistics so I decided to write my own library. I am still very much beginner level with technologies such as passing cookies and CSRF requests which is why I ultimately ended up using <a href="https://splinter.readthedocs.io/en/latest/">Splinter</a> which just lets you automate browser actions. I used that to login and navigate the TAL archives by year. I then used <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a> to parse the HTML. Finally, I just wanted to visualize the results so I used Mike Bostock&rsquo;s <a href="https://bl.ocks.org/mbostock/3885304">D3 Bar Chart example</a>.</p>
-
-<iframe src="http://zachstednick.com/TAL_stats.html" marginwidth="0" marginheight="0" style="height:500px; width:1060px;" scrolling="no"></iframe>
-
-
-<p>Pretty basic but it gets the job done, full code here on
-<a href="https://github.com/stedy/TAL_stats">GitHub</a></p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-08-16T22:19:24-07:00" pubdate data-updated="true"></time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/d3-python/'>d3,python</a>
 
 
 </div>

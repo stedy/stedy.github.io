@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2017-09-30T14:59:37-07:00</updated>
+  <updated>2017-10-07T22:25:57-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,99 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[States with multiple football teams in the AP Top 25]]></title>
+    <link href="http://stedy.github.io/blog/2017/10/07/states-with-multiple-football-teams-in-the-ap-top-25/"/>
+    <updated>2017-10-07T22:24:34-07:00</updated>
+    <id>http://stedy.github.io/blog/2017/10/07/states-with-multiple-football-teams-in-the-ap-top-25</id>
+    <content type="html"><![CDATA[<p>With <a href="http://www.espn.com/college-football/game?gameId=400935292">WSU beating
+Oregon</a> and
+<a href="http://www.espn.com/college-football/game?gameId=400935293">UW beating UC
+Berkeley</a>,
+the State of Washington is poised to have two football teams in the top
+ten of NCAA Division I football rankings. Naturally this got me
+thinking, how often does this happen and how many states have had this
+same achievement?</p>
+
+<p>To answer this I used the weekly results of <a href="https://en.wikipedia.org/wiki/AP_Poll">Associated Press
+poll</a> which started in 1936 and
+thanks to our good friends at <a href="https://donate.wikimedia.org">Wikipedia</a>,
+I was able to get AP Poll results for every week.</p>
+
+<p>I found that 25 states had at least one week where two teams from that
+state were in the AP Poll. However, the more I thought about it the more
+I realized this was slightly biased because some states might only have
+one team (i.e. Wyoming) while other states might have two Division I
+teams that are never both great at the same time (i.e. Montana). I
+tightened down my restrictions a bit and only looked at the top 10 teams
+from each AP Poll.</p>
+
+<p>Surprisingly, of the 25 states with at least two teams in the AP top 25,
+21 of those states had a week with at least two teams in the AP top 10.
+I made a summary table with the most recent year listed:</p>
+
+<p>|state | year |
+| &mdash;- | &mdash;: |
+|Louisiana|<a href="https://en.wikipedia.org/wiki/1936_NCAA_football_rankings">1936</a>|
+|Maryland|<a href="https://en.wikipedia.org/wiki/1955_NCAA_football_rankings">1955</a>|
+|North
+Carolina|<a href="https://en.wikipedia.org/wiki/1957_NCAA_University_Division_football_rankings">1957</a>|
+|New York|<a href="https://en.wikipedia.org/wiki/1958_NCAA_University_Division_football_rankings">1958</a>|
+|Illinois|<a href="https://en.wikipedia.org/wiki/1963_NCAA_University_Division_football_rankings">1963</a>|
+|Indiana|<a href="https://en.wikipedia.org/wiki/1979_NCAA_Division_I-A_football_rankings">1979</a>|
+|Pennsylvania|<a href="https://en.wikipedia.org/wiki/1982_NCAA_Division_I-A_football_rankings">1982</a>|
+|Colorado|<a href="https://en.wikipedia.org/wiki/1994_NCAA_Division_I-A_football_rankings">1994</a>|
+|Kansas|<a href="https://en.wikipedia.org/wiki/1995_NCAA_Division_I-A_football_rankings">1995</a>|
+|Washington|<a href="https://en.wikipedia.org/wiki/1997_NCAA_Division_I-A_football_rankings">1997</a>|
+|Ohio|<a href="https://en.wikipedia.org/wiki/2009_NCAA_Division_I_FBS_football_rankings">2009</a>|
+|Oregon|<a href="https://en.wikipedia.org/wiki/2012_NCAA_Division_I_FBS_football_rankings">2012</a>|
+|Florida|<a href="https://en.wikipedia.org/wiki/2013_NCAA_Division_I_FBS_football_rankings">2013</a>|
+|South
+Carolina|<a href="https://en.wikipedia.org/wiki/2013_NCAA_Division_I_FBS_football_rankings">2013</a>|
+|Georgia|<a href="https://en.wikipedia.org/wiki/2014_NCAA_Division_I_FBS_football_rankings">2014</a>|
+|Mississippi|<a href="https://en.wikipedia.org/wiki/2014_NCAA_Division_I_FBS_football_rankings">2014</a>|
+|California|<a href="https://en.wikipedia.org/wiki/2015_NCAA_Division_I_FBS_football_rankings">2015</a>|
+|Alabama|<a href="https://en.wikipedia.org/wiki/2016_NCAA_Division_I_FBS_football_rankings">2016</a>|
+|Michigan|<a href="https://en.wikipedia.org/wiki/2016_NCAA_Division_I_FBS_football_rankings">2016</a>|
+|Texas|<a href="https://en.wikipedia.org/wiki/2016_NCAA_Division_I_FBS_football_rankings">2016</a>|
+|Oklahoma|<a href="https://en.wikipedia.org/wiki/2017_NCAA_Division_I_FBS_football_rankings">2017</a>|</p>
+
+<p>Then, I thought what if there were ever a week when a state had 3 teams
+in the AP top 10. Sure enough, four states have achieved this:</p>
+
+<table>
+<thead>
+<tr>
+<th>state </th>
+<th style="text-align:right;"> year </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>California</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/1952_NCAA_football_rankings">1952</a></td>
+</tr>
+<tr>
+<td>Indiana</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/1967_NCAA_University_Division_football_rankings">1967</a></td>
+</tr>
+<tr>
+<td>Florida</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/2005_NCAA_Division_I-A_football_rankings">2005</a></td>
+</tr>
+<tr>
+<td>Texas</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/2015_NCAA_Division_I_FBS_football_rankings">2015</a></td>
+</tr>
+</tbody>
+</table>
+
+
+<p>As always, all of my code for this is on
+<a href="https://github.com/stedy/blog-supplemental/">GitHub</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Further exploration of IMDb TV show rating data]]></title>
@@ -1359,59 +1452,6 @@ oldest traffic circle being 18TH AVE E AND E HARRISON ST installed on
 <li>All code available <a href="https://github.com/stedy/blog-supplemental">here</a></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[subsetting shapefiles with R]]></title>
-    <link href="http://stedy.github.io/blog/2015/09/04/subsetting-shapefiles-with-r/"/>
-    <updated>2015-09-04T13:05:49-07:00</updated>
-    <id>http://stedy.github.io/blog/2015/09/04/subsetting-shapefiles-with-r</id>
-    <content type="html"><![CDATA[<p>I have been trying to improve my GIS skills lately and have been trying
-to use R for as much of this process as I can. One of the tasks I
-frequently perform is taking a shapefile, subsetting it, and then
-converting to a GeoJSON. The npm module
-<a href="https://www.npmjs.com/package/ogr2ogr">ogr2ogr</a> is excellent for
-converting from a shapefile to GeoJSON, however I frequntly find myself
-needing to select only certain areas of a shapefile. I have been using
-two libraries in R to achieve this, specifically
-<a href="https://cran.r-project.org/web/packages/rgdal/index.html">rgdal</a> and
-<a href="https://cran.r-project.org/web/packages/sp/">sp</a>.</p>
-
-<p>For example, lets use the Congressional District 2012 shapefiles from
-the <a href="http://www.ofm.wa.gov/pop/geographic/tiger.asp">Washington State Office of Financial
-Management</a>. Downloading
-the file, unzipping, and then loading into R with</p>
-
-<p><script
-src="https://gist.github.com/stedy/b05e2e11e309b66eb28e.js"></script></p>
-
-<p>We want to select only the districts that cover Seattle, 7 and 9 which
-is as simple as subsetting</p>
-
-<p><code>seattle.only &lt;- subset(wa.cd, CD113FP %in% c('07', '09'))</code></p>
-
-<p>One of the nice features about GitHub gists is that you can overlay a
-GeoJSON file on a Google map for a quick QC check. While R accepts a
-variety of
-projection formats, Github does not and I occasionally I find I have to
-convert to the WGS84 datum which are easily done with</p>
-
-<p><code>seattle.only.wgs &lt;- spTransform(seattle.only, CRS("+proj=longlat
-+ellps=WGS84"))</code></p>
-
-<p>And written out as a GeoJSON file with</p>
-
-<p><code>writeOGR(seattle.only.wgs, dsn="seattle.only.wgs.geojson", layer="cd2012", driver="GeoJSON", check_exists = FALSE)</code></p>
-
-<p>Occasionally I get an error about the file I am about to create not
-being found. This Stack Overflow
-<a href="http://stackoverflow.com/a/29743969/163809">answer</a> was very helpful
-and now I add the <code>check_exists = FALSE</code> parameter every time I write
-out with <code>writeOGR()</code>.</p>
-
-<p><script
-src="https://gist.github.com/stedy/3c4954baa0b1c96fc9e8.js"></script></p>
 ]]></content>
   </entry>
   
