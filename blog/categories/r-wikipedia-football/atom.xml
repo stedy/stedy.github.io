@@ -4,7 +4,7 @@
   <title><![CDATA[Category: r,wikipedia,football | Zach Stednick]]></title>
   <link href="http://stedy.github.io/blog/categories/r-wikipedia-football/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2017-10-07T22:25:57-07:00</updated>
+  <updated>2017-10-07T22:27:41-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -44,31 +44,101 @@ from each AP Poll.</p>
 21 of those states had a week with at least two teams in the AP top 10.
 I made a summary table with the most recent year listed:</p>
 
-<p>|state | year |
-| &mdash;- | &mdash;: |
-|Louisiana|<a href="https://en.wikipedia.org/wiki/1936_NCAA_football_rankings">1936</a>|
-|Maryland|<a href="https://en.wikipedia.org/wiki/1955_NCAA_football_rankings">1955</a>|
-|North
-Carolina|<a href="https://en.wikipedia.org/wiki/1957_NCAA_University_Division_football_rankings">1957</a>|
-|New York|<a href="https://en.wikipedia.org/wiki/1958_NCAA_University_Division_football_rankings">1958</a>|
-|Illinois|<a href="https://en.wikipedia.org/wiki/1963_NCAA_University_Division_football_rankings">1963</a>|
-|Indiana|<a href="https://en.wikipedia.org/wiki/1979_NCAA_Division_I-A_football_rankings">1979</a>|
-|Pennsylvania|<a href="https://en.wikipedia.org/wiki/1982_NCAA_Division_I-A_football_rankings">1982</a>|
-|Colorado|<a href="https://en.wikipedia.org/wiki/1994_NCAA_Division_I-A_football_rankings">1994</a>|
-|Kansas|<a href="https://en.wikipedia.org/wiki/1995_NCAA_Division_I-A_football_rankings">1995</a>|
-|Washington|<a href="https://en.wikipedia.org/wiki/1997_NCAA_Division_I-A_football_rankings">1997</a>|
-|Ohio|<a href="https://en.wikipedia.org/wiki/2009_NCAA_Division_I_FBS_football_rankings">2009</a>|
-|Oregon|<a href="https://en.wikipedia.org/wiki/2012_NCAA_Division_I_FBS_football_rankings">2012</a>|
-|Florida|<a href="https://en.wikipedia.org/wiki/2013_NCAA_Division_I_FBS_football_rankings">2013</a>|
-|South
-Carolina|<a href="https://en.wikipedia.org/wiki/2013_NCAA_Division_I_FBS_football_rankings">2013</a>|
-|Georgia|<a href="https://en.wikipedia.org/wiki/2014_NCAA_Division_I_FBS_football_rankings">2014</a>|
-|Mississippi|<a href="https://en.wikipedia.org/wiki/2014_NCAA_Division_I_FBS_football_rankings">2014</a>|
-|California|<a href="https://en.wikipedia.org/wiki/2015_NCAA_Division_I_FBS_football_rankings">2015</a>|
-|Alabama|<a href="https://en.wikipedia.org/wiki/2016_NCAA_Division_I_FBS_football_rankings">2016</a>|
-|Michigan|<a href="https://en.wikipedia.org/wiki/2016_NCAA_Division_I_FBS_football_rankings">2016</a>|
-|Texas|<a href="https://en.wikipedia.org/wiki/2016_NCAA_Division_I_FBS_football_rankings">2016</a>|
-|Oklahoma|<a href="https://en.wikipedia.org/wiki/2017_NCAA_Division_I_FBS_football_rankings">2017</a>|</p>
+<table>
+<thead>
+<tr>
+<th>state </th>
+<th style="text-align:right;"> year </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Louisiana</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/1936_NCAA_football_rankings">1936</a></td>
+</tr>
+<tr>
+<td>Maryland</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/1955_NCAA_football_rankings">1955</a></td>
+</tr>
+<tr>
+<td>North Carolina</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/1957_NCAA_University_Division_football_rankings">1957</a></td>
+</tr>
+<tr>
+<td>New York</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/1958_NCAA_University_Division_football_rankings">1958</a></td>
+</tr>
+<tr>
+<td>Illinois</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/1963_NCAA_University_Division_football_rankings">1963</a></td>
+</tr>
+<tr>
+<td>Indiana</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/1979_NCAA_Division_I-A_football_rankings">1979</a></td>
+</tr>
+<tr>
+<td>Pennsylvania</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/1982_NCAA_Division_I-A_football_rankings">1982</a></td>
+</tr>
+<tr>
+<td>Colorado</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/1994_NCAA_Division_I-A_football_rankings">1994</a></td>
+</tr>
+<tr>
+<td>Kansas</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/1995_NCAA_Division_I-A_football_rankings">1995</a></td>
+</tr>
+<tr>
+<td>Washington</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/1997_NCAA_Division_I-A_football_rankings">1997</a></td>
+</tr>
+<tr>
+<td>Ohio</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/2009_NCAA_Division_I_FBS_football_rankings">2009</a></td>
+</tr>
+<tr>
+<td>Oregon</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/2012_NCAA_Division_I_FBS_football_rankings">2012</a></td>
+</tr>
+<tr>
+<td>Florida</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/2013_NCAA_Division_I_FBS_football_rankings">2013</a></td>
+</tr>
+<tr>
+<td>South Carolina</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/2013_NCAA_Division_I_FBS_football_rankings">2013</a></td>
+</tr>
+<tr>
+<td>Georgia</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/2014_NCAA_Division_I_FBS_football_rankings">2014</a></td>
+</tr>
+<tr>
+<td>Mississippi</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/2014_NCAA_Division_I_FBS_football_rankings">2014</a></td>
+</tr>
+<tr>
+<td>California</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/2015_NCAA_Division_I_FBS_football_rankings">2015</a></td>
+</tr>
+<tr>
+<td>Alabama</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/2016_NCAA_Division_I_FBS_football_rankings">2016</a></td>
+</tr>
+<tr>
+<td>Michigan</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/2016_NCAA_Division_I_FBS_football_rankings">2016</a></td>
+</tr>
+<tr>
+<td>Texas</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/2016_NCAA_Division_I_FBS_football_rankings">2016</a></td>
+</tr>
+<tr>
+<td>Oklahoma</td>
+<td style="text-align:right;"><a href="https://en.wikipedia.org/wiki/2017_NCAA_Division_I_FBS_football_rankings">2017</a></td>
+</tr>
+</tbody>
+</table>
+
 
 <p>Then, I thought what if there were ever a week when a state had 3 teams
 in the AP top 10. Sure enough, four states have achieved this:</p>
