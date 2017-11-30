@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2017-10-08T09:18:11-07:00</updated>
+  <updated>2017-11-30T13:12:35-08:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Has the Pac-12 Network decreased UW home football game attendance UPDATED]]></title>
+    <link href="http://stedy.github.io/blog/2017/11/30/has-the-pac-12-network-decreased-uw-home-football-game-attendance-updated/"/>
+    <updated>2017-11-30T13:10:16-08:00</updated>
+    <id>http://stedy.github.io/blog/2017/11/30/has-the-pac-12-network-decreased-uw-home-football-game-attendance-updated</id>
+    <content type="html"><![CDATA[<p>Following up on my earlier
+<a href="http://zachstednick.name/blog/2016/09/02/has-the-pac-12-network-decreased-uw-home-football-game-attendance/">post</a>,
+how much has the Pac-12 Network affected game attendance? I updated my previous data set to include the past two seasons so as to include 2008-2017 data. I relied on home game
+attendance as reported by Wikipedia and also used Wikipedia to determine what TV network broadcast each home game. In an ideal world I would be able to make better comparisons using the <a href="http://www.nielsen.com/us/en/solutions/measurement/television.html">Nielsen rating</a>
+for each game however my guess is that data does not come as cheap or as
+easily as data from Wikipedia. For the purposes of this analysis I am
+neglecting various other factors in this anaysis
+such as time at kickoff, game day temperature, opponent, ranking of UW,
+ranking of opponent, etc&hellip; the list goes on and on. My main intention
+was
+to simply show home game attendance versus TV network for all games:</p>
+
+<p><img src="http://zachstednick.com/UW_football_attendance_by_TV_2008-17.png"></p>
+
+<p>And attendance for Pac-12 only opponents versus TV network:</p>
+
+<p><img src="http://zachstednick.com/UW_football_attendance_by_TV_2008-17_Pac12_only.png"></p>
+
+<p>Based on the available data it appears that attendance during home games
+has
+been influenced and possibly decreased by the Pac-12 Network but it is
+difficult to say for sure while ignoring so many external factors. With
+a significant budget deficit still a major
+<a href="https://www.seattletimes.com/seattle-news/education/uw-regents-assail-ex-athletic-director-over-growing-deficit/">issue</a>,
+one can only hope that losses from game day ticket sales are made up for
+with Pac-12 Network advertising revenue.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[States with multiple football teams in the AP Top 25]]></title>
@@ -1428,102 +1462,6 @@ show that Full-Service Restaurants have had sustained growth over the
 entire year, which makes for great storytelling either with data or a
 narrative and
 benefits all of us with increased diversity of restaurant options.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mapping Seattle Traffic Circles]]></title>
-    <link href="http://stedy.github.io/blog/2015/09/21/mapping-seattle-traffic-circles/"/>
-    <updated>2015-09-21T22:03:39-07:00</updated>
-    <id>http://stedy.github.io/blog/2015/09/21/mapping-seattle-traffic-circles</id>
-    <content type="html"><![CDATA[<p>Recently, there was a post on Priceonomics about traffic circles with
-the argument that roundabouts are <a href="http://priceonomics.com/the-case-for-more-traffic-roundabouts/">safer, help improve traffic flow, and
-reduce emissions</a>.
-The post mentions that there are 3700 roundabouts in the United States,
-which made me wonder - how many of those are in Seattle?</p>
-
-<p>Fortunately, the <a href="https://data.seattle.gov/">City of Seattle data site</a>
-has GIS data for all streets as well as GIS data for all traffic
-circles. The traffic circles dataset had 1042 total entries or about a
-third of the total number of roundabouts in the United States. I&rsquo;m not
-sure how accurate that is but I think focusing on traffic circles within
-the city limits is more interesting.</p>
-
-<p>I used the <a href="https://cran.r-project.org/web/packages/sp/">sp library</a> in
-R to read in both sets of shapefiles and quickly determine the streets
-with the highest number of roundabouts:</p>
-
-<table>
-<thead>
-<tr>
-<th> street </th>
-<th style="text-align:right;"> count </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td> FREMONT AVE N </td>
-<td style="text-align:right;"> 27</td>
-</tr>
-<tr>
-<td> 1ST AVE NW </td>
-<td style="text-align:right;"> 24</td>
-</tr>
-<tr>
-<td> 8TH AVE NE </td>
-<td style="text-align:right;"> 23</td>
-</tr>
-<tr>
-<td> DAYTON AVE N </td>
-<td style="text-align:right;"> 23</td>
-</tr>
-<tr>
-<td> 6TH AVE NW </td>
-<td style="text-align:right;"> 21</td>
-</tr>
-<tr>
-<td> 12TH AVE NE </td>
-<td style="text-align:right;"> 18</td>
-</tr>
-</tbody>
-</table>
-
-
-<p>Fremont Ave N. has a whopping 27 traffic circles which seems excessive
-until you realize that most of these are North of the zoo and not in the
-denser southern part of the street.</p>
-
-<p>I thought quite a bit about how to best represent these values and
-ultimately
-settled on mapping streets colored to the number of traffic
-circles on that street. I used R and <a href="http://colorbrewer2.org/">Color Brewer</a> to make a color attribute for the map based on traffic circle count that could be read by Leaflet. I wrote out my GeoJSON files using
-<code>rgdal::writeOGR()</code> and then found that was way too slow to reasonably
-run in a browser so I converted it to
-<a href="https://github.com/mbostock/topojson">topojson</a> using <code>topojson -o colored_traffic_circles2.topojson -p color colored_traffic_circles.geojson</code>. Even this ran too slowly so I had to
-reduce to streets with more than two traffic circles.</p>
-
-<p><img src="http://zachstednick.com/seattle_traffic_circles.png"></p>
-
-<p>Here the darker the color, the more traffic circles present on that
-street. For me the most interesting feature is how many traffic circles
-in a N-S
-direction are right next to State Highway 99 or near I-5. Is this an
-attempt to mitigate traffic of people trying to use surface streets
-instead of arterials? Possibly, though difficult to determine.
-Regardless, 1042 is an impressive amount of traffic circles for a
-metropolitan area this large.</p>
-
-<h2>Notes</h2>
-
-<ul>
-<li>The City dataset has dates on traffic circle installations with the
-oldest traffic circle being 18TH AVE E AND E HARRISON ST installed on
-1/5/1976</li>
-<li>Full size version of this map available
-<a href="http://zachstednick.com/seattle_traffic_circles.html">here</a></li>
-<li>All code available <a href="https://github.com/stedy/blog-supplemental">here</a></li>
-</ul>
-
 ]]></content>
   </entry>
   
