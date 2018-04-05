@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2017-11-30T13:12:35-08:00</updated>
+  <updated>2018-04-05T11:27:25-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,81 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Visualizing the 2017-18 WA State Legislature]]></title>
+    <link href="http://stedy.github.io/blog/2018/04/05/visualizing-the-2017-18-wa-state-legislature/"/>
+    <updated>2018-04-05T11:25:23-07:00</updated>
+    <id>http://stedy.github.io/blog/2018/04/05/visualizing-the-2017-18-wa-state-legislature</id>
+    <content type="html"><![CDATA[<p>In his <a href="https://www.governor.wa.gov/news-media/news-media/speeches/2018-state-state">2018 State of the State
+speech</a>,
+Washington State Governor Jay Inslee
+made a passioned appeal for a carbon tax and proposed one in Washington
+State Senate bill
+<a href="http://apps2.leg.wa.gov/billsummary?BillNumber=6203&amp;Year=2017">6203</a>.
+Because of this, I paid more attention to the
+activities of the Washington State Legislature than I ever had before
+and I found it fascinating.</p>
+
+<p>First off, lets start with the website for the state Legislature. Here
+is a screenshot of the
+Washington State Legislature page for SB 6203 which is the bill I was
+most interested in:</p>
+
+<p><img src="http://zachstednick.com/WA_6203.png"></p>
+
+<p>The website is very resource dense and well worth time exploring when
+the Legislature is in session. Every piece of proposed legislation
+shows the same amount of information and allows you to easily find and
+contact your legislators about a particular bill if interested. The site
+also has livestreams of <a href="http://apps2.leg.wa.gov/billsummary?BillNumber=6203&amp;Year=2017#videoSection">committee
+hearings</a>
+and displays <a href="https://app.leg.wa.gov/far/Senate/Calendar">vote
+counts</a> on bills in almost
+real time as the votes are tallied on both the
+Senate and the House floor.</p>
+
+<p>Is Washington state unique in this regard? Of course not, here is a
+screen shot for an interesting bill in Legislature for the State of
+California.</p>
+
+<p><img src="http://zachstednick.com/CA_827.png"></p>
+
+<p>Finally here is a screenshot of a House bill on the United States
+Congress website</p>
+
+<p><img src="http://zachstednick.com/HR_5031.png"></p>
+
+<p>Does ease of use of the website increase participation in the civic
+process at the state level? That is a difficult question to answer but
+personally I am glad I get to use the Washington State one instead of
+the California state Legislature webpage.</p>
+
+<p>The 2017-18 Washington State Legislative Session ended on <a href="http://leg.wa.gov/legislature/Documents/2018CutoffCalendar.pdf">March 8,
+2018</a>
+and
+Governor Inslee then had 21 days to sign bills into law or veto them.</p>
+
+<p>The conclusion of the 2017-18 Session made me wonder what happened to
+those bills that were introduced and how many of them actually became
+law.
+In addition to a great website, the Washington State
+Legislature also has an excellent set of <a href="http://wslwebservices.leg.wa.gov/">Web
+Services</a> that allow for
+programmatically
+capturing metrics and data about activities in the state
+legislation. One way to easily visualize this is with a <a href="https://en.wikipedia.org/wiki/Sankey_diagram">Sankey
+Diagram</a> (no relation to
+this <a href="https://www.youtube.com/watch?v=6Iec080MWCs">Sankey</a> though).</p>
+
+<p>Here is a smaller image of the diagram with a larger version [here]</p>
+
+<iframe src="http://zachstednick.com/WA_leg_sankey.html" marginwidth="0" marginheight="0" style="height:500px; width:1060px;" scrolling="no"></iframe>
+
+
+<p>Code to generate this figure available on my <a href="https://github.com/stedy/blog-supplemental/">GitHub repo</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Has the Pac-12 Network decreased UW home football game attendance UPDATED]]></title>
@@ -1384,84 +1459,6 @@ worth bending the rules a bit for. <a href="https://www.librarything.com/work/85
 
 <p>Looking forward to this challenge and you should join in if you feel so
 inclined.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Summarizing the Seattle restaurant scene in 2015]]></title>
-    <link href="http://stedy.github.io/blog/2015/12/28/summarizing-the-seattle-restaurant-scene-in-2015/"/>
-    <updated>2015-12-28T12:50:02-08:00</updated>
-    <id>http://stedy.github.io/blog/2015/12/28/summarizing-the-seattle-restaurant-scene-in-2015</id>
-    <content type="html"><![CDATA[<p>Seattle is experiencing sustained economic growth which manifests
-itself in a variety of ways, one of the most visible being changes in
-the restaurant
-industry. However, tracking the exact changes can be difficult due
-to a variety of factors such the size of the city and the difficulty in
-aggregating reliable data. There are several options for attempting to
-track changes such as scraping data from a review site such as Yelp or
-Zomato, systematically
-checking the Food section of the local paper, or going straight to the city
-records and attempt to
-determine what restaurant permits are being issued over time.</p>
-
-<p>For the purposes of this analysis, I decided to compare official city permit
-records with the Food column from a local paper, specifically <a href="http://www.thestranger.com/">The
-Stranger</a>.</p>
-
-<p>Earlier this year, I started scraping the <a href="http://www.seattle.gov/licenses/find-a-business">City of Seattle Business
-License
-database</a> which
-tracks both permit issuance and revocations. The City of Seattle site
-classifies permits based on <a href="https://en.wikipedia.org/wiki/North_American_Industry_Classification_System">NAICS
-codes</a>.
-Because I am only interested in restaurant related permits, I focused on
-the following five NAICS codes: Breweries, Drinking Places
-(Alcoholic Beverages), Mobile Food Services, Limited-Service
-Restaurants, and Full-Service Restaurants. I tracked changes in permits
-by
-week which when looked at for the entire year produces the following
-figure:</p>
-
-<p><img src="http://zachstednick.com/City_DB_NAICS_2015.png"></p>
-
-<p>Clearly a good time to be in the food truck business. Also I am not sure
-why so many Limited-Service Restaurants are closing and so many
-Full-Service
-Restaurants are opening. It could be simply that the restaurant decided
-to expand its service or attempt to cater to a different clientele.
-According to the official
-<a href="http://www.census.gov/cgi-bin/sssd/naics/naicsrch?code=722511&amp;search=2012">definition</a>,
-the NAICS code for Full-Service Restaurant
-is that &ldquo;Providing food services to patrons who order and are served
-while seated and pay after eating&rdquo;. For more details
-on these changes, I have made an <a href="http://seattlerestaurantchanges.com">interactive
-site</a> that allows you to further
-investigate by neighborhood and restaurant type.</p>
-
-<p>For comparison, I looked at every column I could
-find by <a href="http://www.thestranger.com/authors/31833/angela-garbes">Angela
-Garbes</a> who
-seems to be the main restaurant reporter at The Stranger. I looked at
-every restaurant opening and closing she mentioned in her
-column. I then
-<a href="https://docs.google.com/spreadsheets/d/1HFS4H8E-4RiM47pQzbauLzjfKSoEzv3IZ6Xl2PbHmIg/edit?usp=sharing">classified</a>
-all the restaurants she mentioned
-based on the same NAICS code to generate a similar figure:</p>
-
-<p><img src="http://zachstednick.com/Stranger_NAICS_2015.png"></p>
-
-<p>Obviously, she has a lot less data and her column is focused on more of
-the narrative of big name restaurants that
-have opened and less likely to focus on something like a new Taco Time.
-She focuses a lot on local food events such as popup restaurants as well
-as restaurant personnel which is not something that shows up in the
-official city
-statistics. Regardless, our figures look very similar and both of the
-datasets
-show that Full-Service Restaurants have had sustained growth over the
-entire year, which makes for great storytelling either with data or a
-narrative and
-benefits all of us with increased diversity of restaurant options.</p>
 ]]></content>
   </entry>
   
