@@ -4,7 +4,7 @@
   <title><![CDATA[Category: legislature | Zach Stednick]]></title>
   <link href="http://stedy.github.io/blog/categories/legislature/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2018-04-05T23:13:18-07:00</updated>
+  <updated>2018-04-05T23:14:22-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -29,12 +29,12 @@ was more likely to pass if it had more sponsors. First I took the 647
 bills passed by the Legislation and signed into law by Governor and
 looked up how many co-sponsors each bill had:</p>
 
-<p><img src="http://zachstednick.com/all_sponsor_counts.png></p>
+<p><img src="http://zachstednick.com/all_sponsor_counts.png"></p>
 
 <p>Then I I took every bill that was introduced but did not become
 law and counted up the sponsors for these:</p>
 
-<p><img src="http://zachstednick.com/all_sponsor_counts_not_passed.png></p>
+<p><img src="http://zachstednick.com/all_sponsor_counts_not_passed.png"></p>
 
 <p>So it appears that the number of sponsors is not particulary predictive
 for a bill becoming law. The three bills introduced in the Senate with
