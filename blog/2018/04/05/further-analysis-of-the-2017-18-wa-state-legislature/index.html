@@ -1,0 +1,206 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Further analysis of the 2017-18 WA State Legislature - Zach Stednick</title>
+	<meta name="author" content="Zach Stednick">
+
+	
+	<meta name="description" content="This is my second post looking at the data from the 2017-18 Washington
+State Legislative Session. the first part of this blog can be
+read
+here After &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Zach Stednick" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Zach Stednick</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:stedy.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/zachstednick" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/stedy" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="https://www.google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:stedy.github.io">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Further Analysis of the 2017-18 WA State Legislature</h2>
+	<div class="entry-content"><p>This is my second post looking at the data from the 2017-18 Washington
+State Legislative Session. the first part of this blog can be
+read
+<a href="http://zachstednick.name/blog/2018/04/05/visualizing-the-2017-18-wa-state-legislature/">here</a></p>
+
+<p>After some time looking at different bills that did pass, I started to
+wonder if a bill
+was more likely to pass if it had more sponsors. First I took the 647
+bills passed by the Legislation and signed into law by Governor and
+looked up how many co-sponsors each bill had:</p>
+
+<p><img src="http://zachstednick.com/all_sponsor_counts.png></p>
+
+<p>Then I I took every bill that was introduced but did not become
+law and counted up the sponsors for these:</p>
+
+<p><img src="http://zachstednick.com/all_sponsor_counts_not_passed.png></p>
+
+<p>So it appears that the number of sponsors is not particulary predictive
+for a bill becoming law. The three bills introduced in the Senate with
+the highest number of Sponsors were:</p>
+
+<p>|Bill | Number of Sponsors | Summary |
+|&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;: |
+|<a href="http://apps2.leg.wa.gov/billsummary?BillNumber=5598&amp;Year=2017">5598</a>|40|Granting
+relatives, including but not limited to grandparents, the right to seek
+visitation with a child through the courts.|
+|<a href="http://apps2.leg.wa.gov/billsummary?BillNumber=6037&amp;Year=2017">6037</a>|28|Concerning
+the uniform parentage act.|
+|<a href="http://apps2.leg.wa.gov/billsummary?BillNumber=5375&amp;Year=2017">5375</a>|27|Renaming
+the cancer research endowment authority to the Andy Hill cancer research
+endowment.|</p>
+
+<p>And in the House:</p>
+
+<p>|Bill | Number of Sponsors | Summary |
+|&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;: |
+|<a href="http://apps2.leg.wa.gov/billsummary?BillNumber=2282&amp;Year=2017">2282</a>|52|Protecting
+an open internet in Washington state.|
+|<a href="http://apps2.leg.wa.gov/billsummary?BillNumber=1714&amp;Year=2017">1714</a>|45|Concerning
+nursing staffing practices at hospitals.|
+|<a href="http://apps2.leg.wa.gov/billsummary?BillNumber=1400&amp;Year=2017">1400</a>|42|Creating
+Washington state aviation special license plates.|</p>
+
+<p>In November 2017, Manka Dhingra won a special election and the
+Washington State Senate
+flipped from Republican held to Democrat held. Initially I wanted to
+focus on the number of bills passed by a Republican held Senate versus a
+Democrat held Senate but there were too many extraneous variables such
+as passing a budget and a shorter session in 2018. Instead, I decided to
+focus on the number of Yea votes by bill</p>
+
+<p><img src ="http://zachstednick.com/percentage_yea_votes.png"></p>
+
+<p>Many of the bills passed were with almost overwhelming support, which is
+refreshing to see that there is quite a bit of bipartisanship in
+Washington State in 2018.</p>
+
+<p>As always, analysis code on
+<a href="https://github.com/stedy/blog-supplemental">GitHub</a></p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-04-05T23:11:26-07:00" pubdate data-updated="true"></time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/legislature/'>legislature</a>, <a class='category' href='/blog/categories/r/'>r,</a>
+
+
+</div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+</div>
+
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2018
+
+    Zach Stednick
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>

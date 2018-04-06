@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: legislature | Zach Stednick]]></title>
+  <link href="http://stedy.github.io/blog/categories/legislature/atom.xml" rel="self"/>
+  <link href="http://stedy.github.io/"/>
+  <updated>2018-04-05T23:13:18-07:00</updated>
+  <id>http://stedy.github.io/</id>
+  <author>
+    <name><![CDATA[Zach Stednick]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Further analysis of the 2017-18 WA State Legislature]]></title>
+    <link href="http://stedy.github.io/blog/2018/04/05/further-analysis-of-the-2017-18-wa-state-legislature/"/>
+    <updated>2018-04-05T23:11:26-07:00</updated>
+    <id>http://stedy.github.io/blog/2018/04/05/further-analysis-of-the-2017-18-wa-state-legislature</id>
+    <content type="html"><![CDATA[<p>This is my second post looking at the data from the 2017-18 Washington
+State Legislative Session. the first part of this blog can be
+read
+<a href="http://zachstednick.name/blog/2018/04/05/visualizing-the-2017-18-wa-state-legislature/">here</a></p>
+
+<p>After some time looking at different bills that did pass, I started to
+wonder if a bill
+was more likely to pass if it had more sponsors. First I took the 647
+bills passed by the Legislation and signed into law by Governor and
+looked up how many co-sponsors each bill had:</p>
+
+<p><img src="http://zachstednick.com/all_sponsor_counts.png></p>
+
+<p>Then I I took every bill that was introduced but did not become
+law and counted up the sponsors for these:</p>
+
+<p><img src="http://zachstednick.com/all_sponsor_counts_not_passed.png></p>
+
+<p>So it appears that the number of sponsors is not particulary predictive
+for a bill becoming law. The three bills introduced in the Senate with
+the highest number of Sponsors were:</p>
+
+<p>|Bill | Number of Sponsors | Summary |
+|&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;: |
+|<a href="http://apps2.leg.wa.gov/billsummary?BillNumber=5598&amp;Year=2017">5598</a>|40|Granting
+relatives, including but not limited to grandparents, the right to seek
+visitation with a child through the courts.|
+|<a href="http://apps2.leg.wa.gov/billsummary?BillNumber=6037&amp;Year=2017">6037</a>|28|Concerning
+the uniform parentage act.|
+|<a href="http://apps2.leg.wa.gov/billsummary?BillNumber=5375&amp;Year=2017">5375</a>|27|Renaming
+the cancer research endowment authority to the Andy Hill cancer research
+endowment.|</p>
+
+<p>And in the House:</p>
+
+<p>|Bill | Number of Sponsors | Summary |
+|&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;: |
+|<a href="http://apps2.leg.wa.gov/billsummary?BillNumber=2282&amp;Year=2017">2282</a>|52|Protecting
+an open internet in Washington state.|
+|<a href="http://apps2.leg.wa.gov/billsummary?BillNumber=1714&amp;Year=2017">1714</a>|45|Concerning
+nursing staffing practices at hospitals.|
+|<a href="http://apps2.leg.wa.gov/billsummary?BillNumber=1400&amp;Year=2017">1400</a>|42|Creating
+Washington state aviation special license plates.|</p>
+
+<p>In November 2017, Manka Dhingra won a special election and the
+Washington State Senate
+flipped from Republican held to Democrat held. Initially I wanted to
+focus on the number of bills passed by a Republican held Senate versus a
+Democrat held Senate but there were too many extraneous variables such
+as passing a budget and a shorter session in 2018. Instead, I decided to
+focus on the number of Yea votes by bill</p>
+
+<p><img src ="http://zachstednick.com/percentage_yea_votes.png"></p>
+
+<p>Many of the bills passed were with almost overwhelming support, which is
+refreshing to see that there is quite a bit of bipartisanship in
+Washington State in 2018.</p>
+
+<p>As always, analysis code on
+<a href="https://github.com/stedy/blog-supplemental">GitHub</a></p>
+]]></content>
+  </entry>
+  
+</feed>
