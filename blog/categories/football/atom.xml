@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: r,wikipedia,football | Zach Stednick]]></title>
-  <link href="http://stedy.github.io/blog/categories/r-wikipedia-football/atom.xml" rel="self"/>
+  <title><![CDATA[Category: football | Zach Stednick]]></title>
+  <link href="http://stedy.github.io/blog/categories/football/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2018-04-05T23:21:00-07:00</updated>
+  <updated>2018-04-05T23:26:31-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>

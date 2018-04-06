@@ -1,90 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE HTML>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>States with multiple football teams in the AP Top 25 - Zach Stednick</title>
-	<meta name="author" content="Zach Stednick">
-
-	
-	<meta name="description" content="With WSU beating
-Oregon and
-UW beating UC
-Berkeley,
-the State of Washington is poised to have two football teams in the top
-ten of NCAA Division I &hellip;">
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<link href="/atom.xml" rel="alternate" title="Zach Stednick" type="application/atom+xml">
-	<link rel="canonical" href="">
-	<link href="/favicon.png" rel="shortcut icon">
-	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	
-</head>
-
-
-<body>
-	<header id="header" class="inner"><h1><a href="/">Zach Stednick</a></h1>
-<nav id="main-nav"><ul class="main">
-	<li><a href="/">Blog</a></li>
-	<li><a href="/blog/archives">Archives</a></li>
-</ul>
-</nav>
-<nav id="mobile-nav">
-	<div class="alignleft menu">
-		<a class="button">Menu</a>
-		<div class="container"><ul class="main">
-	<li><a href="/">Blog</a></li>
-	<li><a href="/blog/archives">Archives</a></li>
-</ul>
-</div>
-	</div>
-	<div class="alignright search">
-		<a class="button"></a>
-		<div class="container">
-			<form action="https://www.google.com/search" method="get">
-				<input type="text" name="q" results="0">
-				<input type="hidden" name="q" value="site:stedy.github.io">
-			</form>
-		</div>
-	</div>
-</nav>
-<nav id="sub-nav" class="alignright">
-	<div class="social">
-		
-		
-		
-		<a class="twitter" href="http://twitter.com/zachstednick" title="Twitter">Twitter</a>
-		
-		
-		<a class="github" href="https://github.com/stedy" title="GitHub">GitHub</a>
-		
+  <title><![CDATA[Category: wikipedia, | Zach Stednick]]></title>
+  <link href="http://stedy.github.io/blog/categories/wikipedia/atom.xml" rel="self"/>
+  <link href="http://stedy.github.io/"/>
+  <updated>2018-04-05T23:26:31-07:00</updated>
+  <id>http://stedy.github.io/</id>
+  <author>
+    <name><![CDATA[Zach Stednick]]></name>
     
-		
-		
-		
-		
-		
-		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
-		
-    
-	</div>
-	<form class="search" action="https://www.google.com/search" method="get">
-		<input class="alignright" type="text" name="q" results="0">
-		<input type="hidden" name="q" value="site:stedy.github.io">
-	</form>
-</nav>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
-</header>
-	
-		
-	
-	<div id="content" class="inner"><article class="post">
-	<h2 class="title">States With Multiple Football Teams in the AP Top 25</h2>
-	<div class="entry-content"><p>With <a href="http://www.espn.com/college-football/game?gameId=400935292">WSU beating
+  
+  <entry>
+    <title type="html"><![CDATA[States with multiple football teams in the AP Top 25]]></title>
+    <link href="http://stedy.github.io/blog/2017/10/07/states-with-multiple-football-teams-in-the-ap-top-25/"/>
+    <updated>2017-10-07T22:24:34-07:00</updated>
+    <id>http://stedy.github.io/blog/2017/10/07/states-with-multiple-football-teams-in-the-ap-top-25</id>
+    <content type="html"><![CDATA[<p>With <a href="http://www.espn.com/college-football/game?gameId=400935292">WSU beating
 Oregon</a> and
 <a href="http://www.espn.com/college-football/game?gameId=400935293">UW beating UC
 Berkeley</a>,
@@ -241,65 +175,7 @@ in the AP top 10. Sure enough, four states have achieved this:</p>
 
 <p>As always, all of my code for this is on
 <a href="https://github.com/stedy/blog-supplemental/">GitHub</a></p>
-</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
+]]></content>
+  </entry>
   
-
-
-<time datetime="2017-10-07T22:24:34-07:00" pubdate data-updated="true"></time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/football/'>football</a>, <a class='category' href='/blog/categories/r/'>r,</a>, <a class='category' href='/blog/categories/wikipedia/'>wikipedia,</a>
-
-
-</div>
-	
-</div>
-</article>
-
-	<div class="share">
-	<div class="addthis_toolbox addthis_default_style ">
-		
-		
-		<a class="addthis_button_tweet"></a>
-		
-		
-		
-	</div>
-	
-</div>
-
-
-</div>
-	<footer id="footer" class="inner">Copyright &copy; 2018
-
-    Zach Stednick
-
-</footer>
-	<script src="/javascripts/slash.js"></script>
-<script src="/javascripts/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-	$('.fancybox').fancybox();
-})(jQuery);
-</script> <!-- Delete or comment this line to disable Fancybox -->
-
-
-
-
-
-
-</body>
-</html>
+</feed>
