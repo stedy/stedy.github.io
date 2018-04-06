@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2018-04-05T23:29:33-07:00</updated>
+  <updated>2018-04-05T23:31:26-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -44,7 +44,7 @@ the highest number of Sponsors were:</p>
 <thead>
 <tr>
 <th>Bill </th>
-<th> Number of Sponsors </th>
+<th> Sponsor count </th>
 <th style="text-align:right;"> Summary </th>
 </tr>
 </thead>
@@ -70,14 +70,33 @@ the highest number of Sponsors were:</p>
 
 <p>And in the House:</p>
 
-<p>|Bill | Number of Sponsors | Summary |
-| &mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;: |
-| <a href="http://apps2.leg.wa.gov/billsummary?BillNumber=2282&amp;Year=2017">2282</a> | 52 | Protecting
-an open internet in Washington state.
-| <a href="http://apps2.leg.wa.gov/billsummary?BillNumber=1714&amp;Year=2017">1714</a> | 45 | Concerning
-nursing staffing practices at hospitals.
-| <a href="http://apps2.leg.wa.gov/billsummary?BillNumber=1400&amp;Year=2017">1400</a> | 42 | Creating
-Washington state aviation special license plates.</p>
+<table>
+<thead>
+<tr>
+<th>Bill </th>
+<th> Sponsors count </th>
+<th style="text-align:right;"> Summary </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <a href="http://apps2.leg.wa.gov/billsummary?BillNumber=2282&amp;Year=2017">2282</a> </td>
+<td> 52 </td>
+<td style="text-align:right;"> Protecting an open internet in Washington state.</td>
+</tr>
+<tr>
+<td> <a href="http://apps2.leg.wa.gov/billsummary?BillNumber=1714&amp;Year=2017">1714</a> </td>
+<td> 45 </td>
+<td style="text-align:right;"> Concerning nursing staffing practices at hospitals.</td>
+</tr>
+<tr>
+<td> <a href="http://apps2.leg.wa.gov/billsummary?BillNumber=1400&amp;Year=2017">1400</a> </td>
+<td> 42 </td>
+<td style="text-align:right;"> Creating Washington state aviation special license plates.</td>
+</tr>
+</tbody>
+</table>
+
 
 <p>In November 2017, Manka Dhingra won a special election and the
 Washington State Senate
