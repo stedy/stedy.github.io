@@ -7,10 +7,8 @@
 	<meta name="author" content="Zach Stednick">
 
 	
-	<meta name="description" content="This is my second post looking at the data from the 2017-18 Washington
-State Legislative Session. the first part of this blog can be
-read
-here After &hellip;">
+	<meta name="description" content="Remember this map that Facebook created of friend connections? I thought it was pretty cool back then and I still
+think its pretty cool. I wanted to &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -81,6 +79,101 @@ here After &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2018/05/26/visualizing-flight-data-for-the-2017-seattle-mariners/">
+		
+			Visualizing Flight Data for the 2017 Seattle Mariners</a>
+	</h2>
+	<div class="entry-content">
+		<p>Remember this map that Facebook created of friend connections?</p>
+
+<p><img
+src="https://scontent.fsea1-1.fna.fbcdn.net/v/t1.0-9/163413_479288597199_8388607_n.jpg?_nc_cat=0&oh=711d85dd232ab4e2a7b920917eee149a&oe=5B7DD918&efg=eyJhZG1pc3Npb25fY29udHJvbCI6MSwidXBsb2FkZXJfaWQiOiI5NDQ1NTQ3MTk5In0%3D"
+height="430" width="670" ></p>
+
+<p>I thought it was pretty cool back then and I still
+think its pretty cool. I wanted to make a similar map but was not sure
+where to start. I could have done a similar visualization however I quit
+Facebook so I can no longer export all my friend&rsquo;s data to use for
+making maps. My next thought was flight information. I am trying to
+reduce my carbon footprint which meant I only flew five times in 2017
+and have flown exactly zero times so far in 2018. Then I thought, you
+know who does
+fly alot? The Seattle Mariners.</p>
+
+<p>First step was to collect all the Mariners game data, fortunately
+Baseball Reference has all that data in an easily accessible <a href="https://www.baseball-reference.com/teams/SEA/2017-schedule-scores.shtml">HTML
+table</a>.</p>
+
+<p>Next step was to geolocate all the stadiums which can be a bit tedious.
+Fortunately GitHub user
+<a href="https://github.com/the55">the55</a> created a nice JSON file of all the
+stadiums and put it as a
+<a href="https://gist.github.com/the55/2155142">gist</a>. I was able to use an R
+library called
+<a href="https://cran.r-project.org/web/packages/geosphere/">geosphere</a> for
+using the <a href="https://en.wikipedia.org/wiki/Haversine_formula">Haversine
+formula</a> to calculate
+the distance between two stadiums.</p>
+
+<p>My initial attempt here:</p>
+
+<p><img src="http://zachstednick.com/mariners_base.svg"></p>
+
+<p>In order to make the image look similar to the Facebook connection map,
+I ended up using this <a href="https://flowingdata.com/2011/05/11/how-to-map-connections-with-great-circles/">Flowing Data
+post</a>
+quite a bit to figure out how to
+add the lines and change the background color:</p>
+
+<p><img src="http://zachstednick.com/mariners_black_bg.svg"></p>
+
+<p>Finally because there were so many trips from Seattle to American League
+West opponents that I ended up adding a bit of <a href="https://en.wikipedia.org/wiki/Jitter">noise or
+jitter</a> to the stadium locations
+to make the flight paths not perfectly overlap each other.</p>
+
+<p><img src="http://zachstednick.com/mariners_map_with_noise.svg"></p>
+
+<p>Looking back at this 2017 reminded me the Mariners finished 78-84 in
+2017, here&rsquo;s hoping to a better season in 2018!</p>
+
+<p>If interested, I put all the code for this analysis
+<a href="https://github.com/stedy/blog-supplemental/blob/master/analysis/mariners_2017_travel_map.R">here</a></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-05-26T17:11:21-07:00" pubdate data-updated="true"></time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/baseball/'>baseball</a>, <a class='category' href='/blog/categories/r/'>r,</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -1229,51 +1322,6 @@ in
 
 
 	<a class='category' href='/blog/categories/r-basketball/'>r,basketball</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2017/03/02/a-forgotten-cron-job-leads-to-interesting-results/">
-		
-			A Forgotten Cron Job Leads to Interesting Results</a>
-	</h2>
-	<div class="entry-content">
-		<p>On January 1, 2016 I set up a <a href="https://en.wikipedia.org/wiki/Cron">cron</a> job to perform a daily count of the number of Twitter followers of the two main Gubernatorial candidates in Washington State: <a href="https://twitter.com/GovInslee">Jay Inslee</a> and <a href="https://twitter.com/BillBryantWA">Bill Bryant</a>. I was not attempting to predict the election or do anything with the data, I just wanted to count followers until Election Day 2016 and hopefully plot some interesting results. I checked on Election Day and the trend lines remained pretty much the same as they did at the start of the year so I abandonded my idea. Today I was cleaning out my crontab file and I found that the cron job was still running. I added a solid line for the 2016 Election Day and dashed line for the 2017 Presidential Inauguration.</p>
-
-<p><img src="http://zachstednick.com/Inslee_vs_Bryant.png"></p>
-
-<p>To me, the follower count data after the inauguration is the most interesting but it is just count data and I am not sure how much you can really read into it. If anything, forgetting the cron job was a pleasant surprise that reminded me of this guy who took a screenshot of the New York Times frontpage everyday for 5 years <a href="https://www.youtube.com/watch?v=sCKGOiauJCE">YouTube</a>.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2017-03-02T15:15:33-08:00" pubdate data-updated="true"></time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/r-twitter/'>r,twitter</a>
 
 
 </div>
