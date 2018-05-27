@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2018-05-26T17:13:41-07:00</updated>
+  <updated>2018-05-26T17:16:31-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -18,7 +18,8 @@
     <link href="http://stedy.github.io/blog/2018/05/26/visualizing-flight-data-for-the-2017-seattle-mariners/"/>
     <updated>2018-05-26T17:11:21-07:00</updated>
     <id>http://stedy.github.io/blog/2018/05/26/visualizing-flight-data-for-the-2017-seattle-mariners</id>
-    <content type="html"><![CDATA[<p>Remember this map that Facebook created of friend connections?</p>
+    <content type="html"><![CDATA[<p>Remember this map that Facebook created of friend connections back in
+2011?</p>
 
 <p><img
 src="https://scontent.fsea1-1.fna.fbcdn.net/v/t1.0-9/163413_479288597199_8388607_n.jpg?_nc_cat=0&oh=711d85dd232ab4e2a7b920917eee149a&oe=5B7DD918&efg=eyJhZG1pc3Npb25fY29udHJvbCI6MSwidXBsb2FkZXJfaWQiOiI5NDQ1NTQ3MTk5In0%3D"
@@ -26,9 +27,10 @@ height="430" width="670" ></p>
 
 <p>I thought it was pretty cool back then and I still
 think its pretty cool. I wanted to make a similar map but was not sure
-where to start. I could have done a similar visualization however I quit
+where to start. I could have done a similar visualization however I
+recently quit
 Facebook so I can no longer export all my friend&rsquo;s data to use for
-making maps. My next thought was flight information. I am trying to
+making maps. My next thought was visualizing travel routes such as flight information. I am trying to
 reduce my carbon footprint which meant I only flew five times in 2017
 and have flown exactly zero times so far in 2018. Then I thought, you
 know who does
