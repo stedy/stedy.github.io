@@ -7,7 +7,9 @@
 	<meta name="author" content="Zach Stednick">
 
 	
-	<meta name="description" content="After a year on Fitbit, I figured it might be time to take a look at the data that I have been generating. Unfortunately, Fitbit makes you sign up &hellip;">
+	<meta name="description" content="Seattle construction is currently booming and I was interested in how
+that
+reflected in the local restaurant scene. There are many food blogs and &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -78,6 +80,80 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2015/04/17/seattle-restaurant-changes/">
+		
+			Seattle Restaurant Changes</a>
+	</h2>
+	<div class="entry-content">
+		<p>Seattle construction is currently booming and I was interested in how
+that
+reflected in the local restaurant scene. There are many food blogs and
+local news sites that cover openings and closings, but I found it too
+difficult to parse these in a regular manner. Fortunately I was able to
+use data from the <a href="http://www.seattle.gov/licenses/find-a-business">City of Seattle business
+finder</a> and used the
+restaurant classification or
+<a href="https://en.wikipedia.org/wiki/NAICS">NAICS</a> code as a proxy. Using the
+data in this manner makes an assumption that a restaurant will no longer
+have a business licence after it closes.
+I&rsquo;m not sure how accurate this is but I figured it was as accurate as I
+could get short of hiring people on Mechanical Turk to phone every
+restaurant every week and ask if the restaurant is still open. To map each
+restaurant to a particular neighborhood, I
+used geolocation to map license address returned by the City of Seattle business
+finder. Obviously that does not work as well for Mobile Food Services
+(i.e. food trucks) but it still allows for an interesting comparison.
+This data is plotted at <a href="http://seattlerestaurantchanges.com">Seattle Restaurant
+Changes</a>.</p>
+
+<p>I initially attempted to scrape
+data from <a href="https://www.thestranger.com/food-and-drink">The Stranger</a> but
+after finding the City of Seattle site I just used
+<a href="http://www.crummy.com/software/BeautifulSoup/">BeautifulSoup</a> for the
+scraping. I would not have been able to do much more beyond that state
+if it had not been for Nathan Yau&rsquo;s excellent tutorial on <a href="http://flowingdata.com/2015/02/19/make-an-interactive-map-with-category-filters/">making maps
+with category
+filters</a>.
+I was able to get a state level shapefile for Washington state from
+<a href="http://www.zillow.com/blog/7000-neighborhood-boundary-files-in-shapefile-format-4653/">Zillow</a>
+and then reduce that to just Seattle neighborhoods using R&rsquo;s
+<a href="http://cran.r-project.org/web/packages/sp/">sp</a> package. Full code
+posted on <a href="https://github.com/stedy/seattle-restaurants">github</a></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-04-17T10:51:18-07:00" pubdate data-updated="true"></time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/d3/'>d3</a>, <a class='category' href='/blog/categories/restaurants/'>restaurants,</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -922,63 +998,6 @@ elected the Face of MLB, then what&rsquo;s the point of programming?</p>
 
 
 <time datetime="2014-02-24T21:42:00-08:00" pubdate data-updated="true"></time></div>
-	<div class="tags">
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/02/06/foursquare-without-a-smartphone/">
-		
-			Foursquare Without a Smartphone</a>
-	</h2>
-	<div class="entry-content">
-		<p>I don&rsquo;t have a smartphone. Because of this,
-I am apparently missing out on sweet checkin
-<a href="https://foursquare.com/stevewoz/checkin/52f4182911d23311d6d12c6d?s=O5DyXc1-s3wjItCncf6KlvDtyxc&amp;ref=tw">badges</a>
-that I could be displaying on a user
-profile on fourquare or somewhere similar. This, in addition to how
-amazed I am by the <a href="http://feltron.com/ar12_01.html">Feltron
-annual report</a> does make slightly
-envious of people with abilities to easily track daily events. Instead
-of getting a smartphone, I opted for a much more low
-tech solution.</p>
-
-<p><img src="http://zachstednick.com/calendar.jpg"></p>
-
-<p>This is a picture of any bars, restaurants or events I
-went to in the month of January. I am also
-trying to record how often I work out and what kind of workout I am
-doing. Its been interesting thus far to try and observe trends and
-determine if I can gain any insight. I can definitely see why people are
-interested in using a device like a fitbit and or a smartphone for
-tracking. Until that day, I think I will
-just stick to using pen on a calendar.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-06T22:10:00-08:00" pubdate data-updated="true"></time></div>
 	<div class="tags">
 
 </div>

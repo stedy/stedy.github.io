@@ -7,9 +7,9 @@
 	<meta name="author" content="Zach Stednick">
 
 	
-	<meta name="description" content="Remember this map that Facebook created of friend connections back in
-2011? I thought it was pretty cool back then and I still
-think its pretty cool &hellip;">
+	<meta name="description" content="One of the things people consistently tell me when they are
+considering buying or renting a house/apartment in a new location is
+that they want to &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -80,6 +80,378 @@ think its pretty cool &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2018/05/27/a-visual-ranking-of-seattle-public-elementary-schools/">
+		
+			A Visual Ranking of Seattle Public Elementary Schools</a>
+	</h2>
+	<div class="entry-content">
+		<p>One of the things people consistently tell me when they are
+considering buying or renting a house/apartment in a new location is
+that they want to move somewhere with &ldquo;good schools&rdquo;. This always maks
+me think what is a &ldquo;good
+school&rdquo; and more importantly, how do we quanitfy what schools are
+considered &ldquo;good&rdquo;? Generally this
+means using some sort of list of school data summarized in a fact sheet
+from a realtor/apartment manager or more likely using a
+websearch that results in sites such as
+<a href="https://www.niche.com/k12/thurgood-marshall-elementary-school-seattle-wa/">Niche</a>.
+This approach is generally fine but it assumes that you are only
+interested in a specific neighborhood which may be difficult to achieve
+right now in most major cities across the US and especially in
+<a href="https://www.seattletimes.com/business/real-estate/new-home-price-records-777000-in-seattle-950000-on-the-eastside/">Seattle</a>.</p>
+
+<p>What if instead we looked at school ratings in all neighborhoods
+simultaneously in a city? This would
+allow the user to spot trends and make some visual comparisons as well
+as possibly identify overperforming schools in unexpected areas.
+Fortunately, Seattle Public Schools (SPS) provides quite a lot of
+<a href="https://www.seattleschools.org/cms/One.aspx?portalId=627&amp;pageId=6369011">data</a>
+about their schools which makes this easy to visualize.</p>
+
+<h1>Setup</h1>
+
+<ul>
+<li><p>For this analysis I just used the SPS data for the 2016-17 school
+year.</p></li>
+<li><p>I focused solely on elementary school data for the 2016-17
+school year. I used the SPS district boundary map for all elementary
+schools in the City of Seattle and ignored any magnet or alternative
+elementary schools.</p></li>
+</ul>
+
+
+<h1>Rankings</h1>
+
+<p>My initial questions were focused on what school has the best
+student/teacher ratio? What
+school has the best attendance and what schools are good for reading and
+math?</p>
+
+<p>I took the student/teacher ratio, attendance rate, and reading and math
+proficiency scores for each school and calculated the rank of that
+school
+within the city and made this table. Click on the category name to sort
+by that category.</p>
+
+<p><link rel="stylesheet" type="text/css"
+src="http://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" /></p>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+</script>
+
+
+
+
+<script type="text/javascript"
+src="http://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"
+></script>
+
+
+<script>
+$(document).ready( function () {
+      $('#myTable').DataTable({paging: false, info: false});
+} );
+
+</script>
+
+
+
+
+
+
+
+
+<table border=1 id="myTable">
+  <thead>
+<tr> <th> School Name </th> <th> Attendance Rank </th> <th>
+Student/Teacher Ratio Rank </th> <th> Grade 3 Math Rank </th> <th> Grade
+3 Reading Rank </th>  </tr>
+</thead>
+<tbody>
+  <tr> <td> Adams </td> <td align="right"> 12 </td> <td align="right">
+53 </td> <td align="right"> 29 </td> <td align="right"> 21 </td> </tr>
+  <tr> <td> Alki </td> <td align="right"> 20 </td> <td align="right"> 35
+</td> <td align="right"> 12 </td> <td align="right"> 15 </td> </tr>
+  <tr> <td> Arbor Heights </td> <td align="right"> 21 </td> <td
+align="right"> 31 </td> <td align="right"> 45 </td> <td align="right">
+33 </td> </tr>
+  <tr> <td> Gatzert </td> <td align="right"> 42 </td> <td align="right">
+4 </td> <td align="right"> 49 </td> <td align="right"> 56 </td> </tr>
+  <tr> <td> Beacon Hill Int&#8217;l </td> <td align="right"> 1 </td> <td
+align="right"> 32.50 </td> <td align="right"> 30 </td> <td
+align="right"> 37 </td> </tr>
+  <tr> <td> B.F. Day </td> <td align="right"> 16 </td> <td
+align="right"> 43 </td> <td align="right"> 25 </td> <td align="right">
+23 </td> </tr>
+  <tr> <td>  Broadview-Thomson K-8 </td> <td align="right"> 49 </td> <td
+align="right"> 2 </td> <td align="right"> 46 </td> <td align="right"> 45
+</td> </tr>
+  <tr> <td> Bryant </td> <td align="right"> 6 </td> <td align="right">
+55 </td> <td align="right"> 3 </td> <td align="right"> 4 </td> </tr>
+  <tr> <td> Cascadia </td> <td align="right"> 2 </td> <td align="right">
+59 </td> <td align="right"> 1 </td> <td align="right"> 1 </td> </tr>
+  <tr>  <td> Catharine Blaine K-8 </td> <td align="right"> 38 </td> <td
+align="right"> 15 </td> <td align="right"> 6 </td> <td align="right"> 13
+</td> </tr>
+  <tr>  <td> Concord Int&#8217;l </td> <td align="right"> 44 </td> <td
+align="right"> 22 </td> <td align="right"> 59 </td> <td align="right">
+60 </td> </tr>
+  <tr>  <td> Bagley </td> <td align="right"> 10 </td> <td align="right">
+20 </td> <td align="right"> 24 </td> <td align="right"> 19 </td> </tr>
+  <tr>  <td> Dearborn Park Int&#8217;l </td> <td align="right"> 61 </td> <td
+align="right"> 61 </td> <td align="right"> 61 </td> <td align="right">
+61 </td> </tr>
+  <tr>  <td> Dunlap </td> <td align="right"> 43 </td> <td align="right">
+5 </td> <td align="right"> 56 </td> <td align="right"> 55 </td> </tr>
+  <tr>  <td> Emerson </td> <td align="right"> 58 </td> <td
+align="right"> 14 </td> <td align="right"> 43 </td> <td align="right">
+53 </td> </tr>
+  <tr>  <td> Fairmount Park </td> <td align="right"> 22 </td> <td
+align="right"> 47 </td> <td align="right"> 2 </td> <td align="right"> 3
+</td> </tr>
+  <tr>  <td> Coe </td> <td align="right"> 9 </td> <td align="right"> 48
+</td> <td align="right"> 10 </td> <td align="right"> 9 </td> </tr>
+  <tr>  <td> Gatewood </td> <td align="right"> 35 </td> <td
+align="right"> 26 </td> <td align="right"> 33 </td> <td align="right">
+40 </td> </tr>
+  <tr>  <td> Genesee Hill </td> <td align="right"> 24 </td> <td
+align="right"> 50 </td> <td align="right"> 16 </td> <td align="right">
+20 </td> </tr>
+  <tr>  <td> Graham Hill </td> <td align="right"> 39 </td> <td
+align="right"> 10 </td> <td align="right"> 55 </td> <td align="right">
+49 </td> </tr>
+  <tr>  <td> Green Lake </td> <td align="right"> 31 </td> <td
+align="right"> 37 </td> <td align="right"> 26 </td> <td align="right">
+28 </td> </tr>
+  <tr>  <td> Greenwood </td> <td align="right"> 15 </td> <td
+align="right"> 54 </td> <td align="right"> 20 </td> <td align="right">
+17 </td> </tr>
+  <tr>  <td> Hawthorne </td> <td align="right"> 46 </td> <td
+align="right"> 16 </td> <td align="right"> 48 </td> <td align="right">
+41 </td> </tr>
+  <tr>  <td> Highland Park </td> <td align="right"> 48 </td> <td
+align="right"> 6 </td> <td align="right"> 57 </td> <td align="right"> 50
+</td> </tr>
+  <tr>  <td> Hay </td> <td align="right"> 8 </td> <td align="right"> 38
+</td> <td align="right"> 19 </td> <td align="right"> 10 </td> </tr>
+  <tr>  <td> John Muir </td> <td align="right"> 23 </td> <td
+align="right"> 25 </td> <td align="right"> 52 </td> <td align="right">
+48 </td> </tr>
+  <tr>  <td> John Rogers </td> <td align="right"> 33 </td> <td
+align="right"> 24 </td> <td align="right"> 34 </td> <td align="right">
+34 </td> </tr>
+  <tr>  <td> Kimball </td> <td align="right"> 30 </td> <td
+align="right"> 32.50 </td> <td align="right"> 40 </td> <td
+align="right"> 36 </td> </tr>
+  <tr>  <td> Lafayette </td> <td align="right"> 29 </td> <td
+align="right"> 44 </td> <td align="right"> 27 </td> <td align="right">
+25 </td> </tr>
+  <tr>  <td> Laurelhurst </td> <td align="right"> 34 </td> <td
+align="right"> 49 </td> <td align="right"> 15 </td> <td align="right">
+24 </td> </tr>
+  <tr>  <td> Lawton </td> <td align="right"> 26 </td> <td align="right">
+42 </td> <td align="right"> 4 </td> <td align="right"> 6 </td> </tr>
+  <tr>  <td> Leschi </td> <td align="right"> 53 </td> <td align="right">
+36 </td> <td align="right"> 37 </td> <td align="right"> 44 </td> </tr>
+  <tr>  <td> Lowell </td> <td align="right"> 60 </td> <td align="right">
+3 </td> <td align="right"> 58 </td> <td align="right"> 54 </td> </tr>
+  <tr>  <td> Loyal Heights </td> <td align="right"> 17 </td> <td
+align="right"> 58 </td> <td align="right"> 5 </td> <td align="right"> 7
+</td> </tr>
+  <tr>  <td> Madrona </td> <td align="right"> 52 </td> <td
+align="right"> 1 </td> <td align="right"> 47 </td> <td align="right"> 43
+</td> </tr>
+  <tr>  <td> Maple </td> <td align="right"> 19 </td> <td align="right">
+28 </td> <td align="right"> 31 </td> <td align="right"> 32 </td> </tr>
+  <tr>  <td> MLK Jr. </td> <td align="right"> 45 </td> <td
+align="right"> 8 </td> <td align="right"> 54 </td> <td align="right"> 58
+</td> </tr>
+  <tr>  <td> McDonald International </td> <td align="right"> 7 </td> <td
+align="right"> 30 </td> <td align="right"> 23 </td> <td align="right"> 2
+</td> </tr>
+  <tr>  <td> McGilvra </td> <td align="right"> 25 </td> <td
+align="right"> 40 </td> <td align="right"> 14 </td> <td align="right">
+11 </td> </tr>
+  <tr>  <td> Montlake </td> <td align="right"> 37 </td> <td
+align="right"> 51 </td> <td align="right"> 9 </td> <td align="right"> 16
+</td> </tr>
+  <tr>  <td> North Beach </td> <td align="right"> 14 </td> <td
+align="right"> 46 </td> <td align="right"> 13 </td> <td align="right">
+12 </td> </tr>
+  <tr>  <td> Northgate </td> <td align="right"> 51 </td> <td
+align="right"> 11 </td> <td align="right"> 50 </td> <td align="right">
+51 </td> </tr>
+  <tr>  <td> Olympic Hills </td> <td align="right"> 41 </td> <td
+align="right"> 34 </td> <td align="right"> 21 </td> <td align="right">
+30 </td> </tr>
+  <tr>  <td> Olympic View </td> <td align="right"> 27 </td> <td
+align="right"> 56 </td> <td align="right"> 32 </td> <td align="right">
+29 </td> </tr>
+  <tr>  <td> Queen Anne </td> <td align="right"> 28 </td> <td
+align="right"> 57 </td> <td align="right"> 28 </td> <td align="right">
+22 </td> </tr>
+  <tr>  <td> Rainier View </td> <td align="right"> 55 </td> <td
+align="right"> 21 </td> <td align="right"> 18 </td> <td align="right">
+26 </td> </tr>
+  <tr>  <td> Roxhill </td> <td align="right"> 56 </td> <td
+align="right"> 13 </td> <td align="right"> 53 </td> <td align="right">
+57 </td> </tr>
+  <tr>  <td> Sacajawea </td> <td align="right"> 36 </td> <td
+align="right"> 7 </td> <td align="right"> 42 </td> <td align="right"> 42
+</td> </tr>
+  <tr>  <td> Sand Point </td> <td align="right"> 47 </td> <td
+align="right"> 27 </td> <td align="right"> 39 </td> <td align="right">
+35 </td> </tr>
+  <tr>  <td> Sanislo </td> <td align="right"> 57 </td> <td
+align="right"> 12 </td> <td align="right"> 60 </td> <td align="right">
+59 </td> </tr>
+  <tr>  <td> Stevens </td> <td align="right"> 32 </td> <td
+align="right"> 29 </td> <td align="right"> 35 </td> <td align="right">
+31 </td> </tr>
+  <tr>  <td> Thornton Creek </td> <td align="right"> 18 </td> <td
+align="right"> 17 </td> <td align="right"> 41 </td> <td align="right">
+38 </td> </tr>
+  <tr>  <td> Thurgood Marshall </td> <td align="right"> 5 </td> <td
+align="right"> 39 </td> <td align="right"> 8 </td> <td align="right"> 18
+</td> </tr>
+  <tr>  <td> Van Asselt </td> <td align="right"> 59 </td> <td
+align="right"> 9 </td> <td align="right"> 51 </td> <td align="right"> 52
+</td> </tr>
+  <tr>  <td> Viewlands </td> <td align="right"> 40 </td> <td
+align="right"> 19 </td> <td align="right"> 44 </td> <td align="right">
+47 </td> </tr>
+  <tr>  <td> View Ridge </td> <td align="right"> 3 </td> <td
+align="right"> 52 </td> <td align="right"> 11 </td> <td align="right"> 5
+</td> </tr>
+  <tr>  <td> Wedgwood </td> <td align="right"> 11 </td> <td
+align="right"> 41 </td> <td align="right"> 7 </td> <td align="right"> 14
+</td> </tr>
+  <tr>  <td> West Seattle Elem </td> <td align="right"> 54 </td> <td
+align="right"> 23 </td> <td align="right"> 38 </td> <td align="right">
+46 </td> </tr>
+  <tr>  <td> West Woodland </td> <td align="right"> 13 </td> <td
+align="right"> 45 </td> <td align="right"> 17 </td> <td align="right"> 8
+</td> </tr>
+  <tr>  <td> Whittier </td> <td align="right"> 4 </td> <td
+align="right"> 60 </td> <td align="right"> 22 </td> <td align="right">
+27 </td> </tr>
+  <tr>  <td> Wing Luke </td> <td align="right"> 50 </td> <td
+align="right"> 18 </td> <td align="right"> 36 </td> <td align="right">
+39 </td> </tr>
+  <tr>  <td> Schmitz Park </td> <td align="right"> 62 </td> <td
+align="right"> 62 </td> <td align="right"> 62 </td> <td align="right">
+62 </td> </tr>
+</tbody>
+</table>
+
+
+<p>What jumps out most at me is that no particular school leads all the
+other schools consistently and it can make it challenging to decide what
+to prioritize when choosing a school.</p>
+
+<h1>Student/Teacher ratio</h1>
+
+<iframe src="http://zachstednick.com/student_teacher_ratio_map.html"
+height=850 width=520></iframe>
+
+
+<p>Click on an attendance area for the exact percentage.</p>
+
+<h1>Attendance</h1>
+
+<p>I was initially interested in student attendance, but the elementary
+school with the
+lowest daily attendance was Lowell Elementary with an attendance rate of
+89%. Every other school reported an attendance rate at or
+above 95% which did not make for a very interesting map. I later learned
+that Washington State has a compulsory
+attendance <a href="http://apps.leg.wa.gov/RCW/default.aspx?cite=28A.225">law</a>
+which likely affected these numbers.</p>
+
+<h1>Reading proficiency</h1>
+
+<p>I was interested in looking at reading achievement scores district-wide
+for 3rd
+graders as measured by the <a href="http://www.k12.wa.us/Assessment/StateTesting/default.aspx">Washington State proficiency
+test</a></p>
+
+<iframe src="http://zachstednick.com/grade3_reading_map.html" height=850
+width=520></iframe>
+
+
+<p>Click on an attendance area for the exact percentage.</p>
+
+<h1>Math proficiency</h1>
+
+<p>Similarly, I looked at math achievement scores district-wide for 3rd
+graders as measured by the <a href="http://www.k12.wa.us/Assessment/StateTesting/default.aspx">Washington State proficiency
+test</a></p>
+
+<iframe src="http://zachstednick.com/grade3_math_map.html" height=850
+width=520></iframe>
+
+
+<p>Click on an attendance area for the exact percentage.</p>
+
+<h1>Family engagement</h1>
+
+<p>SPS provides a parent survey with a variety of questions targeted at
+parent enthusiasm. The results of these surveys are not published but
+instead we can just look at how many families
+complete these surveys.</p>
+
+<iframe src="http://zachstednick.com/family_engagement_map.html"
+height=850 width=520></iframe>
+
+
+<p>Click on an attendance area for the exact percentage.</p>
+
+<p>The highest school reported that only 49.1% of families responded to the
+survey which to me means that most of the families are satisified with
+the school but not too excited or disappointed by their school.</p>
+
+<p><em>tl;dr</em> Choosing a school is hard but ultimately it comes down to how
+satisfied the parents or guardians are with the school. Schools report
+on a wide array of metrics about student performance,
+but student performance is often an issue of secondary importance when
+compared to parents&#8217; overall perception of the quality of a school.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-05-27T23:08:01-07:00" pubdate data-updated="true"></time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/schools/'>schools</a>, <a class='category' href='/blog/categories/seattle/'>seattle,</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -1251,80 +1623,6 @@ to Westlake Ave &amp; 6th Ave:</p>
 
 
 	<a class='category' href='/blog/categories/pronto-biking-seattle-r/'>pronto,biking,seattle,r</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2017/03/07/have-there-been-more-upsets-in-the-ncaa-tournament-recently/">
-		
-			Have There Been More Upsets in the NCAA Tournament Recently?</a>
-	</h2>
-	<div class="entry-content">
-		<p>I have been following the <a href="https://en.wikipedia.org/wiki/NCAA_Division_I_Men%27s_Basketball_Tournament">NCAA Men&rsquo;s Basketball
-Tournament</a>
-for as long
-as I can remember and with Selection Sunday coming up, I wondered if
-there
-have been more or less upsets in recent tournaments. To look at this
-visually I used a hypothetical perfect bracket as a reference (i.e. #1
-seed beats #16 seed, #2 seed beats #15 seed all the way to #1 seed beating a #2 seed). I
-took the sum of all the winning seed numbers at each round in the
-Regional Tournament and used that as the denominator
-for comparison with the other Regional Tournaments for that particular
-year.</p>
-
-<p>I went back in time as far as I could but the <a href="https://en.wikipedia.org/wiki/2007_NCAA_Division_I_Men's_Basketball_Tournament">2007
-Tournament</a>
-finally harmonized the names of the Regional tournaments with the names
-East, West, South, and
-Midwest which made for easier comparison across years.</p>
-
-<p><img src="http://zachstednick.com/NCAA_by_region.png"></p>
-
-<p>Clearly there have been quite a lot of upsets in the past ten years
-especially within the Midwest Region.</p>
-
-<p>I then went back and looked at all games back to 1985 when
-the Tournament first expanded to 64 teams. For this I did not have all
-the Regional Tournament information so I just looked at all the games
-(except the Final Four).</p>
-
-<p><img src="http://zachstednick.com/NCAA_all_by_year.png"></p>
-
-<p>The aggregate data is pretty volatile year over year as well with a low
-in
-<a href="https://en.wikipedia.org/wiki/2007_NCAA_Division_I_Men's_Basketball_Tournament">2007</a>. If anything, this shows we should be in for another great year of NCAA tournament basketball complete with some (hopefully many) exciting upsets.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2017-03-07T13:19:58-08:00" pubdate data-updated="true"></time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/r-basketball/'>r,basketball</a>
 
 
 </div>
