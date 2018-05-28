@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2018-05-27T23:09:01-07:00</updated>
+  <updated>2018-05-27T23:13:46-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -286,11 +286,14 @@ to prioritize when choosing a school.</p>
 
 <h1>Student/Teacher ratio</h1>
 
+<p>Each school reports the number of enrolled students and the number of
+teachers which I simply used to calculate a ratio.</p>
+
+<p><em>Click on an attendance area for the exact percentage.</em></p>
+
 <iframe src="http://zachstednick.com/student_teacher_ratio_map.html"
 height=850 width=520></iframe>
 
-
-<p>Click on an attendance area for the exact percentage.</p>
 
 <h1>Attendance</h1>
 
@@ -310,11 +313,11 @@ for 3rd
 graders as measured by the <a href="http://www.k12.wa.us/Assessment/StateTesting/default.aspx">Washington State proficiency
 test</a></p>
 
+<p><em>Click on an attendance area for the exact percentage.</em></p>
+
 <iframe src="http://zachstednick.com/grade3_reading_map.html" height=850
 width=520></iframe>
 
-
-<p>Click on an attendance area for the exact percentage.</p>
 
 <h1>Math proficiency</h1>
 
@@ -322,11 +325,11 @@ width=520></iframe>
 graders as measured by the <a href="http://www.k12.wa.us/Assessment/StateTesting/default.aspx">Washington State proficiency
 test</a></p>
 
+<p><em>Click on an attendance area for the exact percentage.</em></p>
+
 <iframe src="http://zachstednick.com/grade3_math_map.html" height=850
 width=520></iframe>
 
-
-<p>Click on an attendance area for the exact percentage.</p>
 
 <h1>Family engagement</h1>
 
@@ -335,11 +338,11 @@ parent enthusiasm. The results of these surveys are not published but
 instead we can just look at how many families
 complete these surveys.</p>
 
+<p><em>Click on an attendance area for the exact percentage.</em></p>
+
 <iframe src="http://zachstednick.com/family_engagement_map.html"
 height=850 width=520></iframe>
 
-
-<p>Click on an attendance area for the exact percentage.</p>
 
 <p>The highest school reported that only 49.1% of families responded to the
 survey which to me means that most of the families are satisified with
