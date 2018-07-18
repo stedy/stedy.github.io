@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2018-05-27T23:23:33-07:00</updated>
+  <updated>2018-07-18T13:22:20-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Should Seattle convert public golf courses into land for housing?]]></title>
+    <link href="http://stedy.github.io/blog/2018/07/18/should-seattle-convert-public-golf-courses-into-land-for-housing/"/>
+    <updated>2018-07-18T13:19:56-07:00</updated>
+    <id>http://stedy.github.io/blog/2018/07/18/should-seattle-convert-public-golf-courses-into-land-for-housing</id>
+    <content type="html"><![CDATA[<p>Like many other metropolitan areas, Seattle is currently dealing with a
+serious housing shortage. Recently, there have been some good articles
+(<a href="https://seattletransitblog.com/2018/06/11/west-seattle-can-tunnel-housing/">here</a>
+and
+<a href="https://fancybeans.com/2018/01/27/what-is-a-housing-emergency-really/">here</a>)
+about converting public golf
+courses into housing. It is an interesting concept and certainly should
+be discussed, however one aspect I feel is being overlooked in this
+debate
+is how popular are these golf courses anyways? According to Bloomberg
+News, there is <a href="https://www.bloomberg.com/gadfly/articles/2017-05-25/off-for-a-round-of-golf-this-weekend-didn-t-think-so">declining interest in golf
+nationwide</a>,
+is this happening in
+Seattle?</p>
+
+<p>The City of Seattle is somewhat
+aware of this issue and is at least discussing
+<a href="https://www.seattle.gov/Documents/Departments/ParksAndRecreation/BriefingPapers/Golf%20Park%20Board%20Briefing%20Paper%20Final%202-6-18.pdf">options</a>
+for the golf courses. I filed a <a href="http://www.seattle.gov/public-records">Public Records
+Request</a> act
+with the City of Seattle and they sent me data on the rounds of golf
+played for
+the past three years.</p>
+
+<p>Unfortunately the city only provided the count data for number of
+rounds of golf played per year so I cannot look at more granular trends.
+However, I can plot the counts on an annual basis.</p>
+
+<p><img src="http://zachstednick.com/seattle_golf_counts.png"></p>
+
+<p>It will be interesting to see if this debate both on converting public
+golf
+courses to housing goes anywhere both in Seattle and other major cities.
+I don&rsquo;t have a horse in this
+particular race, I live near the <a href="http://premiergc.com/-jefferson-park-golf-course">Jefferson
+Park course</a> and I
+really appreciate the large
+expanse of green it provides however I am acutely aware of the need for
+more housing within Seattle city limits.</p>
+
+<p>Interested in taking a look? I put the full data I got from the city
+<a href="https://github.com/stedy/city_of_seattle_golf_counts">here</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A visual ranking of Seattle public elementary schools]]></title>
@@ -1635,107 +1685,6 @@ according to Google Maps I only have 14832.8 miles to go.</p>
 
 <p>My code for this lives
 <a href="https://github.com/stedy/blog-supplemental">here</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Super Bowl Sunday at Chuck's]]></title>
-    <link href="http://stedy.github.io/blog/2016/02/13/super-bowl-sunday-at-chucks/"/>
-    <updated>2016-02-13T20:58:15-08:00</updated>
-    <id>http://stedy.github.io/blog/2016/02/13/super-bowl-sunday-at-chucks</id>
-    <content type="html"><![CDATA[<p>In the same vein as my previous post on <a href="http://zachstednick.name/blog/2016/01/31/weekend-at-chucks/">beer sales analysis</a> at <a href="http://chucks85th.com/">Chuck&rsquo;s Hop Shop</a>, I wanted to make a similar analysis but this time focus on Super Bowl Sunday sales. Similar to last time, I made a few assumptions:</p>
-
-<ul>
-<li>A keg is on tap until it is empty.</li>
-<li>Each keg only serves pints of beer.</li>
-<li>A pint is the only unit served (ie no 8 oz. pours).</li>
-</ul>
-
-
-<p>Anyways, here is a brief summary of beers on tap for the shortest amount
-of
-time on Sunday:</p>
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">Brewery      </th>
-<th style="text-align:left;">Beer     </th>
-<th style="text-align:left;">Hours on tap </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">Cloudburst    </td>
-<td style="text-align:left;">Psycho Hose Beast&hellip;    </td>
-<td style="text-align:left;">  0.25</td>
-</tr>
-<tr>
-<td style="text-align:left;">Iron Fist     </td>
-<td style="text-align:left;">Mint Chocolate Im&hellip;    </td>
-<td style="text-align:left;">  1.00</td>
-</tr>
-<tr>
-<td style="text-align:left;">Ballast Point </td>
-<td style="text-align:left;">Watermelon Dorado&hellip;    </td>
-<td style="text-align:left;">  1.00</td>
-</tr>
-<tr>
-<td style="text-align:left;">Wander        </td>
-<td style="text-align:left;">Wanderale, Belgia&hellip;    </td>
-<td style="text-align:left;">  1.25</td>
-</tr>
-<tr>
-<td style="text-align:left;">Sound         </td>
-<td style="text-align:left;">Humonkulous IIIPA       </td>
-<td style="text-align:left;">  1.25</td>
-</tr>
-<tr>
-<td style="text-align:left;">Cloudburst    </td>
-<td style="text-align:left;">Saison W/Grapefru&hellip;    </td>
-<td style="text-align:left;">  1.25</td>
-</tr>
-<tr>
-<td style="text-align:left;">Victory       </td>
-<td style="text-align:left;">Prima Pilsner           </td>
-<td style="text-align:left;">  1.75</td>
-</tr>
-<tr>
-<td style="text-align:left;">Commons       </td>
-<td style="text-align:left;">Holden Saison           </td>
-<td style="text-align:left;">  2.00</td>
-</tr>
-<tr>
-<td style="text-align:left;">Seattle Cider </td>
-<td style="text-align:left;">Semi-Sweet Cider        </td>
-<td style="text-align:left;">  3.00</td>
-</tr>
-<tr>
-<td style="text-align:left;">Deschutes     </td>
-<td style="text-align:left;">Abyss &lsquo;15  &frac12; Pint     </td>
-<td style="text-align:left;">  3.00</td>
-</tr>
-</tbody>
-</table>
-
-
-<h1>Time on tap vs. ABV</h1>
-
-<p>Did beer with higher ABV sell faster?</p>
-
-<p><img src="http://zachstednick.com/SB_abv_count.png"></p>
-
-<h1>Time on tap vs. cost</h1>
-
-<p>Did more expensive beer sell faster?</p>
-
-<p><img src="http://zachstednick.com/SB_cost_count.png"></p>
-
-<h1>What does the relation between cost per pint and ABV look like?</h1>
-
-<p><img src="http://zachstednick.com/SB_labeled.png"></p>
-
-<p>Once again, all code lives <a href="https://github.com/stedy/chucks-beer-db">here</a></p>
 ]]></content>
   </entry>
   

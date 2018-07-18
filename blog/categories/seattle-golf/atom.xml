@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: seattle,golf | Zach Stednick]]></title>
+  <link href="http://stedy.github.io/blog/categories/seattle-golf/atom.xml" rel="self"/>
+  <link href="http://stedy.github.io/"/>
+  <updated>2018-07-18T13:22:20-07:00</updated>
+  <id>http://stedy.github.io/</id>
+  <author>
+    <name><![CDATA[Zach Stednick]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Should Seattle convert public golf courses into land for housing?]]></title>
+    <link href="http://stedy.github.io/blog/2018/07/18/should-seattle-convert-public-golf-courses-into-land-for-housing/"/>
+    <updated>2018-07-18T13:19:56-07:00</updated>
+    <id>http://stedy.github.io/blog/2018/07/18/should-seattle-convert-public-golf-courses-into-land-for-housing</id>
+    <content type="html"><![CDATA[<p>Like many other metropolitan areas, Seattle is currently dealing with a
+serious housing shortage. Recently, there have been some good articles
+(<a href="https://seattletransitblog.com/2018/06/11/west-seattle-can-tunnel-housing/">here</a>
+and
+<a href="https://fancybeans.com/2018/01/27/what-is-a-housing-emergency-really/">here</a>)
+about converting public golf
+courses into housing. It is an interesting concept and certainly should
+be discussed, however one aspect I feel is being overlooked in this
+debate
+is how popular are these golf courses anyways? According to Bloomberg
+News, there is <a href="https://www.bloomberg.com/gadfly/articles/2017-05-25/off-for-a-round-of-golf-this-weekend-didn-t-think-so">declining interest in golf
+nationwide</a>,
+is this happening in
+Seattle?</p>
+
+<p>The City of Seattle is somewhat
+aware of this issue and is at least discussing
+<a href="https://www.seattle.gov/Documents/Departments/ParksAndRecreation/BriefingPapers/Golf%20Park%20Board%20Briefing%20Paper%20Final%202-6-18.pdf">options</a>
+for the golf courses. I filed a <a href="http://www.seattle.gov/public-records">Public Records
+Request</a> act
+with the City of Seattle and they sent me data on the rounds of golf
+played for
+the past three years.</p>
+
+<p>Unfortunately the city only provided the count data for number of
+rounds of golf played per year so I cannot look at more granular trends.
+However, I can plot the counts on an annual basis.</p>
+
+<p><img src="http://zachstednick.com/seattle_golf_counts.png"></p>
+
+<p>It will be interesting to see if this debate both on converting public
+golf
+courses to housing goes anywhere both in Seattle and other major cities.
+I don&rsquo;t have a horse in this
+particular race, I live near the <a href="http://premiergc.com/-jefferson-park-golf-course">Jefferson
+Park course</a> and I
+really appreciate the large
+expanse of green it provides however I am acutely aware of the need for
+more housing within Seattle city limits.</p>
+
+<p>Interested in taking a look? I put the full data I got from the city
+<a href="https://github.com/stedy/city_of_seattle_golf_counts">here</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>
