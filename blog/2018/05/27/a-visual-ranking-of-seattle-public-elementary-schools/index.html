@@ -8,8 +8,8 @@
 
 	
 	<meta name="description" content="One of the things people consistently tell me when they are
-considering buying or renting a house/apartment in a new location is
-that they want to &hellip;">
+considering buying or renting a home in a new location is
+that they want to move &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -82,23 +82,22 @@ that they want to &hellip;">
 	<div id="content" class="inner"><article class="post">
 	<h2 class="title">A Visual Ranking of Seattle Public Elementary Schools</h2>
 	<div class="entry-content"><p>One of the things people consistently tell me when they are
-considering buying or renting a house/apartment in a new location is
-that they want to move somewhere with &ldquo;good schools&rdquo;. This always maks
-me think what is a &ldquo;good
-school&rdquo; and more importantly, how do we quantify what schools are
-considered &ldquo;good&rdquo;? Generally this
-means using some sort of list of school data summarized in a fact sheet
-from a realtor/apartment manager or more likely using a
-websearch that results in sites such as
+considering buying or renting a home in a new location is
+that they want to move somewhere with &ldquo;good schools.&rdquo; This always makes
+me wonder how we quantify what schools are
+considered &ldquo;good&rdquo;? To start you might look for information on school
+reputations or performance using local school data fact sheets from
+realtors or apartment managers or, more likely, by searching ranking and
+review sites such as
 <a href="https://www.niche.com/k12/thurgood-marshall-elementary-school-seattle-wa/">Niche</a>.
 This approach is generally fine but it assumes that you are only
 interested in a specific neighborhood which may be difficult to achieve
 right now in most major cities across the US and especially in
 <a href="https://www.seattletimes.com/business/real-estate/new-home-price-records-777000-in-seattle-950000-on-the-eastside/">Seattle</a>.</p>
 
-<p>What if instead we looked at school ratings in all neighborhoods
-simultaneously in a city? This would
-allow the user to spot trends and make some visual comparisons as well
+<p>What if instead we looked at all the neighborhood school ratings in a
+city simultaneously? This would
+allow the reader to spot trends and make visual comparisons as well
 as possibly identify overperforming schools in unexpected areas.
 Fortunately, Seattle Public Schools (SPS) provides quite a lot of
 <a href="https://www.seattleschools.org/cms/One.aspx?portalId=627&amp;pageId=6369011">data</a>
@@ -107,10 +106,10 @@ about their schools which makes this easy to visualize.</p>
 <h1>Setup</h1>
 
 <ul>
-<li><p>For this analysis I just used the SPS data for the 2016-17 school
+<li><p>For this analysis I just the SPS data for the 2016-17 school
 year.</p></li>
 <li><p>I focused solely on elementary school data for the 2016-17
-school year. I used the SPS district boundary map for all elementary
+school year. I used the SPS district boundary map for all public elementary
 schools in the City of Seattle and ignored any magnet or alternative
 elementary schools.</p></li>
 </ul>
@@ -118,15 +117,18 @@ elementary schools.</p></li>
 
 <h1>Rankings</h1>
 
-<p>My initial questions were focused on what school has the best
-student/teacher ratio? What
-school has the best attendance and what schools are good for reading and
-math?</p>
+<p>Initially I focused on three questions:</p>
 
-<p>I took the student/teacher ratio, attendance rate, and reading and math
-proficiency scores for each school and calculated the rank of that
-school
-within the city and made this table. Click on the category name to sort
+<ul>
+<li>What school has the best student/teacher ratio?</li>
+<li>What school reports the best attendance?</li>
+<li>What schools are best for reading and math?</li>
+</ul>
+
+
+<p>I took the SPS data for student/teacher ratio, attendance rate, and reading and math
+proficiency scores for each school and calculated their rank
+within the city to make this table. Click on the category name to sort
 by that category.</p>
 
 <p><link rel="stylesheet" type="text/css"
@@ -343,8 +345,8 @@ align="right"> 62 </td> <td align="right"> 62 </td> <td align="right">
 </table>
 
 
-<p>What jumps out most at me is that no particular school leads all the
-other schools consistently and it can make it challenging to decide what
+<p>What jumps out at me most is that no particular school consistently
+out-performs the others, which can make it challenging to decide what
 to prioritize when choosing a school.</p>
 
 <h1>Student/Teacher ratio</h1>
@@ -360,7 +362,7 @@ height=850 width=520></iframe>
 
 <h1>Attendance</h1>
 
-<p>I was initially interested in student attendance, but the elementary
+<p>I was initially interested in student attendance data, but the elementary
 school with the
 lowest daily attendance was Lowell Elementary with an attendance rate of
 89%. Every other school reported an attendance rate at or
@@ -371,10 +373,12 @@ which likely affected these numbers.</p>
 
 <h1>Reading proficiency</h1>
 
-<p>I was interested in looking at reading achievement scores district-wide
+<p>I was interested in looking at district-wide third grade reading achievement scores district-wide
 for 3rd
 graders as measured by the <a href="http://www.k12.wa.us/Assessment/StateTesting/default.aspx">Washington State proficiency
-test</a></p>
+test</a>. I
+chose third grade because that is the first year a Washington State standardized test is
+administered for reading.</p>
 
 <p><em>Click on an attendance area for the exact percentage.</em></p>
 
@@ -384,8 +388,8 @@ width=520></iframe>
 
 <h1>Math proficiency</h1>
 
-<p>Similarly, I looked at math achievement scores district-wide for 3rd
-graders as measured by the <a href="http://www.k12.wa.us/Assessment/StateTesting/default.aspx">Washington State proficiency
+<p>Similarly, I looked at the district-wide third grade
+math achievement scores as measured by the <a href="http://www.k12.wa.us/Assessment/StateTesting/default.aspx">Washington State proficiency
 test</a></p>
 
 <p><em>Click on an attendance area for the exact percentage.</em></p>
@@ -396,10 +400,9 @@ width=520></iframe>
 
 <h1>Family engagement</h1>
 
-<p>SPS provides a parent survey with a variety of questions targeted at
-parent enthusiasm. The results of these surveys are not published but
-instead we can just look at how many families
-complete these surveys.</p>
+<p>SPS provides a parent survey with a variety of questions evaluating
+parent enthusiasm and approval of Seattle schools. These survey results are not published, so I looked at how many families
+completed these surveys for the 2016-17 school year.</p>
 
 <p><em>Click on an attendance area for the exact percentage.</em></p>
 
@@ -407,15 +410,15 @@ complete these surveys.</p>
 height=850 width=520></iframe>
 
 
-<p>The highest school reported that only 49.1% of families responded to the
-survey which to me means that most of the families are satisified with
-the school but not too excited or disappointed by their school.</p>
+<p>Even the school with the most responses reported that only 49.1% of families responded to the
+survey which to me means that most families are satisfied with
+their school but neither especially excited or disappointed by their school experiences.</p>
 
 <p><strong>tl;dr</strong> Choosing a school is hard but ultimately it comes down to how
 satisfied the parents or guardians are with the school. Schools report
 on a wide array of metrics about student performance,
-but student performance is often an issue of secondary importance when
-compared to parents&#8217; overall perception of the quality of a school.</p>
+but performance is often an issue of secondary importance when
+compared to parents&#8217; overall perception of the school quality.</p>
 </div>
 
 
