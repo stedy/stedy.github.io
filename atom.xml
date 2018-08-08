@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2018-08-08T16:07:27-07:00</updated>
+  <updated>2018-08-08T16:12:37-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -24,7 +24,7 @@ August 7, 2018. As a
 registered voter in Washington State I am mailed a <a href="https://www.sos.wa.gov/elections/research/2018-voters-pamphlet.aspx">Voter&rsquo;s Information
 Pamphlet</a>
 which lists the candidates and a Candidate
-Statement (provided by the candidate) for each race. The Candidate
+Statement (provided by the candidate) for each office. The Candidate
 Statement is where the candidate is allowed to write anything they want
 as long as its under 300 words. I was curious if there was any
 relationship between the sentiment of a candidate&rsquo;s Statement and the
@@ -38,7 +38,7 @@ many word groups to choose from such as &ldquo;joy&rdquo; and &ldquo;trust&rdquo
 analysis I just looked at &ldquo;positive&rdquo; and &ldquo;negative&rdquo; words (as classified
 by <a href="http://www.saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm">NRC</a>.</p>
 
-<p>Altough there were multiple races in this Primary with many candidates,
+<p>Although there were multiple races in this Primary with many candidates,
 the U.S. Senate race had 29 candidates which made for a very rich
 dataset. Washington State uses a <a href="https://en.wikipedia.org/wiki/Nonpartisan_blanket_primary">Top-Two
 Primary</a>
