@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: r,politics | Zach Stednick]]></title>
+  <link href="http://stedy.github.io/blog/categories/r-politics/atom.xml" rel="self"/>
+  <link href="http://stedy.github.io/"/>
+  <updated>2018-08-08T16:01:38-07:00</updated>
+  <id>http://stedy.github.io/</id>
+  <author>
+    <name><![CDATA[Zach Stednick]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sentiment analysis of Candidate Statements by Senate candidates]]></title>
+    <link href="http://stedy.github.io/blog/2018/08/08/sentiment-analysis-of-candidate-statements-by-senate-candidates/"/>
+    <updated>2018-08-08T16:00:05-07:00</updated>
+    <id>http://stedy.github.io/blog/2018/08/08/sentiment-analysis-of-candidate-statements-by-senate-candidates</id>
+    <content type="html"><![CDATA[<p>The <a href="https://www.sos.wa.gov/elections/calendar.aspx">2018 Washington State
+Primary</a> was held on
+August 7, 2018. As a
+registered voter in Washington State I am mailed a <a href="https://www.sos.wa.gov/elections/research/2018-voters-pamphlet.aspx">Voter&rsquo;s Information
+Pamphlet</a>
+which lists the candidates and a Candidate
+Statement (provided by the candidate) for each race. The Candidate
+Statement is where the candidate is allowed to write anything they want
+as long as its under 300 words. I was curious if there was any
+relationship between the sentiment of a candidate&rsquo;s Statement and the
+number of votes
+that candidate received.</p>
+
+<p>I conducted my analysis using sentiment analysis which groups words
+together based on
+pre-defined lists of words that are members of that group. There are
+many word groups to choose from such as &ldquo;joy&rdquo; and &ldquo;trust&rdquo; but for this
+analysis I just looked at &ldquo;positive&rdquo; and &ldquo;negative&rdquo; words (as classified
+by <a href="http://www.saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm">NRC</a>.</p>
+
+<p>Altough there were multiple races in this Primary with many candidates,
+the U.S. Senate race had 29 candidates which made for a very rich
+dataset. Washington State uses a <a href="https://en.wikipedia.org/wiki/Nonpartisan_blanket_primary">Top-Two
+Primary</a>
+which allows for easy comparison across political parties.</p>
+
+<p>There are many factors deliberately ignored by this analysis such as
+<a href="https://en.wikipedia.org/wiki/Cook_Partisan_Voting_Index">PVI</a>,
+incumbency, political party, and candidate issues. However I thought
+text mining could
+be an interesting way to analyze these candidates in a slightly
+different manner.</p>
+
+<p>First I just plotted the number of positive words in the Candidate
+Statement by candidate:</p>
+
+<p><img src="http://zachstednick.com/WA_candidate_positive.png"></p>
+
+<p>Then I repeated with the number of negative words in the Candidate
+Statement by candidate:</p>
+
+<p><img src="http://zachstednick.com/WA_candidate_negative.png"></p>
+
+<p>Next I looked at the number of positive words in the Candidate Statement
+by candidate versus the number of votes that candidate received. Because
+of the strength of the Democratic incumbent candidate <a href="https://ballotpedia.org/Maria_Cantwell">Maria
+Cantwell</a> and the Republican
+establishment candidate <a href="https://ballotpedia.org/Susan_Hutchison">Susan
+Hutchison</a> I had to
+log-transform the vote counts because these two canidates got so much of
+the total vote.</p>
+
+<p><img src="http://zachstednick.com/WA_candidate_positive_vote_count.png"></p>
+
+<p>Then I repeated this analysis by votes for negative words:</p>
+
+<p><img src="http://zachstednick.com/WA_candidate_negative_vote_count.png"></p>
+
+<p>While I don&rsquo;t think this will lead to any amazing political insights, I
+do think its an interesting way to look at candidates. Full code
+including individual candidate statements available
+<a href="https://github.com/stedy/candidate_sentiment_analysis">here</a></p>
+]]></content>
+  </entry>
+  
+</feed>
