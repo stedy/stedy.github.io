@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2018-08-08T16:01:38-07:00</updated>
+  <updated>2018-08-08T16:07:27-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -67,16 +67,16 @@ of the strength of the Democratic incumbent candidate <a href="https://ballotped
 Cantwell</a> and the Republican
 establishment candidate <a href="https://ballotpedia.org/Susan_Hutchison">Susan
 Hutchison</a> I had to
-log-transform the vote counts because these two canidates got so much of
+<a href="https://en.wikipedia.org/wiki/Logarithm">log-transform</a> the vote counts because these two candidates got so much of
 the total vote.</p>
 
 <p><img src="http://zachstednick.com/WA_candidate_positive_vote_count.png"></p>
 
-<p>Then I repeated this analysis by votes for negative words:</p>
+<p>Then I repeated this analysis by looking at votes for negative words:</p>
 
 <p><img src="http://zachstednick.com/WA_candidate_negative_vote_count.png"></p>
 
-<p>While I don&rsquo;t think this will lead to any amazing political insights, I
+<p>While I don&rsquo;t think this will lead to any novel political insights, I
 do think its an interesting way to look at candidates. Full code
 including individual candidate statements available
 <a href="https://github.com/stedy/candidate_sentiment_analysis">here</a></p>
