@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2018-08-08T16:18:55-07:00</updated>
+  <updated>2018-10-01T21:35:06-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A quick look at the Seattle Mariners 2018 attendance]]></title>
+    <link href="http://stedy.github.io/blog/2018/10/01/a-quick-look-at-the-seattle-mariners-2018-attendance/"/>
+    <updated>2018-10-01T21:33:20-07:00</updated>
+    <id>http://stedy.github.io/blog/2018/10/01/a-quick-look-at-the-seattle-mariners-2018-attendance</id>
+    <content type="html"><![CDATA[<p>On September 17, 2018, the King County council <a href="https://mkcclegisearch.kingcounty.gov/LegislationDetail.aspx?ID=3585391&amp;GUID=4C4DA409-D946-4189-AF23-59682F4FEF44&amp;Options=Advanced&amp;Search=">voted
+5-4</a>
+to allow for a
+new funding agreement between King County and sports stadiums such as
+<a href="https://en.wikipedia.org/wiki/Safeco_Field">Safeco Field</a>. There have
+already
+been challenges
+to the legislation and it may appear as a
+<a href="https://komonews.com/news/local/residents-could-get-to-vote-whether-safeco-field-gets-its-135-million-in-county-funding">petition</a>
+on the ballot soon.</p>
+
+<p>The 2018 season was unusually successful for the Mariners, and while
+they are again sitting out the Playoffs this season I did wonder what
+attendance looked like this year.</p>
+
+<p><img src="http://zachstednick.com/Mariners_Attendance_2018.png"></p>
+
+<p>I added two lines to this plot, one for maximum attendance (currently
+47,715 according to
+<a href="https://en.wikipedia.org/wiki/Safeco_Field#Seating_capacity">Wikipedia</a>)
+and one for mean attendance which was 28,389 this year. This means that
+we have a
+stadium that is on average about 60% full for any game for a team that
+competed for a
+Playoff spot until the very end of the
+<a href="https://www.seattletimes.com/sports/mariners/robinson-cano-breaks-out-bat-as-mariners-score-season-high-13-runs-to-bash-rangers/">season</a>.
+Is that really the best use of this money?</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Sentiment analysis of Candidate Statements by Senate candidates]]></title>
@@ -1663,54 +1698,6 @@ will result in further usage.</p>
 
 <p>Data from Table 1.1 from Poor Numbers and full code available at this
 <a href="https://gist.github.com/stedy/59fe24c6b5ab02a870d2584e4ce89ef9">gist</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Changes in NPS visits over time with D3]]></title>
-    <link href="http://stedy.github.io/blog/2016/06/05/changes-in-nps-visits-over-time-with-d3/"/>
-    <updated>2016-06-05T11:24:26-07:00</updated>
-    <id>http://stedy.github.io/blog/2016/06/05/changes-in-nps-visits-over-time-with-d3</id>
-    <content type="html"><![CDATA[<p>This year is the 100th anniversary of the National Park Service and I
-was curious about how park attendance had changed recently. Andrew
-Flowers of FiveThirtyEight had a nice
-<a href="http://fivethirtyeight.com/features/the-national-parks-have-never-been-more-popular/">overview</a>
-using official <a href="https://irma.nps.gov/Stats/Reports/National">NPS data</a>.
-The article was interesting but contrary to most of FiveThirtyEight&rsquo;s
-pieces there was a stunning lack of interactivity in what I felt was the
-main figure of the piece</p>
-
-<p><img src="http://i2.wp.com/espnfivethirtyeight.files.wordpress.com/2016/05/flowers-national-parks-4.png?quality=90&strip=all&w=575&ssl=1"></p>
-
-<p>I remade the figure using that same data but just focusong on 2006 until
-2015 and basically the popular parks stay popular and vice versa:</p>
-
-<iframe src="http://zachstednick.com/rankNP.html" marginwidth="0" marginheight="0" style="height:500px; width:1060px;" scrolling="no"></iframe>
-
-
-<p>Basically, Great Smoky Mountains NP has dominated attendance since its
-creation but what other parks have recently become popular? I used
-<a href="https://d3js.org/">D3</a> to make a simple line plot that allowed for
-interactively exploring park attendance based on year over year change
-from the mean attendance over the last ten years:</p>
-
-<iframe src="http://zachstednick.com/deltaNP.html" marginwidth="0" marginheight="0" style="height:500px; width:1060px;" scrolling="no"></iframe>
-
-
-<p>Clearly a spike in recent years - maybe due to lower gas prices or
-increased popularity of social media?</p>
-
-<p>Also, I was curious about what the trend looked like for the National
-Monuments.</p>
-
-<iframe src="http://zachstednick.com/deltaNM.html" marginwidth="0" marginheight="0" style="height:500px; width:1060px;" scrolling="no"></iframe>
-
-
-<p>The most immediate trend that jumps out is the effect of the
-<a href="https://en.wikipedia.org/wiki/Statue_of_Liberty#Closures_and_reopening_.282001.E2.80.93present.29">closing</a> of the <a href="https://www.nps.gov/stli/index.htm">Statue of Liberty</a> in 2011 which indirectly caused a slowdown in visits to <a href="https://www.nps.gov/cacl/index.htm">Castle Clinton</a>.</p>
-
-<p>I aim to visit some new parks and monuments this summer and hopefully
-looking at the data like this will help me avoid the crowds.</p>
 ]]></content>
   </entry>
   
