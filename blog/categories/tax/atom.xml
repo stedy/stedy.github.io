@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: tax | Zach Stednick]]></title>
+  <link href="http://stedy.github.io/blog/categories/tax/atom.xml" rel="self"/>
+  <link href="http://stedy.github.io/"/>
+  <updated>2018-11-10T21:53:18-08:00</updated>
+  <id>http://stedy.github.io/</id>
+  <author>
+    <name><![CDATA[Zach Stednick]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A visual comparison of votes for two carbon tax initiatives]]></title>
+    <link href="http://stedy.github.io/blog/2018/11/10/a-visual-comparison-of-votes-for-two-carbon-tax-initiatives/"/>
+    <updated>2018-11-10T21:52:00-08:00</updated>
+    <id>http://stedy.github.io/blog/2018/11/10/a-visual-comparison-of-votes-for-two-carbon-tax-initiatives</id>
+    <content type="html"><![CDATA[<p>In 2016 and 2018, Washington State voters were presented two different
+carbon tax measures in the General Election. A full comparison of both
+proposals is
+<a href="http://carbonwa.org/1631-compare-recent-carbon-pricing-proposals-washington-state/">here</a>.
+While neither passed, I was curious how the Yes vote looked for both
+Propositions.</p>
+
+<p>Map of percentage of Yes votes for Initiative 732 (General Election
+2016):</p>
+
+<iframe src="http://zachstednick.com/map_732.html" height=500 width=520></iframe>
+
+
+<p>Hover mouse over county for percentage.</p>
+
+<p>Map of percentage of Yes votes for Initiative 1631 (General Election
+2018):</p>
+
+<iframe src="http://zachstednick.com/map_1631.html" height=500 width=520></iframe>
+
+
+<p>Hover mouse over county for percentage.</p>
+
+<p>Overall net change in Yes votes from Initiative 732 to Initiative 1631 as a percentage of the whole by County:</p>
+
+<iframe src="http://zachstednick.com/diff_map.html" height=500 width=620></iframe>
+
+
+<p>Hover mouse over county for percentage.</p>
+]]></content>
+  </entry>
+  
+</feed>
