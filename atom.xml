@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2018-11-27T16:15:18-08:00</updated>
+  <updated>2018-11-27T16:20:58-08:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -18,35 +18,29 @@
     <link href="http://stedy.github.io/blog/2018/11/10/a-visual-comparison-of-votes-for-two-carbon-tax-initiatives/"/>
     <updated>2018-11-10T21:52:00-08:00</updated>
     <id>http://stedy.github.io/blog/2018/11/10/a-visual-comparison-of-votes-for-two-carbon-tax-initiatives</id>
-    <content type="html"><![CDATA[<p>In 2016 and 2018, Washington State voters were presented two different
-carbon tax measures in the General Election. A full comparison of both
+    <content type="html"><![CDATA[<p>Washington State voters were presented two different
+carbon tax initiatives in the General Elections of 2016 and 2018. A full comparison of both
 proposals is
 <a href="http://carbonwa.org/1631-compare-recent-carbon-pricing-proposals-washington-state/">here</a>.
 While neither passed, I was curious how the Yes vote looked for both
-Propositions.</p>
+Initiatives.</p>
 
 <p>Map of percentage of Yes votes for Initiative 732 (General Election
-2016):</p>
+2016), hover mouse cursor over county for exact Yes percentage.</p>
 
 <iframe src="http://zachstednick.com/map_732.html" height=500 width=520></iframe>
 
 
-<p>(Hover mouse over county for exact percentage)</p>
-
 <p>Map of percentage of Yes votes for Initiative 1631 (General Election
-2018):</p>
+2018):i\, hover mouse cursor over county for exact Yes percentage.</p>
 
 <iframe src="http://zachstednick.com/map_1631.html" height=500 width=520></iframe>
 
 
-<p>Hover mouse over county for percentage.</p>
-
-<p>Overall net change in Yes votes from Initiative 732 to Initiative 1631 as a percentage of the whole by County. The more red counties are where Initiative 732 was favored more while the more blue counties are where Initiative 1631 was favored more.</p>
+<p>Overall net change in Yes votes from Initiative 732 to Initiative 1631 as a percentage of the whole by county. The more red counties are where Initiative 732 was favored more while the more blue counties are where Initiative 1631 was favored more. Hover mouse cursor over county for net difference between Yes votes for both Initiatives.</p>
 
 <iframe src="http://zachstednick.com/diff_map.html" height=500 width=620></iframe>
 
-
-<p>(Hover mouse over county for percentage)</p>
 ]]></content>
   </entry>
   
