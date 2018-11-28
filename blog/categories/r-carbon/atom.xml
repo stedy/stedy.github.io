@@ -4,7 +4,7 @@
   <title><![CDATA[Category: r,carbon | Zach Stednick]]></title>
   <link href="http://stedy.github.io/blog/categories/r-carbon/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2018-11-10T21:59:01-08:00</updated>
+  <updated>2018-11-27T16:15:18-08:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -31,7 +31,7 @@ Propositions.</p>
 <iframe src="http://zachstednick.com/map_732.html" height=500 width=520></iframe>
 
 
-<p>Hover mouse over county for percentage.</p>
+<p>(Hover mouse over county for exact percentage)</p>
 
 <p>Map of percentage of Yes votes for Initiative 1631 (General Election
 2018):</p>
@@ -41,12 +41,12 @@ Propositions.</p>
 
 <p>Hover mouse over county for percentage.</p>
 
-<p>Overall net change in Yes votes from Initiative 732 to Initiative 1631 as a percentage of the whole by County:</p>
+<p>Overall net change in Yes votes from Initiative 732 to Initiative 1631 as a percentage of the whole by County. The more red counties are where Initiative 732 was favored more while the more blue counties are where Initiative 1631 was favored more.</p>
 
 <iframe src="http://zachstednick.com/diff_map.html" height=500 width=620></iframe>
 
 
-<p>Hover mouse over county for percentage.</p>
+<p>(Hover mouse over county for percentage)</p>
 ]]></content>
   </entry>
   
