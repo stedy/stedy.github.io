@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tax | Zach Stednick]]></title>
   <link href="http://stedy.github.io/blog/categories/tax/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2018-11-27T20:51:48-08:00</updated>
+  <updated>2018-11-27T20:58:30-08:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -28,7 +28,7 @@ Initiatives.</p>
 <p>Map of percentage of Yes votes for Initiative 732 (General Election
 2016), hover mouse cursor over county for exact Yes percentage.</p>
 
-<iframe src="http://zachstednick.com/map_732_red.html" height=500 width=520></iframe>
+<iframe src="http://zachstednick.com/map_732.html" height=500 width=520></iframe>
 
 
 <p>Map of percentage of Yes votes for Initiative 1631 (General Election
