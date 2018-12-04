@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: r,elections | Zach Stednick]]></title>
+  <link href="http://stedy.github.io/blog/categories/r-elections/atom.xml" rel="self"/>
+  <link href="http://stedy.github.io/"/>
+  <updated>2018-12-03T22:13:24-08:00</updated>
+  <id>http://stedy.github.io/</id>
+  <author>
+    <name><![CDATA[Zach Stednick]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[changes in voter turnout between the 2014 and 2018 US elections]]></title>
+    <link href="http://stedy.github.io/blog/2018/12/03/changes-in-voter-turnout-between-the-2014-and-2018-us-elections/"/>
+    <updated>2018-12-03T22:08:34-08:00</updated>
+    <id>http://stedy.github.io/blog/2018/12/03/changes-in-voter-turnout-between-the-2014-and-2018-us-elections</id>
+    <content type="html"><![CDATA[<p>As I watched the livestream of the 2018 US midterm election results, I
+was absolutely stunned at the significant increase in voter turnout over
+the 2014 US midterm election. Now that almost all of the 2018 election
+results have been certified by their repective Secretaries of State, I
+wanted to take a look at how this increase in voter turnout manifested
+on a state by state basis.</p>
+
+<p>To make things as simple as I could, I primarily used the data from two
+New York Times elections pages: the <a href="https://www.nytimes.com/elections/2014/results/house">2014 results
+page</a> and the
+<a href="https://www.nytimes.com/interactive/2018/11/06/us/elections/results-house-elections.html">2018 results
+page</a>.</p>
+
+<p>I realize this data may not be complete as some of the voter counts are
+not fully reported for all precincts on these pages. However, the total
+vote count from the 2014 data is 72,031,124 while the total vote count
+from 2018 is 106,385,810 which I felt was accurate enough for the
+purposes of this analysis.</p>
+
+<p>In both elections, I primarily focused on the House of Representatives
+because that was the only office for universally up for election. As I
+embarked on this project I soon realized that a direct comparison would
+not be possible after Pennslyvania <a href="https://en.wikipedia.org/wiki/Pennsylvania's_congressional_districts">re-drew its congressional maps in
+early
+2018</a>
+and Florida did so as well in a <a href="https://en.wikipedia.org/wiki/Florida%27s_congressional_districts">2016
+redistricting</a>.</p>
+
+<p>This first map simply shows congressional districts where the voter
+turnout increased. The congressional districts colored grey have either
+a decline in voter turnout, or where the candidate ran uncontested in
+either 2014 or 2018 (or both) and therefore do not have a difference in
+percentage to measure.</p>
+
+<p><iframe src="http://zachstednick.com/US_house_diff_map_pos_only.png"></p>
+
+<p>Explorable version
+<a href="http://zachstednick.com/US_house_diff_map_pos_only.png">here</a></p>
+
+<p>The second choropleth map shows states that increased in voter turnout
+as blue, states that decreased in voter turnout as red while those
+colored grey had at least one uncontested election.</p>
+
+<p><iframe src="http://zachstednick.com/house_diff_map_pos_neg.png">
+Explorable version of this map
+<a href="http://zachstednick.com/house_diff_map_pos_neg.html">here</a></p>
+
+<p>It is interesting to note that only seven US Congressional districts had
+decreases in voter turnout from 2014 to 2018. Table of districts with
+decreased voter turnout:</p>
+
+<table>
+<thead>
+<tr>
+<th> District </th>
+<th> 2014 votes </th>
+<th> 2018 votes </th>
+<th style="text-align:right;"> Difference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> IL-09 </td>
+<td> 203946 </td>
+<td> 91476 </td>
+<td style="text-align:right;"> -55.14</td>
+</tr>
+<tr>
+<td> CO-01 </td>
+<td> 266021 </td>
+<td> 256542 </td>
+<td style="text-align:right;"> -3.56</td>
+</tr>
+<tr>
+<td> PA-02 </td>
+<td> 202635 </td>
+<td> 197495 </td>
+<td style="text-align:right;"> -2.53</td>
+</tr>
+<tr>
+<td> AK-00 </td>
+<td> 242844 </td>
+<td> 238131 </td>
+<td style="text-align:right;"> -1.94</td>
+</tr>
+<tr>
+<td> IL-07 </td>
+<td> 171502 </td>
+<td> 170290 </td>
+<td style="text-align:right;"> -0.70</td>
+</tr>
+<tr>
+<td> AR-04 </td>
+<td> 205066 </td>
+<td> 204113 </td>
+<td style="text-align:right;"> -0.46</td>
+</tr>
+<tr>
+<td> KY-05 </td>
+<td> 218697 </td>
+<td> 218324 </td>
+<td style="text-align:right;"> -0.17</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>The district with the highest increase in turnout? That would be
+<a href="https://ballotpedia.org/California's_34th_Congressional_District">CA-34</a></p>
+
+<p>Finally I grouped all the votes together by state to make the following
+choropleth of US House votes on a state level:</p>
+
+<p><iframe src="http://zachstednick.com/state_vote_diff_map.png">
+Explorable version of this map
+<a href="http://zachstednick.com/state_vote_diff_map.html">here</a></p>
+]]></content>
+  </entry>
+  
+</feed>

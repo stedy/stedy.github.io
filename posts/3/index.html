@@ -7,10 +7,9 @@
 	<meta name="author" content="Zach Stednick">
 
 	
-	<meta name="description" content="I finally got around to reading Poor
-Numbers by Morton
-Jerven and found it really interesting. Basically Jerven argues that
-academic literature has &hellip;">
+	<meta name="description" content="Lately I have been listening to episodes of This American
+Life faster than they are making them
+which means I have been going back to the archive &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -81,6 +80,55 @@ academic literature has &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2016/08/16/this-american-life-stats/">
+		
+			This American Life Stats</a>
+	</h2>
+	<div class="entry-content">
+		<p>Lately I have been listening to episodes of <a href="http://www.thisamericanlife.org/">This American
+Life</a> faster than they are making them
+which means I have been going back to the archive for past unheard shows. Their website has a nice <a href="http://www.thisamericanlife.org/user/login">user section</a> where you can log in and mark episodes you have heard and your favorites. The archives are arranged by year which naturally got me thinking about the number episodes I have listened to by year. A search of GitHub revealed many libraries for downloading episodes of the podcast but none that were interested in user statistics so I decided to write my own library. I am still very much beginner level with technologies such as passing cookies and CSRF requests which is why I ultimately ended up using <a href="https://splinter.readthedocs.io/en/latest/">Splinter</a> which just lets you automate browser actions. I used that to login and navigate the TAL archives by year. I then used <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a> to parse the HTML. Finally, I just wanted to visualize the results so I used Mike Bostock&rsquo;s <a href="https://bl.ocks.org/mbostock/3885304">D3 Bar Chart example</a>.</p>
+
+<iframe src="http://zachstednick.com/TAL_stats.html" marginwidth="0" marginheight="0" style="height:500px; width:1060px;" scrolling="no"></iframe>
+
+
+<p>Pretty basic but it gets the job done, full code here on
+<a href="https://github.com/stedy/TAL_stats">GitHub</a></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-08-16T22:19:24-07:00" pubdate data-updated="true"></time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/d3-python/'>d3,python</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -1025,91 +1073,6 @@ oldest traffic circle being 18TH AVE E AND E HARRISON ST installed on
 
 
 	<a class='category' href='/blog/categories/gis-r-topojson/'>gis,r,topojson</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2015/09/04/subsetting-shapefiles-with-r/">
-		
-			Subsetting Shapefiles With R</a>
-	</h2>
-	<div class="entry-content">
-		<p>I have been trying to improve my GIS skills lately and have been trying
-to use R for as much of this process as I can. One of the tasks I
-frequently perform is taking a shapefile, subsetting it, and then
-converting to a GeoJSON. The npm module
-<a href="https://www.npmjs.com/package/ogr2ogr">ogr2ogr</a> is excellent for
-converting from a shapefile to GeoJSON, however I frequntly find myself
-needing to select only certain areas of a shapefile. I have been using
-two libraries in R to achieve this, specifically
-<a href="https://cran.r-project.org/web/packages/rgdal/index.html">rgdal</a> and
-<a href="https://cran.r-project.org/web/packages/sp/">sp</a>.</p>
-
-<p>For example, lets use the Congressional District 2012 shapefiles from
-the <a href="http://www.ofm.wa.gov/pop/geographic/tiger.asp">Washington State Office of Financial
-Management</a>. Downloading
-the file, unzipping, and then loading into R with</p>
-
-<p><script
-src="https://gist.github.com/stedy/b05e2e11e309b66eb28e.js"></script></p>
-
-<p>We want to select only the districts that cover Seattle, 7 and 9 which
-is as simple as subsetting</p>
-
-<p><code>seattle.only &lt;- subset(wa.cd, CD113FP %in% c('07', '09'))</code></p>
-
-<p>One of the nice features about GitHub gists is that you can overlay a
-GeoJSON file on a Google map for a quick QC check. While R accepts a
-variety of
-projection formats, Github does not and I occasionally I find I have to
-convert to the WGS84 datum which are easily done with</p>
-
-<p><code>seattle.only.wgs &lt;- spTransform(seattle.only, CRS("+proj=longlat
-+ellps=WGS84"))</code></p>
-
-<p>And written out as a GeoJSON file with</p>
-
-<p><code>writeOGR(seattle.only.wgs, dsn="seattle.only.wgs.geojson", layer="cd2012", driver="GeoJSON", check_exists = FALSE)</code></p>
-
-<p>Occasionally I get an error about the file I am about to create not
-being found. This Stack Overflow
-<a href="http://stackoverflow.com/a/29743969/163809">answer</a> was very helpful
-and now I add the <code>check_exists = FALSE</code> parameter every time I write
-out with <code>writeOGR()</code>.</p>
-
-<p><script
-src="https://gist.github.com/stedy/3c4954baa0b1c96fc9e8.js"></script></p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-09-04T13:05:49-07:00" pubdate data-updated="true"></time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/gis-r-geojson/'>gis,r,geojson</a>
 
 
 </div>
