@@ -1,0 +1,206 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>What is the most remote airport from the city it serves in the United States? - Zach Stednick</title>
+	<meta name="author" content="Zach Stednick">
+
+	
+	<meta name="description" content="Recently, there was a question on
+travel.SE about locating the airport furthest
+from the city it is supposed to serve. There are some interesing &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Zach Stednick" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Zach Stednick</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:stedy.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/zachstednick" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/stedy" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="https://www.google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:stedy.github.io">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">What Is the Most Remote Airport From the City It Serves in the United States?</h2>
+	<div class="entry-content"><p>Recently, there was a question on
+<a href="https://travel.stackexchange.com/questions/137558/what-is-the-most-remote-airport-from-the-center-of-the-city-it-supposedly-serves">travel.SE</a> about locating the airport furthest
+from the city it is supposed to serve. There are some interesing answers
+including the winner from Paris where the airport is approximately 147
+km away from the Paris metro area. I started to wonder about this
+question for different airports
+within the US and I stumbled onto this [Wikipedia
+page]
+(<a href="https://en.wikipedia.org/wiki/List_of_airports_in_the_United_States">https://en.wikipedia.org/wiki/List_of_airports_in_the_United_States</a>)
+which served as a good baseline for a quick analysis.</p>
+
+<p>I used the <a href="https://cloud.google.com/maps-platform/places/">Google Maps location
+API</a> to calculate
+latitude and longitude
+location of the center
+of the town or city and location of the airport. I then used the Google
+Maps directions API to calculate the driving distance between the
+airport and the center of the town it serves. This lead to some
+interesting edge cases. For example, Peach Springs, Arizona is on this
+list and the airport is about 113 miles away:</p>
+
+<p><img src="http://zachstednick.com/peach_springs_drive.png"></p>
+
+<p>Peach Springs is a Census Designated Place and largely serves the
+Hualapai tribe. Should it have been included on this list?</p>
+
+<p>I also noticed on this Wikipedia page that there are many airports with
+split locations (<a href="https://en.wikipedia.org/wiki/Seattle%E2%80%93Tacoma_International_Airport">Sea/Tac
+Airport</a>
+for example)
+or a single airport serving multiple locations such as <a href="https://en.wikipedia.org/wiki/Harrisburg_International_Airport">Harrisburg
+International
+Airport</a>
+serving
+<a href="https://en.wikipedia.org/wiki/Harrisburg,_Pennsylvania">Harrisburg</a>-<a href="https://en.wikipedia.org/wiki/Middletown,_Dauphin_County,_Pennsylvania">Middletown,
+PA</a>).
+For these cases I just used
+the first city mentioned for this analysis. The Wikipedia article also
+lists
+enplanements as recorded by the FAA in 2015 which provides a useful
+metric for comparison. First I looked
+at distance to airport versus number of passengers:</p>
+
+<p><img src="http://zachstednick.com/airport_all.png"></p>
+
+<p>Not too surprising to observe that many of the airports have very few
+emboardings each year and are reasonably close to the center of town.</p>
+
+<p>Then I looked at only airports that had over one million enplanements
+which narrowed my list of airports down to 27:</p>
+
+<p><img src="http://zachstednick.com/airport_1mil.png"></p>
+
+<p>To me it is interesting to note that San Diego, Boston and to some
+extent Dulles are all close to the city center with relatively few
+emboardings as compared to this subset. Also I grew up in Fort Collins,
+CO and have many fond memories as a child of driving across the plains
+with Denver International Airport seeming so, so far away.</p>
+
+<p>As always, full code available on
+<a href="https://github.com/stedy/blog-supplemental">GitHub</a></p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2019-05-04T20:51:52-07:00" pubdate data-updated="true"></time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/python-r-airports/'>python,r,airports</a>
+
+
+</div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+</div>
+
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2019
+
+    Zach Stednick
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>

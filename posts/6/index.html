@@ -7,9 +7,9 @@
 	<meta name="author" content="Zach Stednick">
 
 	
-	<meta name="description" content="My wife and sometimes other people ask me to send them research papers
-that are not publicly available which I am more than happy to do.
-However, &hellip;">
+	<meta name="description" content="The Listserve is an email list where
+people sign up for a chance to send an email out to the entire list to
+discuss whatever they want. Currently &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -80,6 +80,86 @@ However, &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2013/04/14/text-mining-the-listserve-emails/">
+		
+			Text Mining the Listserve Emails</a>
+	</h2>
+	<div class="entry-content">
+		<p><a href="http://www.thelistserve.com">The Listserve</a> is an email list where
+people sign up for a chance to send an email out to the entire list to
+discuss whatever they want.  Currently the number of people enrolled is
+about 20,000 and there has been one email per day since 16 April 2012.
+I thought that since this project has been running for about a year, it
+would be a nice opportunity to learn a little more about text mining.</p>
+
+<p>In this first part I will discuss how I fetched all those emails and
+parsed them and in a second blog post I will talk about what I found.</p>
+
+<p>The first issue was how to get the emails off the server and after
+trying a few solutions I finally ended up using the Python
+<a href="http://docs.python.org/2/library/imaplib.html">imaplib</a> which is a
+Python library for connecting with an IMAP4 email server which is used
+by all the major providers such as Yahoo and Google.  After connecting I
+used the Python <a href="http://docs.python.org/2/library/email.html">email</a> library which helped facilitate selecting certain parts of the email.  I relied
+heavily on the function <code>email.message_from_string()</code> to fetch email
+attributes such as Message-ID or Sender.  I took all these emails and
+dumped them into a SQLite database to later parse with
+<a href="http://cran.r-project.org">R</a>.</p>
+
+<p>I use R almost daily for work so it was nice to tackle this part of the
+project with tools I knew pretty well.  I used <code>sapply()</code> and
+<code>strsplit()</code> mostly to parse out parts of various email attributes and
+then used the <a href="http://cran.r-project.org/web/packages/tm/index.html">tm</a>
+package to handle all of the text processing.  The tm package makes it
+easier to get all the emails into a term document matrix which is much
+easier to work with a large corpus of text such as this.  I used an
+English dictonary with the tm package to remove stop words and for
+stemming (reducing the word to its base form).  There have been two
+emails so far in Portuguese but the rest are all in English.</p>
+
+<p>Initially I thought I could track all the emails by date but this proved
+to be a difficult task due to the nuances of email and when they
+actually got sent off the server.  Instead I ended up using the
+Message-ID for making sure that I did not duplicate emails in the
+analysis.</p>
+
+<p>I put up all the source code on a github
+<a href="https://github.com/stedy/thelistserve-stats">repo</a>.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-14T18:21:00-07:00" pubdate data-updated="true"></time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/r/'>r,</a>, <a class='category' href='/blog/categories/tm/'>tm</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -575,7 +655,7 @@ n&#8217; Paddle</a> in Hanalei which also sold us some of the other things we fo
     <div class="center"><a href="/blog/archives">Blog Archives</a></div>
 </nav>
 </div>
-	<footer id="footer" class="inner">Copyright &copy; 2018
+	<footer id="footer" class="inner">Copyright &copy; 2019
 
     Zach Stednick
 
