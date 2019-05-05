@@ -4,7 +4,7 @@
   <title><![CDATA[Category: python,r,airports | Zach Stednick]]></title>
   <link href="http://stedy.github.io/blog/categories/python-r-airports/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2019-05-04T20:57:13-07:00</updated>
+  <updated>2019-05-04T21:02:30-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -24,15 +24,13 @@ from the city it is supposed to serve. There are some interesing answers
 including the winner from Paris where the airport is approximately 147
 km away from the Paris metro area. I started to wonder about this
 question for different airports
-within the US and I stumbled onto this [Wikipedia
-page]
-(<a href="https://en.wikipedia.org/wiki/List_of_airports_in_the_United_States">https://en.wikipedia.org/wiki/List_of_airports_in_the_United_States</a>)
+within the US and I stumbled onto this <a href="https://en.wikipedia.org/wiki/List_of_airports_in_the_United_States">Wikipedia page</a>
 which served as a good baseline for a quick analysis.</p>
 
 <p>I used the <a href="https://cloud.google.com/maps-platform/places/">Google Maps location
 API</a> to calculate
 latitude and longitude
-location of the center
+for the center
 of the town or city and location of the airport. I then used the Google
 Maps directions API to calculate the driving distance between the
 airport and the center of the town it serves. This lead to some
@@ -41,7 +39,7 @@ list and the airport is about 113 miles away:</p>
 
 <p><img src="http://zachstednick.com/peach_springs_drive.png"></p>
 
-<p>Peach Springs is a Census Designated Place and largely serves the
+<p><a href="https://en.wikipedia.org/wiki/Peach_Springs,_Arizona">Peach Springs</a> is a Census Designated Place and largely serves the
 Hualapai tribe. Should it have been included on this list?</p>
 
 <p>I also noticed on this Wikipedia page that there are many airports with
@@ -52,7 +50,7 @@ or a single airport serving multiple locations such as <a href="https://en.wikip
 International
 Airport</a>
 serving
-<a href="https://en.wikipedia.org/wiki/Harrisburg,_Pennsylvania">Harrisburg</a>-<a href="https://en.wikipedia.org/wiki/Middletown,_Dauphin_County,_Pennsylvania">Middletown,
+<a href="https://en.wikipedia.org/wiki/Harrisburg,_Pennsylvania">Harrisburg</a>/<a href="https://en.wikipedia.org/wiki/Middletown,_Dauphin_County,_Pennsylvania">Middletown,
 PA</a>).
 For these cases I just used
 the first city mentioned for this analysis. The Wikipedia article also
@@ -73,7 +71,7 @@ which narrowed my list of airports down to 27:</p>
 
 <p>To me it is interesting to note that San Diego, Boston and to some
 extent Dulles are all close to the city center with relatively few
-emboardings as compared to this subset. Also I grew up in Fort Collins,
+emboardings as compared to this subset. Also, I grew up in Fort Collins,
 CO and have many fond memories as a child of driving across the plains
 with Denver International Airport seeming so, so far away.</p>
 
