@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2019-05-04T21:02:30-07:00</updated>
+  <updated>2019-05-23T15:13:53-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Impact of Amazon Echo on babies named Alexa]]></title>
+    <link href="http://stedy.github.io/blog/2019/05/23/impact-of-amazon-echo-on-babies-named-alexa/"/>
+    <updated>2019-05-23T15:10:53-07:00</updated>
+    <id>http://stedy.github.io/blog/2019/05/23/impact-of-amazon-echo-on-babies-named-alexa</id>
+    <content type="html"><![CDATA[<p>A few years ago, there was an article in the Seattle Times about <a href="https://www.seattletimes.com/life/for-4-seattle-women-called-alexa-its-fun-frustrating-to-share-name-with-amazon-device/">girls
+named Alexa post-introduction of the Amazon
+Echo</a>.
+I was chatting with a friend of mine about this and we wondered if the
+introduction of the Amazon Echo has lead to a reduction in girls named
+Alexa. According to Wikipedia, the Amazon Echo was first introduced on
+<a href="https://en.wikipedia.org/wiki/Amazon_Echo">November 6, 2014</a> and Hadley
+Wickham was kind enough to organize an R package of baby names as
+recorded by the <a href="https://github.com/hadley/babynames">United States
+SSA</a>. Using this data shows a
+steep decline in the number of female babies named Alexa which may be
+due to a variety of factors:</p>
+
+<p><img src="http://zachstednick.com/alexa_females.png"></p>
+
+<p>In the process of making this first plot I realized that there are boys
+in the SSA data named Alexa as well, lets see what the data for boys looks like:</p>
+
+<p><img src="http://zachstednick.com/alexa_females.png"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[What is the most remote airport from the city it serves in the United States?]]></title>
@@ -1706,55 +1733,6 @@ Lamarr</a> had a very
 interesting life and is greatly underappreciated in
 modern society. Hopefully this book will prove to be as motivational
 over the course of the year in a similar manner as Musk&rsquo;s biography was.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Election 2016]]></title>
-    <link href="http://stedy.github.io/blog/2016/12/08/election-2016/"/>
-    <updated>2016-12-08T14:30:57-08:00</updated>
-    <id>http://stedy.github.io/blog/2016/12/08/election-2016</id>
-    <content type="html"><![CDATA[<p>It has now been a month since the 2016 US Presidential election and I am
-still stunned by the outcome but am ready to move on.</p>
-
-<p>The major issues I focused on while voting at the Presidential level
-were a better climate policy
-and more equal treatment for minorities and other marginalized
-populations. When I stop and think about why these were the major issues
-for me, I realize that I am pretty fortunate. I have a great job,
-generally feel safe, and am optimistic overall about the future and the
-economy.</p>
-
-<p>The biggest realization for me was that although I care deeply about
-these issues on a national level, I need to be more involved at the
-community level.</p>
-
-<p>After thinking about it, there are three ways I want to get more
-politically involved:</p>
-
-<ol>
-<li><p>Increase the amount of money I donate to specific organizations on a
-recurring basis.</p></li>
-<li><p>Get more involved with organizations that focus on climate advocacy
-and immigrant populations. I did do some volunteer work with
-<a href="https://carbonwa.org">CarbonWA</a> and I want to get more involved with
-them as well as with an organization that focuses on immigrants such as
-<a href="http://www.rewa.org/">ReWA</a></p></li>
-<li><p>Write more letters to elected officials about the issues I am most
-passionate about. I have helped make a github
-<a href="https://github.com/openseattle/seattle-boundaries">repo</a> of all the
-boundaries of my hometown and I have never used this for any reason
-other than looking up addresses. At least I know where to look to figure
-out the various districts I live in.</p></li>
-</ol>
-
-
-<p>Will these actions by me make a difference on the national level? Not
-likely but hard to say. What they will do for sure is to make an impact
-at the local level and will help me to improve the community around me.
-If these issues are important
-enough for me to write this post about, then it goes to show that they
-are important enough for me to get more involved with.</p>
 ]]></content>
   </entry>
   
