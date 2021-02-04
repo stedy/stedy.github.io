@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2020-09-20T00:04:12-07:00</updated>
+  <updated>2021-02-04T15:05:20-08:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,97 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Have any cities had a team in the championship game for the four major professional sports?]]></title>
+    <link href="http://stedy.github.io/blog/2021/02/04/have-any-cities-had-a-team-in-the-championship-game-for-the-four-major-professional-sports/"/>
+    <updated>2021-02-04T15:04:06-08:00</updated>
+    <id>http://stedy.github.io/blog/2021/02/04/have-any-cities-had-a-team-in-the-championship-game-for-the-four-major-professional-sports</id>
+    <content type="html"><![CDATA[<p>The <a href="https://en.wikipedia.org/wiki/2020_Tampa_Bay_Buccaneers_season">Tampa Bay
+Buccaneers</a>
+are set to play in (and
+<a href="https://en.wikipedia.org/wiki/Super_Bowl_LV">host</a>!) the Super Bowl
+becoming the third team from the City of Tampa to go to a championship
+game within a year. Tampa does not currently have an NBA team so they
+cannot be represented in the all four championship games of the major
+professional sports leagues. However Miami does have an NBA team and
+also played in the <a href="https://en.wikipedia.org/wiki/2019%E2%80%9320_Miami_Heat_season">2020 NBA
+finals</a>
+so pretty good year for pro sports in the State of Florida. Naturally,
+this did make me wonder if any state has ever had a team in all four
+championship games in a calendar year. In 1980 Pennysylvania
+accomplished exactly this:</p>
+
+<p>| League | Team | Outcome |
+| &mdash;&mdash; | &mdash;- | &mdash;&mdash;- |
+| NFL | Pittsburgh Steelers | <a href="https://en.wikipedia.org/wiki/Super_Bowl_XIV">Defeated LA Rams
+31-19</a> |
+| MLB | Philadelphia Phillies | <a href="https://en.wikipedia.org/wiki/1980_World_Series">Defeated KC Royals
+4-2</a> |
+| NBA | Philadelphia 76ers | <a href="https://en.wikipedia.org/wiki/1980_NBA_Finals">Lost to LA Lakers
+4-2</a> |
+| NHL | Philadelphia Flyers | <a href="https://en.wikipedia.org/wiki/1980_Stanley_Cup_Finals">Lost to New York Islanders
+4-2</a> |</p>
+
+<p>1980 Must have been a great year to live in the Keystone State!</p>
+
+<p>Obviously not every state has a team in all four of the major sports
+leagues but when was each state last in a championship game? Here is a
+short table of the longest state championship game droughts greater than
+ten years:</p>
+
+<table>
+<thead>
+<tr>
+<th> Year </th>
+<th> State </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 1991 </td>
+<td>Minnesota </td>
+</tr>
+<tr>
+<td> 1992 </td>
+<td>Oregon</td>
+</tr>
+<tr>
+<td> 1998 </td>
+<td>Utah</td>
+</tr>
+<tr>
+<td> 2009 </td>
+<td>Arizona</td>
+</tr>
+<tr>
+<td> 2010 </td>
+<td>Indiana</td>
+</tr>
+<tr>
+<td> 2010 </td>
+<td>Louisiana</td>
+</tr>
+<tr>
+<td> 2011 </td>
+<td>Wisconsin</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>I wrote all my analysis code and put it in a repo
+<a href="https://github.com/stedy/blog-supplemental">here</a>. Finally all of this
+talk of 1980s sports made me think of one of the greatest music videos
+ever:</p>
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/kd9TlGDZGkI" frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Great Influenza review]]></title>
@@ -1815,48 +1906,6 @@ to Westlake Ave &amp; 6th Ave:</p>
 
 <p>I&rsquo;m sad that I can&rsquo;t work on this project anymore but maybe with Pronto
 2.0 I will be able to revist this idea.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Have there been more upsets in the NCAA Tournament recently?]]></title>
-    <link href="http://stedy.github.io/blog/2017/03/07/have-there-been-more-upsets-in-the-ncaa-tournament-recently/"/>
-    <updated>2017-03-07T13:19:58-08:00</updated>
-    <id>http://stedy.github.io/blog/2017/03/07/have-there-been-more-upsets-in-the-ncaa-tournament-recently</id>
-    <content type="html"><![CDATA[<p>I have been following the <a href="https://en.wikipedia.org/wiki/NCAA_Division_I_Men%27s_Basketball_Tournament">NCAA Men&rsquo;s Basketball
-Tournament</a>
-for as long
-as I can remember and with Selection Sunday coming up, I wondered if
-there
-have been more or less upsets in recent tournaments. To look at this
-visually I used a hypothetical perfect bracket as a reference (i.e. #1
-seed beats #16 seed, #2 seed beats #15 seed all the way to #1 seed beating a #2 seed). I
-took the sum of all the winning seed numbers at each round in the
-Regional Tournament and used that as the denominator
-for comparison with the other Regional Tournaments for that particular
-year.</p>
-
-<p>I went back in time as far as I could but the <a href="https://en.wikipedia.org/wiki/2007_NCAA_Division_I_Men's_Basketball_Tournament">2007
-Tournament</a>
-finally harmonized the names of the Regional tournaments with the names
-East, West, South, and
-Midwest which made for easier comparison across years.</p>
-
-<p><img src="http://zachstednick.com/NCAA_by_region.png"></p>
-
-<p>Clearly there have been quite a lot of upsets in the past ten years
-especially within the Midwest Region.</p>
-
-<p>I then went back and looked at all games back to 1985 when
-the Tournament first expanded to 64 teams. For this I did not have all
-the Regional Tournament information so I just looked at all the games
-(except the Final Four).</p>
-
-<p><img src="http://zachstednick.com/NCAA_all_by_year.png"></p>
-
-<p>The aggregate data is pretty volatile year over year as well with a low
-in
-<a href="https://en.wikipedia.org/wiki/2007_NCAA_Division_I_Men's_Basketball_Tournament">2007</a>. If anything, this shows we should be in for another great year of NCAA tournament basketball complete with some (hopefully many) exciting upsets.</p>
 ]]></content>
   </entry>
   

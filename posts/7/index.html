@@ -7,7 +7,8 @@
 	<meta name="author" content="Zach Stednick">
 
 	
-	<meta name="description" content="My wife and I just did the Kalalau trail in Na Pali State park and I wanted to put out some of my general thoughts to help make it easier for &hellip;">
+	<meta name="description" content="Notes on installing my flask app on CentOS I developed a small flask application at work and put it on a server
+running CentOS which I ended up &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -78,6 +79,101 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/11/30/running-flask-on-centos/">
+		
+			Running Flask on CentOS</a>
+	</h2>
+	<div class="entry-content">
+		<h1>Notes on installing my flask app on CentOS</h1>
+
+<p>I developed a small <a href="http://flask.pocoo.org/">flask</a> application at work and put it on a server
+running CentOS which I ended up spending a few days struggling with
+getting it up and running.  Hopefully this helps someone else
+avoid some of the pain I had.  Jumping right in, the first thing I did
+was install flask, since CentOS 6.3 comes with python 2.6.6 it was easy to
+install pip-python and use that to get flask.  Since the server was
+running Apache 2.2, I put my webapp in /var/www/html. Next step was to
+install httpd_devel and mod_wsgi both of which easily installed from
+source.  Everything seemed fine but I kept getting an HTTP 500 error
+message, here is what I did:</p>
+
+<p>There was a lot of editing of /etc/httpd/conf/httpd.conf to allow for vitrual hosts.<br/>
+This was also the first time I had worked on a subdomain but my DNS had supposedly been setup correctly.</p>
+
+<h2>Is mod_wsgi in the right place?</h2>
+
+<p>Check that mod_wsgi.so is in /usr/lib/httpd/modules a</p>
+
+<p><code>-rwxr-xr-x. 1 root root 315812 Sep  4 10:20 mod_wsgi.so</code></p>
+
+<p>The <code>.</code> at the end of the permissions field is the SELinux (in this case
+CentOS) ACL.</p>
+
+<h2>Does the application have SE Linux permissions?</h2>
+
+<p><code>bash: semanage: comand not found</code></p>
+
+<p>Since semanage is not found I am assume that we are running CentOS
+without any additional security.</p>
+
+<h2>Are we loading mod_wsgi correctly?</h2>
+
+<p>Add a line to httpd.conf</p>
+
+<p><code>LoadModule wsgi_module modules/mod_wsgi.so</code></p>
+
+<h2>Is the socket file set up correctly?</h2>
+
+<p>Socket file not able to write to directory, set socket file to write to
+/tmp using WSGISocketPrefix to allow www-data worker process to connect.</p>
+
+<h2>Server still giving HTTP 500</h2>
+
+<p>This is where I started trying everything I could thinkof.  I set
+LogLevel to debug and later set LogLevel to info and still could not
+figure out what was going on. I even asked on <a href="http://stackoverflow.com/questions/12416532/mod-wsgi-test-wsgi-runs-fine-application-gives-http-500">stack
+overflow</a>
+with little luck.</p>
+
+<h2>Solved!</h2>
+
+<p>Basically, I was not explicit enough in my file path names which caused the majority of these headaches.  I assumed that CentOS would be like
+Debian in how it parsed filepaths, however this was wrong and this
+caused more headaches than needed.  Since this was a python application,
+you would think that I would recall from the Zen of Python that
+&ldquo;Explicit is better than implicit&rdquo; but in this case you would be wrong.
+remember the Zen of Python</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-30T10:01:00-08:00" pubdate data-updated="true"></time></div>
+	<div class="tags">
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -185,7 +281,7 @@ n&#8217; Paddle</a> in Hanalei which also sold us some of the other things we fo
     <div class="center"><a href="/blog/archives">Blog Archives</a></div>
 </nav>
 </div>
-	<footer id="footer" class="inner">Copyright &copy; 2020
+	<footer id="footer" class="inner">Copyright &copy; 2021
 
     Zach Stednick
 

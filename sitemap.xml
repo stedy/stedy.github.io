@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://stedy.github.io/blog/2021/02/04/have-any-cities-had-a-team-in-the-championship-game-for-the-four-major-professional-sports/</loc>
+    <lastmod>2021-02-04T15:04:06-08:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://stedy.github.io/blog/2020/08/26/the-great-influenza-review/</loc>
     <lastmod>2020-08-26T15:22:34-07:00</lastmod>
     <priority>0.8</priority>
@@ -312,13 +317,13 @@
   </url>
   <url>
     <loc>http://stedy.github.io/</loc>
-    <lastmod>2020-09-20T00:04:12-07:00</lastmod>
+    <lastmod>2021-02-04T15:05:20-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://stedy.github.io/blog/archives/</loc>
-    <lastmod>2020-09-20T00:04:12-07:00</lastmod>
+    <lastmod>2021-02-04T15:05:20-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
