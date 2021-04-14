@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2021-03-23T10:37:16-07:00</updated>
+  <updated>2021-04-14T11:09:46-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,54 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Pair Programming With a 13 Month Old]]></title>
+    <link href="http://stedy.github.io/blog/2021/04/14/pair-programming-with-a-13-month-old/"/>
+    <updated>2021-04-14T11:02:42-07:00</updated>
+    <id>http://stedy.github.io/blog/2021/04/14/pair-programming-with-a-13-month-old</id>
+    <content type="html"><![CDATA[<p><a href="https://en.wikipedia.org/wiki/Pair_programming">Pair Programming</a> is a
+software development method that uses two programmers on one
+workstation thereby writing code as a team. I did a slight variation of this on a recent
+project with a thirteen month old and had pretty good success.</p>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Pair_programming_1.jpg/1024px-Pair_programming_1.jpg" alt="Pair
+Programming" /></p>
+
+<p>I used to really like this site [GraphTV] and was sad when it closed. I later found <a href="http://www.omdbapi.com/">OMDb API</a> which I
+ used to recreate GraphTV as a command line program on [GitHub]. But who wants to use a command line program to look
+things up? I knew it could be much better hosted on its own website
+which meant improving my JavaScript and a ideally use a JS charting
+library (I ultimately went with <a href="https://www.chartjs.org/">Chart.js</a>). In a past life I wrote a lot of R code and JS often feels
+incredibly foreign to me for reasons I cannot quite articulate.</p>
+
+<p>These days I spend most of my time with a 13 month old and have pretty limited amounts of time
+here and there for writing code. I do find that when working on a
+programming problem that it can be incredibly easy for me
+to run into a roadblock, hop on <a href="https://stackoverflow.com/tags/javascript">SO</a> and then find myself further out in the
+weeds and really frustrated.</p>
+
+<p>With this project, I took a different approach. Any time I ran into a roadblock I did a quick search on SO, read a few answers and then just closed my laptop and walked away. Granted this was not the fastest way to solve the problem but it did lead to many minor epiphanies in quotidian parenting events:
+- Playing with some books on the floor and thinking &ldquo;The
+<code>innerHTML</code>
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML">element</a> is not flushing everything out, maybe there is a
+dedicated function in Chartjs&rdquo;.
+- Trying to get the 13 month old to eat more and thinking &ldquo;Why am I using this unwieldy CSV file when I could simplify my code so much
+with a JSON object&rdquo;.
+- Changing a diaper and thinking &ldquo;Well, I have tried everything else, did Bootstrap change something between v4.5 and <a href="https://blog.getbootstrap.com/2020/06/16/bootstrap-5-alpha/">5.0</a>&rdquo;?</p>
+
+<p>I finally finished my project and launched
+<a href="http://bingetrendy.com/">bingetrendy</a>!
+I am not nor will ever be a shredding programmer and I am okay with
+that. I also realize that not everyone might have their own 13 month old to help distract them.
+However, I strongly feel that walking away from my code for extended periods of time
+was beneficial for me and may be beneficial for you as well. Now if you
+will excuse me, the 13 month old is asleep and I want to figure out what
+episodes of <a href="https://www.imdb.com/title/tt0472954/episodes?season=6">It&rsquo;s Always Sunny in Philadelphia Season
+6</a> I should
+watch.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Have any cities had a team in the championship game for the four major professional sports?]]></title>
@@ -1869,62 +1917,6 @@ stifle smaller websites and startups.</p>
 communities and users will come together to stand tall and sound the
 alarm about the FCC&rsquo;s attack on net neutrality. Join us
 <a href="https://www.battleforthenet.com/july12">here</a>!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Pronto post-mortem]]></title>
-    <link href="http://stedy.github.io/blog/2017/03/26/pronto-post-mortem/"/>
-    <updated>2017-03-26T17:21:03-07:00</updated>
-    <id>http://stedy.github.io/blog/2017/03/26/pronto-post-mortem</id>
-    <content type="html"><![CDATA[<p>Pronto bike share ends this Friday March 31st and I will miss it for
-sure. I <a href="http://zachstednick.name/blog/2016/02/09/thoughts-on-pronto/">wrote about why Pronto mattered to me</a> and I
-even rode a Pronto bike in the 25
-mile <a href="http://www.obliteride.org/">Obliteride</a> last year:</p>
-
-<p><img src="http://zachstednick.com/IMG_2260.JPG"></p>
-
-<p>In October 2015, there was a Pronto sponsored
-<a href="https://www.prontocycleshare.com/datachallenge">contest</a> to visualize
-bikeshare ride data. I created an
-<a href="http://prontostories.com/">entry</a> which although did not win, was a
-nice introduction for me to learn mapping with
-<a href="d3js.org">D3</a>. As I was
-checking out the Pronto site one last time today I noticed that they had
-updated their publically available dataset to include 2016
-ride data as well as the 2015 ride data.</p>
-
-<p><img src="http://zachstednick.com/pronto_historical_ridership.png"></p>
-
-<p>To me it seems that Pronto had a hard time expanding and encouraging
-repeat riders. Unfortunately we do not have the membership data but if
-we can assume that people who did not ride much in 2015 did not renew
-their membership in 2016 then it looks pretty clear that Pronto was hurting
-more than people thought. Also, it looked like they had good success in
-2015 with getting people to buy day passes especially during peak tourist
-season in the summer and were able to replicate that success in 2016. I
-feel there is a need for a dedicated
-bike share in Seattle however this iteration of bike share does not
-appear to be the solution we need.</p>
-
-<p>I went back to the Pronto site to fetch all my data because of an idea I
-worked on then abandoned last summer. The idea was for a website that
-was basically <a href="https://www.strava.com/">Strava</a> for Pronto
-whereby you compared your ride time data to everyone else&rsquo;s and mapped out how
-fast you were compared to them. Pronto did not make it easy to download
-all your trip data so I ended up having to write a webscraper to get out
-my own data (Hint, hint Pronto 2.0!) which I put at this <a href="https://github.com/stedy/pronto-scraper">GitHub
-repository</a>. I never was able
-to get my project past the personal level and my ultimate goal was to
-simply make a map of the route and add
-in plots. Here is an example of all trips from Fairview Ave N &amp; Ward St
-to Westlake Ave &amp; 6th Ave:</p>
-
-<iframe src="http://zachstednick.com/strava_for_pronto_demo.html" marginwidth="0" marginheight="0" style="height:700px; width:1260px;" scrolling="no"></iframe>
-
-
-<p>I&rsquo;m sad that I can&rsquo;t work on this project anymore but maybe with Pronto
-2.0 I will be able to revist this idea.</p>
 ]]></content>
   </entry>
   
