@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2021-04-14T11:09:46-07:00</updated>
+  <updated>2021-04-14T11:16:32-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -24,10 +24,10 @@ workstation thereby writing code as a team. I did a slight variation of this on 
 project with a thirteen month old and had pretty good success.</p>
 
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Pair_programming_1.jpg/1024px-Pair_programming_1.jpg" alt="Pair
-Programming" /></p>
+Programming" /> | :&ndash;:| Lisamarie Babik, CC BY 2.0 <a href="https://creativecommons.org/licenses/by/2.0">https://creativecommons.org/licenses/by/2.0</a>, via Wikimedia Commons|</p>
 
-<p>I used to really like this site [GraphTV] and was sad when it closed. I later found <a href="http://www.omdbapi.com/">OMDb API</a> which I
- used to recreate GraphTV as a command line program on [GitHub]. But who wants to use a command line program to look
+<p>I used to really like this site <a href="http://graphtv.kevinformatics.com/">GraphTV</a> and was sad when it closed. I later found <a href="http://www.omdbapi.com/">OMDb API</a> which I
+ used to recreate GraphTV as a command line program on <a href="https://github.com/stedy/binge-trendy">GitHub</a>. But who wants to use a command line program to look
 things up? I knew it could be much better hosted on its own website
 which meant improving my JavaScript and a ideally use a JS charting
 library (I ultimately went with <a href="https://www.chartjs.org/">Chart.js</a>). In a past life I wrote a lot of R code and JS often feels
@@ -40,13 +40,13 @@ to run into a roadblock, hop on <a href="https://stackoverflow.com/tags/javascri
 weeds and really frustrated.</p>
 
 <p>With this project, I took a different approach. Any time I ran into a roadblock I did a quick search on SO, read a few answers and then just closed my laptop and walked away. Granted this was not the fastest way to solve the problem but it did lead to many minor epiphanies in quotidian parenting events:
-- Playing with some books on the floor and thinking &ldquo;The
-<code>innerHTML</code>
+* Playing with some books on the floor and thinking &ldquo;The
+<code>innerHTML()</code>
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML">element</a> is not flushing everything out, maybe there is a
 dedicated function in Chartjs&rdquo;.
-- Trying to get the 13 month old to eat more and thinking &ldquo;Why am I using this unwieldy CSV file when I could simplify my code so much
+* Trying to get the 13 month old to eat more and thinking &ldquo;Why am I using this unwieldy CSV file when I could simplify my code so much
 with a JSON object&rdquo;.
-- Changing a diaper and thinking &ldquo;Well, I have tried everything else, did Bootstrap change something between v4.5 and <a href="https://blog.getbootstrap.com/2020/06/16/bootstrap-5-alpha/">5.0</a>&rdquo;?</p>
+* Changing a diaper and thinking &ldquo;Well, I have tried everything else, did Bootstrap change something between v4.5 and <a href="https://blog.getbootstrap.com/2020/06/16/bootstrap-5-alpha/">5.0</a>&rdquo;?</p>
 
 <p>I finally finished my project and launched
 <a href="http://bingetrendy.com/">bingetrendy</a>!
