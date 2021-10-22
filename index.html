@@ -122,7 +122,19 @@
 
 <p>In addition to determining the colors of each flag I was also interested in what percentage of each flag was a specific color. By this method, the flag of France would be represented as 33% red, 33% white and 33% blue. Some country flags have smaller details with distinct colors which made classification trickier. To simplify analysis I limited my dataset to colors that appeared on at least 5% of the overall flag. For example, the flag of Belize has many small details that had to be omitted while retaining the dominant red, blue, and white color pattern.</p>
 
-<p><img src="http://zachstednick.com/belize_flag.png"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center;"> <img src="http://zachstednick.com/belize_flag.png"> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;"> Flag of Belize </td>
+</tr>
+</tbody>
+</table>
+
 
 <p>After collecting the data, I implemented a <a href="https://en.wikipedia.org/wiki/Cluster_analysis">clustering algorithm</a>, specifically <a href="https://en.wikipedia.org/wiki/K-means_clustering">K-means clustering</a> which is a mathematical method for grouping observations into clusters. Each cluster contains individual observations with similar values and the smaller the cluster the more similar all of the values are in that particular cluster. For an initial demonstration, I clustered the eleven country flags of South America into three clusters.</p>
 
@@ -136,9 +148,19 @@
 
 <p>Unsurprisingly, there is quite a bit of overlap between the three clusters and it is difficult to ascertain how these clusters are distinct from each other. Most countries use good design patterns (For example the <a href="https://nava.clubexpress.com/content.aspx?page_id=22&amp;club_id=622278&amp;module_id=475721">NAVA guide</a>), similar colors, and similar color proportions for their flags. However, there are some interesting observations and unexpected pairings that reveal themselves after studying the figure. For example, Lesotho and Uzbekistan have similar design patterns as well as similar color profiles. Another interesting pairng that does not share similar design patterns is Honduras and Greece. Also interesting to note how similar many of these flags are, with the two notable outliers being Ukraine and Niue.</p>
 
-<p><img src="http://zachstednick.com/niue_flag.png">
-|:&ndash;:|
-| Flag of <a href="https://en.wikipedia.org/wiki/Niue">Niue</a> |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center;"> <img src="http://zachstednick.com/niue_flag.png"> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;"> Flag of <a href="https://en.wikipedia.org/wiki/Niue">Niue</a> </td>
+</tr>
+</tbody>
+</table>
+
 
 <p>Cluster analysis is by no means definitive, and is more of an exploratory analysis. Regardless, I found this method a rewarding way to reconsider the design
 patterns of the many flags of the world.</p>
