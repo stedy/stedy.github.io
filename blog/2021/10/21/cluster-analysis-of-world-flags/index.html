@@ -1,0 +1,179 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cluster analysis of world flags - Zach Stednick</title>
+	<meta name="author" content="Zach Stednick">
+
+	
+	<meta name="description" content="After spending time looking at world flags, I have started to notice similarities in flags from different countries. Sometimes the similarity may be &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Zach Stednick" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Zach Stednick</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:stedy.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/zachstednick" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/stedy" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="https://www.google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:stedy.github.io">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Cluster Analysis of World Flags</h2>
+	<div class="entry-content"><p>After spending time looking at world flags, I have started to notice similarities in flags from different countries. Sometimes the similarity may be due to historical relationships, such as the <a href="https://en.wikipedia.org/wiki/United_States">United States of America</a> and <a href="https://en.wikipedia.org/wiki/Liberia">Liberia</a> or the <a href="https://en.wikipedia.org/wiki/United_Kingdom">United Kingdom</a> and <a href="https://en.wikipedia.org/wiki/Australia">Australia</a>. Other times it may be purely coincidental such as <a href="https://en.wikipedia.org/wiki/Romania">Romania</a> and <a href="https://en.wikipedia.org/wiki/Chad">Chad</a>.</p>
+
+<p><img src="http://zachstednick.com/romania_chad.png">
+|:&ndash;:|
+| Flag of Romania on left, Flag of Chad on right |</p>
+
+<p> I was interested in determining if additional relationships between flags could be discovered via mathematical analysis of the properties of each flag. To begin my analysis, I needed to find a standardized set of flag image files to make up my dataset. I started by using flags from Wikipedia but found these were too variable in size and image quality. I later ended up purchasing a set of flag image files from <a href="countryflags.com">CountryFlags</a>. I used the Python library <a href="https://github.com/obskyr/colorgram.py">colorgram</a> to scan every pixel of every flag image file and then determine each pixel’s color using the <a href="https://en.wikipedia.org/wiki/RGB_color_model">RGB color model</a>. There are many distinct shades of every color so I grouped all shades into groups of red, yellow, blue, green, orange, white and black. For example, the blue of the Argentina flag is quite different from the blue of the Sweden flag, however for the purposes of this project I called them both blue.</p>
+
+<p><img src="http://zachstednick.com/arg_swe.png">
+|:&ndash;:|
+| Flag of Argentina on left, Flag of Sweden on right |</p>
+
+<p>In addition to determining the colors of each flag I was also interested in what percentage of each flag was a specific color. By this method, the flag of France would be represented as 33% red, 33% white and 33% blue. Some country flags have smaller details with distinct colors which made classification trickier. To simplify analysis I limited my dataset to colors that appeared on at least 5% of the overall flag. For example, the flag of Belize has many small details that had to be omitted while retaining the dominant red, blue, and white color pattern.</p>
+
+<p><img src="http://zachstednick.com/belize_flag.png"></p>
+
+<p>After collecting the data, I implemented a <a href="https://en.wikipedia.org/wiki/Cluster_analysis">clustering algorithm</a>, specifically <a href="https://en.wikipedia.org/wiki/K-means_clustering">K-means clustering</a> which is a mathematical method for grouping observations into clusters. Each cluster contains individual observations with similar values and the smaller the cluster the more similar all of the values are in that particular cluster. For an initial demonstration, I clustered the eleven country flags of South America into three clusters.</p>
+
+<p><img src="http://zachstednick.com/sa_cluster.png"></p>
+
+<p>From this figure, three clusters of interest are distinctly observed with the smallest cluster consisting of the flags of Colombia, Ecuador, and Venezuela. We can see the other two clusters which have grouped the remaining flags of South America into two separate and larger clusters. From a historical perspective, this makes sense as most countries in South America were colonized by Spain or Brazil and became independent at approximately the same time.</p>
+
+<p>For the analysis of all the flags of the world, I again set the number of clusters to 3 in order to simplify the visual output:</p>
+
+<p><img src="http://zachstednick.com/all_flags_cluster.png"></p>
+
+<p>Unsurprisingly, there is quite a bit of overlap between the three clusters and it is difficult to ascertain how these clusters are distinct from each other. Most countries use good design patterns (For example the <a href="https://nava.clubexpress.com/content.aspx?page_id=22&amp;club_id=622278&amp;module_id=475721">NAVA guide</a>), similar colors, and similar color proportions for their flags. However, there are some interesting observations and unexpected pairings that reveal themselves after studying the figure. For example, Lesotho and Uzbekistan have similar design patterns as well as similar color profiles. Another interesting pairng that does not share similar design patterns is Honduras and Greece. Also interesting to note how similar many of these flags are, with the two notable outliers being Ukraine and Niue.</p>
+
+<p><img src="http://zachstednick.com/niue_flag.png">
+|:&ndash;:|
+| Flag of <a href="https://en.wikipedia.org/wiki/Niue">Niue</a> |</p>
+
+<p>Cluster analysis is by no means definitive, and is more of an exploratory analysis. Regardless, I found this method a rewarding way to reconsider the design
+patterns of the many flags of the world.</p>
+
+<p>As always, analysis code can be found on <a href="https://github.com/stedy/flag_clustering">GitHub</a></p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2021-10-21T22:25:28-07:00" pubdate data-updated="true"></time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/r-python/'>r,python</a>
+
+
+</div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+</div>
+
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2021
+
+    Zach Stednick
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>

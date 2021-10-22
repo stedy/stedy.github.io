@@ -4,7 +4,7 @@
   <title><![CDATA[Zach Stednick]]></title>
   <link href="http://stedy.github.io/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2021-04-14T11:30:25-07:00</updated>
+  <updated>2021-10-21T22:27:41-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Cluster analysis of world flags]]></title>
+    <link href="http://stedy.github.io/blog/2021/10/21/cluster-analysis-of-world-flags/"/>
+    <updated>2021-10-21T22:25:28-07:00</updated>
+    <id>http://stedy.github.io/blog/2021/10/21/cluster-analysis-of-world-flags</id>
+    <content type="html"><![CDATA[<p>After spending time looking at world flags, I have started to notice similarities in flags from different countries. Sometimes the similarity may be due to historical relationships, such as the <a href="https://en.wikipedia.org/wiki/United_States">United States of America</a> and <a href="https://en.wikipedia.org/wiki/Liberia">Liberia</a> or the <a href="https://en.wikipedia.org/wiki/United_Kingdom">United Kingdom</a> and <a href="https://en.wikipedia.org/wiki/Australia">Australia</a>. Other times it may be purely coincidental such as <a href="https://en.wikipedia.org/wiki/Romania">Romania</a> and <a href="https://en.wikipedia.org/wiki/Chad">Chad</a>.</p>
+
+<p><img src="http://zachstednick.com/romania_chad.png">
+|:&ndash;:|
+| Flag of Romania on left, Flag of Chad on right |</p>
+
+<p> I was interested in determining if additional relationships between flags could be discovered via mathematical analysis of the properties of each flag. To begin my analysis, I needed to find a standardized set of flag image files to make up my dataset. I started by using flags from Wikipedia but found these were too variable in size and image quality. I later ended up purchasing a set of flag image files from <a href="countryflags.com">CountryFlags</a>. I used the Python library <a href="https://github.com/obskyr/colorgram.py">colorgram</a> to scan every pixel of every flag image file and then determine each pixel’s color using the <a href="https://en.wikipedia.org/wiki/RGB_color_model">RGB color model</a>. There are many distinct shades of every color so I grouped all shades into groups of red, yellow, blue, green, orange, white and black. For example, the blue of the Argentina flag is quite different from the blue of the Sweden flag, however for the purposes of this project I called them both blue.</p>
+
+<p><img src="http://zachstednick.com/arg_swe.png">
+|:&ndash;:|
+| Flag of Argentina on left, Flag of Sweden on right |</p>
+
+<p>In addition to determining the colors of each flag I was also interested in what percentage of each flag was a specific color. By this method, the flag of France would be represented as 33% red, 33% white and 33% blue. Some country flags have smaller details with distinct colors which made classification trickier. To simplify analysis I limited my dataset to colors that appeared on at least 5% of the overall flag. For example, the flag of Belize has many small details that had to be omitted while retaining the dominant red, blue, and white color pattern.</p>
+
+<p><img src="http://zachstednick.com/belize_flag.png"></p>
+
+<p>After collecting the data, I implemented a <a href="https://en.wikipedia.org/wiki/Cluster_analysis">clustering algorithm</a>, specifically <a href="https://en.wikipedia.org/wiki/K-means_clustering">K-means clustering</a> which is a mathematical method for grouping observations into clusters. Each cluster contains individual observations with similar values and the smaller the cluster the more similar all of the values are in that particular cluster. For an initial demonstration, I clustered the eleven country flags of South America into three clusters.</p>
+
+<p><img src="http://zachstednick.com/sa_cluster.png"></p>
+
+<p>From this figure, three clusters of interest are distinctly observed with the smallest cluster consisting of the flags of Colombia, Ecuador, and Venezuela. We can see the other two clusters which have grouped the remaining flags of South America into two separate and larger clusters. From a historical perspective, this makes sense as most countries in South America were colonized by Spain or Brazil and became independent at approximately the same time.</p>
+
+<p>For the analysis of all the flags of the world, I again set the number of clusters to 3 in order to simplify the visual output:</p>
+
+<p><img src="http://zachstednick.com/all_flags_cluster.png"></p>
+
+<p>Unsurprisingly, there is quite a bit of overlap between the three clusters and it is difficult to ascertain how these clusters are distinct from each other. Most countries use good design patterns (For example the <a href="https://nava.clubexpress.com/content.aspx?page_id=22&amp;club_id=622278&amp;module_id=475721">NAVA guide</a>), similar colors, and similar color proportions for their flags. However, there are some interesting observations and unexpected pairings that reveal themselves after studying the figure. For example, Lesotho and Uzbekistan have similar design patterns as well as similar color profiles. Another interesting pairng that does not share similar design patterns is Honduras and Greece. Also interesting to note how similar many of these flags are, with the two notable outliers being Ukraine and Niue.</p>
+
+<p><img src="http://zachstednick.com/niue_flag.png">
+|:&ndash;:|
+| Flag of <a href="https://en.wikipedia.org/wiki/Niue">Niue</a> |</p>
+
+<p>Cluster analysis is by no means definitive, and is more of an exploratory analysis. Regardless, I found this method a rewarding way to reconsider the design
+patterns of the many flags of the world.</p>
+
+<p>As always, analysis code can be found on <a href="https://github.com/stedy/flag_clustering">GitHub</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Pair Programming With a 13 Month Old]]></title>
@@ -1900,38 +1944,6 @@ href="https://twitter.com/hadleywickham/status/589068687669243905">April
 <script async src="//platform.twitter.com/widgets.js"
 charset="utf-8"></script>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Standing up for net neutrality]]></title>
-    <link href="http://stedy.github.io/blog/2017/07/05/standing-up-for-net-neutrality/"/>
-    <updated>2017-07-05T21:26:12-07:00</updated>
-    <id>http://stedy.github.io/blog/2017/07/05/standing-up-for-net-neutrality</id>
-    <content type="html"><![CDATA[<p>Currently there are many political issues that demand
-attention however in my opinion there are none that would affect more
-people than the possible destruction of net neutrality.</p>
-
-<p><a href="https://en.wikipedia.org/wiki/Net_neutrality">Net neutrality</a> is simply the principle that all data on the internet
-should be treated the same. It does not matter if you are visiting Fox
-News or Mother Jones - the data and content from both of these
-websites (as well as from every other website) should be treated as
-equal and that data should be served equally by all Internet Service Providers. Losing net neutrality could
-lead to an internet that favors
-one of these two sites based on which site is willing to pay more. I
-chose these sites because they are such polar opposites but at the same
-time we live in a country that allows for such opposites to
-have equal protection of freedom of speech. I may disagree with the content of a particular
-website but
-I do not think it should be served any differently than the website of a
-site I do agree with. Destruction of net neutrality will lead to greater
-influence wielded by larger corporations and could
-stifle smaller websites and startups.</p>
-
-<p>Fortunately, there is still time to act. On July 12, various online
-communities and users will come together to stand tall and sound the
-alarm about the FCC&rsquo;s attack on net neutrality. Join us
-<a href="https://www.battleforthenet.com/july12">here</a>!</p>
 ]]></content>
   </entry>
   

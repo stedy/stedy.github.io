@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://stedy.github.io/blog/2021/10/21/cluster-analysis-of-world-flags/</loc>
+    <lastmod>2021-10-21T22:25:28-07:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://stedy.github.io/blog/2021/04/14/pair-programming-with-a-13-month-old/</loc>
     <lastmod>2021-04-14T11:02:42-07:00</lastmod>
     <priority>0.8</priority>
@@ -322,13 +327,13 @@
   </url>
   <url>
     <loc>http://stedy.github.io/</loc>
-    <lastmod>2021-04-14T11:30:25-07:00</lastmod>
+    <lastmod>2021-10-21T22:27:41-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://stedy.github.io/blog/archives/</loc>
-    <lastmod>2021-04-14T11:30:25-07:00</lastmod>
+    <lastmod>2021-10-21T22:27:41-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
