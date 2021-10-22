@@ -4,7 +4,7 @@
   <title><![CDATA[Category: r,python | Zach Stednick]]></title>
   <link href="http://stedy.github.io/blog/categories/r-python/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2021-10-21T22:27:41-07:00</updated>
+  <updated>2021-10-21T22:29:33-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -20,15 +20,35 @@
     <id>http://stedy.github.io/blog/2021/10/21/cluster-analysis-of-world-flags</id>
     <content type="html"><![CDATA[<p>After spending time looking at world flags, I have started to notice similarities in flags from different countries. Sometimes the similarity may be due to historical relationships, such as the <a href="https://en.wikipedia.org/wiki/United_States">United States of America</a> and <a href="https://en.wikipedia.org/wiki/Liberia">Liberia</a> or the <a href="https://en.wikipedia.org/wiki/United_Kingdom">United Kingdom</a> and <a href="https://en.wikipedia.org/wiki/Australia">Australia</a>. Other times it may be purely coincidental such as <a href="https://en.wikipedia.org/wiki/Romania">Romania</a> and <a href="https://en.wikipedia.org/wiki/Chad">Chad</a>.</p>
 
-<p><img src="http://zachstednick.com/romania_chad.png">
-|:&ndash;:|
-| Flag of Romania on left, Flag of Chad on right |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center;"> <img src="http://zachstednick.com/romania_chad.png"> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;"> Flag of Romania on left, Flag of Chad on right </td>
+</tr>
+</tbody>
+</table>
+
 
 <p> I was interested in determining if additional relationships between flags could be discovered via mathematical analysis of the properties of each flag. To begin my analysis, I needed to find a standardized set of flag image files to make up my dataset. I started by using flags from Wikipedia but found these were too variable in size and image quality. I later ended up purchasing a set of flag image files from <a href="countryflags.com">CountryFlags</a>. I used the Python library <a href="https://github.com/obskyr/colorgram.py">colorgram</a> to scan every pixel of every flag image file and then determine each pixel’s color using the <a href="https://en.wikipedia.org/wiki/RGB_color_model">RGB color model</a>. There are many distinct shades of every color so I grouped all shades into groups of red, yellow, blue, green, orange, white and black. For example, the blue of the Argentina flag is quite different from the blue of the Sweden flag, however for the purposes of this project I called them both blue.</p>
 
-<p><img src="http://zachstednick.com/arg_swe.png">
-|:&ndash;:|
-| Flag of Argentina on left, Flag of Sweden on right |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center;"> <img src="http://zachstednick.com/arg_swe.png"> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;"> Flag of Argentina on left, Flag of Sweden on right </td>
+</tr>
+</tbody>
+</table>
+
 
 <p>In addition to determining the colors of each flag I was also interested in what percentage of each flag was a specific color. By this method, the flag of France would be represented as 33% red, 33% white and 33% blue. Some country flags have smaller details with distinct colors which made classification trickier. To simplify analysis I limited my dataset to colors that appeared on at least 5% of the overall flag. For example, the flag of Belize has many small details that had to be omitted while retaining the dominant red, blue, and white color pattern.</p>
 
