@@ -4,7 +4,7 @@
   <title><![CDATA[Category: r,python | Zach Stednick]]></title>
   <link href="http://stedy.github.io/blog/categories/r-python/atom.xml" rel="self"/>
   <link href="http://stedy.github.io/"/>
-  <updated>2021-10-21T22:32:23-07:00</updated>
+  <updated>2021-10-21T22:33:58-07:00</updated>
   <id>http://stedy.github.io/</id>
   <author>
     <name><![CDATA[Zach Stednick]]></name>
@@ -92,7 +92,7 @@
 </table>
 
 
-<p>Cluster analysis is by no means definitive, and is more of an exploratory analysis. Regardless, I found this method a rewarding way to reconsider the design
+<p>Cluster analysis is by no means definitive, and is performeed as more of an exploratory analysis. Regardless, I found this method a rewarding way to reconsider the design
 patterns of the many flags of the world.</p>
 
 <p>As always, analysis code can be found on <a href="https://github.com/stedy/flag_clustering">GitHub</a></p>
