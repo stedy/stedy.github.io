@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: schools,logo | Zach Stednick]]></title>
+  <link href="http://stedy.github.io/blog/categories/schools-logo/atom.xml" rel="self"/>
+  <link href="http://stedy.github.io/"/>
+  <updated>2023-08-28T11:55:46-07:00</updated>
+  <id>http://stedy.github.io/</id>
+  <author>
+    <name><![CDATA[Zach Stednick]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[SPS Elementary school logos 2023-24]]></title>
+    <link href="http://stedy.github.io/blog/2023/08/28/sps-elementary-school-logos-2023-24/"/>
+    <updated>2023-08-28T11:13:53-07:00</updated>
+    <id>http://stedy.github.io/blog/2023/08/28/sps-elementary-school-logos-2023-24</id>
+    <content type="html"><![CDATA[<p>I was doing some research on Seattle Public School PTAs at different
+elementary schools and happened to notice a wide variety and diversity in logos. I
+went through each school&rsquo;s official website (e.g. <a href="https://marshalles.seattleschools.org/">Thurgood Marshall
+ES</a> and grabbed the logo on that
+page. I compiled all the elementary school logos into this image:</p>
+
+<p><img src="http://zachstednick.com/SPS_Elem_logos.png"></p>
+]]></content>
+  </entry>
+  
+</feed>
