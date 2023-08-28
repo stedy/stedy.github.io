@@ -7,9 +7,9 @@
 	<meta name="author" content="Zach Stednick">
 
 	
-	<meta name="description" content="This year is the 100th Anniversary of the National Park system and the
-National Park Service is kicking things off with National Park
-Week where &hellip;">
+	<meta name="description" content="This year is the 100th anniversary of the National Park Service and I
+was curious about how park attendance had changed recently. Andrew
+Flowers of &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -80,6 +80,86 @@ Week where &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2016/06/05/changes-in-nps-visits-over-time-with-d3/">
+		
+			Changes in NPS Visits Over Time With D3</a>
+	</h2>
+	<div class="entry-content">
+		<p>This year is the 100th anniversary of the National Park Service and I
+was curious about how park attendance had changed recently. Andrew
+Flowers of FiveThirtyEight had a nice
+<a href="http://fivethirtyeight.com/features/the-national-parks-have-never-been-more-popular/">overview</a>
+using official <a href="https://irma.nps.gov/Stats/Reports/National">NPS data</a>.
+The article was interesting but contrary to most of FiveThirtyEight&rsquo;s
+pieces there was a stunning lack of interactivity in what I felt was the
+main figure of the piece</p>
+
+<p><img src="http://i2.wp.com/espnfivethirtyeight.files.wordpress.com/2016/05/flowers-national-parks-4.png?quality=90&strip=all&w=575&ssl=1"></p>
+
+<p>I remade the figure using that same data but just focusong on 2006 until
+2015 and basically the popular parks stay popular and vice versa:</p>
+
+<iframe src="http://zachstednick.com/rankNP.html" marginwidth="0" marginheight="0" style="height:500px; width:1060px;" scrolling="no"></iframe>
+
+
+<p>Basically, Great Smoky Mountains NP has dominated attendance since its
+creation but what other parks have recently become popular? I used
+<a href="https://d3js.org/">D3</a> to make a simple line plot that allowed for
+interactively exploring park attendance based on year over year change
+from the mean attendance over the last ten years:</p>
+
+<iframe src="http://zachstednick.com/deltaNP.html" marginwidth="0" marginheight="0" style="height:500px; width:1060px;" scrolling="no"></iframe>
+
+
+<p>Clearly a spike in recent years - maybe due to lower gas prices or
+increased popularity of social media?</p>
+
+<p>Also, I was curious about what the trend looked like for the National
+Monuments.</p>
+
+<iframe src="http://zachstednick.com/deltaNM.html" marginwidth="0" marginheight="0" style="height:500px; width:1060px;" scrolling="no"></iframe>
+
+
+<p>The most immediate trend that jumps out is the effect of the
+<a href="https://en.wikipedia.org/wiki/Statue_of_Liberty#Closures_and_reopening_.282001.E2.80.93present.29">closing</a> of the <a href="https://www.nps.gov/stli/index.htm">Statue of Liberty</a> in 2011 which indirectly caused a slowdown in visits to <a href="https://www.nps.gov/cacl/index.htm">Castle Clinton</a>.</p>
+
+<p>I aim to visit some new parks and monuments this summer and hopefully
+looking at the data like this will help me avoid the crowds.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-06-05T11:24:26-07:00" pubdate data-updated="true"></time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/r-nps-d3/'>r,nps,d3</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -1030,106 +1110,6 @@ before 9 AM and before 6 PM.</p>
 </div>
 </article>
 
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2015/08/16/batch-collection-of-park-boundaries-with-open-street-map/">
-		
-			Batch Collection of Park Boundaries With Open Street Map</a>
-	</h2>
-	<div class="entry-content">
-		<p>Open Street Map (OSM) is, simply put, a freely available and editable
-map of the <a href="http://www.openstreetmap.org">world</a>. I have been interested in
-improving the availability of <a href="https://github.com/openseattle/seattle-boundaries">boundaries in Seattle</a> and wanted
-to add park boundaries to this list as well. It was easy to look up
-boundaries on OSM, for example <a href="http://www.openstreetmap.org/way/53600070">Salmon Bay Park</a> shows the various nodes that
-make up its boundaries. But I had struggled with how to automate this
-search since at last count Seattle had over <a href="http://www.seattle.gov/parks/listall.asp">400
-parks</a>. After months of
-struggling with the OSM API, I fortuitously stumbed
-across the following tweet:</p>
-
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Two
-map data posts:&#10;&#10;Historic map warping for <a
-href="https://twitter.com/somethingmodern">@somethingmodern</a> <a
-href="http://t.co/7POw8PNBXI">http://t.co/7POw8PNBXI</a>&#10;&#10;Data
-from OSM for <a href="https://twitter.com/alignedleft">@alignedleft</a>
-<a href="http://t.co/DqxAuyPunh">http://t.co/DqxAuyPunh</a></p>&mdash;
-Michal Migurski (@michalmigurski) <a
-href="https://twitter.com/michalmigurski/status/632613151721193472">August
-15, 2015</a></blockquote>
-
-
-<script async src="//platform.twitter.com/widgets.js"
-charset="utf-8"></script>
-
-
-<p>This tweet lead me to Mapzen which provides a service called <a href="https://mapzen.com/data/metro-extracts/">Metro
-Extracts</a> which provides
-datasets from OSM on a weekly basis. I downloaded the OSM2PGSQL GeoJSON
-file for Seattle which provided me files for Line, Point, and
-Polygon geometries. I then used
-<a href="https://www.npmjs.com/package/ogr2ogr">ogr2ogr</a> to filter for parks
-only with the command</p>
-
-<p><code>ogr2ogr select 'osm_id, name, geometry' where "leisure = 'park'"</code></p>
-
-<p>This produced a GeoJSON file that looked like this:</p>
-
-<script src="https://gist.github.com/stedy/d11ab757400fd5375796.js"></script>
-
-
-<p>Obviously, more filtering needed to be done. Since many of these parks
-were not in Seattle, I used the Nominatim API to search for each park
-based on the OSM ID number. For example, the above mentioned park Salmon
-Bay Park returns a nicely formatted <a href="http://nominatim.openstreetmap.org/lookup?osm_ids=W53600070">XML
-file</a> which
-I just filtered based on city.</p>
-
-<p>Even after this there were still parks that were wrongly labelled as
-being in Seattle. I loaded the file into R and subset based on OSM ID
-and then used
-<a href="https://cran.r-project.org/web/packages/rgdal/">rgdal</a> to write the
-final result out as a GeoJSON file.</p>
-
-<script src="https://gist.github.com/stedy/1ef0a40bc8c29f7412a0.js"></script>
-
-
-<p>The take home lesson for me is that OSM is an excellent service but as
-with any publically annotated dataset be prepared to invest some time
-into cleaning and validating the data.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-08-16T12:16:39-07:00" pubdate data-updated="true"></time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/geojson/'>geojson,</a>, <a class='category' href='/blog/categories/osm/'>osm</a>, <a class='category' href='/blog/categories/r/'>r,</a>
-
-
-</div>
-	
-</div>
-</article>
-
 <nav id="pagenavi">
     
         
@@ -1142,7 +1122,7 @@ into cleaning and validating the data.</p>
     <div class="center"><a href="/blog/archives">Blog Archives</a></div>
 </nav>
 </div>
-	<footer id="footer" class="inner">Copyright &copy; 2021
+	<footer id="footer" class="inner">Copyright &copy; 2023
 
     Zach Stednick
 
